@@ -8,14 +8,16 @@ export function SectionCard({
   icon,
   title,
   children,
+  compact = false,
 }: {
   icon: React.ReactNode
   title: string
   children: React.ReactNode
+  compact?: boolean
 }) {
   return (
-    <Card size="4" className="anim-in-up">
-      <Flex direction="column" gap="4">
+    <Card size={compact ? '2' : '4'} className="anim-in-up">
+      <Flex direction="column" gap={compact ? '3' : '4'}>
         <Flex align="center" gap="3">
           <Flex
             align="center"
@@ -29,7 +31,7 @@ export function SectionCard({
             {title}
           </Heading>
         </Flex>
-        <Flex direction="column" gap="4">
+        <Flex direction="column" gap={compact ? '2' : '4'}>
           {children}
         </Flex>
       </Flex>

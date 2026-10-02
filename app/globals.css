@@ -33,6 +33,33 @@ html .radix-themes {
   font-family: var(--font-serif-en);
 }
 
+.settings-field {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 36px;
+}
+
+html .settings-rate {
+  width: min(100%, 20rem);
+  min-width: 0;
+}
+
+html .settings-voice-trigger {
+  max-width: 100%;
+  min-width: 0;
+}
+
+html .settings-voice-choice {
+  flex: 1;
+  min-width: 0;
+  height: auto;
+  padding: var(--space-2) var(--space-3);
+  justify-content: space-between;
+  text-align: left;
+}
+
 /* 单元按钮按最小可读宽度自动换列；保留标签整行显示，窄屏下不再出现 1- / 1。 */
 .unit-grid {
   display: grid;

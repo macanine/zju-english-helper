@@ -1,18 +1,18 @@
 'use client'
 
 import * as React from 'react'
-import { Database, Download, Eye, Keyboard, Upload, Volume2 } from 'lucide-react'
+import { Check, ChevronRight, Database, Download, Eye, Keyboard, Upload, Volume2 } from 'lucide-react'
 import {
   AlertDialog,
   Box,
   Button,
   Callout,
-  Card,
   Container,
+  Dialog,
   Flex,
   Heading,
   SegmentedControl,
-  Select,
+  ScrollArea,
   Separator,
   Slider,
   Switch,
@@ -28,7 +28,7 @@ import type { EnMode, ExampleMode } from '@/lib/storage'
 
 const PREVIEW_SENTENCE = 'The entrepreneur assembled a brilliant team in Silicon Valley.'
 
-/** 设置项：小屏标签在上、控件铺满；宽屏标签左、控件右 */
+/** 标签与控件保持同行，控件区域允许收缩。 */
 function FieldRow({
   label,
   control,
@@ -37,21 +37,16 @@ function FieldRow({
   control: React.ReactNode
 }) {
   return (
-    <Flex
-      direction={{ initial: 'column', md: 'row' }}
-      justify={{ initial: 'start', md: 'between' }}
-      align={{ initial: 'stretch', md: 'center' }}
-      gap={{ initial: '2', md: '4' }}
-    >
-      <Box className="min-w-0 flex-1">
+    <div className="settings-field">
+      <Box>
         <Text as="div" size="2" weight="medium">
           {label}
         </Text>
       </Box>
-      <Flex align="center" justify="end" gap="2" className="w-full shrink-0 md:w-auto">
+      <Flex align="center" justify="end" gap="2" className="min-w-0">
         {control}
       </Flex>
-    </Flex>
+    </div>
   )
 }
 
@@ -98,33 +93,26 @@ export function SettingsView() {
         </Box>
 
         <SectionCard
+          compact
           icon={<Volume2 size={16} />}
           title="朗读"
         >
           <FieldRow
             label="语音"
             control={
-              <Select.Root
-                value={prefs.voiceURI ?? 'auto'}
-                onValueChange={(v) => update({ ...prefs, voiceURI: v === 'auto' ? null : v })}
-              >
-                <Select.Trigger aria-label="选择语音" className="w-full md:w-52" />
-                <Select.Content position="popper">
-                  <Select.Item value="auto">自动</Select.Item>
-                  {voices.map((v) => (
-                    <Select.Item key={v.voiceURI} value={v.voiceURI}>
-                      {v.name}（{v.lang}）
-                    </Select.Item>
-                  ))}
-                </Select.Content>
-              </Select.Root>
+              <VoicePicker
+                voices={voices}
+                value={prefs.voiceURI}
+                canSpeak={canSpeak}
+                onChange={(voiceURI) => update({ ...prefs, voiceURI })}
+              />
             }
           />
           <Separator size="4" />
           <FieldRow
             label="语速"
             control={
-              <Flex align="center" gap="3" className="w-full md:w-80">
+              <Flex align="center" gap="2" className="settings-rate">
                 {/* Slider 需要在定宽容器里 flex-1：Themes 给它设了 width:fit-content，
                     直接写 w-28 会被盖掉 */}
                 <Slider
@@ -145,7 +133,6 @@ export function SettingsView() {
                   disabled={!canSpeak}
                   onClick={() => speak(PREVIEW_SENTENCE)}
                 >
-                  <Volume2 size={14} />
                   试听
                 </Button>
               </Flex>
@@ -154,6 +141,7 @@ export function SettingsView() {
         </SectionCard>
 
         <SectionCard
+          compact
           icon={<Keyboard size={16} />}
           title="练习"
         >
@@ -170,6 +158,7 @@ export function SettingsView() {
         </SectionCard>
 
         <SectionCard
+          compact
           icon={<Eye size={16} />}
           title="显示"
         >
@@ -180,7 +169,6 @@ export function SettingsView() {
                 aria-label="英文解释显示方式"
                 value={prefs.enMode}
                 onValueChange={(v) => update({ ...prefs, enMode: v as EnMode })}
-                className="w-full md:w-auto"
               >
                 <SegmentedControl.Item value="always">常显</SegmentedControl.Item>
                 <SegmentedControl.Item value="collapsible">收起</SegmentedControl.Item>
@@ -196,7 +184,6 @@ export function SettingsView() {
                 aria-label="例句显示方式"
                 value={prefs.exampleMode}
                 onValueChange={(v) => update({ ...prefs, exampleMode: v as ExampleMode })}
-                className="w-full md:w-auto"
               >
                 <SegmentedControl.Item value="always">常显</SegmentedControl.Item>
                 <SegmentedControl.Item value="collapsible">收起</SegmentedControl.Item>
@@ -207,6 +194,7 @@ export function SettingsView() {
         </SectionCard>
 
         <SectionCard
+          compact
           icon={<Database size={16} />}
           title="数据"
         >
@@ -225,6 +213,88 @@ export function SettingsView() {
         </SectionCard>
       </Flex>
     </Container>
+  )
+}
+
+function VoicePicker({
+  voices,
+  value,
+  canSpeak,
+  onChange,
+}: {
+  voices: SpeechSynthesisVoice[]
+  value: string | null
+  canSpeak: boolean
+  onChange: (voiceURI: string | null) => void
+}) {
+  const [open, setOpen] = React.useState(false)
+  const selected = voices.find((voice) => voice.voiceURI === value)
+  const choices = [
+    { id: null, name: '自动', lang: '默认英文音色' },
+    ...voices.map((voice) => ({ id: voice.voiceURI, name: voice.name, lang: voice.lang })),
+  ]
+
+  return (
+    <Dialog.Root open={open} onOpenChange={(next) => {
+      if (!next && canSpeak) window.speechSynthesis.cancel()
+      setOpen(next)
+    }}>
+      <Dialog.Trigger>
+        <Button variant="soft" color="gray" aria-label="选择音色" className="settings-voice-trigger">
+          <span className="truncate">{selected?.name ?? (value ? '已选音色' : '自动')}</span>
+          <ChevronRight size={14} className="shrink-0" />
+        </Button>
+      </Dialog.Trigger>
+      <Dialog.Content maxWidth="520px" style={{ maxHeight: '85dvh' }}>
+        <Dialog.Title>选择音色</Dialog.Title>
+        <Dialog.Description size="2" color="gray" mb="3">
+          试听后选择，使用当前语速。
+        </Dialog.Description>
+        <ScrollArea type="auto" style={{ height: 'min(52dvh, 420px)' }}>
+          <Flex direction="column" gap="2" pr="3">
+            {choices.map((choice) => (
+              <Flex key={choice.id ?? 'auto'} align="center" gap="2">
+                <Button
+                  variant={value === choice.id ? 'soft' : 'outline'}
+                  color={value === choice.id ? undefined : 'gray'}
+                  aria-pressed={value === choice.id}
+                  aria-label={`选择 ${choice.name}`}
+                  className="settings-voice-choice"
+                  onClick={() => {
+                    onChange(choice.id)
+                    if (canSpeak) window.speechSynthesis.cancel()
+                    setOpen(false)
+                  }}
+                >
+                  <Flex direction="column" align="start" className="min-w-0 flex-1">
+                    <Text className="truncate w-full">{choice.name}</Text>
+                    <Text size="1" color="gray">{choice.lang}</Text>
+                  </Flex>
+                  {value === choice.id && <Check size={16} className="shrink-0" />}
+                </Button>
+                <Button
+                  size="2"
+                  variant="soft"
+                  disabled={!canSpeak}
+                  aria-label={`试听 ${choice.name}`}
+                  onClick={() => speak(PREVIEW_SENTENCE, { voiceURI: choice.id })}
+                >
+                  <Volume2 size={14} />
+                  试听
+                </Button>
+              </Flex>
+            ))}
+            {!canSpeak && <Text size="2" color="gray">当前浏览器不支持朗读。</Text>}
+            {canSpeak && voices.length === 0 && (
+              <Text size="2" color="gray">浏览器暂未提供英文音色，可使用自动朗读。</Text>
+            )}
+          </Flex>
+        </ScrollArea>
+        <Flex justify="end" mt="3">
+          <Dialog.Close><Button variant="soft" color="gray">关闭</Button></Dialog.Close>
+        </Flex>
+      </Dialog.Content>
+    </Dialog.Root>
   )
 }
 
@@ -259,19 +329,17 @@ function DataSection() {
   return (
     <Flex direction="column" gap="3">
       <Flex
-        direction={{ initial: 'column', md: 'row' }}
-        gap="3"
-        className="w-full md:w-auto"
+        gap="2"
+        wrap="wrap"
       >
-        <Button size="3" className="w-full md:w-auto" onClick={() => downloadBackup()}>
+        <Button size="2" onClick={() => downloadBackup()}>
           <Download size={16} />
           导出备份
         </Button>
         <Button
-          size="3"
+          size="2"
           variant="soft"
           color="gray"
-          className="w-full md:w-auto"
           onClick={() => fileRef.current?.click()}
         >
           <Upload size={16} />

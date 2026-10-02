@@ -7,14 +7,15 @@ import { loadPrefs, type Prefs } from './storage'
 /** 朗读英文。语音与语速取自设置页偏好：指定 voiceURI；
     未指定时自动挑英音（en-GB）女声，没有再退到任意英文声。
     opts.queue = 排队播放（不取消正在播的内容），用于「打完单词再读一遍」这类衔接朗读 */
-export function speak(text: string, opts?: { queue?: boolean }) {
+export function speak(text: string, opts?: { queue?: boolean; voiceURI?: string | null }) {
   try {
     const synth = window.speechSynthesis
     const prefs = loadPrefs()
     const u = new SpeechSynthesisUtterance(text)
     const voices = synth.getVoices()
-    const voice = prefs.voiceURI
-      ? (voices.find((v) => v.voiceURI === prefs.voiceURI) ?? null)
+    const voiceURI = opts?.voiceURI === undefined ? prefs.voiceURI : opts.voiceURI
+    const voice = voiceURI
+      ? (voices.find((v) => v.voiceURI === voiceURI) ?? null)
       : pickDefaultVoice(voices)
     if (voice) u.voice = voice
     u.lang = voice?.lang ?? 'en-GB'
