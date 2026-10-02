@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Box, Theme } from '@radix-ui/themes'
+import { Box, Flex, Theme } from '@radix-ui/themes'
 import '@radix-ui/themes/styles.css'
 import './globals.css'
 import { AppHeader } from '@/components/app-header'
