@@ -1,18 +1,15 @@
 import { dayKey } from './stats'
+import { STORAGE_VALIDATORS } from './storage'
+import { hasFields, isRecord } from './validation'
 
 /** 备份覆盖的键：错题本 / 设置 / 偏好 / 单词记录 / 每日记录 / 已掌握 */
-const BACKUP_KEYS = [
-  'zjueh.wrong-words',
-  'zjueh.mastered',
-  'zjueh.settings',
-  'zjueh.prefs',
-  'zjueh.word-stats',
-  'zjueh.day-stats',
-] as const
+type BackupKey = keyof typeof STORAGE_VALIDATORS
+const BACKUP_KEYS = Object.keys(STORAGE_VALIDATORS) as BackupKey[]
+const BACKUP_VERSION = 2
 
 interface BackupFile {
   app: 'zjueh'
-  version: 1
+  version: typeof BACKUP_VERSION
   exportedAt: string
   data: Record<string, unknown>
 }
@@ -22,13 +19,11 @@ export function buildBackup(): BackupFile {
   for (const key of BACKUP_KEYS) {
     const raw = localStorage.getItem(key)
     if (raw === null) continue
-    try {
-      data[key] = JSON.parse(raw)
-    } catch {
-      /* 损坏的条目跳过，不让整份备份失败 */
-    }
+    const value: unknown = JSON.parse(raw)
+    if (!STORAGE_VALIDATORS[key](value)) throw new Error(`数据格式无效：${key}`)
+    data[key] = value
   }
-  return { app: 'zjueh', version: 1, exportedAt: new Date().toISOString(), data }
+  return { app: 'zjueh', version: BACKUP_VERSION, exportedAt: new Date().toISOString(), data }
 }
 
 /** 导出为 JSON 文件（本地 Blob 下载，不经过任何服务器） */
@@ -54,20 +49,41 @@ export function importBackup(text: string): ImportResult {
   } catch {
     return { ok: false, error: '文件不是有效的 JSON。' }
   }
-  const data = (parsed as Partial<BackupFile> | null)?.data
-  if (!data || typeof data !== 'object' || Array.isArray(data)) {
-    return { ok: false, error: '文件结构不对：缺少 data 字段，可能不是本工具导出的备份。' }
+  if (!hasFields(parsed, ['app', 'version', 'exportedAt', 'data']) ||
+      parsed.app !== 'zjueh' || parsed.version !== BACKUP_VERSION ||
+      typeof parsed.exportedAt !== 'string' || !Number.isFinite(Date.parse(parsed.exportedAt)) ||
+      !isRecord(parsed.data)) {
+    return { ok: false, error: '备份格式或版本不受支持，请使用当前应用导出的备份。' }
   }
-  let keys = 0
+  const data = parsed.data
+  if (Object.keys(data).some((key) => !Object.hasOwn(STORAGE_VALIDATORS, key))) {
+    return { ok: false, error: '备份包含无法识别的数据字段。' }
+  }
+  const keys = BACKUP_KEYS.filter((key) => Object.hasOwn(data, key))
+  for (const key of keys) {
+    if (!STORAGE_VALIDATORS[key](data[key])) {
+      return { ok: false, error: `备份数据格式无效：${key}` }
+    }
+  }
+  const previous = new Map<BackupKey, string | null>()
+  const written: BackupKey[] = []
   try {
-    for (const key of BACKUP_KEYS) {
-      if (!(key in data)) continue
-      localStorage.setItem(key, JSON.stringify((data as Record<string, unknown>)[key]))
-      keys++
+    for (const key of keys) previous.set(key, localStorage.getItem(key))
+    for (const key of keys) {
+      localStorage.setItem(key, JSON.stringify(data[key]))
+      written.push(key)
     }
   } catch {
-    return { ok: false, error: '写入本地存储失败（可能处于隐私模式或空间不足）。' }
+    try {
+      for (const key of written.reverse()) {
+        const raw = previous.get(key)!
+        if (raw === null) localStorage.removeItem(key)
+        else localStorage.setItem(key, raw)
+      }
+    } catch {
+      return { ok: false, error: '导入中断，部分数据未能恢复。请检查浏览器存储后重新导入。' }
+    }
+    return { ok: false, error: '无法写入本地存储，本次导入未生效。' }
   }
-  if (keys === 0) return { ok: false, error: '备份里没有可导入的数据。' }
-  return { ok: true, keys }
+  return { ok: true, keys: keys.length }
 }

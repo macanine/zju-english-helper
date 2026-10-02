@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { Box, Card, Flex, Table, Text } from '@radix-ui/themes'
 import { usePrefs } from '@/lib/hooks'
-import { cleanEnglish, extractBlanks, type WordEntry } from '@/lib/model'
+import { extractBlanks, type WordEntry } from '@/lib/model'
 import { speak } from '@/lib/speech'
 import type { EnMode, ExampleMode } from '@/lib/storage'
 
@@ -89,7 +89,7 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
                       key={word.english}
                       className="cursor-pointer"
                       onClick={() =>
-                        collapsible(word) ? toggle(word.english) : speak(cleanEnglish(word.english))
+                        collapsible(word) ? toggle(word.english) : speak(word.english)
                       }
                     >
                       {/* 没有表头行，列宽在单元格上给：单词列固定占比，释义列吃掉剩下的 */}
@@ -209,7 +209,7 @@ function WordText({ english }: { english: string }) {
         aria-label={`朗读 ${english}`}
         onClick={(e) => {
           e.stopPropagation()
-          speak(cleanEnglish(english))
+          speak(english)
         }}
       >
         {english}

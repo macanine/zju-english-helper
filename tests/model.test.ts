@@ -3,7 +3,6 @@ import { test } from 'node:test'
 
 import {
   buildCards,
-  cleanEnglish,
   extractBlanks,
   hasUsableExamples,
   pickExample,
@@ -19,11 +18,6 @@ const sense = (zh = '', en = '', examples: string[] = [], pos: string | null = n
 const word = (english: string, pos: string | null = 'v.', senses = [sense()]): WordEntry => ({
   english,
   senses: senses.map((s) => ({ ...s, pos: s.pos ?? pos })),
-})
-
-test('cleanEnglish 取逗号前的英文', () => {
-  assert.equal(cleanEnglish('sprawl, sprawls'), 'sprawl')
-  assert.equal(cleanEnglish('  look after '), 'look after')
 })
 
 test('buildCards 默认按释义展开（每个释义一道题）', () => {

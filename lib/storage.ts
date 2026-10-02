@@ -1,4 +1,5 @@
-import { MERGE_MODES, type MergeMode, type SenseCard, type Sense } from './model'
+import { MERGE_MODES, isSense, type MergeMode, type SenseCard } from './model'
+import { hasFields, isCount, isId, isOneOf, isRecord, isText } from './validation'
 
 export const CONTENT_FILTERS = ['all', 'words_only', 'phrases_only'] as const
 export const ORDER_MODES = ['sequential', 'random'] as const
@@ -52,8 +53,6 @@ export interface Prefs {
   enMode: EnMode
   /** 例句：常显 / 默认收起（点词块展开）/ 隐藏 */
   exampleMode: ExampleMode
-  /** @deprecated 旧版设置字段，仅为兼容已保存的偏好数据保留 */
-  autoSpeak: boolean
   /** 打字音效（按键 / 错误 / 完成） */
   keySound: boolean
 }
@@ -63,7 +62,6 @@ export const DEFAULT_PREFS: Prefs = {
   rate: 0.9,
   enMode: 'collapsible',
   exampleMode: 'always',
-  autoSpeak: false,
   keySound: true,
 }
 
@@ -89,195 +87,134 @@ export interface DayStat {
   ms: number
 }
 
-const WRONG_KEY = 'zjueh.wrong-words'
-const SETTINGS_KEY = 'zjueh.settings'
-const PREFS_KEY = 'zjueh.prefs'
-const WORD_STATS_KEY = 'zjueh.word-stats'
-const DAY_STATS_KEY = 'zjueh.day-stats'
-const MASTERED_KEY = 'zjueh.mastered'
+/** 每个存储键的当前数据结构，也是备份导入的校验契约。 */
+interface StoredData {
+  'zjueh.wrong-words': SenseCard[]
+  'zjueh.mastered': SenseCard[]
+  'zjueh.settings': Settings
+  'zjueh.prefs': Prefs
+  'zjueh.word-stats': Record<string, WordStat>
+  'zjueh.day-stats': Record<string, DayStat>
+}
 
-function read<T>(key: string): T | null {
+function isCards(value: unknown): value is SenseCard[] {
+  if (!Array.isArray(value)) return false
+  const seen = new Set<string>()
+  return value.every((card: unknown) => {
+    if (!hasFields(card, ['english', 'sense', 'senses']) || !isText(card.english) ||
+        !isSense(card.sense) || !Array.isArray(card.senses) || card.senses.length === 0 ||
+        !card.senses.every(isSense) || seen.has(card.english)) return false
+    const current = card.sense
+    if (!card.senses.some((s) => s.pos === current.pos && s.zh === current.zh && s.en === current.en &&
+      s.examples.length === current.examples.length && s.examples.every((e, i) => e === current.examples[i]))) return false
+    seen.add(card.english)
+    return true
+  })
+}
+
+function isSettings(value: unknown): value is Settings {
+  return hasFields(value, Object.keys(DEFAULT_SETTINGS)) && isId(value.bookId) &&
+    Array.isArray(value.units) && value.units.every(isId) && new Set(value.units).size === value.units.length &&
+    isOneOf(value.contentFilter, CONTENT_FILTERS) && isOneOf(value.orderMode, ORDER_MODES) &&
+    isOneOf(value.questionMode, QUESTION_MODES) && isOneOf(value.mergeMode, MERGE_MODES) &&
+    typeof value.showFirstLetter === 'boolean'
+}
+
+function isPrefs(value: unknown): value is Prefs {
+  return hasFields(value, Object.keys(DEFAULT_PREFS)) &&
+    (value.voiceURI === null || isText(value.voiceURI)) &&
+    typeof value.rate === 'number' && Number.isFinite(value.rate) && value.rate >= 0.5 && value.rate <= 1.5 &&
+    isOneOf(value.enMode, EN_MODES) && isOneOf(value.exampleMode, EXAMPLE_MODES) &&
+    typeof value.keySound === 'boolean'
+}
+
+function isWordStats(value: unknown): value is Record<string, WordStat> {
+  return isRecord(value) && Object.entries(value).every(([word, stat]) =>
+    isText(word) && !["__proto__", "constructor", "prototype"].includes(word) &&
+    hasFields(stat, ['attempts', 'wrongs', 'lastSeen', 'lastWrong']) &&
+    isCount(stat.attempts) && isCount(stat.wrongs) && stat.wrongs <= stat.attempts &&
+    isCount(stat.lastSeen) && isCount(stat.lastWrong) && stat.lastWrong <= stat.lastSeen)
+}
+
+function isDayStats(value: unknown): value is Record<string, DayStat> {
+  return isRecord(value) && Object.entries(value).every(([date, stat]) =>
+    /^\d{4}-\d{2}-\d{2}$/.test(date) &&
+    new Date(`${date}T00:00:00.000Z`).toJSON()?.slice(0, 10) === date &&
+    hasFields(stat, ['words', 'correct', 'ms']) && isCount(stat.words) &&
+    isCount(stat.correct) && stat.correct <= stat.words && isCount(stat.ms))
+}
+
+export const STORAGE_VALIDATORS: { [K in keyof StoredData]: (value: unknown) => value is StoredData[K] } = {
+  'zjueh.wrong-words': isCards,
+  'zjueh.mastered': isCards,
+  'zjueh.settings': isSettings,
+  'zjueh.prefs': isPrefs,
+  'zjueh.word-stats': isWordStats,
+  'zjueh.day-stats': isDayStats,
+}
+
+function read<K extends keyof StoredData>(key: K): StoredData[K] | null {
   try {
     const raw = localStorage.getItem(key)
-    return raw ? (JSON.parse(raw) as T) : null
+    const value: unknown = raw === null ? null : JSON.parse(raw)
+    return STORAGE_VALIDATORS[key](value) ? value : null
   } catch {
     return null
   }
 }
 
-function write(key: string, value: unknown) {
+function write<K extends keyof StoredData>(key: K, value: StoredData[K]) {
   try {
     localStorage.setItem(key, JSON.stringify(value))
   } catch {
-    /* 隐私模式 / 存储被禁用时忽略，功能降级为不记忆 */
+    /* 存储不可用时，本次会话仍可在内存中使用。 */
   }
-}
-
-/** 旧版错题本迁移：v1 词条 { english, chinese, examples } → 卡片。
-    chinese 是「英文释义+中文释义」混合文本，按第一个汉字 / 全角字符拆开 */
-function migrateLegacyWord(raw: Record<string, unknown>): SenseCard | null {
-  const english = typeof raw.english === 'string' ? raw.english : ''
-  const chinese = typeof raw.chinese === 'string' ? raw.chinese : ''
-  const examples = typeof raw.examples === 'string' ? raw.examples : ''
-  if (!english) return null
-  const def = chinese.replace(/\[[^\[\]]*\]/g, '').trim()
-  const m = def.match(/[\u4e00-\u9fff\u3000-\u303f\uff01-\uff60]/)
-  const zh = m ? def.slice(m.index).trim() : ''
-  const en = m ? def.slice(0, m.index).trim() : def
-  const sense: Sense = {
-    pos: null,
-    zh,
-    en,
-    examples: examples
-      .split('；')
-      .map((s) => s.replace(/^e\.g\.\s*/i, '').trim())
-      .filter(Boolean),
-  }
-  return { english, sense, senses: [sense] }
-}
-
-/** 存储里的一条释义（词性 v3 起在释义上，旧版存在卡片上，读取时搬进来） */
-function parseSense(raw: unknown, cardPos: unknown): Sense | null {
-  if (!raw || typeof raw !== 'object') return null
-  const s = raw as Record<string, unknown>
-  const zh = typeof s.zh === 'string' ? s.zh : ''
-  const en = typeof s.en === 'string' ? s.en : ''
-  const examples = Array.isArray(s.examples)
-    ? s.examples.filter((e): e is string => typeof e === 'string')
-    : []
-  if (!zh && !en && examples.length === 0) return null
-  return {
-    pos: typeof s.pos === 'string' ? s.pos : typeof cardPos === 'string' ? cardPos : null,
-    zh,
-    en,
-    examples,
-  }
-}
-
-/**
- * 存储里的卡片列表解析：跳过损坏项，旧版 v1 数据自动迁移。
- * 记录以**单词**为单位，同一个词的旧记录（以前按释义各存一条）会合并成一条。
- */
-function parseCards(data: unknown): SenseCard[] {
-  if (!Array.isArray(data)) return []
-  const byWord = new Map<string, SenseCard>()
-  const add = (english: string, senses: Sense[]) => {
-    if (!english || senses.length === 0) return
-    const hit = byWord.get(english)
-    if (!hit) {
-      byWord.set(english, { english, sense: senses[0], senses: [...senses] })
-      return
-    }
-    for (const sense of senses) {
-      if (!hit.senses.some((s) => s.zh === sense.zh && s.en === sense.en)) hit.senses.push(sense)
-    }
-  }
-
-  for (const item of data) {
-    if (!item || typeof item !== 'object') continue
-    const raw = item as Record<string, unknown>
-    if ('chinese' in raw) {
-      const migrated = migrateLegacyWord(raw)
-      if (migrated) add(migrated.english, migrated.senses)
-      continue
-    }
-    if (typeof raw.english !== 'string') continue
-    const list = Array.isArray(raw.senses)
-      ? raw.senses.map((s) => parseSense(s, raw.pos))
-      : [parseSense(raw.sense, raw.pos)]
-    add(
-      raw.english,
-      list.filter((s): s is Sense => s !== null)
-    )
-  }
-  return [...byWord.values()]
 }
 
 export function loadWrongWords(): SenseCard[] {
-  return parseCards(read<unknown[]>(WRONG_KEY))
+  return read('zjueh.wrong-words') ?? []
 }
 
 export function saveWrongWords(words: SenseCard[]) {
-  write(WRONG_KEY, words)
+  write('zjueh.wrong-words', words)
 }
 
-/** 已掌握的词（从练习与复习中排除；可取消掌握） */
 export function loadMastered(): SenseCard[] {
-  return parseCards(read<unknown[]>(MASTERED_KEY))
+  return read('zjueh.mastered') ?? []
 }
 
 export function saveMastered(words: SenseCard[]) {
-  write(MASTERED_KEY, words)
+  write('zjueh.mastered', words)
 }
 
-/**
- * 单词级学习记录，key 就是单词本身。
- * 旧版按「单词 + 释义」存（key 里带 `\u0000释义`），读取时合并到单词上。
- */
 export function loadWordStats(): Record<string, WordStat> {
-  const data = read<Record<string, WordStat>>(WORD_STATS_KEY)
-  if (!data || typeof data !== 'object' || Array.isArray(data)) return {}
-  const out: Record<string, WordStat> = {}
-  for (const [key, stat] of Object.entries(data)) {
-    if (!stat || typeof stat !== 'object') continue
-    const english = key.split('\u0000')[0]
-    if (!english) continue
-    const prev = out[english]
-    out[english] = {
-      attempts: (prev?.attempts ?? 0) + (Number(stat.attempts) || 0),
-      wrongs: (prev?.wrongs ?? 0) + (Number(stat.wrongs) || 0),
-      lastSeen: Math.max(prev?.lastSeen ?? 0, Number(stat.lastSeen) || 0),
-      lastWrong: Math.max(prev?.lastWrong ?? 0, Number(stat.lastWrong) || 0),
-    }
-  }
-  return out
+  return read('zjueh.word-stats') ?? {}
 }
 
 export function saveWordStats(stats: Record<string, WordStat>) {
-  write(WORD_STATS_KEY, stats)
+  write('zjueh.word-stats', stats)
 }
 
 export function loadDayStats(): Record<string, DayStat> {
-  const data = read<Record<string, DayStat>>(DAY_STATS_KEY)
-  return data && typeof data === 'object' && !Array.isArray(data) ? data : {}
+  return read('zjueh.day-stats') ?? {}
 }
 
 export function saveDayStats(days: Record<string, DayStat>) {
-  write(DAY_STATS_KEY, days)
+  write('zjueh.day-stats', days)
 }
 
 export function loadSettings(): Settings {
-  const saved = read<Partial<Settings>>(SETTINGS_KEY) ?? {}
-  // 兼容旧版本存过 'unit1-1.csv' 后缀的历史数据
-  const units = Array.isArray(saved.units)
-    ? saved.units.map((u) => u.replace(/\.csv$/, ''))
-    : DEFAULT_SETTINGS.units
-  return { ...DEFAULT_SETTINGS, ...saved, units }
+  return read('zjueh.settings') ?? { ...DEFAULT_SETTINGS, units: [] }
 }
 
 export function saveSettings(settings: Settings) {
-  write(SETTINGS_KEY, settings)
+  write('zjueh.settings', settings)
 }
 
 export function loadPrefs(): Prefs {
-  // 旧版本存的是 showEn: boolean（是否显示英文释义），读取时映射到三态 enMode
-  const saved = read<Partial<Prefs> & { showEn?: boolean }>(PREFS_KEY) ?? {}
-  const { showEn, ...rest } = saved
-  const merged: Prefs = { ...DEFAULT_PREFS, ...rest }
-  // 只认存过的合法值；没存过（或存坏了）才看旧字段 / 默认值
-  if (!EN_MODES.includes(rest.enMode as EnMode)) {
-    merged.enMode =
-      typeof showEn === 'boolean' ? (showEn ? 'always' : 'hidden') : DEFAULT_PREFS.enMode
-  }
-  if (!EXAMPLE_MODES.includes(rest.exampleMode as ExampleMode)) {
-    // 早期两态（show / hide）迁移到三态
-    const legacy = rest.exampleMode as string
-    merged.exampleMode =
-      legacy === 'show' ? 'always' : legacy === 'hide' ? 'hidden' : DEFAULT_PREFS.exampleMode
-  }
-  return merged
+  return read('zjueh.prefs') ?? { ...DEFAULT_PREFS }
 }
 
 export function savePrefs(prefs: Prefs) {
-  write(PREFS_KEY, prefs)
+  write('zjueh.prefs', prefs)
 }

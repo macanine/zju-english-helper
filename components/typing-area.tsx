@@ -5,7 +5,7 @@ import { Eye, EyeOff, SkipForward, Volume2, X } from 'lucide-react'
 import { Button, Card, Container, Flex, IconButton, Progress, Text } from '@radix-ui/themes'
 import type { GameEngine } from '@/lib/engine'
 import { usePrefs } from '@/lib/hooks'
-import { cleanEnglish, extractBlanks, pickExample, type SenseCard } from '@/lib/model'
+import { extractBlanks, pickExample, type SenseCard } from '@/lib/model'
 import type { Session, SessionStats } from '@/lib/session'
 import { playDone, playKey, playSkip, playWrong } from '@/lib/sound'
 import { speak, useCanSpeak } from '@/lib/speech'
@@ -105,7 +105,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
   const answer = question
     ? isExampleMode && example
       ? example.blanks.join(' ')
-      : cleanEnglish(question.word.english)
+      : question.word.english
     : ''
 
   /** 朗读文本：听写模式与自动朗读用；例句模式读整句（空缺按原形填回） */
@@ -114,7 +114,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
     if (isExampleMode && example) {
       return example.parts.map((part, i) => part + (example.blanks[i] ?? '')).join('')
     }
-    return cleanEnglish(word.english)
+    return word.english
   }, [word, isExampleMode, example])
 
   // 格子状态在渲染期推导；typed 只存首字母提示位之后的真实输入

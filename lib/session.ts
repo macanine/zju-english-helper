@@ -1,4 +1,5 @@
 import { MERGE_MODES } from './model'
+import { isCount, isId, isOneOf } from './validation'
 import {
   CONTENT_FILTERS,
   DEFAULT_SETTINGS,
@@ -47,25 +48,31 @@ export function encodeSession(session: Session): string {
   return p.toString()
 }
 
-function pick<T extends string>(value: string | null, allowed: readonly T[], fallback: T): T {
-  return allowed.includes(value as T) ? (value as T) : fallback
+function pick<T extends string>(value: string | null, allowed: readonly T[], defaultValue: T): T | null {
+  return value === null ? defaultValue : isOneOf(value, allowed) ? value : null
 }
 
 export function decodeSession(query: string): Session | null {
   const p = new URLSearchParams(query)
   if (p.get('review') === '1') return { kind: 'review' }
   const bookId = p.get('book')
-  const units = (p.get('units') ?? '').split(',').filter(Boolean)
-  if (!bookId || units.length === 0) return null
+  const units = (p.get('units') ?? '').split(',')
+  if (!isId(bookId) || !units.every(isId) || new Set(units).size !== units.length) return null
+  const contentFilter = pick(p.get('filter'), CONTENT_FILTERS, DEFAULT_SETTINGS.contentFilter)
+  const orderMode = pick(p.get('order'), ORDER_MODES, DEFAULT_SETTINGS.orderMode)
+  const questionMode = pick(p.get('mode'), QUESTION_MODES, DEFAULT_SETTINGS.questionMode)
+  const mergeMode = pick(p.get('merge'), MERGE_MODES, DEFAULT_SETTINGS.mergeMode)
+  if (!contentFilter || !orderMode || !questionMode || !mergeMode ||
+      (p.has('hint') && p.get('hint') !== '1')) return null
   return {
     kind: 'practice',
     bookId,
     units,
     options: {
-      contentFilter: pick(p.get('filter'), CONTENT_FILTERS, DEFAULT_SETTINGS.contentFilter),
-      orderMode: pick(p.get('order'), ORDER_MODES, DEFAULT_SETTINGS.orderMode),
-      questionMode: pick(p.get('mode'), QUESTION_MODES, DEFAULT_SETTINGS.questionMode),
-      mergeMode: pick(p.get('merge'), MERGE_MODES, DEFAULT_SETTINGS.mergeMode),
+      contentFilter,
+      orderMode,
+      questionMode,
+      mergeMode,
       showFirstLetter: p.get('hint') === '1',
     },
   }
@@ -74,7 +81,7 @@ export function decodeSession(query: string): Session | null {
 function readCount(raw: string | null): number | null {
   if (raw === null || raw.trim() === '') return null
   const n = Number(raw)
-  return Number.isFinite(n) && n >= 0 ? n : null
+  return isCount(n) ? n : null
 }
 
 export function encodeResult(session: Session, stats: SessionStats): string {
@@ -92,6 +99,6 @@ export function decodeResult(query: string): { session: Session; stats: SessionS
   const total = readCount(p.get('total'))
   const first = readCount(p.get('first'))
   const ms = readCount(p.get('ms'))
-  if (!session || total === null || total === 0 || first === null || ms === null) return null
+  if (!session || total === null || total === 0 || first === null || first > total || ms === null) return null
   return { session, stats: { total, firstTryCorrect: first, durationMs: ms } }
 }

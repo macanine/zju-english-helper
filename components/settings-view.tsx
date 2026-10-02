@@ -332,6 +332,15 @@ function DataSection() {
   const [pending, setPending] = React.useState<{ name: string; text: string } | null>(null)
   const [error, setError] = React.useState<string | null>(null)
 
+  function exportData() {
+    setError(null)
+    try {
+      downloadBackup()
+    } catch {
+      setError('导出失败：无法读取本地数据，或数据格式无效。')
+    }
+  }
+
   function onFileChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
     e.target.value = '' // 允许再次选择同一个文件
@@ -360,7 +369,7 @@ function DataSection() {
         gap="2"
         wrap="wrap"
       >
-        <Button size="2" onClick={() => downloadBackup()}>
+        <Button size="2" onClick={exportData}>
           <Download size={16} />
           导出备份
         </Button>

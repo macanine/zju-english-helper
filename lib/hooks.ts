@@ -84,7 +84,6 @@ export function useBooks(): { books: BookMeta[] | null; error: string | null } {
   return { books, error }
 }
 
-/** 练习设置；settings 为 null 表示尚未从 localStorage 读出 */
 /** 个性化偏好（TTS 语音 / 语速 / 显示英文释义）；null = 尚未从 localStorage 读出 */
 export function usePrefs(): [Prefs | null, (next: Prefs) => void] {
   const [prefs, setPrefs] = React.useState<Prefs | null>(null)
@@ -99,6 +98,7 @@ export function usePrefs(): [Prefs | null, (next: Prefs) => void] {
   return [prefs, update]
 }
 
+/** 练习设置；settings 为 null 表示尚未从 localStorage 读出 */
 export function useSettings(): [Settings | null, (next: Settings) => void] {
   const [settings, setSettings] = React.useState<Settings | null>(null)
 

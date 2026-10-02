@@ -1,3 +1,5 @@
+import { hasFields, isText } from './validation'
+
 export interface Sense {
   /** 词性（跟着释义走，如 'n. [C]'、'adj.'、'短语'；无标注为 null） */
   pos: string | null
@@ -9,10 +11,23 @@ export interface Sense {
   examples: string[]
 }
 
-/** 词库 v3 词条：同一单词的多个释义合并在 senses 里，词性也在释义上 */
+/** 同一单词的多个释义合并在 senses 里，词性也在释义上 */
 export interface WordEntry {
   english: string
   senses: Sense[]
+}
+
+export function isSense(value: unknown): value is Sense {
+  return hasFields(value, ['pos', 'zh', 'en', 'examples']) &&
+    (value.pos === null || isText(value.pos)) &&
+    typeof value.zh === 'string' && typeof value.en === 'string' &&
+    (value.zh.trim().length > 0 || value.en.trim().length > 0) &&
+    Array.isArray(value.examples) && value.examples.every((e: unknown) => typeof e === 'string')
+}
+
+export function isWordEntry(value: unknown): value is WordEntry {
+  return hasFields(value, ['english', 'senses']) && isText(value.english) &&
+    Array.isArray(value.senses) && value.senses.length > 0 && value.senses.every(isSense)
 }
 
 /**
@@ -32,7 +47,7 @@ export type MergeMode = (typeof MERGE_MODES)[number]
 /**
  * 词库词条 → 练习卡片。
  *   sense：每个释义各考一遍（默认）
- *   first：同词只考一次，提示只给第一条释义（例句填空也用这个）
+ *   first：同词只考一次，提示只给第一条释义
  *   all：  同词只考一次，提示里列出全部释义
  */
 export function buildCards(words: WordEntry[], merge: MergeMode): SenseCard[] {
@@ -48,11 +63,6 @@ export function buildCards(words: WordEntry[], merge: MergeMode): SenseCard[] {
     }
   }
   return cards
-}
-
-/** 取逗号前的干净英文（与原版 _get_clean_english 一致） */
-export function cleanEnglish(english: string): string {
-  return english.split(',')[0].trim()
 }
 
 /** 例句随机选一条（[[..]] 挖空） */

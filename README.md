@@ -54,7 +54,7 @@ npm run start      # 本地托管 out/，先运行 build
 
 词库文件位于 `public/data/`，每本词书的单元由 `index.json` 列出。用户数据使用浏览器 `localStorage`，不会由本应用上传。浏览器数据被清理后无法从应用恢复；迁移或清理前，可在「设置 → 数据」导出备份。
 
-日常维护词库时直接编辑 JSON，并运行 `npm run check:data`。数据使用 v3 格式：
+日常维护词库时直接编辑 JSON，并运行 `npm run check:data`。数据结构如下：
 
 ```json
 [
@@ -72,9 +72,7 @@ npm run start      # 本地托管 out/，先运行 build
 ]
 ```
 
-词性属于释义；没有词性时 `pos` 可为 `null`。例句挖空用 `[[...]]` 标记，标记中的单词形式就是答案。新增词书时还要更新 `public/data/index.json`；词书显示名可在 `lib/data.ts` 的 `BOOK_NAME_MAP` 配置。
-
-`archive/` 只保留 v2/v3 格式迁移快照，不供运行时读取。历史 CSV 和从 CSV 重建 v1 词库的脚本已移除；其余迁移脚本 `scripts/convert-v2.mjs`、`scripts/convert-v3.mjs`、`scripts/apply-example-split.mjs` 也会改写词库，普通内容修订不要运行。
+词性属于释义；没有词性时 `pos` 可为 `null`。例句挖空用 `[[...]]` 标记，标记中的单词形式就是答案。新增词书时还要更新 `public/data/index.json`；词书显示名记录在 `public/data/index.json`。
 
 ## 项目结构
 
@@ -83,9 +81,8 @@ app/                 Next.js 路由、根布局与全局样式
 components/          客户端页面视图与交互组件
 lib/                 词库、会话、引擎、本地存储、统计和备份
 public/data/          运行时词库 JSON
-scripts/              词库校验与历史格式迁移工具
+scripts/              词库校验工具
 tests/                node:test 单元测试
-archive/              v2/v3 格式迁移快照
 ```
 
 面向仓库编码代理的架构说明与实现约定见 [`AGENTS.md`](./AGENTS.md)。

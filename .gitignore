@@ -5,13 +5,6 @@ out/
 next-env.d.ts
 *.tsbuildinfo
 
-# 用户数据
-wrong_words.json
-
-# 临时/测试文件
-test.md
-other/
-
 # 系统
 .DS_Store
 

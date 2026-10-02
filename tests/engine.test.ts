@@ -214,27 +214,6 @@ test('错题本支持逐条移除与清空', () => {
   assert.deepEqual(loadWrongWords(), [])
 })
 
-test('旧版错题本数据自动迁移', () => {
-  store.set(
-    'zjueh.wrong-words',
-    JSON.stringify([
-      {
-        english: 'apple',
-        chinese: '[C] a fruit 苹果',
-        examples: 'e.g. I ate an [[apple]].；e.g. An [[apple]] a day.',
-      },
-    ])
-  )
-  const wrong = loadWrongWords()
-  assert.equal(wrong.length, 1)
-  assert.equal(wrong[0].english, 'apple')
-  assert.equal(wrong[0].sense.zh, '苹果')
-  assert.equal(wrong[0].sense.en, 'a fruit')
-  assert.deepEqual(wrong[0].sense.examples, ['I ate an [[apple]].', 'An [[apple]] a day.'])
-  // 迁移后的数据引擎能读回
-  assert.equal(new GameEngine().wrongCount, 1)
-})
-
 test('checkAnswer 记录单词级与当日练习记录', () => {
   const engine = new GameEngine()
   engine.startSession([apple, banana], options(), 'k')

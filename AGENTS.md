@@ -33,13 +33,12 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 | `lib/model.ts` | 词库类型、练习卡片、多义词出题、例句空缺提取 |
 | `lib/session.ts` | 会话与结果的 URL 查询串编解码 |
 | `lib/engine.ts` | 练习牌组、判分、错题/掌握状态和统计；模块级单例 |
-| `lib/storage.ts` | 用户数据类型、默认值、旧格式兼容与 `localStorage` 读写 |
+| `lib/storage.ts` | 当前用户数据类型、默认值与 `localStorage` 读写 |
 | `lib/stats.ts` | 日期、连续练习天数和每日统计的纯函数 |
 | `lib/hooks.ts` | React 组件读取词库、设置、偏好、引擎和统计的订阅入口 |
 | `lib/backup.ts` | 用户数据 JSON 备份导入与导出 |
-| `public/data/` | 随仓库维护的 v3 词库 JSON，唯一运行时词库来源 |
-| `scripts/` | 词库校验、历史格式迁移和人工例句拆分工具 |
-| `archive/` | v2/v3 历史 JSON 快照；不参与运行时和常规构建 |
+| `public/data/` | 随仓库维护的当前词库 JSON，唯一运行时词库来源 |
+| `scripts/` | 词库校验工具 |
 | `tests/` | `node:test` 纯逻辑测试；不引入测试框架依赖 |
 
 路由由 `app/` 中的页面文件映射：`/` 首页、`/browse` 预习、`/practice` 练习、`/result` 成绩、`/wrong-words` 错题本、`/settings` 设置、`/help` 帮助。页面文件尽量只处理 metadata、加载边界和 Suspense；页面交互放在对应视图组件。使用 `useSearchParams` 的 `/browse`、`/practice`、`/result` 页面必须在页面层套 `<Suspense>`，静态导出依赖这个边界。
@@ -61,11 +60,11 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 - 已有存储键是兼容契约，不要改名：`zjueh.wrong-words`、`zjueh.mastered`、`zjueh.settings`、`zjueh.prefs`、`zjueh.word-stats`、`zjueh.day-stats`、`zjueh.theme`。改名会让既有用户数据无法按原键读取。
 - 新增持久化数据时，在 `lib/storage.ts` 加载/保存函数、默认值与必要的旧数据兼容，并将键加入 `lib/backup.ts` 的 `BACKUP_KEYS`。不要把主题键误认为新增的业务设置；它由主题切换组件直接读写。
 - 浏览器 API 只能在 effect、事件处理器或有 `typeof window` 守卫的客户端路径使用，避免静态预渲染和水合错误。`localStorage` 写入失败需要保持功能可降级。
-- `autoSpeak` 是旧偏好兼容字段，不是当前设置 UI 或练习前自动朗读开关。只有听写题会在题目出现时自动朗读；答对后各模式都会朗读答案。
+- 只有听写题会在题目出现时自动朗读；答对后各模式都会朗读答案。
 
 ### 词库与例句
 
-- v3 词条结构：`{ english, senses: [{ pos, zh, en, examples }] }`。词性属于释义，允许为 `null`；同一词的多个用法合并进 `senses`。中文和英文释义分开保存，例句也属于各自释义。
+- 词条结构：`{ english, senses: [{ pos, zh, en, examples }] }`。词性属于释义，允许为 `null`；同一词的多个用法合并进 `senses`。中文和英文释义分开保存，例句也属于各自释义。
 - 修改或新增数据直接编辑 `public/data/`，运行 `npm run check:data`。该命令检查清单与文件对应关系、必需字段、重复词头、词性格式及零宽空格/NBSP。运行时不替数据做兜底清洗。
 - 新词书需添加数据目录和单元 JSON、更新 `public/data/index.json`，并按需在 `lib/data.ts` 的 `BOOK_NAME_MAP` 配显示名。界面通过清单读取词书和单元，不要在视图中硬编码单元列表。
 - 例句空缺用 `[[...]]` 标记；方括号内的拼写就是作答形式，可为语法所需的变形。一个句子多个不同空缺按顺序以空格连接作答；多个相同空缺只输入一次。例句练习按释义出题，没有可用空缺的卡片会自动跳过；若所选牌组都没有可用例句，显示无可用例句状态。

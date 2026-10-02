@@ -2,7 +2,7 @@
 /**
  * 词库体检：npm run check:data
  *
- * public/data 是运行时数据源（v3 结构：{ english, senses: [{ pos, zh, en, examples }] }，
+ * public/data 是运行时数据源（结构：{ english, senses: [{ pos, zh, en, examples }] }，
  * 词性跟着释义走），可以直接手改 JSON；零宽空格、NBSP、空词条这类肉眼看不见的脏数据会让
  * 打字判定永远不通过，统一在这里拦下来（应用运行时不再兜底清洗）。
  */
@@ -13,10 +13,15 @@ import { fileURLToPath } from 'node:url'
 const dataDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'data')
 const INVISIBLE = /[\u200b\u00a0]/
 const problems = []
+const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value)
+const hasFields = (value, fields) => isObject(value) && Object.keys(value).length === fields.length &&
+  fields.every((field) => Object.hasOwn(value, field))
+const isId = (value) => typeof value === 'string' && /^[a-zA-Z0-9]+(?:[-_][a-zA-Z0-9]+)*$/.test(value)
 
 const manifest = JSON.parse(readFileSync(join(dataDir, 'index.json'), 'utf8'))
-if (!Array.isArray(manifest.books) || manifest.books.length === 0) {
-  problems.push('index.json 里没有 books')
+if (!hasFields(manifest, ['books']) || !Array.isArray(manifest.books) || manifest.books.length === 0) {
+  console.error('✗ index.json 必须包含非空 books 数组')
+  process.exit(1)
 }
 
 let unitCount = 0
@@ -36,14 +41,24 @@ function checkString(value, where, field, { allowEmpty = false } = {}) {
   }
 }
 
-for (const book of manifest.books ?? []) {
+const bookIds = new Set()
+for (const book of manifest.books) {
+  if (!hasFields(book, ['id', 'name', 'units']) || !isId(book.id) ||
+      !Array.isArray(book.units) || book.units.length === 0 || !book.units.every(isId)) {
+    problems.push('词书必须包含 id、name 和非空 units 数组，id 与单元名只允许字母、数字、连字符和下划线')
+    continue
+  }
+  checkString(book.name, `词书 ${book.id}`, 'name')
+  if (bookIds.has(book.id)) problems.push(`词书 id 重复：${book.id}`)
+  bookIds.add(book.id)
+  if (new Set(book.units).size !== book.units.length) problems.push(`词书 ${book.id} 有重复单元`)
   const dir = join(dataDir, book.id)
   if (!existsSync(dir)) {
     problems.push(`缺少词书目录 ${book.id}/`)
     continue
   }
 
-  for (const unit of book.units ?? []) {
+  for (const unit of book.units) {
     unitCount++
     const file = join(dir, `${unit}.json`)
     if (!existsSync(file)) {
@@ -58,16 +73,19 @@ for (const book of manifest.books ?? []) {
     const seen = new Set()
     words.forEach((word, i) => {
       const where = `${book.id}/${unit}.json[${i}]`
+      if (!hasFields(word, ['english', 'senses'])) {
+        problems.push(`${where} 必须只包含 english 与 senses`)
+        return
+      }
       checkString(word.english, where, 'english')
       if (typeof word.english === 'string' && word.english.trim() !== '') {
+        if (word.english !== word.english.trim() || /[,\u0000-\u001f]/.test(word.english)) {
+          problems.push(`${where} english 必须是单一词头，不能含逗号、控制字符或首尾空格`)
+        }
         if (seen.has(word.english)) {
           problems.push(`${where} english 重复：${word.english}（同词多义应合并进 senses）`)
         }
         seen.add(word.english)
-      }
-      // v3 起词性挂在释义上，词条级 pos 已废弃
-      if ('pos' in word) {
-        problems.push(`${where} 仍有词条级 pos（v3 词性在 senses[].pos 上，转换脚本：node scripts/convert-v3.mjs）`)
       }
       // 释义
       if (!Array.isArray(word.senses) || word.senses.length === 0) {
@@ -75,8 +93,8 @@ for (const book of manifest.books ?? []) {
       } else {
         for (const [j, sense] of word.senses.entries()) {
           const sWhere = `${where}.senses[${j}]`
-          if (!sense || typeof sense !== 'object') {
-            problems.push(`${sWhere} 不是对象`)
+          if (!hasFields(sense, ['pos', 'zh', 'en', 'examples'])) {
+            problems.push(`${sWhere} 必须只包含 pos、zh、en 与 examples`)
             continue
           }
           if (sense.pos !== null && (typeof sense.pos !== 'string' || sense.pos.trim() === '')) {
@@ -102,14 +120,18 @@ for (const book of manifest.books ?? []) {
       }
     })
     wordCount += words.length
-    senseCount += words.reduce((acc, w) => acc + (Array.isArray(w.senses) ? w.senses.length : 0), 0)
+    senseCount += words.reduce((acc, w) => acc + (isObject(w) && Array.isArray(w.senses) ? w.senses.length : 0), 0)
   }
 
   for (const name of readdirSync(dir)) {
-    if (name.endsWith('.json') && !(book.units ?? []).includes(name.replace(/\.json$/, ''))) {
+    if (name.endsWith('.json') && !book.units.includes(name.replace(/\.json$/, ''))) {
       problems.push(`${book.id}/${name} 未登记在 index.json`)
     }
   }
+}
+
+for (const entry of readdirSync(dataDir, { withFileTypes: true })) {
+  if (entry.isDirectory() && !bookIds.has(entry.name)) problems.push(`词书目录 ${entry.name}/ 未登记在 index.json`)
 }
 
 if (problems.length > 0) {

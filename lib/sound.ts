@@ -6,13 +6,10 @@ let ctx: AudioContext | null = null
 
 function audio(): AudioContext | null {
   if (typeof window === 'undefined') return null
-  const Ctor =
-    window.AudioContext ??
-    (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
-  if (!Ctor) return null
+  if (!window.AudioContext) return null
   try {
-    ctx ??= new Ctor()
-    if (ctx.state === 'suspended') void ctx.resume()
+    ctx ??= new AudioContext()
+    if (ctx.state === 'suspended') void ctx.resume().catch(() => {})
     return ctx
   } catch {
     return null

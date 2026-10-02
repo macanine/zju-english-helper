@@ -1,4 +1,4 @@
-import { cleanEnglish, hasUsableExamples, type SenseCard } from './model'
+import { hasUsableExamples, type SenseCard } from './model'
 import { dayKey, recordAnswer } from './stats'
 import {
   loadDayStats,
@@ -56,8 +56,7 @@ export function orderForReview(
 }
 
 /**
- * GameEngine：一次练习会话的核心状态（对应原 PyQt 版 engine.py）。
- * 错题本持久化到 localStorage（替代原 wrong_words.json）。
+ * 一次练习会话的核心状态，错题本持久化到 localStorage。
  * 实例由 getEngine() 提供单例：路由切换时牌组与进度不丢。
  */
 export class GameEngine {
@@ -208,8 +207,7 @@ export class GameEngine {
   }
 
   /**
-   * 获取下一个有效问题。例句模式下自动跳过没有 [[..]] 标记的词条
-   * （与原版 main.py ask_next_question 的循环一致）。
+   * 获取下一个有效问题。例句模式下自动跳过没有 [[..]] 标记的词条。
    */
   nextQuestion(): NextQuestion {
     const total = this.deck.length
@@ -242,7 +240,7 @@ export class GameEngine {
   ): boolean {
     const word = this.currentWord()
     if (!word) return false
-    const correct = (opts?.expected ?? cleanEnglish(word.english)).toLowerCase()
+    const correct = (opts?.expected ?? word.english).toLowerCase()
     const isCorrect = userInput.trim().toLowerCase() === correct
     const firstTry = isCorrect && !opts?.markWrong
     if (firstTry) {
@@ -250,10 +248,10 @@ export class GameEngine {
     } else {
       this.wrongMap.set(word.english, word)
       this.persist()
-      this.notify()
     }
     this.recordAnswer(word, firstTry)
     this.index++
+    this.notify()
     return isCorrect
   }
 

@@ -32,6 +32,17 @@ export function SetupView() {
   const [settings, update] = useSettings()
   const { words } = useWrongBook()
 
+  if (error) {
+    return (
+      <Container size="3" px="4" py="6">
+        <Callout.Root color="red" role="alert">
+          <Callout.Icon><CircleAlert size={16} /></Callout.Icon>
+          <Callout.Text>{error}</Callout.Text>
+        </Callout.Root>
+      </Container>
+    )
+  }
+
   if (!books || !settings) {
     return (
       <Container size="3" px="4" py="6">
@@ -41,13 +52,11 @@ export function SetupView() {
   }
 
   const units = books.find((b) => b.id === settings.bookId)?.units ?? []
-  const noUnits = settings.units.length === 0
+  const noUnits = settings.units.length === 0 || settings.units.some((unit) => !units.includes(unit))
 
   const start = () => {
-    // 丢掉清单里已不存在的单元（旧设置残留），避免落到 404
-    const valid = settings.units.filter((u) => units.includes(u))
-    if (valid.length === 0) return
-    router.push(`/practice?${encodeSession(sessionFromSettings({ ...settings, units: valid }))}`)
+    if (noUnits) return
+    router.push(`/practice?${encodeSession(sessionFromSettings(settings))}`)
   }
 
   const switchBook = (bookId: string) => {
@@ -252,15 +261,6 @@ export function SetupView() {
               </Flex>
             )}
           </div>
-
-          {error && (
-            <Callout.Root color="red" variant="soft" size="2">
-              <Callout.Icon>
-                <CircleAlert size={16} />
-              </Callout.Icon>
-              <Callout.Text>{error}</Callout.Text>
-            </Callout.Root>
-          )}
 
           <div className="grid gap-3 sm:grid-cols-2">
             <Button size="3" disabled={noUnits} onClick={start} className="w-full">

@@ -1,4 +1,5 @@
-import type { WordEntry } from './model'
+import { isWordEntry, type WordEntry } from './model'
+import { hasFields, isId, isText } from './validation'
 
 export interface BookMeta {
   id: string
@@ -6,14 +7,20 @@ export interface BookMeta {
   units: string[]
 }
 
-/** 已知词书的显示名；未收录的词书直接显示目录 id */
-const BOOK_NAME_MAP: Record<string, string> = {
-  book2: '大英三',
-  book3: '大英四',
-}
-
 export interface Manifest {
   books: BookMeta[]
+}
+
+function isManifest(value: unknown): value is Manifest {
+  if (!hasFields(value, ['books']) || !Array.isArray(value.books) || value.books.length === 0) return false
+  const seen = new Set<string>()
+  return value.books.every((book: unknown) => {
+    if (!hasFields(book, ['id', 'name', 'units']) || !isId(book.id) || !isText(book.name) ||
+        !Array.isArray(book.units) || book.units.length === 0 || !book.units.every(isId) ||
+        new Set(book.units).size !== book.units.length || seen.has(book.id)) return false
+    seen.add(book.id)
+    return true
+  })
 }
 
 let manifestPromise: Promise<Manifest> | null = null
@@ -23,15 +30,11 @@ export function loadManifest(): Promise<Manifest> {
   manifestPromise ??= fetch('/data/index.json')
     .then(async (res) => {
       if (!res.ok) throw new Error(`词库清单加载失败 (${res.status})`)
-      return (await res.json()) as { books?: { id?: string; units?: string[] }[] }
+      return await res.json() as unknown
     })
     .then((data) => {
-      if (!Array.isArray(data.books)) throw new Error('词库清单格式错误')
-      return {
-        books: data.books
-          .filter((b): b is { id: string; units?: string[] } => typeof b.id === 'string')
-          .map((b) => ({ id: b.id, name: BOOK_NAME_MAP[b.id] ?? b.id, units: b.units ?? [] })),
-      }
+      if (!isManifest(data)) throw new Error('词库清单格式错误')
+      return data
     })
     .catch((err: unknown) => {
       manifestPromise = null
@@ -47,8 +50,11 @@ async function fetchUnit(bookId: string, unitId: string): Promise<WordEntry[]> {
   const res = await fetch(`/data/${key}.json`)
   if (!res.ok) throw new Error(`词库加载失败：${key} (${res.status})`)
   const words: unknown = await res.json()
-  if (!Array.isArray(words)) throw new Error(`词库数据格式错误：${key}`)
-  return words as WordEntry[]
+  if (!Array.isArray(words) || !words.every(isWordEntry) ||
+      new Set(words.map((word) => word.english)).size !== words.length) {
+    throw new Error(`词库数据格式错误：${key}`)
+  }
+  return words
 }
 
 function loadUnit(bookId: string, unitId: string): Promise<WordEntry[]> {
@@ -66,6 +72,12 @@ function loadUnit(bookId: string, unitId: string): Promise<WordEntry[]> {
 
 /** 加载一本词书若干单元的全部词条（按单元顺序拼接） */
 export async function loadWords(bookId: string, unitIds: string[]): Promise<WordEntry[]> {
+  const manifest = await loadManifest()
+  const book = manifest.books.find((entry) => entry.id === bookId)
+  if (!book || unitIds.length === 0 || new Set(unitIds).size !== unitIds.length ||
+      unitIds.some((unit) => !book.units.includes(unit))) {
+    throw new Error('所选词书或单元不存在，请重新选择。')
+  }
   const perUnit = await Promise.all(unitIds.map((u) => loadUnit(bookId, u)))
   return perUnit.flat()
 }
