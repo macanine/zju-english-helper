@@ -160,6 +160,7 @@ export function BrowseView() {
                   单元
                 </Text>
                 <Select.Root
+                  size="3"
                   value={isAllUnits ? 'all' : (unitIds[0] ?? 'all')}
                   onValueChange={(v) => update({ unitIds: v === 'all' ? 'all' : [v] })}
                 >
