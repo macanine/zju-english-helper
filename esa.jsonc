@@ -1,0 +1,9 @@
+{
+  "name": "zju-english-helper",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "assets": {
+    "directory": "./out",
+    "notFoundStrategy": "404Page"
+  }
+}
