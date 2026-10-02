@@ -1,6 +1,6 @@
 /**
  * 打字音效：用 Web Audio 现场合成，不引入任何音频素材（静态导出可直接用）。
- * 默认关闭，由设置页「键盘音效」开关控制；无 AudioContext 的环境静默降级。
+ * 默认开启，可由设置页「键盘音效」开关关闭；无 AudioContext 的环境静默降级。
  */
 let ctx: AudioContext | null = null
 

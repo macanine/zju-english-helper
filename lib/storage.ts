@@ -64,7 +64,7 @@ export const DEFAULT_PREFS: Prefs = {
   enMode: 'collapsible',
   exampleMode: 'always',
   autoSpeak: false,
-  keySound: false,
+  keySound: true,
 }
 
 /** 单词级学习记录：用于错题本排序、错误次数展示与「已掌握」判断 */
