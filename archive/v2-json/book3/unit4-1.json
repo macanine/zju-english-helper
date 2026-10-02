@@ -1,0 +1,657 @@
+[
+	{
+		"english": "freediving",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "（不使用呼吸装备的) 自由潜水",
+				"en": "the sport or activity of diving without the aid of breathing equipment",
+				"examples": [
+					"They noticed she was very good at holding her breath and suggested she try [[freediving]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "championship",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "锦标赛；冠军赛",
+				"en": "(also championships) a competition to find which player, team, etc. is the best in a particular sport",
+				"examples": [
+					"The sixth game of the World Chess [[Championship]] will be broadcast tonight on Channel 6."
+				]
+			}
+		]
+	},
+	{
+		"english": "superficial",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "肤浅的；浅薄的；不深入的",
+				"en": "not studying or looking at sth. carefully and only seeing the most noticeable things",
+				"examples": [
+					"Unfortunately I only had a very [[superficial]] knowledge of music."
+				]
+			}
+		]
+	},
+	{
+		"english": "nonetheless",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "然而；但是；尽管如此；虽然如此",
+				"en": "(fml.) in spite of the fact that has just been mentioned",
+				"examples": [
+					"The region was extremely beautiful. [[Nonetheless]], Gerard could not imagine spending the rest of his life there."
+				]
+			}
+		]
+	},
+	{
+		"english": "spectator",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（活动或体育比赛的）观看者，观众",
+				"en": "sb. who is watching an event or a game",
+				"examples": [
+					"The final baseball game which was held last Thursday attracted a crowd of over 50,000 [[spectators]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "diver",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（通常使用特种呼吸辅助装备的）潜水员",
+				"en": "sb. who swims or works under water, usu. with special equipment to help them breathe",
+				"examples": [
+					"Twenty minutes later, a [[diver]] surfaced and handed a metal box to the elderly gentleman."
+				]
+			}
+		]
+	},
+	{
+		"english": "dangle",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "（使）悬垂；（使）吊着；（使）悬荡",
+				"en": "hang or swing loosely, or make sth. do this",
+				"examples": [
+					"We stood in the orchard (果园), where the apples were ripe and [[dangled]] just inches above our heads."
+				]
+			}
+		]
+	},
+	{
+		"english": "terrify",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "使恐惧；使十分害怕；使惊吓",
+				"en": "make sb. feel extremely frightened",
+				"examples": [
+					"He had imagined that going down in the caves late at night would [[terrify]] her, but instead she felt surprisingly calm."
+				]
+			}
+		]
+	},
+	{
+		"english": "bare",
+		"pos": "adj. / v.",
+		"senses": [
+			{
+				"zh": "裸体的；裸露的",
+				"en": "not covered by any clothes",
+				"examples": [
+					"While she was walking around her house in [[bare]] feet, her mom just didn't seem to notice."
+				]
+			}
+		]
+	},
+	{
+		"english": "stroke",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "（游泳或划船的）一次划水",
+				"en": "one of a set of movements in swimming or rowing in which you move your arms or the oar forward and then back",
+				"examples": [
+					"She walked into the water and began to swim with strong [[strokes]] to the middle of the lake.",
+					"It is reported that air pollution could also restrict blood flow, causing [[strokes]] and heart attacks."
+				]
+			},
+			{
+				"zh": "脑卒中；中风",
+				"en": "a sudden serious illness when a blood vessel in the brain bursts or is blocked, which can cause death or the loss of the ability to move or to speak clearly",
+				"examples": [
+					"She walked into the water and began to swim with strong [[strokes]] to the middle of the lake.",
+					"It is reported that air pollution could also restrict blood flow, causing [[strokes]] and heart attacks."
+				]
+			}
+		]
+	},
+	{
+		"english": "loosen",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "（使）放松；变松",
+				"en": "make sth. less tight or firmly fixed; become less tight or firmly fixed",
+				"examples": [
+					"He took a screwdriver (螺丝刀) from his pocket and began to [[loosen]] the screws on the bike."
+				]
+			}
+		]
+	},
+	{
+		"english": "skydiver",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（延缓张伞的）特技跳伞运动员",
+				"en": "sb. who jumps from a plane and falls for as long as they can before opening the parachute",
+				"examples": [
+					"As a [[skydiver]] falls, he accelerates downward, gaining speed with each second."
+				]
+			}
+		]
+	},
+	{
+		"english": "pose",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "（为画像、拍照等摆的）姿势",
+				"en": "n. a particular position in which sb. stands, sits, etc., esp. in order to be painted, drawn or photographed",
+				"examples": [
+					"Please ask the model to stay in that [[pose]] anywhere from 30 seconds to 1 minute.",
+					"Concerns about the danger [[posed]] by fireworks could lead to restrictions on their sale and use."
+				]
+			},
+			{
+				"zh": "造成（威胁、问题等）；引起；产生",
+				"en": "vt.create a threat, problem, etc. that has to be dealt with",
+				"examples": [
+					"Please ask the model to stay in that [[pose]] anywhere from 30 seconds to 1 minute.",
+					"Concerns about the danger [[posed]] by fireworks could lead to restrictions on their sale and use."
+				]
+			}
+		]
+	},
+	{
+		"english": "vanish",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "（莫名奇妙地）突然消失",
+				"en": "disappear suddenly and / or in a way that you cannot explain",
+				"examples": [
+					"Three boats [[vanished]] without a trace one day and have never been found."
+				]
+			}
+		]
+	},
+	{
+		"english": "sonar",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "声呐（船上或潜艇上利用声波探测水下目标位置的仪器）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "descent",
+		"pos": "n. [C, U]",
+		"senses": [
+			{
+				"zh": "下降；降落",
+				"en": "(fml.) the process of going down",
+				"examples": [
+					"The night turned cold and heavy rain began to fall during our [[descent]] from the mountain peak."
+				]
+			}
+		]
+	},
+	{
+		"english": "tick",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "给（试卷、问题等）打钩号",
+				"en": "vt. (AmE check) mark a test, list of questions, etc. with a tick, in order to show that sth. is correct, to choose sth., etc.",
+				"examples": [
+					"She is used to [[ticking]] off all of the things that she has done before the end of the day.",
+					"The clock on the wall [[ticked]] away, its sound echoing through the otherwise silent room."
+				]
+			},
+			{
+				"zh": "（钟表）发出嘀嗒声",
+				"en": "vi.(also ~ away) if a clock or watch ticks, it makes a short repeated sound",
+				"examples": [
+					"She is used to [[ticking]] off all of the things that she has done before the end of the day.",
+					"The clock on the wall [[ticked]] away, its sound echoing through the otherwise silent room."
+				]
+			}
+		]
+	},
+	{
+		"english": "agonizing",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "（尤因难以抉择或等待过久而）折磨人的",
+				"en": "(BrE agonising)1) very unpleasant to experience, esp. because of involving a difficult choice or a long wait",
+				"examples": [
+					"For two [[agonizing]] minutes the plane dived, shook, and finally landed safely at the airport.",
+					"It was said that a few months ago Mr. Lin died after suffering years of [[agonizing]] pain."
+				]
+			},
+			{
+				"zh": "十分痛苦的",
+				"en": "extremely painful",
+				"examples": [
+					"For two [[agonizing]] minutes the plane dived, shook, and finally landed safely at the airport.",
+					"It was said that a few months ago Mr. Lin died after suffering years of [[agonizing]] pain."
+				]
+			}
+		]
+	},
+	{
+		"english": "headlight",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（车辆的）前灯；车头灯（的光束）",
+				"en": "(also headlamp)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "fog",
+		"pos": "n. [C, U]",
+		"senses": [
+			{
+				"zh": "雾",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "exhale",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "呼出，吐出（肺中的空气、烟等）；呼气",
+				"en": "(fml.) breathe out the air or smoke, etc. in our lungs",
+				"examples": [
+					"I changed my breathing pattern, inhaling and [[exhaling]] heavily after each set of exercise."
+				]
+			}
+		]
+	},
+	{
+		"english": "scuba",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "水肺；自携式水下呼吸器",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "fin",
+		"pos": "n. [C, usu. pl.]",
+		"senses": [
+			{
+				"zh": "（潜水、游泳时用的）手蹼，脚蹼",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "assist",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "协助；帮助",
+				"en": "help sb. to do sth.",
+				"examples": [
+					"Families [[assisted]] teachers with the achievement of educational goals."
+				]
+			}
+		]
+	},
+	{
+		"english": "resurface",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "重新露出水面",
+				"en": "come back up to the surface of the water",
+				"examples": [
+					"When the [[divers]] did not [[resurface]] after an hour, three crew members dived down to look for them.",
+					"She [[resurfaced]] briefly about eight years later, to compete with Noriko again for $5 million."
+				]
+			},
+			{
+				"zh": "（遗失或失踪后）再次出现",
+				"en": "appear again after being lost or missing",
+				"examples": [
+					"When the [[divers]] did not [[resurface]] after an hour, three crew members dived down to look for them.",
+					"She [[resurfaced]] briefly about eight years later, to compete with Noriko again for $5 million."
+				]
+			}
+		]
+	},
+	{
+		"english": "cardiac",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "心脏的",
+				"en": "(only before noun) relating to the heart",
+				"examples": [
+					"It is generally believed that patients with [[cardiac]] problems should avoid foods that are high in salt."
+				]
+			}
+		]
+	},
+	{
+		"english": "cardiac arrest",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "心脏停搏；心搏停止",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "underwater",
+		"pos": "adj. / adv.",
+		"senses": [
+			{
+				"zh": "水下的；水下（使）用的",
+				"en": "(only before noun) below the surface of an area of water, or able to be used there",
+				"examples": [
+					"Each guide also includes full-color [[underwater]] photographs illustrating the marine life you could expect to see."
+				]
+			}
+		]
+	},
+	{
+		"english": "keenly",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "（观察）敏锐地",
+				"en": "if you look at sb. / sth. keenly or watch them keenly, you look closely at them and notice everything about them",
+				"examples": [
+					"I looked at him [[keenly]]; he did not blink or even seem embarrassed by what he had just said.",
+					"Scientists are [[keenly]] interested in learning which substances make fruits and vegetables so healthful."
+				]
+			},
+			{
+				"zh": "强烈地",
+				"en": "very strongly",
+				"examples": [
+					"I looked at him [[keenly]]; he did not blink or even seem embarrassed by what he had just said.",
+					"Scientists are [[keenly]] interested in learning which substances make fruits and vegetables so healthful."
+				]
+			}
+		]
+	},
+	{
+		"english": "envelop",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "包住；覆盖",
+				"en": "(fml.) cover or wrap sb. / sth. up completely",
+				"examples": [
+					"The mist and rain [[enveloped]] the forest and we could only see the nearest trees."
+				]
+			}
+		]
+	},
+	{
+		"english": "wilderness",
+		"pos": "n. [C, usu. sing.]",
+		"senses": [
+			{
+				"zh": "未开发的地区；荒野；荒凉之处",
+				"en": "a large area of land that has never been developed or farmed",
+				"examples": [
+					"As we could see from the film, this place used to be a vast [[wilderness]] of mountains, lakes, and forests."
+				]
+			}
+		]
+	},
+	{
+		"english": "frontier",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "未完全开拓的领域；新领域",
+				"en": "the limit of what is known about sth.",
+				"examples": [
+					"The study of the brain is often described by scientists as the next intellectual [[frontier]].",
+					"Many of the cars crossing the [[frontier]] were stopped and searched for illegal goods."
+				]
+			},
+			{
+				"zh": "国界；边境",
+				"en": "(esp. BrE) the border of a country",
+				"examples": [
+					"The study of the brain is often described by scientists as the next intellectual [[frontier]].",
+					"Many of the cars crossing the [[frontier]] were stopped and searched for illegal goods."
+				]
+			}
+		]
+	},
+	{
+		"english": "penalty",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（因违反法律、规则或合约而受到的）惩罚，处罚",
+				"en": "a punishment for breaking a law, rule, or legal agreement",
+				"examples": [
+					"The contract includes heavy [[penalties]] for those people who fail to complete the work on time."
+				]
+			}
+		]
+	},
+	{
+		"english": "marine",
+		"pos": "adj. / n.",
+		"senses": [
+			{
+				"zh": "海洋的；海洋生物的",
+				"en": "(only before noun) relating to the sea and the creatures that live there",
+				"examples": [
+					"We are all quite familiar with news items concerning [[marine]] pollution due to oil spills."
+				]
+			}
+		]
+	},
+	{
+		"english": "fraction",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "一点；少量",
+				"en": "a very small amount of sth.",
+				"examples": [
+					"Employees' salaries are just a [[fraction]] of the total cost of the project."
+				]
+			}
+		]
+	},
+	{
+		"english": "exploration",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "勘探；勘查；探索",
+				"en": "the act of traveling through a place in order to find out about it or look for sth. in it",
+				"examples": [
+					"You can use this hut as a base for [[explorations]] into the mountains and forests around.",
+					"This chapter begins with a detailed [[exploration]] of the issue of gender discrimination among all age groups."
+				]
+			},
+			{
+				"zh": "探究；研究；探测",
+				"en": "an examination of sth. in order to find out about it",
+				"examples": [
+					"You can use this hut as a base for [[explorations]] into the mountains and forests around.",
+					"This chapter begins with a detailed [[exploration]] of the issue of gender discrimination among all age groups."
+				]
+			}
+		]
+	},
+	{
+		"english": "mysterious",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "神秘的；陌生的",
+				"en": "(esp. of people) strange and interesting because you do not know much about them",
+				"examples": [
+					"I decided to find out more about my [[mysterious]] new neighbor who lived on the top floor.",
+					"The police are investigating the [[mysterious]] disappearance of a new-born baby at the hospital."
+				]
+			},
+			{
+				"zh": "神秘的；奇怪的；不易理解的",
+				"en": "difficult to understand or explain; strange",
+				"examples": [
+					"I decided to find out more about my [[mysterious]] new neighbor who lived on the top floor.",
+					"The police are investigating the [[mysterious]] disappearance of a new-born baby at the hospital."
+				]
+			}
+		]
+	},
+	{
+		"english": "handful",
+		"pos": "n. [sing., C]",
+		"senses": [
+			{
+				"zh": "少数人或物",
+				"en": "(~ of) a small number of people or things",
+				"examples": [
+					"The new book is by a man who's already written a [[handful]] of best-sellers, most of them about space exploration.",
+					"The boy picked up a [[handful]] of stones and started throwing them at us, which made us annoyed."
+				]
+			},
+			{
+				"zh": "一把（的量）",
+				"en": "(~ of) the amount that you can hold in your hand",
+				"examples": [
+					"The new book is by a man who's already written a [[handful]] of best-sellers, most of them about space exploration.",
+					"The boy picked up a [[handful]] of stones and started throwing them at us, which made us annoyed."
+				]
+			}
+		]
+	},
+	{
+		"english": "sailor",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "水手；海员",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "menace",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "危险的人或事物",
+				"en": "sb. / sth. that is dangerous",
+				"examples": [
+					"Drivers like that are a [[menace]]. They shouldn't be allowed on the road."
+				]
+			}
+		]
+	},
+	{
+		"english": "ape",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "猿",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "on occasion",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "偶尔；偶然；有时",
+				"en": "sometimes but not often",
+				"examples": [
+					"We no longer keep up a close friendship, though we still visit each other on [[occasion]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "on sb.'s (own) terms",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "按照···的条件；根据···的主张",
+				"en": "according to the conditions that sb. wants",
+				"examples": [
+					"Don't just accept this job because it would make your parents happy — you need to act on your own [[terms]] for once."
+				]
+			}
+		]
+	},
+	{
+		"english": "William Trubridge",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "威廉 • 特鲁布里奇（新西兰自由潜水运动员）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "PBS (Public Broadcasting Service)",
+		"pos": "缩写",
+		"senses": [
+			{
+				"zh": "（美国）公共广播公司",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

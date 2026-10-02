@@ -1,0 +1,120 @@
+@unocss all;
+
+/* 组件主题（颜色/圆角/灰阶）由 @radix-ui/themes 管理（见 app/layout.tsx 的 <Theme>），
+   本文件只保留：字体、极简动效、少量全局微调。 */
+
+body {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'PingFang SC',
+    'HarmonyOS Sans SC',
+    'Microsoft YaHei',
+    'Segoe UI',
+    sans-serif;
+}
+
+/* 英文专用衬线（单词列 / 例句），中文与界面文案保持默认无衬线 */
+:root {
+  --font-serif-en:
+    'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+}
+
+.serif-en {
+  font-family: var(--font-serif-en);
+}
+
+/* 注意：Next 打包后本文件可能排在 Themes 样式之前，同特异性的覆盖会输，
+   所以对 Themes 内部样式的改写统一加 html 前缀，让覆盖与打包顺序无关。
+   只作用于页面根主题层：Select 等弹层也带 .radix-themes 类（data-is-root-theme=false），
+   若让它们也撑满视口，弹层会被 min-height 顶出屏幕底部（底部选项不可达）。 */
+html .radix-themes[data-is-root-theme='true'] {
+  min-height: 100dvh;
+}
+
+html .rt-TextFieldInput {
+  /* 移动端防 iOS 聚焦缩放：输入字号 ≥16px */
+  font-size: 1.0625rem;
+}
+
+html .rt-SegmentedControlItem {
+  flex-grow: 1;
+}
+
+/* 词典表格细节：行悬停淡染。
+   （试过 thead/th 吸顶：Chromium 对表格内部 sticky 的实现会恒定错位一个 inset，
+   盖住首行，不值得 hack，放弃吸顶。） */
+html .rt-TableRoot tbody tr {
+  transition: background-color 0.15s;
+}
+
+html .rt-TableRoot tbody tr:hover {
+  background-color: var(--gray-a2);
+}
+
+/* 分组标题行（预习 / 错题本的「Unit N · M 词」）：Themes 给单元格设了固定 height
+   （size 3 = 48px），一行小字浮在空带里，视觉上像个空洞 —— 放开高度并收紧竖直内边距，
+   读起来是紧凑的节标题。 */
+html .rt-TableCell.cell-group-label {
+  height: auto;
+  padding-block: var(--space-2);
+}
+
+/* ---------- 极简动效 ---------- */
+
+@keyframes u-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes u-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes u-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes u-pop {
+  0% { opacity: 0; transform: scale(0.85); }
+  60% { transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes u-slide-in-right {
+  from { opacity: 0; transform: translateX(48px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes u-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+.anim-in-up { animation: u-in-up 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.anim-pop { animation: u-pop 0.32s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.anim-shake { animation: u-shake 0.4s ease both; }
+.anim-slide-in-right { animation: u-slide-in-right 0.28s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes u-blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0; }
+}
+
+.u-blink { animation: u-blink 1.1s step-end infinite; }

@@ -1,0 +1,686 @@
+[
+	{
+		"english": "commencement",
+		"pos": "n. [C, U, U]",
+		"senses": [
+			{
+				"zh": "（大学或高中的）毕业典礼",
+				"en": "(AmE) a ceremony at which university, college, or high school students receive their diplomas",
+				"examples": [
+					"The high school [[commencement]] speaker was giving a rather inspiring address.",
+					"Would passengers please turn off their mobile phones before the [[commencement]] of the flight?"
+				]
+			},
+			{
+				"zh": "开始；开端",
+				"en": "the beginning of sth.",
+				"examples": [
+					"The high school [[commencement]] speaker was giving a rather inspiring address.",
+					"Would passengers please turn off their mobile phones before the [[commencement]] of the flight?"
+				]
+			}
+		]
+	},
+	{
+		"english": "faculty",
+		"pos": "n. [C, U, C]",
+		"senses": [
+			{
+				"zh": "（大学的）全体教员",
+				"en": "(AmE) all the teachers in a university",
+				"examples": [
+					"A drop in enrollment (招生人数) will affect students, [[faculty]], and administrators.",
+					"These plans were part of a reorganization that divided the university into six [[faculties]]."
+				]
+			},
+			{
+				"zh": "系；部；院",
+				"en": "a department or group of related departments within a university",
+				"examples": [
+					"A drop in enrollment (招生人数) will affect students, [[faculty]], and administrators.",
+					"These plans were part of a reorganization that divided the university into six [[faculties]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "confront",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "处理，解决（问题或困境）",
+				"en": "deal with a problem or difficult situation",
+				"examples": [
+					"You must [[confront]] your fears and doubts and take risks again and again.",
+					"Here are some problems that have [[confronted]] scientists all over the world in the past decade."
+				]
+			},
+			{
+				"zh": "（问题或困境）临到···头上；使面对",
+				"en": "(of a problem or difficult situation) appear and need to be dealt with by sb.",
+				"examples": [
+					"You must [[confront]] your fears and doubts and take risks again and again.",
+					"Here are some problems that have [[confronted]] scientists all over the world in the past decade."
+				]
+			}
+		]
+	},
+	{
+		"english": "quitter",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "遇到困难就放弃的人；半途而废的人",
+				"en": "(infml.) sb. who does not have the determination or courage to finish sth. that is difficult",
+				"examples": [
+					"I have asked you to do this tough task because I know you are not a [[quitter]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "mediocre",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "不太好的",
+				"en": "not very good",
+				"examples": [
+					"Tourists crowd the gift shops along the street to buy [[mediocre]] products at high prices."
+				]
+			}
+		]
+	},
+	{
+		"english": "slipshod",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "马虎的，随便的，草率的（含贬义）",
+				"en": "done too quickly and carelessly — used to show disapproval",
+				"examples": [
+					"She complained that the research project was delayed mainly due to [[slipshod]] management."
+				]
+			}
+		]
+	},
+	{
+		"english": "forgiving",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "宽容的；宽大的",
+				"en": "willing to forgive",
+				"examples": [
+					"The public was more [[forgiving]] of the president's mistakes than the press and fellow politicians."
+				]
+			}
+		]
+	},
+	{
+		"english": "deadline",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "截止时间；最后期限",
+				"en": "a date or time by which you have to do or complete sth.",
+				"examples": [
+					"Without extra help, it's going to be very difficult for us to meet the Friday [[deadline]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "garrulous",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "（尤指对琐事）喋喋不休的，饶舌的",
+				"en": "talking too much, esp. about unimportant things",
+				"examples": [
+					"I had talked too much about myself and felt like a [[garrulous]] old fool."
+				]
+			}
+		]
+	},
+	{
+		"english": "toss",
+		"pos": "v. / n.",
+		"senses": [
+			{
+				"zh": "扔，掷，抛（尤指轻的东西）",
+				"en": "throw sth., esp. sth. light, with a quick gentle movement of your hand",
+				"examples": [
+					"She picked up the package and casually [[tossed]] it into her handbag."
+				]
+			}
+		]
+	},
+	{
+		"english": "dull",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "迟钝的；愚笨的",
+				"en": "slow in understanding; stupid",
+				"examples": [
+					"It's such a simple question. If you don't understand then you are [[duller]] than I thought.",
+					"The documentary lasts for more than two-and-a-half hours, and there is scarcely a [[dull]] minute."
+				]
+			},
+			{
+				"zh": "无趣味的；不刺激的；不生动的",
+				"en": "not interesting or exciting",
+				"examples": [
+					"It's such a simple question. If you don't understand then you are [[duller]] than I thought.",
+					"The documentary lasts for more than two-and-a-half hours, and there is scarcely a [[dull]] minute."
+				]
+			}
+		]
+	},
+	{
+		"english": "unimaginative",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "无创意的；缺乏想象力的",
+				"en": "not new, original, or clever; not showing any imagination",
+				"examples": [
+					"He simply couldn't understand why she thought him to be a stiff and [[unimaginative]] person."
+				]
+			}
+		]
+	},
+	{
+		"english": "fantasy",
+		"pos": "n. [C, U]",
+		"senses": [
+			{
+				"zh": "幻想；想象",
+				"en": "an exciting and unusual experience or situation that you imagine happening to you, but which will probably never happen",
+				"examples": [
+					"Young children sometimes cannot distinguish between [[fantasy]] and reality."
+				]
+			}
+		]
+	},
+	{
+		"english": "pretense",
+		"pos": "n. [U, sing.]",
+		"senses": [
+			{
+				"zh": "假装；作假；做作",
+				"en": "(BrE pretence) a way of behaving which is intended to make people believe sth. that is not true",
+				"examples": [
+					"Now that the [[pretense]] was over, he could tell them what he really thought."
+				]
+			}
+		]
+	},
+	{
+		"english": "conventional",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "依照传统的；符合习俗的",
+				"en": "(usu. before noun) following what is traditional or the way sth. has been done for a long time",
+				"examples": [
+					"It's not a hotel, in the [[conventional]] sense, but rather a whole village turned into a hotel."
+				]
+			}
+		]
+	},
+	{
+		"english": "spoil",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "毁掉；糟蹋；破坏",
+				"en": "have a bad effect on sth. so that it is no longer attractive, enjoyable, useful, etc.",
+				"examples": [
+					"They had an entire week, so there was no need to rush into a conversation that might [[spoil]] everything."
+				]
+			}
+		]
+	},
+	{
+		"english": "deprive",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "剥夺",
+				"en": "(~ sb. of sth.) prevent sb. from having sth., esp. sth. that they need or should have",
+				"examples": [
+					"Some people worry that the advances in information technology may [[deprive]] citizens of their privacy."
+				]
+			}
+		]
+	},
+	{
+		"english": "adequate",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "足够的；充分的；合乎需要的",
+				"en": "enough in quantity or of a good enough quality for a particular purpose",
+				"examples": [
+					"The lunchtime menu is more than [[adequate]] to satisfy the biggest appetite."
+				]
+			}
+		]
+	},
+	{
+		"english": "attentive",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "关心的；肯帮忙的",
+				"en": "helpful; making sure that people have what they need",
+				"examples": [
+					"It is an excellent childcare center for babies as the staff are friendly, relaxed and [[attentive]].",
+					"People who watch news tend to be more [[attentive]] to what is on the screen."
+				]
+			},
+			{
+				"zh": "注意的；留心的；专心的",
+				"en": "listening or watching carefully and with interest",
+				"examples": [
+					"It is an excellent childcare center for babies as the staff are friendly, relaxed and [[attentive]].",
+					"People who watch news tend to be more [[attentive]] to what is on the screen."
+				]
+			}
+		]
+	},
+	{
+		"english": "co-worker",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "同事；同僚",
+				"en": "sb. who works with you and has a similar position",
+				"examples": [
+					"The manual explains what to do if a [[co-worker]] is injured and in need of medical attention."
+				]
+			}
+		]
+	},
+	{
+		"english": "insult",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "侮辱；冒犯",
+				"en": "offend sb. by saying or doing sth. they think is rude",
+				"examples": [
+					"In some cultures, you [[insult]] your host if you do not accept their offer of food."
+				]
+			}
+		]
+	},
+	{
+		"english": "parlous",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "状况极坏的；非常危险的",
+				"en": "(fml.) in a very bad or dangerous condition",
+				"examples": [
+					"Relations between the two countries have been in a [[parlous]] state for some time."
+				]
+			}
+		]
+	},
+	{
+		"english": "tolerate",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "容忍；宽容",
+				"en": "allow people to do, say, or believe sth. without criticizing or punishing them",
+				"examples": [
+					"According to the spokesperson, the government is not prepared to [[tolerate]] the situation any longer.",
+					"For years the workers have had to [[tolerate]] low wages and terrible working conditions."
+				]
+			},
+			{
+				"zh": "忍受；忍耐",
+				"en": "be able to accept sth. unpleasant or difficult, even though you do not like it",
+				"examples": [
+					"According to the spokesperson, the government is not prepared to [[tolerate]] the situation any longer.",
+					"For years the workers have had to [[tolerate]] low wages and terrible working conditions."
+				]
+			}
+		]
+	},
+	{
+		"english": "adolescent",
+		"pos": "n. [C] / adj.",
+		"senses": [
+			{
+				"zh": "青少年（常指12至18岁之间的人）",
+				"en": "a young person, usu. between the ages of 12 and 18, who is developing into an adult",
+				"examples": [
+					"We know that [[adolescents]] are neither children nor adults and they have specific developmental needs."
+				]
+			}
+		]
+	},
+	{
+		"english": "unlearn",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "设法忘记，抛弃（已学会的东西）",
+				"en": "(infml.) deliberately forget sth. you have learned, in order to change the way you do sth.",
+				"examples": [
+					"You must start by [[unlearning]] all the bad habits your previous piano teacher taught you!"
+				]
+			}
+		]
+	},
+	{
+		"english": "preparatory",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "预备的；准备的",
+				"en": "(only before noun) done in order to get ready for sth.",
+				"examples": [
+					"Months of [[preparatory]] work needs to be done before construction work can really begin."
+				]
+			}
+		]
+	},
+	{
+		"english": "formulate",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "仔细思考并明确表达",
+				"en": "think carefully about what to say, and say it clearly",
+				"examples": [
+					"She has lots of good ideas, but she has difficulty [[formulating]] them in front of investors.",
+					"The city government is currently [[formulating]] policies on road expansion to solve traffic problems."
+				]
+			},
+			{
+				"zh": "规划；制定；准备",
+				"en": "develop sth. such as a plan or a set of rules, and decide all the details of how it will be done",
+				"examples": [
+					"She has lots of good ideas, but she has difficulty [[formulating]] them in front of investors.",
+					"The city government is currently [[formulating]] policies on road expansion to solve traffic problems."
+				]
+			}
+		]
+	},
+	{
+		"english": "tolerant",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "宽容的；容忍的",
+				"en": "allowing people to do, say, or believe what they want without criticizing or punishing them",
+				"examples": [
+					"My friends are more [[tolerant]], more willing to accept me for what I am."
+				]
+			}
+		]
+	},
+	{
+		"english": "broaden",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "增长（知识、经验等）；扩大（活动范围等）",
+				"en": "increase sth. such as your knowledge, experience, or range of activities",
+				"examples": [
+					"The course helps school-leavers [[broaden]] their knowledge of the world of work."
+				]
+			}
+		]
+	},
+	{
+		"english": "supposedly",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "据说；据称；一般相信；一般看来",
+				"en": "used when saying what many people say or believe is true, esp. when you disagree with them",
+				"examples": [
+					"He was [[supposedly]] delivering some papers to her but I think it was just an excuse to see her."
+				]
+			}
+		]
+	},
+	{
+		"english": "erase",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "清除；消除；消灭",
+				"en": "remove sth. completely",
+				"examples": [
+					"Mr. Woods wants a convincing victory to [[erase]] doubts about his team's ability.",
+					"It appears the names were accidentally [[erased]] from the computer hard drive."
+				]
+			},
+			{
+				"zh": "删除（计算机文件）；抹去（磁带录音）",
+				"en": "remove information from a computer memory or recorded sounds from a tape",
+				"examples": [
+					"Mr. Woods wants a convincing victory to [[erase]] doubts about his team's ability.",
+					"It appears the names were accidentally [[erased]] from the computer hard drive."
+				]
+			}
+		]
+	},
+	{
+		"english": "semester",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（尤指美国中学和大学的）一学期，半学年",
+				"en": "one of the two periods of time that a year at high schools and universities is divided into, esp. in the US",
+				"examples": [
+					"I was finishing my last [[semester]] in college and trying to look for a job in my hometown."
+				]
+			}
+		]
+	},
+	{
+		"english": "midterm",
+		"pos": "n. [C, U] / adj.",
+		"senses": [
+			{
+				"zh": "期中考试2) the middle period of an elected government's time in power （政府任期的）中期",
+				"en": "(AmE) a test that students take in the middle of a semester or quarter",
+				"examples": [
+					"A commitment to making reforms to the care system will form part of tomorrow's [[midterm]] progress report."
+				]
+			}
+		]
+	},
+	{
+		"english": "final",
+		"pos": "adj. / n.",
+		"senses": [
+			{
+				"zh": "（高中或大学的）期终考试",
+				"en": "(AmE) an important test that you take at the end of a particular class in high school or college",
+				"examples": [
+					"He's through to the men's tennis [[final]] for the first time in his career."
+				]
+			},
+			{
+				"zh": "决赛",
+				"en": "the last and most important game, race, or set of games in a competition",
+				"examples": [
+					"He's through to the men's tennis [[final]] for the first time in his career."
+				]
+			}
+		]
+	},
+	{
+		"english": "due",
+		"pos": "adj. / n.",
+		"senses": [
+			{
+				"zh": "预定的；预期发生（到达）的",
+				"en": "(not before noun) expected to happen or arrive at a particular time",
+				"examples": [
+					"They suddenly gave up the deal the day before they were [[due]] to sign the contract."
+				]
+			}
+		]
+	},
+	{
+		"english": "drop out",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "退学；辍学",
+				"en": "leave a school or university before your course has finished",
+				"examples": [
+					"To everyone's surprise, Bill [[dropped]] out of college after his first year and joined a rock-and-roll band."
+				]
+			}
+		]
+	},
+	{
+		"english": "look back",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "回忆起；回顾",
+				"en": "think about sth. that happened in the past",
+				"examples": [
+					"When you [[look]] back on this experience in a year or two, it won't seem so bad."
+				]
+			}
+		]
+	},
+	{
+		"english": "the easy way out",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "省事的做法",
+				"en": "what is easiest in a difficult situation",
+				"examples": [
+					"It is the easy way out to blame others for our failure though it doesn't make any sense."
+				]
+			}
+		]
+	},
+	{
+		"english": "act out",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "用行动来表现情绪（尤指愤怒或紧张）",
+				"en": "express your feelings about sth. through your behavior or actions, esp. when you have been feeling angry or nervous",
+				"examples": [
+					"These teenagers are likely to [[act]] out their feelings of insecurity by being moody and aggressive."
+				]
+			}
+		]
+	},
+	{
+		"english": "be rid of",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "摆脱某人 / 某事物",
+				"en": "have taken action so that sb. / sth. is no longer there to worry or annoy you",
+				"examples": [
+					"He found his job tedious and time-consuming and he was glad to [[be]] [[rid]] of it."
+				]
+			}
+		]
+	},
+	{
+		"english": "pop into one's mind / head",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "突然冒出（想到）",
+				"en": "suddenly think of sth.",
+				"examples": [
+					"List the product's strengths as well as weaknesses at random as they [[pop]] into your mind."
+				]
+			}
+		]
+	},
+	{
+		"english": "get away with",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "（做错事）不被发现，不受惩罚",
+				"en": "not to be caught or punished when you have done sth. wrong",
+				"examples": [
+					"It's time they put a stop to his bad behavior. He's been [[getting]] away with it for too long."
+				]
+			}
+		]
+	},
+	{
+		"english": "get down to",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "开始认真对待；开始努力做",
+				"en": "start to direct your efforts and attention to sth., esp. work",
+				"examples": [
+					"That's a tourism hotspot. I must [[get]] down to booking the hotel as soon as possible."
+				]
+			}
+		]
+	},
+	{
+		"english": "by no means",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "绝不；一点都不",
+				"en": "not at all",
+				"examples": [
+					"It is by no means clear where the money is going to come from to fund this project."
+				]
+			}
+		]
+	},
+	{
+		"english": "Brown",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "布朗大学（美国大学，位于罗得岛州）",
+				"en": "(Brown University)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Carter A. Daniel",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "卡特 • A. 丹尼尔（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Rutgers University",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "罗格斯大学（美国大学，位于新泽西州）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

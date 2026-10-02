@@ -1,0 +1,425 @@
+[
+	{
+		"english": "insightful",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "领悟力强的；富有洞察力的",
+				"en": "able to understand, or showing that you understand, what a situation or person is really like",
+				"examples": [
+					"We are always looking for more interesting and [[insightful]] ideas to share with our readers."
+				]
+			}
+		]
+	},
+	{
+		"english": "equilibrium",
+		"senses": [
+			{
+				"pos": "n. [U, sing.]",
+				"zh": "平衡；均衡；均势",
+				"en": "a balance between different people, groups, or forces that compete with each other, so that none is stronger than the others and the situation is not likely to change suddenly",
+				"examples": [
+					"The point at which the solid and the liquid are in [[equilibrium]] is called the freezing point."
+				]
+			}
+		]
+	},
+	{
+		"english": "purely",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "完全地；纯粹地；仅仅",
+				"en": "completely and only",
+				"examples": [
+					"The management committee decided to close the museum [[purely]] because it cost too much to run."
+				]
+			}
+		]
+	},
+	{
+		"english": "dilemma",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "进退两难的境地；困境",
+				"en": "a situation in which it is very difficult to decide what to do, because all the choices seem equally good or equally bad",
+				"examples": [
+					"The [[dilemma]] over human cloning lies at the heart of the ethical choices facing society."
+				]
+			}
+		]
+	},
+	{
+		"english": "memorable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "难忘的；值得纪念的",
+				"en": "very good, enjoyable, or unusual, and worth remembering",
+				"examples": [
+					"If you want to catch and save this [[memorable]] event in your life, bring your camera with you."
+				]
+			}
+		]
+	},
+	{
+		"english": "classical",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "经典的；古典的；传统的",
+				"en": "widely accepted and used for a long time; traditional in style or idea",
+				"examples": [
+					"Adam Smith is considered one of the founders of [[classical]] economics."
+				]
+			}
+		]
+	},
+	{
+		"english": "collective",
+		"senses": [
+			{
+				"pos": "adj. / n.",
+				"zh": "集体的；共同的；共有的",
+				"en": "(only before noun) shared or made by every member of a group or society",
+				"examples": [
+					"I think it's our [[collective]] responsibility to create an environment for future generations to be even more successful."
+				]
+			}
+		]
+	},
+	{
+		"english": "welfare",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "幸福；健康；福祉",
+				"en": "health and happiness",
+				"examples": [
+					"Biological scientists have to consider the balance between human health and animal [[welfare]] as they push forward the frontiers of research."
+				]
+			}
+		]
+	},
+	{
+		"english": "allegory",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "寓言；讽刺",
+				"en": "a story, painting, etc. in which the events and characters represent ideas or teach a moral lesson",
+				"examples": [
+					"The book is a kind of [[allegory]] of Latin American history."
+				]
+			}
+		]
+	},
+	{
+		"english": "invisible",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "看不见的；不可见的",
+				"en": "impossible to see",
+				"examples": [
+					"This sophisticated technology allows scientists to find things that are [[invisible]] to the naked eye."
+				]
+			}
+		]
+	},
+	{
+		"english": "disastrous",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "灾难性的；以失败告终的",
+				"en": "very bad, or ending in failure",
+				"examples": [
+					"In some cases, lowering interest rates could have [[disastrous]] consequences for the economy."
+				]
+			}
+		]
+	},
+	{
+		"english": "burglar",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "入室窃贼",
+				"en": "sb. who goes into houses, shops, etc. to steal things",
+				"examples": [
+					"A number of [[burglars]] broke into the gallery and stole dozens of priceless paintings."
+				]
+			}
+		]
+	},
+	{
+		"english": "accuse",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "控告；指控；指责",
+				"en": "say that you believe sb. is guilty of a crime or of doing sth. bad",
+				"examples": [
+					"No one could ever [[accuse]] this government of not caring about the poor."
+				]
+			}
+		]
+	},
+	{
+		"english": "robbery",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "抢劫",
+				"en": "the crime of stealing money or things from a bank, shop, etc., esp. using violence",
+				"examples": [
+					"The gang (犯罪团伙) admitted they had committed four recent bank [[robberies]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "confess",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（尤指向警方）坦白，招认，招供",
+				"en": "admit, esp. to the police, that you have done sth. wrong or illegal",
+				"examples": [
+					"Gabriele [[confessed]] to leaking copies of the documents to the press because he wanted to expose the \"evil and corruption\" in the company."
+				]
+			}
+		]
+	},
+	{
+		"english": "optimal",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "最佳的；最适宜的",
+				"en": "(fml.) the best or most suitable",
+				"examples": [
+					"They insist their business idea is [[optimal]] and will be wildly acceptable to customers."
+				]
+			}
+		]
+	},
+	{
+		"english": "better off",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "更好的",
+				"en": "being in a better situation, if or after sth. happens",
+				"examples": [
+					"You'd be [[better]] off living on your own than quarreling all the time with your dad."
+				]
+			}
+		]
+	},
+	{
+		"english": "equivalent",
+		"senses": [
+			{
+				"pos": "adj. / n. [C]",
+				"zh": "同等物；等价物；对应物",
+				"en": "sth. that has the same value, purpose, job, etc. as sth. else",
+				"examples": [
+					"Is there a French word that is the exact [[equivalent]] of the English word \"home\"?"
+				]
+			}
+		]
+	},
+	{
+		"english": "comparative",
+		"senses": [
+			{
+				"pos": "adj. / n.",
+				"zh": "比较而言的；相对的",
+				"en": "measured or judged by how similar or different it is to sth. else; relative",
+				"examples": [
+					"After living in poverty for most of his lifetime, he spent his last few years in [[comparative]] comfort."
+				]
+			}
+		]
+	},
+	{
+		"english": "emit",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "散发，发出（气、热、光、声音等）",
+				"en": "send out gas, heat, light, sound, etc.",
+				"examples": [
+					"The machine will [[emit]] a noisy sound when you press the red button."
+				]
+			}
+		]
+	},
+	{
+		"english": "inaction",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "（人）无行动，没反应",
+				"en": "the fact that sb. is not doing anything",
+				"examples": [
+					"The city council was accused of [[inaction]] on the parking problem of the city."
+				]
+			}
+		]
+	},
+	{
+		"english": "CV",
+		"senses": [
+			{
+				"pos": "缩写",
+				"zh": "简历；履历",
+				"en": "(curriculum vitae) a short written document that lists your education and previous jobs, which you send to employers when you are looking for a job",
+				"examples": [
+					"Applicants interested in applying for the position should submit their [[CVs]] no later than February 15."
+				]
+			}
+		]
+	},
+	{
+		"english": "entail",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使必要；需要",
+				"en": "involve sth. as a necessary part or result",
+				"examples": [
+					"The job of a dance teacher [[entails]] teaching students the technique and performance of dance movements."
+				]
+			}
+		]
+	},
+	{
+		"english": "inefficiency",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "低效率",
+				"en": "the fact of not using time, money, energy, etc. in the best way",
+				"examples": [
+					"The conflict between management and workers makes for [[inefficiency]] in the workplace."
+				]
+			}
+		]
+	},
+	{
+		"english": "intervene",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "干预；介入；插手",
+				"en": "become involved in an argument, fight, or other difficult situation in order to change what happens",
+				"examples": [
+					"I don't usually like to [[intervene]] in disputes between husbands and wives."
+				]
+			}
+		]
+	},
+	{
+		"english": "intervention",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "干涉；干预；介入",
+				"en": "the act of becoming involved in an argument, fight, or other difficult situation in order to change what happens",
+				"examples": [
+					"Repeated [[interventions]] on the currency markets have failed to prevent the value of the currency falling."
+				]
+			}
+		]
+	},
+	{
+		"english": "binding",
+		"senses": [
+			{
+				"pos": "n. / adj.",
+				"zh": "有法律约束力的；必须遵守的",
+				"en": "that must be obeyed because it is accepted in law",
+				"examples": [
+					"Participants in the world trade talks have agreed to negotiate specific [[binding]] commitments."
+				]
+			}
+		]
+	},
+	{
+		"english": "incentive",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "刺激；动力；鼓励",
+				"en": "sth. that encourages you to work harder, start a new activity, etc.",
+				"examples": [
+					"There is little [[incentive]] for people to leave their cars at home when public transport remains so expensive."
+				]
+			}
+		]
+	},
+	{
+		"english": "take sth. as a given",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "认为某事理所当然如此；认为某事是想当然（尤用于得出观点）",
+				"en": "accept that sth. is true or exists, esp. when you are developing an idea or argument",
+				"examples": [
+					"The fact that people find change difficult is taken as a given."
+				]
+			}
+		]
+	},
+	{
+		"english": "come in",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "卷入；参与",
+				"en": "be involved in a plan, deal, etc.",
+				"examples": [
+					"We need some financial advice — that's where Kate [[comes]] in."
+				]
+			}
+		]
+	},
+	{
+		"english": "John Nash",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "约翰 • 纳什（美国数学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Russell Crowe",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "罗素 • 克劳（澳大利亚演员）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Adam Smith",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "亚当 • 斯密（苏格兰经济学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

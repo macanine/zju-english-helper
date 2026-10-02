@@ -1,0 +1,476 @@
+[
+	{
+		"english": "computational",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "使用计算机的",
+				"en": "using computers",
+				"examples": [
+					"Students may pursue research in any aspect of [[computational]] linguistics based on their own interest."
+				]
+			}
+		]
+	},
+	{
+		"english": "emergence",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "出现；显现",
+				"en": "when sth. begins to be known or noticed",
+				"examples": [
+					"Future research should look at the behavior and ecology of these worms to understand what caused the [[emergence]] of new species."
+				]
+			}
+		]
+	},
+	{
+		"english": "consciousness",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "思想；意识",
+				"en": "mind and thoughts",
+				"examples": [
+					"The flow of everyday life provides a context in which individual human [[consciousness]] operates.",
+					"When the man finally regains [[consciousness]] and walks to a mirror, he is unsure of who he is."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "神志清醒",
+				"en": "the condition of being awake and able to understand what is happening around you",
+				"examples": [
+					"The flow of everyday life provides a context in which individual human [[consciousness]] operates.",
+					"When the man finally regains [[consciousness]] and walks to a mirror, he is unsure of who he is."
+				]
+			}
+		]
+	},
+	{
+		"english": "subjective",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "主观的",
+				"en": "based on or influenced by personal feelings, tastes or opinions rather than facts",
+				"examples": [
+					"We know that taste in art is a [[subjective]] matter and differs from person to person."
+				]
+			}
+		]
+	},
+	{
+		"english": "quirk",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "怪癖；古怪",
+				"en": "a strange habit or feature of sb.'s character, or a strange feature of sth.",
+				"examples": [
+					"She took pride in her children's [[quirks]] and individuality, and made no effort to try to change them.",
+					"Years later, by a strange [[quirk]] of fate, she found herself sitting next to him on a plane."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "（偶然发生的）奇事，巧合",
+				"en": "sth. strange that happens by chance",
+				"examples": [
+					"She took pride in her children's [[quirks]] and individuality, and made no effort to try to change them.",
+					"Years later, by a strange [[quirk]] of fate, she found herself sitting next to him on a plane."
+				]
+			}
+		]
+	},
+	{
+		"english": "time-scale",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（做某事所需要的）时间，时段",
+				"en": "(esp. BrE) the period of time it takes for sth. to happen or be completed",
+				"examples": [
+					"The [[time-scale]] for completing the work would be fairly tight and we have to work hard."
+				]
+			}
+		]
+	},
+	{
+		"english": "empathise",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "同情；有同感；产生共鸣",
+				"en": "(AmE empathize) be able to understand sb. else's feelings, problems, etc., esp. because you have had similar experiences",
+				"examples": [
+					"My mother died last year so I can really [[empathise]] with what he's going through."
+				]
+			}
+		]
+	},
+	{
+		"english": "conceive",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "构思，设想，想出（新的主意、计划等）",
+				"en": "think of a new idea, plan, etc. and develop it in your mind",
+				"examples": [
+					"Scientists first [[conceived]] the idea of the atomic bomb in the 1930s.",
+					"Language may be [[conceived]] of as a process which arises from social interaction."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "想象；构想；设想",
+				"en": "v.(fml.) imagine a particular situation or think about sth. in a particular way",
+				"examples": [
+					"Scientists first [[conceived]] the idea of the atomic bomb in the 1930s.",
+					"Language may be [[conceived]] of as a process which arises from social interaction."
+				]
+			}
+		]
+	},
+	{
+		"english": "artefact",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "人工制品，手工艺品（有史学价值的工具、武器等）",
+				"en": "(esp. BrE) (also artifact esp. AmE) an object such as a tool or weapon that was made in the past and is historically important",
+				"examples": [
+					"The museum is well-known for having many [[artefacts]] dating back to prehistoric times."
+				]
+			}
+		]
+	},
+	{
+		"english": "coherent",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（文章、观点等）连贯的，有条理的，一致的",
+				"en": "if a piece of writing, set of ideas, etc. is coherent, it is easy to understand because it is clear and reasonable",
+				"examples": [
+					"It makes me crazy that the board seems to have no [[coherent]] plan for saving the company."
+				]
+			}
+		]
+	},
+	{
+		"english": "implausibly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "难以置信地；不可能真实地",
+				"en": "in a way that is difficult to believe and therefore unlikely to be true",
+				"examples": [
+					"He argued, somewhat [[implausibly]], that the accident could not have been prevented."
+				]
+			}
+		]
+	},
+	{
+		"english": "misinterpretation",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "误解",
+				"en": "the act of forming a wrong understanding of sth. that is said or done, or an example of a wrong understanding",
+				"examples": [
+					"It appears that this universally promoted idea was based on a [[misinterpretation]] of the test results."
+				]
+			}
+		]
+	},
+	{
+		"english": "authentically",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "正宗地；原汁原味地",
+				"en": "in the traditional or original way",
+				"examples": [
+					"Consumers are increasingly interested in the [[authentically]] prepared food."
+				]
+			}
+		]
+	},
+	{
+		"english": "orchestra",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（大型的）管弦乐队",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "symphony",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "交响乐；交响曲",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "considerably",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "很；非常；相当大（多）地",
+				"en": "much; a lot",
+				"examples": [
+					"Housing conditions in this area have improved [[considerably]] over the past few years."
+				]
+			}
+		]
+	},
+	{
+		"english": "acoustics",
+		"senses": [
+			{
+				"pos": "n. [pl., U]",
+				"zh": "（房间的）传声效果，音响效果",
+				"en": "the shape and size of a room, which affect the way sound is heard in it",
+				"examples": [
+					"The auditorium has comfortable seating and modern [[acoustics]]."
+				]
+			},
+			{
+				"pos": "n. [pl., U]",
+				"zh": "声学",
+				"en": "the scientific study of sound",
+				"examples": [
+					"The auditorium has comfortable seating and modern [[acoustics]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "formalise",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使（计划、决定或想法）正式化；使定形；使具体化",
+				"en": "(esp. BrE) (AmE formalize) make a plan, decision, or idea official, esp. by deciding and clearly describing all the details",
+				"examples": [
+					"Final arrangements for the takeover of the company have yet to be [[formalised]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "contextual",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "与上下文有关的",
+				"en": "(usu. before noun) relating to a particular context",
+				"examples": [
+					"Now We need to examine the role of [[contextual]] factors directly and in more detail."
+				]
+			}
+		]
+	},
+	{
+		"english": "execute",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "实行；执行",
+				"en": "do sth. that has been carefully planned",
+				"examples": [
+					"The job involves drawing up and [[executing]] a plan of nursing care.",
+					"Anyone caught trying to escape from that prison would be [[executed]]."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（尤指依法）将···处死",
+				"en": "kill sb., esp. legally as a punishment",
+				"examples": [
+					"The job involves drawing up and [[executing]] a plan of nursing care.",
+					"Anyone caught trying to escape from that prison would be [[executed]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "formula",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "配方",
+				"en": "a list of the exact amounts of the ingredients that are used for making sth.",
+				"examples": [
+					"The [[formulas]] for these drinks are closely guarded secrets of the company.",
+					"He developed a mathematical [[formula]] describing the distances of the planets from the Sun."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "公式；方程式；分子式",
+				"en": "a series of numbers or letters that represent a mathematical or scientific rule",
+				"examples": [
+					"The [[formulas]] for these drinks are closely guarded secrets of the company.",
+					"He developed a mathematical [[formula]] describing the distances of the planets from the Sun."
+				]
+			}
+		]
+	},
+	{
+		"english": "artistic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "美术的；艺术的",
+				"en": "relating to art or culture",
+				"examples": [
+					"According to a famous art critic, opinion about the [[artistic]] merit of his paintings has been mixed.",
+					"His friends are all [[artistic]] — they're painters, musicians, dancers, and writers."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "艺术精湛的；有艺术才华的",
+				"en": "good at painting, drawing, or producing beautiful things",
+				"examples": [
+					"According to a famous art critic, opinion about the [[artistic]] merit of his paintings has been mixed.",
+					"His friends are all [[artistic]] — they're painters, musicians, dancers, and writers."
+				]
+			}
+		]
+	},
+	{
+		"english": "volition",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "出于自愿",
+				"en": "(of one's own ~) (fml.) if you do sth. of your own volition, you do it because you want to, not because you are forced to",
+				"examples": [
+					"To everyone's astonishment, Helena left the company of her own [[volition]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "procedural",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "程序性的；手续上的",
+				"en": "(only before noun) (fml.) connected with a procedure",
+				"examples": [
+					"The business of the committee was delayed by [[procedural]] difficulties."
+				]
+			}
+		]
+	},
+	{
+		"english": "autonomous",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有自主能力的；自主的",
+				"en": "(fml.) having the ability to work and make decisions by yourself without any help from anyone else",
+				"examples": [
+					"It is teachers' responsibility to help children become [[autonomous]] learners.",
+					"Five provinces are to become [[autonomous]] regions in the new federal system of government."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "（地方或机构）自治的",
+				"en": "an autonomous place or organization is free to govern or control itself",
+				"examples": [
+					"It is teachers' responsibility to help children become [[autonomous]] learners.",
+					"Five provinces are to become [[autonomous]] regions in the new federal system of government."
+				]
+			}
+		]
+	},
+	{
+		"english": "interact",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "交流；交往；互相来往",
+				"en": "if people interact with each other, they talk to each other, work together, etc.",
+				"examples": [
+					"The little girl's teacher told her mom that she [[interacted]] well with the other children."
+				]
+			}
+		]
+	},
+	{
+		"english": "interactive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（计算机程序、电视系统等）交互的，互动的",
+				"en": "an interactive computer program, television system, etc. allows you to communicate directly with it, and does things in reaction to your actions",
+				"examples": [
+					"This is an [[interactive]] museum where children can actively manipulate the exhibits.",
+					"Our school encourages [[interactive]] teaching methods, such as role playing."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "合作的； 相互交流的",
+				"en": "involving talking and working together",
+				"examples": [
+					"This is an [[interactive]] museum where children can actively manipulate the exhibits.",
+					"Our school encourages [[interactive]] teaching methods, such as role playing."
+				]
+			}
+		]
+	},
+	{
+		"english": "eagerness",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "渴望",
+				"en": "the state of wanting to do or have sth. very much, esp. sth. interesting or enjoyable",
+				"examples": [
+					"People were pushing each other out of the way in their [[eagerness]] to get to the front."
+				]
+			}
+		]
+	},
+	{
+		"english": "comprehension",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "理解（力）",
+				"en": "the ability to understand sth.",
+				"examples": [
+					"It's annoying that they don't have the least [[comprehension]] of what I'm trying to do."
+				]
+			}
+		]
+	},
+	{
+		"english": "as such",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "从字面意义来看；严格地说",
+				"en": "in the true or exact meaning of the word or phrase",
+				"examples": [
+					"There wasn't much vegetarian food as such, although there were several types of salads."
+				]
+			}
+		]
+	}
+]

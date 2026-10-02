@@ -1,0 +1,732 @@
+[
+	{
+		"english": "confession",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "承认；坦白",
+				"en": "the act of admitting one’s crimes, faults, etc.",
+				"examples": [
+					"I have a [[confession]] to make — I scraped (擦坏) your car when I was parking mine."
+				]
+			}
+		]
+	},
+	{
+		"english": "devote",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "致力；献身；倾注",
+				"en": "use all or most of your time, effort, etc. in order to do sth. or help sb.",
+				"examples": [
+					"After graduating from law school, he [[devoted]] his energies to writing film scripts."
+				]
+			}
+		]
+	},
+	{
+		"english": "devoted",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "忠实的；热爱···的",
+				"en": "showing great fondness or loyalty; caring a great deal",
+				"examples": [
+					"There is absolutely no doubt that this woman was a totally [[devoted]] and caring mother."
+				]
+			}
+		]
+	},
+	{
+		"english": "insatiable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "无法满足的",
+				"en": "impossible to satisfy",
+				"examples": [
+					"The public has an [[insatiable]] appetite for stories about famous people."
+				]
+			}
+		]
+	},
+	{
+		"english": "craving",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "渴望；热望",
+				"en": "a very strong desire for sth.",
+				"examples": [
+					"Surprisingly, his headache and fatigue subsided (减轻) and his [[craving]] for alcohol disappeared."
+				]
+			}
+		]
+	},
+	{
+		"english": "tropical",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "来自热带的；产于热带的；热带的",
+				"en": "coming from, found in, or typical of the tropics",
+				"examples": [
+					"Under normal conditions, the ocean currents of the [[tropical]] Pacific travel from east to west."
+				]
+			}
+		]
+	},
+	{
+		"english": "challenging",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "富有挑战性的",
+				"en": "difficult in an interesting or enjoyable way",
+				"examples": [
+					"Mike found a [[challenging]] job as a computer programmer."
+				]
+			}
+		]
+	},
+	{
+		"english": "calculus",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "微积分",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "adjust",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）适应；（使）习惯",
+				"en": "gradually become familiar with a new situation",
+				"examples": [
+					"I felt I had [[adjusted]] to the idea of being a mother very well."
+				]
+			}
+		]
+	},
+	{
+		"english": "dorm",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "（大学里的）学生宿舍楼",
+				"en": "(BrE hall of residence, infml.)",
+				"examples": []
+			},
+			{
+				"pos": "n.",
+				"zh": "大寝室；宿舍",
+				"en": "(esp. BrE, infml.)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "zucchini",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（绿皮）密生西葫芦",
+				"en": "(pl. zucchini or zucchinis) (BrE courgette)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "cucumber",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "黄瓜",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "disposal",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "处置权",
+				"en": "the power or opportunity to use sb. / sth.",
+				"examples": [
+					"During their visit, I left my car at their [[disposal]]."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "清理；处理",
+				"en": "the act or means of getting rid of sth.",
+				"examples": [
+					"We should not give up this option for the [[disposal]] of nuclear waste."
+				]
+			}
+		]
+	},
+	{
+		"english": "peruse",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "仔细研究；仔细考虑",
+				"en": "examine or consider with attention and in detail",
+				"examples": [
+					"Officials of the union are [[perusing]] the deal."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "读；（尤指）细读，精读",
+				"en": "(fml.) read sth, esp. in a careful way",
+				"examples": [
+					"She found the information while she was [[perusing]] a copy of Life magazine."
+				]
+			}
+		]
+	},
+	{
+		"english": "grimly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "担忧地；不快地",
+				"en": "in a worried or unhappy way",
+				"examples": [
+					"\"We have to get those windows open,\" I announced [[grimly]] to my husband."
+				]
+			},
+			{
+				"pos": "adv.",
+				"zh": "严肃地",
+				"en": "seriously",
+				"examples": [
+					"\"Now, I can wait for you,\" he said [[grimly]], \"but hurry up.\""
+				]
+			}
+		]
+	},
+	{
+		"english": "mealy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（水果或蔬菜）干巴难吃的",
+				"en": "(fruit or vegetables) dry and not tasting good",
+				"examples": [
+					"The apples we bought yesterday are kind of [[mealy]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "pinkish",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "浅粉红色的",
+				"en": "of a light shade of red",
+				"examples": [
+					"Her nostrils (鼻孔) were [[pinkish]], as though she had a cold."
+				]
+			}
+		]
+	},
+	{
+		"english": "iceberg lettuce",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "卷心莴苣",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "wrap",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "（用纸或布）包，裹（某物）",
+				"en": "(also ~ up) put paper or cloth over sth. to cover it",
+				"examples": [
+					"He [[wrapped]] a bandage around my injured wrist."
+				]
+			}
+		]
+	},
+	{
+		"english": "wrapper",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（商品的）包装纸（塑料）",
+				"en": "the piece of paper or plastic that covers sth. when it is sold",
+				"examples": [
+					"The kids were asked to put the sweet [[wrappers]] into the rubbish bin."
+				]
+			}
+		]
+	},
+	{
+		"english": "peel",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "（水果和蔬菜的）外皮（尤指橙子等不能食用的厚皮）",
+				"en": "the skin of some fruit and vegetables, esp. the thick skin of fruit such as oranges, which you do not eat",
+				"examples": [
+					"Usually, we speak of orange [[peel]] and apple [[peel]], but of tomato skin."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "剥去（削去）（水果或蔬菜）的皮",
+				"en": "remove the skin from fruit or vegetables",
+				"examples": [
+					"She sat down in the kitchen and began to [[peel]] potatoes."
+				]
+			}
+		]
+	},
+	{
+		"english": "unworldly",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "不谙世故的；天真的",
+				"en": "not having a lot of experience of life",
+				"examples": [
+					"I cannot believe you have such [[unworldly]] views on things as a grown man."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "对钱财不感兴趣；脱俗的",
+				"en": "not interested in money or possessions",
+				"examples": [
+					"The singer seems somewhat [[unworldly]] because he hates commercial advertising and social activities."
+				]
+			}
+		]
+	},
+	{
+		"english": "cultured",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有文化的；有教养的；有修养的",
+				"en": "having or showing good education, manners, and an interest in art, music, literature, etc.",
+				"examples": [
+					"The people who will be on the committee are moral, [[cultured]], and competent."
+				]
+			}
+		]
+	},
+	{
+		"english": "realization",
+		"senses": [
+			{
+				"pos": "n. [U, sing.]",
+				"zh": "认识；意识；领悟",
+				"en": "(BrE also realisation) the process of becoming aware of sth.",
+				"examples": [
+					"There is now a growing [[realization]] that things cannot go on like this for much longer."
+				]
+			}
+		]
+	},
+	{
+		"english": "grant",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（因习以为常）视···为理所当然（而对其不重视）",
+				"en": "(take sb. / sth. for granted) be so used to sb. / sth. that you do not recognize their true value any more and do not show that you are grateful",
+				"examples": [
+					"I came into adult life clueless about a lot of things that most people take for [[granted]]."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "给予；准予",
+				"en": "(fml.) give sb. sth. or allow them to have sth. that they have asked for",
+				"examples": [
+					"In response to the lawyer's appeals, the Home Secretary [[granted]] a free pardon (赦免)."
+				]
+			}
+		]
+	},
+	{
+		"english": "motivation",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "动机；原因",
+				"en": "the reason why you want to do sth.",
+				"examples": [
+					"What was your [[motivation]] for becoming a doctor?"
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "动力；积极性",
+				"en": "eagerness and willingness to do sth. without needing to be told or forced to do it",
+				"examples": [
+					"Jack is an intelligent pupil, but he lacks [[motivation]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "priority",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "优先处理的事；当务之急",
+				"en": "sth. that needs attention, consideration, service, etc. before others",
+				"examples": [
+					"After several burglaries (入室盗窃) in the area, security is now a high [[priority]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "golden",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "金色的",
+				"en": "of the color of gold",
+				"examples": [
+					"He was so attracted by the girl with [[golden]] hair that he did not hear anything his father said."
+				]
+			}
+		]
+	},
+	{
+		"english": "yolk",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "蛋黄",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "crunch",
+		"senses": [
+			{
+				"pos": "n. [sing.] / v.",
+				"zh": "嘎吱的响声",
+				"en": "the sound of sth. being crushed or like sth. being crushed or broken",
+				"examples": [
+					"I heard a loud [[crunch]] as the truck ran into the wall."
+				]
+			}
+		]
+	},
+	{
+		"english": "organic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "不使用化肥的；有机的；绿色的",
+				"en": "relating to farming or gardening methods of growing food without using artificial chemicals, or produced or grown by these methods",
+				"examples": [
+					"Now [[organic]] farming is expanding everywhere in China."
+				]
+			}
+		]
+	},
+	{
+		"english": "free-range",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "放养的；散养的",
+				"en": "relating to a type of farming which allows animals such as chickens and pigs to move around and eat naturally, rather than being kept in a restricted space",
+				"examples": [
+					"She says that [[free-range]] chickens taste much better than factory-farmed ones."
+				]
+			}
+		]
+	},
+	{
+		"english": "participate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "参加；参与",
+				"en": "(fml.) take part in an activity or event",
+				"examples": [
+					"China will actively [[participate]] in global affairs and play a constructive role in maintaining world peace."
+				]
+			}
+		]
+	},
+	{
+		"english": "earbud",
+		"senses": [
+			{
+				"pos": "n. [C, usu. pl.]",
+				"zh": "耳塞（小型耳机）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "melt",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）熔化，融化",
+				"en": "become or make sth. become liquid as a result of heating",
+				"examples": [
+					"The snow had [[melted]], but the lake was still frozen solid."
+				]
+			}
+		]
+	},
+	{
+		"english": "sustenance",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "营养；食物",
+				"en": "(fml.) food which keeps people or animals strong and healthy",
+				"examples": [
+					"Throughout human history we have depended on nature for [[sustenance]], well-being, and development."
+				]
+			}
+		]
+	},
+	{
+		"english": "profound",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "巨大的；重大的",
+				"en": "very great",
+				"examples": [
+					"The mother's behavior has a [[profound]] impact on the developing child."
+				]
+			}
+		]
+	},
+	{
+		"english": "far-reaching",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "影响深远的",
+				"en": "having a great influence or effect",
+				"examples": [
+					"The report outlines the most [[far-reaching]] changes in housing policy for 30 years."
+				]
+			}
+		]
+	},
+	{
+		"english": "grave",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "严重的；重大的；严峻的",
+				"en": "grave problems, situations, or worries are very great or bad",
+				"examples": [
+					"The situation poses a [[grave]] threat to world peace."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "墓穴；坟墓",
+				"en": "a place in the ground where a dead body is buried",
+				"examples": [
+					"She tore the rose apart and scattered the petals (花瓣) over the [[grave]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "prediction",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "预言；预测",
+				"en": "a statement about what you think is going to happen, or the act of making this statement",
+				"examples": [
+					"He was unwilling to make a [[prediction]] about which books would sell well in the coming year."
+				]
+			}
+		]
+	},
+	{
+		"english": "get (sb.) through",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "熬过或助人熬过（困境）",
+				"en": "pass or assist sb. in passing (a difficult, testing experience, or period)",
+				"examples": [
+					"I don't know how we're going to [[get through]] the winter."
+				]
+			}
+		]
+	},
+	{
+		"english": "make fun of",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "嘲笑；取笑",
+				"en": "laugh, or cause others to laugh, rather unkindly at",
+				"examples": [
+					"People [[make fun of]] her because she wears such a strange hat."
+				]
+			}
+		]
+	},
+	{
+		"english": "at one's disposal",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "供某人支配",
+				"en": "able to be used freely by sb.",
+				"examples": [
+					"We will use all the means at our disposal to solve this problem."
+				]
+			}
+		]
+	},
+	{
+		"english": "pick out",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "分辨出；辨认出",
+				"en": "recognize sb. / sth. in a group of people or things",
+				"examples": [
+					"Steven describes himself as \"a regular guy — you couldn't [[pick out]] me out of a crowd.\""
+				]
+			}
+		]
+	},
+	{
+		"english": "keep sth. to oneself",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "把···秘而不宣；不将···说出去",
+				"en": "not tell anyone about sth.",
+				"examples": [
+					"I have to tell someone. I can't [[keep it to myself]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "be far removed from sth.",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "与···大相径庭；与···不相干",
+				"en": "be very different from sth; not be connected with sth.",
+				"examples": [
+					"Many of these books are far removed from the reality of children's lives."
+				]
+			}
+		]
+	},
+	{
+		"english": "rely on",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "依靠",
+				"en": "be dependent on",
+				"examples": [
+					"They have to [[rely on]] the river for their water."
+				]
+			}
+		]
+	},
+	{
+		"english": "in season",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（水果或蔬菜）当令的",
+				"en": "(of fruit or vegetables) easily available and ready to eat because it is the right time of year for them",
+				"examples": [
+					"These are the dog days (伏天); watermelons are just in season."
+				]
+			}
+		]
+	},
+	{
+		"english": "next to",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "仅次于；紧接",
+				"en": "following in order or importance after sb. / sth.",
+				"examples": [
+					"[[Next to]] biology, I like physics best."
+				]
+			}
+		]
+	},
+	{
+		"english": "for the most part",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "通常；多半",
+				"en": "mostly; usually",
+				"examples": [
+					"These small pieces of land were purchased [[for the most part]] by local people."
+				]
+			}
+		]
+	},
+	{
+		"english": "down / along the road",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "在将来；今后",
+				"en": "in the future",
+				"examples": [
+					"She might be able to help you pursue a promotion [[down the road]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "Appalachia",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "阿巴拉契亚（美国东部地区）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

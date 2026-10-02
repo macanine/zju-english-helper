@@ -1,0 +1,473 @@
+[
+	{
+		"english": "stereotype",
+		"senses": [
+			{
+				"pos": "n. [C] / v.",
+				"zh": "模式化的思想；老一套；旧框框",
+				"en": "a belief or idea of what a particular type of person or thing is like",
+				"examples": [
+					"Current evidence indicates that older people are more healthy than popular [[stereotypes]] suggest."
+				]
+			}
+		]
+	},
+	{
+		"english": "prominence",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "重要；杰出；著名",
+				"en": "the fact of being important and well-known",
+				"examples": [
+					"His rise to [[prominence]] would not have been possible without the war."
+				]
+			}
+		]
+	},
+	{
+		"english": "sentiment",
+		"senses": [
+			{
+				"pos": "n. [U, C]",
+				"zh": "多愁善感；感情因素",
+				"en": "feelings of pity, love, sadness, etc. that are often considered to be too strong or not suitable for a particular situation",
+				"examples": [
+					"He was overwhelmed by [[sentiment]] as he thought of his wife."
+				]
+			},
+			{
+				"pos": "n. [U, C]",
+				"zh": "意见；观点；感想",
+				"en": "(fml.) an opinion or feeling you have about sth.",
+				"examples": [
+					"Public [[sentiment]] is against any change to the law."
+				]
+			}
+		]
+	},
+	{
+		"english": "feminine",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（指气质或外貌）女性特有的；女性的",
+				"en": "having the qualities or appearance considered to be typical of women; connected with women",
+				"examples": [
+					"Amelia's report describes the experience from a [[feminine]] point of view."
+				]
+			}
+		]
+	},
+	{
+		"english": "literary",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "文学的；文学上的",
+				"en": "connected with literature",
+				"examples": [
+					"In a [[literary]] essay, you should explore the meaning and construction of the text."
+				]
+			}
+		]
+	},
+	{
+		"english": "maternal",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "母性的；母亲般慈爱的",
+				"en": "having feelings that are typical of a caring mother toward a child",
+				"examples": [
+					"She seems to have a strong [[maternal]] instinct."
+				]
+			}
+		]
+	},
+	{
+		"english": "excessively",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "过度地；过多地",
+				"en": "to a much greater level or degree than seems reasonable or appropriate",
+				"examples": [
+					"The country relies [[excessively]] on borrowing from abroad."
+				]
+			}
+		]
+	},
+	{
+		"english": "gender",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "性别",
+				"en": "the fact of being male or female",
+				"examples": [
+					"It is a country where [[gender]] roles have remained largely unchanged."
+				]
+			}
+		]
+	},
+	{
+		"english": "inequality",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "不平等；不平衡；不平均",
+				"en": "the unfair difference between groups of people in society, when some have more wealth, status, or opportunities than others",
+				"examples": [
+					"There has been an increase in economic [[inequality]] between different areas of the country."
+				]
+			}
+		]
+	},
+	{
+		"english": "bias",
+		"senses": [
+			{
+				"pos": "n. [U, sing.] / v.",
+				"zh": "偏见；成见；偏心",
+				"en": "an unfair personal opinion that influences your judgment",
+				"examples": [
+					"It's clear that the company has a [[bias]] against women."
+				]
+			}
+		]
+	},
+	{
+		"english": "periodical",
+		"senses": [
+			{
+				"pos": "n. [C] / adj.",
+				"zh": "期刊",
+				"en": "a magazine, esp. one about a serious or technical subject",
+				"examples": [
+					"Readers will find a complete list of [[periodicals]] dealing with that subject."
+				]
+			}
+		]
+	},
+	{
+		"english": "publication",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "（书刊等的）出版，发行；出版物",
+				"en": "the act of printing a book, a magazine, etc. and making it available to the public; a book, a magazine, etc. that has been published",
+				"examples": [
+					"That professor was the author of 70 major scientific [[publications]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "analyze",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "分析；剖析",
+				"en": "(BrE analyse) examine or think about sth. carefully, in order to understand it",
+				"examples": [
+					"We use a special computer program to [[analyze]] all the sales figures."
+				]
+			}
+		]
+	},
+	{
+		"english": "identify",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "认出，识别（某人或某物）",
+				"en": "recognize and correctly name sb. / sth.",
+				"examples": [
+					"Passengers were asked to [[identify]] their own suitcases before they were put on the plane."
+				]
+			}
+		]
+	},
+	{
+		"english": "confirmation",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "证实；证明",
+				"en": "a statement, letter, etc. that shows that sth. is true, correct, or definite",
+				"examples": [
+					"I'm still waiting for [[confirmation]] of the test results."
+				]
+			}
+		]
+	},
+	{
+		"english": "predictable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "可预料的；可预见的",
+				"en": "acting or happening in a way that is expected",
+				"examples": [
+					"In March and April, the weather in this area is much less [[predictable]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "startling",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "异乎寻常的；令人惊奇的",
+				"en": "very unusual or surprising",
+				"examples": [
+					"These myths have a [[startling]] likeness to one another."
+				]
+			}
+		]
+	},
+	{
+		"english": "distinctive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "特有的；特别的；有特色的",
+				"en": "having a quality or characteristic that makes sth. different and easily noticed",
+				"examples": [
+					"Whatever you think of his poetry, it's certainly [[distinctive]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "identical",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "完全相同的；极为相似的",
+				"en": "exactly the same, or very similar",
+				"examples": [
+					"The picture is [[identical]] to the one in The Museum of Modern Art in New York."
+				]
+			}
+		]
+	},
+	{
+		"english": "concerted",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "齐心协力的；一致的",
+				"en": "(only before noun) done in a planned and determined way, esp. by more than one person, government, country, etc.",
+				"examples": [
+					"Libraries have made a [[concerted]] effort to attract young people."
+				]
+			}
+		]
+	},
+	{
+		"english": "discourse",
+		"senses": [
+			{
+				"pos": "n. [C] / v.",
+				"zh": "（关于某主题的）演讲，论述，著述",
+				"en": "a serious speech or piece of writing on a particular subject",
+				"examples": [
+					"Hastings responds with a lengthy [[discourse]] on marketing strategies."
+				]
+			}
+		]
+	},
+	{
+		"english": "quantitative",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（数）量的；与数量有关的；定量的",
+				"en": "(fml.) relating to amounts rather than to the quality or standard of sth.",
+				"examples": [
+					"We need to do a proper [[quantitative]] analysis of this problem."
+				]
+			}
+		]
+	},
+	{
+		"english": "representation",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "代理；代表",
+				"en": "the fact of having sb. to speak, vote, or make decisions for you",
+				"examples": [
+					"Minority groups need more effective parliamentary [[representation]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "trivial",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "微不足道的；没有什么价值的",
+				"en": "not serious, important, or valuable",
+				"examples": [
+					"I know it sounds [[trivial]], but I'm worried about it."
+				]
+			}
+		]
+	},
+	{
+		"english": "noticeable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "显著的；显而易见的",
+				"en": "easy to see or notice; clear or definite",
+				"examples": [
+					"Road noise tends to be more [[noticeable]] in certain weather conditions."
+				]
+			}
+		]
+	},
+	{
+		"english": "disguise",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "掩蔽；掩饰",
+				"en": "hide sth. or change it, so that it cannot be recognized",
+				"examples": [
+					"The speech was seen by many as a thinly [[disguised]] attack on the president."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "装扮；假扮",
+				"en": "change sb.'s appearance so that people cannot recognize them",
+				"examples": [
+					"He [[disguised]] himself by wearing a false beard."
+				]
+			}
+		]
+	},
+	{
+		"english": "unconscious",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（感情、思想等）无意识的，未意识到的",
+				"en": "(of feelings, thoughts, etc.) existing or happening without you realizing or being aware; not deliberate or controlled",
+				"examples": [
+					"He seems to be driven by an [[unconscious]] desire to do better than everyone else."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "不省人事的；失去知觉的",
+				"en": "unable to see, move, feel, etc. in the normal way because you are not conscious",
+				"examples": [
+					"They found him lying [[unconscious]] on the floor."
+				]
+			}
+		]
+	},
+	{
+		"english": "publisher",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（书、报纸等的）出版者，出版商；出版社",
+				"en": "a person or company whose business is to arrange the writing, production, and sale of books, newspapers, etc.",
+				"examples": [
+					"The [[publisher]] planned to produce the journal on a weekly basis."
+				]
+			}
+		]
+	},
+	{
+		"english": "pursue",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "追求；继续进行",
+				"en": "continue doing an activity or trying to achieve sth. over a long period of time",
+				"examples": [
+					"Students should [[pursue]] their own interests, as well as do their school work."
+				]
+			}
+		]
+	},
+	{
+		"english": "discrimination",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "歧视",
+				"en": "the practice of treating one person or group differently from another in an unfair way",
+				"examples": [
+					"Laws have got to be tougher to stop [[discrimination]] against the disabled."
+				]
+			}
+		]
+	},
+	{
+		"english": "rise to prominence / fame / power",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "变得杰出、著名、强大等",
+				"en": "become important, famous, powerful, etc.",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "at stake",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "待解决的；成问题的",
+				"en": "at issue or in question",
+				"examples": [
+					"His own personal future was [[at stake]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "Jane Austen",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "简・奥斯汀（英国小说家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "G. H. Lewes",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "乔治・亨利・刘易斯（英国哲学家、文学评论家和剧作家）",
+				"en": "(George Henry Lewes)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "George Eliot",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "乔治・艾略特（英国小说家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

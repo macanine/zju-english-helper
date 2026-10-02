@@ -1,0 +1,686 @@
+[
+	{
+		"english": "evolution",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "演变；逐步发展",
+				"en": "the gradual change and development of an idea, situation, or object",
+				"examples": [
+					"[[Evolution]] of language is the gradual change in human language over time.",
+					"The emergence of language was a defining moment in the [[evolution]] of modern humans."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "进化（论）",
+				"en": "the scientific idea that plants and animals develop and change gradually over a long period of time",
+				"examples": [
+					"[[Evolution]] of language is the gradual change in human language over time.",
+					"The emergence of language was a defining moment in the [[evolution]] of modern humans."
+				]
+			}
+		]
+	},
+	{
+		"english": "netspeak",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "网络语言",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "slang",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "俚语",
+				"en": "very informal words and expressions that are more common in spoken language, esp. used by a particular group of people, e.g. children, soldiers",
+				"examples": [
+					"These are some [[slang]] words teens might use when talking about other people."
+				]
+			}
+		]
+	},
+	{
+		"english": "abbreviation",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "缩略语，缩写 （形式）",
+				"en": "a short form of a word or expression",
+				"examples": [
+					"The styling of [[abbreviations]] is inconsistent and includes many possible variations."
+				]
+			}
+		]
+	},
+	{
+		"english": "stretch",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "（使）变大；（使）变松；拉长",
+				"en": "make sth. bigger or looser by pulling it, or become bigger or looser as a result of being pulled",
+				"examples": [
+					"A spider's web can [[stretch]] considerably without weakening."
+				]
+			}
+		]
+	},
+	{
+		"english": "crowdfunding",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "众筹（向大众募集资金的做法，常在因特网上进行）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "selfie",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "自拍照片",
+				"en": "(infml.)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "cyberbullying",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "网络霸凌（欺凌）",
+				"en": "the activity of sending Internet or text messages that threaten or insult sb.",
+				"examples": [
+					"The school provides guidance for parents on how to deal with issues such as [[cyberbullying]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "pre-existing",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "先于···存在的",
+				"en": "(fml.) (only before noun) existing before a particular time or event",
+				"examples": [
+					"But, this research doesn't consider the effects of [[pre-existing]] relationships."
+				]
+			}
+		]
+	},
+	{
+		"english": "engagement",
+		"senses": [
+			{
+				"pos": "n. [U, C]",
+				"zh": "密切关系",
+				"en": "when you become involved with sb. / sth. in order to understand them",
+				"examples": [
+					"Virtual employee [[engagement]] activities are ways to improve the relationship between an organization and its remote workers.",
+					"The man knew about the [[engagement]] and brought them a bottle of champagne as a gift."
+				]
+			},
+			{
+				"pos": "n. [U, C]",
+				"zh": "婚约；订婚期间",
+				"en": "an agreement between two people to marry, or the period of time they are engaged",
+				"examples": [
+					"Virtual employee [[engagement]] activities are ways to improve the relationship between an organization and its remote workers.",
+					"The man knew about the [[engagement]] and brought them a bottle of champagne as a gift."
+				]
+			}
+		]
+	},
+	{
+		"english": "accelerate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）加快；（使）加速",
+				"en": "if a process accelerates or if sth. accelerates it, it happens faster than usual or sooner than you expect",
+				"examples": [
+					"More efforts will be made in the years ahead to [[accelerate]] the agricultural reform."
+				]
+			}
+		]
+	},
+	{
+		"english": "lexicon",
+		"senses": [
+			{
+				"pos": "n. [sing.]",
+				"zh": "（个人、语言或学科的）词汇",
+				"en": "the vocabulary of a person, language, or branch of knowledge",
+				"examples": [
+					"The word \"cloud\" is attached to many terms in the computing [[lexicon]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "TTFN",
+		"senses": [
+			{
+				"pos": "缩写",
+				"zh": "回头见（用于电子邮件和手机短信中）",
+				"en": "(ta-ta for now) (BrE, infml.) used in emails and text messages to say goodbye to sb.",
+				"examples": [
+					"Anyway, [[TTFN]], and hopefully I'll have plenty of time to write when I get back."
+				]
+			}
+		]
+	},
+	{
+		"english": "trace",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "追溯；追查",
+				"en": "find the origins of when sth. began or where it came from",
+				"examples": [
+					"The style of these paintings can be [[traced]] back to early medieval influences.",
+					"Police are trying to [[trace]] a young woman who was seen near the accident."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "仔细找寻",
+				"en": "find sb. / sth. that has disappeared by searching for them carefully",
+				"examples": [
+					"The style of these paintings can be [[traced]] back to early medieval influences.",
+					"Police are trying to [[trace]] a young woman who was seen near the accident."
+				]
+			}
+		]
+	},
+	{
+		"english": "doh",
+		"senses": [
+			{
+				"pos": "interj.",
+				"zh": "噢，呀（幽默用法，意识到自己做错事或说错话时发出的感叹语）",
+				"en": "(also d'oh) (spoken) used humorously when you have just realized that you have done or said sth. stupid",
+				"examples": [
+					"\"[[Doh]]! That was the biggest mistake in my career,\" said Jack."
+				]
+			}
+		]
+	},
+	{
+		"english": "directory",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（通常按字母顺序排列的）姓名地址录，名录，电话簿",
+				"en": "a book or list of names, facts, etc., usu. arranged in alphabetical order",
+				"examples": [
+					"I couldn't find your number in the telephone [[directory]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "assistance",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "帮助；援助",
+				"en": "help or support",
+				"examples": [
+					"The work was completed with the [[assistance]] of local carpenters."
+				]
+			}
+		]
+	},
+	{
+		"english": "blur",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）（想法、主题等）难以区分，模糊",
+				"en": "make the difference between two ideas, subjects, etc. less clear",
+				"examples": [
+					"She tends to [[blur]] the distinction between her friends and her colleagues.",
+					"The writing [[blurred]] and danced before his eyes."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）（某物）模糊不清",
+				"en": "become difficult to see, or make sth. difficult to see, because the edges are not clear",
+				"examples": [
+					"She tends to [[blur]] the distinction between her friends and her colleagues.",
+					"The writing [[blurred]] and danced before his eyes."
+				]
+			}
+		]
+	},
+	{
+		"english": "distinction",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "差别；区别；差异",
+				"en": "a clear difference or separation between two similar things",
+				"examples": [
+					"We need to draw a [[distinction]] between the two events, even though they are both related to financial issues."
+				]
+			}
+		]
+	},
+	{
+		"english": "prevalent",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "普遍的；盛行的；流行的",
+				"en": "common at a particular time, in a particular place, or among a particular group of people",
+				"examples": [
+					"One [[prevalent]] quality we have found in teens' statements about themselves is a strikingly positive emotional tone."
+				]
+			}
+		]
+	},
+	{
+		"english": "linguistics",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "语言学",
+				"en": "the study of language in general and of particular languages, their structure, grammar, and history",
+				"examples": [
+					"As a specialist in [[linguistics]], I have studied how the conversational styles of men and women differ."
+				]
+			}
+		]
+	},
+	{
+		"english": "acronym",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "首字母缩略词",
+				"en": "a word formed from the initial letters of other words",
+				"examples": [
+					"More typically, [[acronyms]] are pronounced as new single words, as in UNESCO."
+				]
+			}
+		]
+	},
+	{
+		"english": "LOL",
+		"senses": [
+			{
+				"pos": "缩写",
+				"zh": "大声笑（用于电子邮件、手机短信等中表示认为某事很好笑）",
+				"en": "(laughing out loud) used in emails, text messages, etc. to show that you think sth. is funny",
+				"examples": [
+					"The dog kept running around chasing its tail. [[LOL]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "longevity",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "持续时间",
+				"en": "the amount of time that sth. lasts",
+				"examples": [
+					"By offering services to help expand the [[longevity]] of their products, they are promising quality and durability to consumers.",
+					"The new study appears to be the first to specifically look at the relationship between optimism and [[longevity]]."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "寿命",
+				"en": "the amount of time that sb. / sth. lives",
+				"examples": [
+					"By offering services to help expand the [[longevity]] of their products, they are promising quality and durability to consumers.",
+					"The new study appears to be the first to specifically look at the relationship between optimism and [[longevity]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "eligible",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "合格的；有资格的",
+				"en": "having the right to do or obtain sth.",
+				"examples": [
+					"If you are a teenager living in certain parts of the province, you could be [[eligible]] for this program."
+				]
+			}
+		]
+	},
+	{
+		"english": "revisit",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "重新考虑；再次讨论",
+				"en": "(fml.) consider or discuss sth. again",
+				"examples": [
+					"We need to [[revisit]] this proposal as soon as the budget is clearer.",
+					"Ten years later, I [[revisited]] the school to find out what had changed."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "重游；再访",
+				"en": "(written) return to a place you once knew well",
+				"examples": [
+					"We need to [[revisit]] this proposal as soon as the budget is clearer.",
+					"Ten years later, I [[revisited]] the school to find out what had changed."
+				]
+			}
+		]
+	},
+	{
+		"english": "usage",
+		"senses": [
+			{
+				"pos": "n. [U, C]",
+				"zh": "使用方法；使用量",
+				"en": "the way in which sth. is used, or the amount of it that is used",
+				"examples": [
+					"It involves changing product quality, features, or style to attract new users or more [[usage]] from present users.",
+					"The dictionary focuses on the more usual words of the language and avoids rare [[usages]] of these words."
+				]
+			},
+			{
+				"pos": "n. [U, C]",
+				"zh": "（词语的）用法",
+				"en": "the way that words are used in a language",
+				"examples": [
+					"It involves changing product quality, features, or style to attract new users or more [[usage]] from present users.",
+					"The dictionary focuses on the more usual words of the language and avoids rare [[usages]] of these words."
+				]
+			}
+		]
+	},
+	{
+		"english": "mainstream",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "主流的；主要的",
+				"en": "(only before noun) accepted by or involving most people in a society",
+				"examples": [
+					"Our survey is intended to find out which [[mainstream]] car has the most appeal for both private and business buyers on a budget.",
+					"Environmental ideas have been absorbed into the [[mainstream]] of our politics."
+				]
+			},
+			{
+				"pos": "n. [sing.]",
+				"zh": "（思想或方法的）主流；主流群体",
+				"en": "(the ~) the most usual ideas or methods, or the people who have these ideas or methods",
+				"examples": [
+					"Our survey is intended to find out which [[mainstream]] car has the most appeal for both private and business buyers on a budget.",
+					"Environmental ideas have been absorbed into the [[mainstream]] of our politics."
+				]
+			}
+		]
+	},
+	{
+		"english": "fuzzy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "糊涂的；不明确的",
+				"en": "unclear or confused",
+				"examples": [
+					"There's a [[fuzzy]] line between parents' and schools' responsibilities.",
+					"Some of the photos were so [[fuzzy]] that it was hard to tell who was who."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "（形状或声音）模糊的",
+				"en": "not clear in shape or sound",
+				"examples": [
+					"There's a [[fuzzy]] line between parents' and schools' responsibilities.",
+					"Some of the photos were so [[fuzzy]] that it was hard to tell who was who."
+				]
+			}
+		]
+	},
+	{
+		"english": "appearance",
+		"senses": [
+			{
+				"pos": "n. [sing., C, U]",
+				"zh": "首次出现（使用）；问世",
+				"en": "when sth. new begins to exist or starts being used",
+				"examples": [
+					"The industry has changed greatly with the [[appearance]] of new technologies.",
+					"We are often attracted to somebody first by their physical [[appearance]]."
+				]
+			},
+			{
+				"pos": "n. [sing., C, U]",
+				"zh": "外表；外观",
+				"en": "the way sb. / sth. looks to other people",
+				"examples": [
+					"The industry has changed greatly with the [[appearance]] of new technologies.",
+					"We are often attracted to somebody first by their physical [[appearance]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "jargon",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "（难懂的）行话，术语（常含贬义）",
+				"en": "words and expressions used in a particular profession or by a particular group of people, which are difficult for other people to understand — often used to show disapproval",
+				"examples": [
+					"I'm going to explain it without [[jargon]], and without making it unnecessarily complicated and complex."
+				]
+			}
+		]
+	},
+	{
+		"english": "timeless",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "不受时间影响的；永不过时的",
+				"en": "not appearing to be affected by the process of time passing or by changes in fashion",
+				"examples": [
+					"Lu Xun, an influential Chinese writer, essayist, and translator, produced that [[timeless]] classic, and many more."
+				]
+			}
+		]
+	},
+	{
+		"english": "impose",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "将（想法、信仰等）强加（于某人）",
+				"en": "force sb. to have the same ideas, beliefs, etc. as you",
+				"examples": [
+					"I can't understand why she always tries to [[impose]] her own ideas on the rest of the team.",
+					"The court has the power to [[impose]] an unlimited fine for this offence."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "强制推行；强制实行",
+				"en": "if sb. in authority imposes a rule, punishment, tax, etc., they force people to accept it",
+				"examples": [
+					"I can't understand why she always tries to [[impose]] her own ideas on the rest of the team.",
+					"The court has the power to [[impose]] an unlimited fine for this offence."
+				]
+			}
+		]
+	},
+	{
+		"english": "dislike",
+		"senses": [
+			{
+				"pos": "n. [pl.]",
+				"zh": "不喜欢的东西",
+				"en": "(~s) the things that you do not like",
+				"examples": [
+					"A good hotel manager should know his regular guests' likes and [[dislikes]].",
+					"He simply [[disliked]] working with committees and avoided it whenever possible."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "不喜欢；讨厌",
+				"en": "think sb. / sth. is unpleasant and not like them",
+				"examples": [
+					"A good hotel manager should know his regular guests' likes and [[dislikes]].",
+					"He simply [[disliked]] working with committees and avoided it whenever possible."
+				]
+			}
+		]
+	},
+	{
+		"english": "worrisome",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "令人焦虑的",
+				"en": "(fml.) making you anxious",
+				"examples": [
+					"The scientists report that some of the signs they have found are [[worrisome]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "fascinating",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "迷人的；非常有趣的",
+				"en": "extremely interesting",
+				"examples": [
+					"With the accompaniment of the piano, the poems sounded [[fascinating]] and became really popular."
+				]
+			}
+		]
+	},
+	{
+		"english": "remake",
+		"senses": [
+			{
+				"pos": "n. / v.",
+				"zh": "（尤指以不同的方式）重新制作",
+				"en": "(remade, remade) make sth. again, esp. in a different way",
+				"examples": [
+					"The mall has been moving aggressively to try to [[remake]] itself for a new era of shopping."
+				]
+			}
+		]
+	},
+	{
+		"english": "one's fair share",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（问题，成功或冒险经历等）相当多的",
+				"en": "if one has had their fair share of sth., e.g. problems, success, or adventure, a lot of it has happened to them",
+				"examples": [
+					"He'd had more than his fair share of adventure."
+				]
+			}
+		]
+	},
+	{
+		"english": "come and go",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "断断续续；时来时去",
+				"en": "be present for a short time and then go away",
+				"examples": [
+					"The pain in my leg [[comes]] and [[goes]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "speed up",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "（使）加快速度",
+				"en": "move or happen faster, or make sth. move or happen faster",
+				"examples": [
+					"The world's clock has [[sped up]] as nations around the globe are reinventing themselves at a faster and faster pace."
+				]
+			}
+		]
+	},
+	{
+		"english": "through / by word of mouth",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "口口相传",
+				"en": "through / by oral communication",
+				"examples": [
+					"Much of this information is picked up by word of mouth from previous students."
+				]
+			}
+		]
+	},
+	{
+		"english": "stick around",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "待在某地；待在附近",
+				"en": "(infml.) remain in or near a place",
+				"examples": [
+					"\"Without hesitation, she replied, \"I don't know. Let's [[stick around]] and find out.\""
+				]
+			}
+		]
+	},
+	{
+		"english": "keep up with",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "跟上；保持同步",
+				"en": "manage to do as much or as well as other people",
+				"examples": [
+					"He found it difficult to [[keep up with]] the rest of the class."
+				]
+			}
+		]
+	},
+	{
+		"english": "Bangor University",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "班戈大学（英国大学，位于威尔士）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

@@ -1,0 +1,946 @@
+[
+	{
+		"english": "afflict",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "折磨；使痛苦",
+				"en": "(fml.) affect sb. / sth. in an unpleasant way, and make them suffer",
+				"examples": [
+					"I understand the burdens that [[afflict]] your family, and I pledge to you my efforts to help overcome them."
+				]
+			}
+		]
+	},
+	{
+		"english": "veiled",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "（威胁、攻击或警告）隐含的，不明言的",
+				"en": "(threat, attack, or warning) not direct but is easily understood",
+				"examples": [
+					"They launched a thinly [[veiled]] attack on his ability as a leader."
+				]
+			}
+		]
+	},
+	{
+		"english": "conceal",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "隐瞒；掩盖",
+				"en": "prevent from being seen or discovered",
+				"examples": [
+					"Why did you decide to [[conceal]] your true identity?"
+				]
+			}
+		]
+	},
+	{
+		"english": "hasten",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "赶紧做（或说）",
+				"en": "do or say sth. quickly or without delay",
+				"examples": [
+					"I [[hastened]] to assure her that there was no danger of falling down from the bridge.",
+					"There are, in theory, many ways to [[hasten]] economic recovery after a financial crisis."
+				]
+			},
+			{
+				"zh": "加速；加紧",
+				"en": "vt.make sth. happen faster or sooner",
+				"examples": [
+					"I [[hastened]] to assure her that there was no danger of falling down from the bridge.",
+					"There are, in theory, many ways to [[hasten]] economic recovery after a financial crisis."
+				]
+			}
+		]
+	},
+	{
+		"english": "forestall",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "预先阻止；在（他人）之前行动 ; 先发制人",
+				"en": "prevent sth. from happening or prevent sb. from doing sth. by doing sth. first",
+				"examples": [
+					"My mother tells me that to [[forestall]] is better than to amend and prevention is better than cure."
+				]
+			}
+		]
+	},
+	{
+		"english": "tender",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "温柔的；体贴入微的",
+				"en": "gentle and careful in a way that shows love",
+				"examples": [
+					"He was a rebel, but a strong part of him was sensitive and [[tender]], just as his sister.",
+					"Cook for a minimum of two hours, or until the meat is [[tender]]."
+				]
+			},
+			{
+				"zh": "（食物）软的，嫩的，易咀嚼的",
+				"en": "(food) easily cut and eat, esp. because it has been well cooked",
+				"examples": [
+					"He was a rebel, but a strong part of him was sensitive and [[tender]], just as his sister.",
+					"Cook for a minimum of two hours, or until the meat is [[tender]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "weep",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "哭泣；流泪",
+				"en": "(wept, wept) cry because you feel unhappy or have some other strong emotion",
+				"examples": [
+					"Wonderfully melodic and tuneful, his songs have made the audience [[weep]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "abandon",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "陷入（某种感情）",
+				"en": "(~ yourself to sth.) feel an emotion so strongly that you let it control you completely",
+				"examples": [
+					"We are scared to [[abandon]] ourselves to our feelings in case we seem weak or out of control.",
+					"He can never forgive his mother because she [[abandoned]] him when he was five years old."
+				]
+			},
+			{
+				"zh": "抛弃；遗弃",
+				"en": "leave sb. when you should stay with them and look after them",
+				"examples": [
+					"We are scared to [[abandon]] ourselves to our feelings in case we seem weak or out of control.",
+					"He can never forgive his mother because she [[abandoned]] him when he was five years old."
+				]
+			}
+		]
+	},
+	{
+		"english": "abandonment",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "放任；放纵",
+				"en": "a complete surrender of inhibitions",
+				"examples": [
+					"In some poetry, sensitivity, she suggests, \"has led to a dangerous [[abandonment]] to sensation.\""
+				]
+			}
+		]
+	},
+	{
+		"english": "armchair",
+		"pos": "n. [C] / adj.",
+		"senses": [
+			{
+				"zh": "扶手椅",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "exhaustion",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "筋疲力尽；疲惫不堪",
+				"en": "a feeling of being extremely tired and without energy",
+				"examples": [
+					"Weak with [[exhaustion]], the climbers were finally rescued by a helicopter after being trapped in heavy snow."
+				]
+			}
+		]
+	},
+	{
+		"english": "haunt",
+		"pos": "v. / n.",
+		"senses": [
+			{
+				"zh": "缠扰；纠缠",
+				"en": "continue to cause problems for a person or organization for a long time",
+				"examples": [
+					"The shame of being a bankrupt is likely to [[haunt]] Mr. Lucas for the rest of his life.",
+					"They say the prison is [[haunted]] by the ghosts of the men who died there."
+				]
+			},
+			{
+				"zh": "（鬼魂）经常出没于",
+				"en": "if the soul of a dead person haunts a place, it appears there often",
+				"examples": [
+					"The shame of being a bankrupt is likely to [[haunt]] Mr. Lucas for the rest of his life.",
+					"They say the prison is [[haunted]] by the ghosts of the men who died there."
+				]
+			}
+		]
+	},
+	{
+		"english": "wares",
+		"pos": "n. [pl.]",
+		"senses": [
+			{
+				"zh": "（一般不在商店内出售的）商品，货物",
+				"en": "things that are for sale, usu. not in a shop",
+				"examples": [
+					"The major off-line brands aren't promoting their [[wares]] on the Internet as much as expected."
+				]
+			}
+		]
+	},
+	{
+		"english": "faintly",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "不清楚地；模糊地",
+				"en": "in a way that is difficult to see, hear, smell, etc.",
+				"examples": [
+					"When the piano fell silent, the sound of the traffic echoed [[faintly]] in the room."
+				]
+			}
+		]
+	},
+	{
+		"english": "sparrow",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "麻雀",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "twitter",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "（鸟）鸣啭",
+				"en": "(of birds) make a lot of short high sounds",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "eaves",
+		"pos": "n. [pl.]",
+		"senses": [
+			{
+				"zh": "屋檐",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "patch",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "（与周围部分不同的）小片，小块",
+				"en": "a small area of sth. that is different from the area around it",
+				"examples": [
+					"Belinda watched a [[patch]] of sunlight move slowly across the wall."
+				]
+			}
+		]
+	},
+	{
+		"english": "cushion",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "垫子；靠垫；坐垫",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "sob",
+		"pos": "v. / n. [C]",
+		"senses": [
+			{
+				"zh": "抽噎（声）；啜泣（声）；呜咽（声）",
+				"en": "an act or sound of sobbing",
+				"examples": [
+					"After a while, she began to [[sob]] again, burying her face in the pillow."
+				]
+			},
+			{
+				"zh": "抽噎；啜泣",
+				"en": "vi.cry noisily while taking short breaths",
+				"examples": [
+					"After a while, she began to [[sob]] again, burying her face in the pillow."
+				]
+			}
+		]
+	},
+	{
+		"english": "bespeak",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "显示；表示",
+				"en": "(bespoke, bespoken) show or suggest sth.",
+				"examples": [
+					"Her house, her clothes, her style of living, all [[bespeak]] an exceedingly good income."
+				]
+			}
+		]
+	},
+	{
+		"english": "repress",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "忍住；克制",
+				"en": "stop yourself from doing sth. you want to do",
+				"examples": [
+					"She could not [[repress]] a smile at this, but she answered only by nodding her head slightly."
+				]
+			}
+		]
+	},
+	{
+		"english": "repression",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "（对感情的）抑制，压抑",
+				"en": "the behavior of sb. who refuses to show or admit strong feelings that they have",
+				"examples": [
+					"He told her that emotional [[repression]] was preventing her from understanding her own behavior."
+				]
+			}
+		]
+	},
+	{
+		"english": "gaze",
+		"pos": "n. [sing.] / v.",
+		"senses": [
+			{
+				"zh": "凝视；注视",
+				"en": "a long steady look",
+				"examples": [
+					"She felt embarrassed under his steady [[gaze]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "yonder",
+		"pos": "adv. / adj.",
+		"senses": [
+			{
+				"zh": "在那边（的）；在远处（的）",
+				"en": "over there",
+				"examples": [
+					"Now look [[yonder]], just beyond the wooden post — there's a white cottage under the hill."
+				]
+			}
+		]
+	},
+	{
+		"english": "suspension",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "暂停；中止",
+				"en": "when sth. is officially stopped for a period of time",
+				"examples": [
+					"Anyway, we have to admit that both sides are now working toward a [[suspension]] of hostility."
+				]
+			}
+		]
+	},
+	{
+		"english": "subtle",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "细微的；微妙的；难以察觉的",
+				"en": "not obvious, and therefore difficult to notice",
+				"examples": [
+					"I sensed a [[subtle]] change in his attitude toward us."
+				]
+			}
+		]
+	},
+	{
+		"english": "elusive",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "难找的；不常见到的",
+				"en": "difficult to find or not often seen",
+				"examples": [
+					"Who can tell me how to catch the [[elusive]] charm of the original version in translation?"
+				]
+			}
+		]
+	},
+	{
+		"english": "creep",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "轻声地缓慢行进",
+				"en": "(crept, crept) move slowly and quietly",
+				"examples": [
+					"When cats are preparing to pounce on (猛扑) the mouse, they [[creep]] over the ground very slowly."
+				]
+			}
+		]
+	},
+	{
+		"english": "scent",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "气味；（尤指）香味",
+				"en": "a particular smell, esp. a pleasant one",
+				"examples": [
+					"Flowers are chosen by customers for their [[scent]] as well as their look."
+				]
+			}
+		]
+	},
+	{
+		"english": "bosom",
+		"pos": "n. [C, usu. sing.]",
+		"senses": [
+			{
+				"zh": "（女人的）胸部",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "tumultuously",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "骚乱地；骚动地；混乱地；激动地",
+				"en": "in a way that involves a lot of noise, excitement, activity, or violence",
+				"examples": [
+					"They gathered [[tumultuously]] around him and demanded to know how he had accomplished it."
+				]
+			}
+		]
+	},
+	{
+		"english": "slender",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "苗条的；修长的；纤细的",
+				"en": "tall or long and thin in an attractive way",
+				"examples": [
+					"The dress is for my daughter who's about my height but more [[slender]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "vacant",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "茫然的；失神的",
+				"en": "looking as if you do not understand or are not paying attention",
+				"examples": [
+					"The maid's [[vacant]] expression was replaced momentarily by one of greedy expectation, shortly followed by disappointment.",
+					"All three sets of houses are [[vacant]], and she's making no attempt to rent them out."
+				]
+			},
+			{
+				"zh": "（座位、房间）空的，未被占用的",
+				"en": "(seat, room, etc.) empty and available for sb. to use",
+				"examples": [
+					"The maid's [[vacant]] expression was replaced momentarily by one of greedy expectation, shortly followed by disappointment.",
+					"All three sets of houses are [[vacant]], and she's making no attempt to rent them out."
+				]
+			}
+		]
+	},
+	{
+		"english": "terror",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "恐惧；惊恐",
+				"en": "a feeling of extreme fear",
+				"examples": [
+					"She shook with [[terror]] whenever she was about to fly in a plane by herself."
+				]
+			}
+		]
+	},
+	{
+		"english": "pulse",
+		"pos": "n. [C, usu. sing.]",
+		"senses": [
+			{
+				"zh": "脉搏",
+				"en": "the regular movement of blood as the heart pumps it round the body",
+				"examples": [
+					"The doctor said he was in danger — his breathing was shallow and his [[pulse]] was weak."
+				]
+			}
+		]
+	},
+	{
+		"english": "monstrous",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "极端错误的；道德败坏的；极不公正的",
+				"en": "very wrong, immoral, or unfair",
+				"examples": [
+					"I'd like to make a complaint — it's [[monstrous]] to charge that much for a hotel room."
+				]
+			}
+		]
+	},
+	{
+		"english": "exalted",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "兴高采烈的；得意洋洋的",
+				"en": "extremely happy and proud",
+				"examples": [
+					"We were absolutely [[exalted]] when we learned of your daughter's career success.",
+					"Leith doubted that she would ever meet a man in such a highly [[exalted]] position."
+				]
+			},
+			{
+				"zh": "显贵的；高贵的",
+				"en": "having a very high rank; highly respected",
+				"examples": [
+					"We were absolutely [[exalted]] when we learned of your daughter's career success.",
+					"Leith doubted that she would ever meet a man in such a highly [[exalted]] position."
+				]
+			}
+		]
+	},
+	{
+		"english": "dismiss",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "拒绝考虑；不理会",
+				"en": "refuse to consider sb.'s idea, opinion, etc. because you think it is not serious, true or important",
+				"examples": [
+					"The government has [[dismissed]] criticism that the country's health policy is a mess."
+				]
+			}
+		]
+	},
+	{
+		"english": "procession",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "一连串的人（或物）",
+				"en": "a series of people or things",
+				"examples": [
+					"We've had an endless [[procession]] of new secretaries in the office since Amy left."
+				]
+			}
+		]
+	},
+	{
+		"english": "persistence",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "坚持；执着；执意",
+				"en": "determination to do sth. even though it is difficult or other people oppose it",
+				"examples": [
+					"The teacher kept saying that skill comes only with practice, patience and [[persistence]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "illumination",
+		"pos": "n. [C, U, U]",
+		"senses": [
+			{
+				"zh": "（对某一主题的）阐明，理解",
+				"en": "(fml.) a clear explanation or understanding of a particular subject",
+				"examples": [
+					"In that flash of [[illumination]], he realized where he had gone wrong in his decision-making.",
+					"The only [[illumination]] came from a small window high in the opposite wall."
+				]
+			},
+			{
+				"zh": "光亮；照明",
+				"en": "lighting provided by a lamp, light, etc.",
+				"examples": [
+					"In that flash of [[illumination]], he realized where he had gone wrong in his decision-making.",
+					"The only [[illumination]] came from a small window high in the opposite wall."
+				]
+			}
+		]
+	},
+	{
+		"english": "kneel",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "跪着；跪下",
+				"en": "(knelt, knelt; kneeled, kneeled) be in or move into a position where your body is resting on your knees",
+				"examples": [
+					"She [[knelt]] on the floor and put more wood on the fire so that the room would be warmer."
+				]
+			}
+		]
+	},
+	{
+		"english": "elixir",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "灵丹妙药；不老药",
+				"en": "a magical liquid that is supposed to cure people of illness, make them younger, etc.",
+				"examples": [
+					"You fool, it's yet another health product claiming to be the [[elixir]] of youth."
+				]
+			}
+		]
+	},
+	{
+		"english": "riot",
+		"pos": "n. [C, U] / v.",
+		"senses": [
+			{
+				"zh": "暴乱；骚乱",
+				"en": "a violent protest by a crowd of people",
+				"examples": [
+					"The police were able to take preventive action and avoid a possible [[riot]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "shudder",
+		"pos": "v. / n. [C]",
+		"senses": [
+			{
+				"zh": "战栗；颤抖",
+				"en": "a quick uncontrolled shaking movement",
+				"examples": [
+					"As she turned away from the house into the lane, she gave a [[shudder]] of relief."
+				]
+			}
+		]
+	},
+	{
+		"english": "importunity",
+		"pos": "n. [C, U]",
+		"senses": [
+			{
+				"zh": "强求",
+				"en": "the act of asking sb. for sth. continuously in an annoying or unreasonable way",
+				"examples": [
+					"Unable to withstand my [[importunity]], he would make out drafts for me to copy."
+				]
+			}
+		]
+	},
+	{
+		"english": "feverish",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "特别激动的；极度兴奋的",
+				"en": "extremely excited",
+				"examples": [
+					"He will be attending next week's Grammy Awards in [[feverish]] anticipation.",
+					"You ought to be careful about this kind of [[feverish]] cold — it often kicks back."
+				]
+			},
+			{
+				"zh": "发烧的；发热的",
+				"en": "suffering from a fever",
+				"examples": [
+					"He will be attending next week's Grammy Awards in [[feverish]] anticipation.",
+					"You ought to be careful about this kind of [[feverish]] cold — it often kicks back."
+				]
+			}
+		]
+	},
+	{
+		"english": "triumph",
+		"pos": "n. [U, C] / v.",
+		"senses": [
+			{
+				"zh": "成功的满足感；胜利的喜悦之情",
+				"en": "the proud or excited feeling you get when you have won sth. or been successful",
+				"examples": [
+					"My father returned in [[triumph]] from the annual sales of the department store with a half-price TV.",
+					"If confirmed by longer and larger clinical trials, this will rightly be hailed as a scientific [[triumph]]."
+				]
+			},
+			{
+				"zh": "胜利；成功；成就",
+				"en": "an important victory or success after a difficult struggle",
+				"examples": [
+					"My father returned in [[triumph]] from the annual sales of the department store with a half-price TV.",
+					"If confirmed by longer and larger clinical trials, this will rightly be hailed as a scientific [[triumph]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "unwittingly",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "不知不觉地；非故意地",
+				"en": "in a way that is not conscious or deliberate",
+				"examples": [
+					"Many parents [[unwittingly]] place their children in danger by not making sure they wear seat belts."
+				]
+			}
+		]
+	},
+	{
+		"english": "clasp",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "握紧；抱紧",
+				"en": "hold sb. / sth. tightly with your hands",
+				"examples": [
+					"She would often [[clasp]] her hands behind her head and muse when she could have a house of her own."
+				]
+			}
+		]
+	},
+	{
+		"english": "descend",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "从···下来；下降",
+				"en": "(fml.) move from a higher level to a lower one",
+				"examples": [
+					"I heard his footsteps [[descending]] the stairs — he must have finished his work."
+				]
+			}
+		]
+	},
+	{
+		"english": "latchkey",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（房子或公寓大门的）碰锁钥匙",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "composedly",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "镇静地",
+				"en": "in a way that seems calm and in control of your feelings",
+				"examples": [
+					"It is difficult to think [[composedly]] when you are being attacked by mosquitoes."
+				]
+			}
+		]
+	},
+	{
+		"english": "pierce",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "刺入；刺穿；刺破",
+				"en": "make a small hole in or through sth., using an object with a sharp point",
+				"examples": [
+					"The chef taught him to steam the corn until it can easily be [[pierced]] with a fork."
+				]
+			}
+		]
+	},
+	{
+		"english": "piercing",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "尖锐的；刺耳的",
+				"en": "(sound) high, sharp and unpleasant",
+				"examples": [
+					"Maggie let out a [[piercing]] scream as she saw the truck speeding toward her.",
+					"Cloudy and unfocused for a moment, his eyes quickly regained their normal [[piercing]] clarity."
+				]
+			},
+			{
+				"zh": "敏锐的；有洞察力的",
+				"en": "sb. with piercing eyes is looking at you and seems to know what you are thinking",
+				"examples": [
+					"Maggie let out a [[piercing]] scream as she saw the truck speeding toward her.",
+					"Cloudy and unfocused for a moment, his eyes quickly regained their normal [[piercing]] clarity."
+				]
+			}
+		]
+	},
+	{
+		"english": "take the time",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "花费力气（做某事）",
+				"en": "make the effort to do sth.",
+				"examples": [
+					"There is an old saying: \"Take the time to stop and smell the flowers.\""
+				]
+			}
+		]
+	},
+	{
+		"english": "count for",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "有价值；有重要性",
+				"en": "be important or valuable",
+				"examples": [
+					"When I first came to college, I realized that brainpower didn't [[count]] for much."
+				]
+			}
+		]
+	},
+	{
+		"english": "for heaven's sake",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "天哪（表示某事很重要）",
+				"en": "(spoken) used when sb. is telling sb. else how important it is to do sth. or not to do sth.",
+				"examples": [
+					"For heaven's sake, don't be late. Otherwise, we won't be able to catch the plane."
+				]
+			}
+		]
+	},
+	{
+		"english": "drink in",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "享受地看（听，感觉，嗅）；品味；欣赏",
+				"en": "look at, listen to, feel, or smell sth. in order to enjoy it",
+				"examples": [
+					"She just sat there, [[drinking]] in the stunning view of the sunset."
+				]
+			}
+		]
+	},
+	{
+		"english": "run riot",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "（想象力）自由驰骋；（情感、思绪等）不受约束",
+				"en": "(imagination, emotions, thoughts, etc.) go out of control",
+				"examples": [
+					"They have let their imagination [[run]] riot to create new computer games."
+				]
+			}
+		]
+	},
+	{
+		"english": "at length",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "最后；终于",
+				"en": "after a long time",
+				"examples": [
+					"At length she became uneasy, and woke up the boy and asked, \"Do you know where your dad is?\""
+				]
+			}
+		]
+	},
+	{
+		"english": "Mallard",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "马拉德（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Josephine",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "约瑟芬（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Richards",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "理查兹（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Brently Mallard",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "布伦特利 • 马拉德（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Louise",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "路易丝（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

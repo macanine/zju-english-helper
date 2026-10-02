@@ -1,0 +1,665 @@
+[
+	{
+		"english": "derive",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "源自；源于",
+				"en": "develop or come from sth. else",
+				"examples": [
+					"This word is [[derived]] from Latin, meaning \"water.\"",
+					"Medically, we will [[derive]] great benefit from the application of this technique."
+				]
+			},
+			{
+				"zh": "得到，获得（优势或愉快的感受）",
+				"en": "vt.get sth., esp. an advantage or a pleasant feeling, from sth.",
+				"examples": [
+					"This word is [[derived]] from Latin, meaning \"water.\"",
+					"Medically, we will [[derive]] great benefit from the application of this technique."
+				]
+			}
+		]
+	},
+	{
+		"english": "arouse",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "激起···的性欲",
+				"en": "make sb. feel sexually excited",
+				"examples": [
+					"His strange behavior at the meeting yesterday [[aroused]] my suspicion."
+				]
+			},
+			{
+				"zh": "激起（感情、态度）",
+				"en": "make sb. have a particular feeling or attitude",
+				"examples": [
+					"His strange behavior at the meeting yesterday [[aroused]] my suspicion."
+				]
+			}
+		]
+	},
+	{
+		"english": "cellular",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "由细胞组成的；细胞的",
+				"en": "consisting of or relating to the cells of plants or animals",
+				"examples": [
+					"Researchers have been observing the course of the disease at the cellular level."
+				]
+			}
+		]
+	},
+	{
+		"english": "prompt",
+		"pos": "v. / adj. / n. [C]",
+		"senses": [
+			{
+				"zh": "（计算机屏幕上显示准备接受指令的）提示， 提示符",
+				"en": "",
+				"examples": [
+					"The computer program will [[prompt]] the user to enter data where it is required."
+				]
+			},
+			{
+				"zh": "引起，激起（某人说或做某事）",
+				"en": "vt.make people say or do sth. as a reaction",
+				"examples": [
+					"The computer program will [[prompt]] the user to enter data where it is required."
+				]
+			}
+		]
+	},
+	{
+		"english": "command",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "指令",
+				"en": "an instruction to a computer to do sth.",
+				"examples": [
+					"Check that the computer has executed the [[commands]] that you typed in.",
+					"An officer stood on one of the tanks and began shouting [[commands]] through a loudspeaker."
+				]
+			},
+			{
+				"zh": "命令；指示",
+				"en": "an order that should be obeyed",
+				"examples": [
+					"Check that the computer has executed the [[commands]] that you typed in.",
+					"An officer stood on one of the tanks and began shouting [[commands]] through a loudspeaker."
+				]
+			}
+		]
+	},
+	{
+		"english": "recipient",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "接受者；领受者",
+				"en": "(fml.) sb. who receives sth.",
+				"examples": [
+					"I felt glad that I was a giver of pleasure, not merely a passive [[recipient]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "circulation",
+		"pos": "n. [U, sing.]",
+		"senses": [
+			{
+				"zh": "血液循环",
+				"en": "the movement of blood around your body",
+				"examples": [
+					"Stretching is a good way to relax muscles and to increase blood [[circulation]] during long-time air travel."
+				]
+			}
+		]
+	},
+	{
+		"english": "insulin",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "胰岛素",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "glucose",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "葡萄糖",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "testosterone",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "睾酮",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "leptin",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "瘦蛋白",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "overeat",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "吃得过多； 暴食",
+				"en": "eat too much, or eat more than is healthy",
+				"examples": [
+					"A woman who [[overeats]] during pregnancy can cause health problems for her child."
+				]
+			}
+		]
+	},
+	{
+		"english": "diffusely",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "弥漫地；扩散地；漫射地",
+				"en": "over a wide area",
+				"examples": [
+					"One weakness of the essay is that the information is given diffusely instead of in a certain section, thereby reducing the effective communication of ideas."
+				]
+			}
+		]
+	},
+	{
+		"english": "thyroid",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "甲状腺",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "sluggish",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "缓慢的；迟缓的；懒洋洋的",
+				"en": "moving, reacting or working more slowly than normal and in a way that seems lazy",
+				"examples": [
+					"The company has been rather [[sluggish]] in responding to the rapid changes in technology."
+				]
+			}
+		]
+	},
+	{
+		"english": "oblivious",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "不知道的；未察觉到的",
+				"en": "(not before noun) not knowing about or not noticing sth. that is happening around you",
+				"examples": [
+					"He went on and on about how successful he was, [[oblivious]] to the fact that he had hurt her."
+				]
+			}
+		]
+	},
+	{
+		"english": "boost",
+		"pos": "v. / n.",
+		"senses": [
+			{
+				"zh": "促进；推动；使兴旺",
+				"en": "increase or improve sth. and make it more successful",
+				"examples": [
+					"They won the semi-final and this [[boosted]] the morale (士气) of the team."
+				]
+			}
+		]
+	},
+	{
+		"english": "adrenaline",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "肾上腺素",
+				"en": "(also adrenalin)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "digit",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（从0到9的任何一个）数字",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "ephemeral",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "短暂的；只流行一时的",
+				"en": "existing or popular for only a short time",
+				"examples": [
+					"Many words appearing during that period were quite [[ephemeral]] and have passed into history."
+				]
+			}
+		]
+	},
+	{
+		"english": "inactivate",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "使不活动；使不活跃",
+				"en": "make inactive",
+				"examples": [
+					"Researchers have identified antibodies (抗体) that [[inactivate]] the virus before it has the chance to change itself."
+				]
+			}
+		]
+	},
+	{
+		"english": "kidney",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "肾；肾脏",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "exception",
+		"pos": "n. [C, U]",
+		"senses": [
+			{
+				"zh": "例外；除外",
+				"en": "sb. / sth. that is not included in a general statement or does not follow a rule or pattern",
+				"examples": [
+					"Few guitarists can sing as well as they can play; however, he is an [[exception]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "linger",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "继续留存（较惯常或理想的时间长）",
+				"en": "continue to exist, be noticeable, etc. for longer than is usual or desirable",
+				"examples": [
+					"The faint smell of her perfume [[lingered]] on in the room long after she had left."
+				]
+			}
+		]
+	},
+	{
+		"english": "predictive",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "预测的； 预言的；前瞻的",
+				"en": "(usu. before noun) (fml.) relating to the ability to show what is going to happen in the future",
+				"examples": [
+					"Newton's physical theories are a good example of how a scientific theory may be [[predictive]] as well as explanatory."
+				]
+			}
+		]
+	},
+	{
+		"english": "midway",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "（一段时间）在中间的；到一半（的）",
+				"en": "when half a period of time has passed",
+				"examples": [
+					"She was interrupted by the chairperson when she was [[midway]] through her presentation.",
+					"We are coming close to the [[midway]] point between Los Angeles and San Francisco."
+				]
+			},
+			{
+				"zh": "在中途（的）；在半路（的）；在中间（的）",
+				"en": "between two places, and the same distance from each of them",
+				"examples": [
+					"She was interrupted by the chairperson when she was [[midway]] through her presentation.",
+					"We are coming close to the [[midway]] point between Los Angeles and San Francisco."
+				]
+			}
+		]
+	},
+	{
+		"english": "anticipation",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "期望；盼望",
+				"en": "a feeling of excitement about sth. enjoyable that is going to happen in the near future",
+				"examples": [
+					"There was a sense of [[anticipation]] in the audience as the curtain went up for the play."
+				]
+			}
+		]
+	},
+	{
+		"english": "gastrin",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "胃泌素；促胃液素",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "trigger",
+		"pos": "v. / n.",
+		"senses": [
+			{
+				"zh": "引发，激发（尤指一系列事件）",
+				"en": "make sth. happen very quickly, esp. a series of events",
+				"examples": [
+					"There must be specific events which [[triggered]] the aggressive displays in your dog."
+				]
+			}
+		]
+	},
+	{
+		"english": "acid",
+		"pos": "n. [C, U] / adj.",
+		"senses": [
+			{
+				"zh": "酸（一种化学物质）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "digestion",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "消化（过程）",
+				"en": "the process of digesting food",
+				"examples": [
+					"[[Digestion]] is the organic process by which food is converted into substances that can be absorbed into the body."
+				]
+			}
+		]
+	},
+	{
+		"english": "gland",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "腺",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "tumour",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "肿瘤；肿块；瘤",
+				"en": "(AmE tumor)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "hyperthyroidism",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "甲状腺功能亢进",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "stature",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "身高；身材",
+				"en": "sb.'s height or size",
+				"examples": [
+					"I was by no means short in [[stature]], but next to this man I felt like a dwarf (矮子).",
+					"At that time there were no other universities in England equal in [[stature]] to Oxford and Cambridge."
+				]
+			},
+			{
+				"zh": "名声；声望",
+				"en": "the degree to which sb. is admired or regarded as important",
+				"examples": [
+					"I was by no means short in [[stature]], but next to this man I felt like a dwarf (矮子).",
+					"At that time there were no other universities in England equal in [[stature]] to Oxford and Cambridge."
+				]
+			}
+		]
+	},
+	{
+		"english": "surge",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "（大量液体）汹涌；（电流）浪涌；（化学物等）突然涌动",
+				"en": "if a large amount of a liquid, electricity, chemical, etc. surges, it moves very quickly and suddenly",
+				"examples": [
+					"Adrenaline [[surged]] through her veins.",
+					"After the doors of the theater opened, the crowd [[surged]] forward and police had to intervene."
+				]
+			},
+			{
+				"zh": "迅速涌动；蜂拥向前",
+				"en": "suddenly move very quickly in a particular direction",
+				"examples": [
+					"Adrenaline [[surged]] through her veins.",
+					"After the doors of the theater opened, the crowd [[surged]] forward and police had to intervene."
+				]
+			}
+		]
+	},
+	{
+		"english": "meanwhile",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "而（用于强调两种情况之间的差异）",
+				"en": "used for emphasizing the difference between two situations",
+				"examples": [
+					"Stress can be extremely damaging to your health. Exercise, [[meanwhile]], can reduce its effects.",
+					"The hurricane will reach the island this evening. [[Meanwhile]], residents are being evacuated (转移)."
+				]
+			},
+			{
+				"zh": "与此同时",
+				"en": "while sth. else is happening",
+				"examples": [
+					"Stress can be extremely damaging to your health. Exercise, [[meanwhile]], can reduce its effects.",
+					"The hurricane will reach the island this evening. [[Meanwhile]], residents are being evacuated (转移)."
+				]
+			}
+		]
+	},
+	{
+		"english": "suppress",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "抑制（生长、发展、起作用等）",
+				"en": "prevent sth. from growing or developing, or from working effectively",
+				"examples": [
+					"It is probable that the medication will [[suppress]] the symptom without treating the condition.",
+					"Illegal cross-border transactions are very active in this area despite international attempts to [[suppress]] them."
+				]
+			},
+			{
+				"zh": "（凭借武力或严格的法律）平定，制止，镇压",
+				"en": "stop opposition or protest using military force or strict laws",
+				"examples": [
+					"It is probable that the medication will [[suppress]] the symptom without treating the condition.",
+					"Illegal cross-border transactions are very active in this area despite international attempts to [[suppress]] them."
+				]
+			}
+		]
+	},
+	{
+		"english": "urine",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "尿",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "pee",
+		"pos": "v. / n.",
+		"senses": [
+			{
+				"zh": "撒尿",
+				"en": "(infml.) pass liquid waste from your body",
+				"examples": [
+					"I need to [[pee]] before I leave. It's going to be a long journey."
+				]
+			}
+		]
+	},
+	{
+		"english": "act on / upon",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "根据···行事",
+				"en": "do sth. because of another person's advice or order, or because you have received information or had an idea",
+				"examples": [
+					"A patient will usually listen to the doctor's advice and [[act]] on it."
+				]
+			}
+		]
+	},
+	{
+		"english": "top up",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "补足；将···增加到所需之量",
+				"en": "increase the level of sth. slightly so as to bring it back to the level you want",
+				"examples": [
+					"He had to do extra jobs on the weekend to [[top]] up his income and support the family."
+				]
+			}
+		]
+	},
+	{
+		"english": "sign off",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "（写非正式信件时）收笔",
+				"en": "write your final message at the end of an informal letter",
+				"examples": [
+					"It's getting late, so she wrote a few more lines and [[signed]] off with \"Yours, Janet.\""
+				]
+			}
+		]
+	},
+	{
+		"english": "Ernest Starling",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "欧内斯特 • 斯塔林（英国生理学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "the Royal College of Physicians",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "（英国）皇家内科医师学会",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Vodafone",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "沃达丰（世界著名的跨国移动通讯网络公司）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Frederic Martini",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "弗雷德里克 • 马丁尼（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Snapchat",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "一款“阅后即焚”的信息分享应用程序",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

@@ -1,0 +1,606 @@
+[
+	{
+		"english": "disclose",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "透露；揭露；泄露",
+				"en": "(fml.) make sth. publicly known, esp. after it has been kept secret",
+				"examples": [
+					"The spokesman of the company refused to [[disclose]] more details of their latest project to the press."
+				]
+			}
+		]
+	},
+	{
+		"english": "codger",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "老家伙；老东西",
+				"en": "(old ~ ) (infml. not polite) an offensive word for an old man",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "commonplace",
+		"senses": [
+			{
+				"pos": "adj. / n.",
+				"zh": "常见的；屡见不鲜的",
+				"en": "happening or existing in many places, and therefore not special or unusual",
+				"examples": [
+					"With the improvement of people's living standard, foreign travels have become [[commonplace]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "replacement",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "替代品；替换物",
+				"en": "a thing that replaces sth, esp. because the first thing is old, broken, etc.",
+				"examples": [
+					"Just two months ago, he underwent hip [[replacement]] surgery that cost $120,000."
+				]
+			}
+		]
+	},
+	{
+		"english": "abolish",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "废止；废除；取消",
+				"en": "officially get rid of a law, system, practice, etc.",
+				"examples": [
+					"It was only at the very end of the 19th century that this practice was [[abolished]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "suspend",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "暂停 ; 中止",
+				"en": "stop sth. from being active, either temporarily or permanently",
+				"examples": [
+					"We have decided to [[suspend]] all production at the factory until safety checks can be carried out."
+				]
+			}
+		]
+	},
+	{
+		"english": "optimist",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "乐观者；乐观主义者",
+				"en": "sb. who believes that good things will happen",
+				"examples": [
+					"He's an eternal [[optimist]]. He always expects good things to happen or things to be successful."
+				]
+			}
+		]
+	},
+	{
+		"english": "prolong",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "延长，拉长，拖长（感觉或活动）",
+				"en": "deliberately make sth. such as a feeling or an activity last longer",
+				"examples": [
+					"Doctors say these new drugs can reduce pain and [[prolong]] life for two or three years."
+				]
+			}
+		]
+	},
+	{
+		"english": "immediate",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "目前的；当下的；紧迫的",
+				"en": "(only before noun) existing now, and needing to be dealt with quickly",
+				"examples": [
+					"Let's try and solve the most [[immediate]] problems before they get worse.",
+					"If the eyes are affected by the drug, you must seek [[immediate]] medical attention."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "立刻的；即刻的",
+				"en": "happening or done at once and without delay",
+				"examples": [
+					"Let's try and solve the most [[immediate]] problems before they get worse.",
+					"If the eyes are affected by the drug, you must seek [[immediate]] medical attention."
+				]
+			}
+		]
+	},
+	{
+		"english": "inaccessible",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "得不到的；难懂的",
+				"en": "difficult or impossible to afford or understand",
+				"examples": [
+					"The language of teenagers is often completely [[inaccessible]] to the elderly.",
+					"A long flight of stairs made the center of the museum [[inaccessible]] to disabled visitors."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "难到达的 ; 不可及的",
+				"en": "difficult or impossible to reach",
+				"examples": [
+					"The language of teenagers is often completely [[inaccessible]] to the elderly.",
+					"A long flight of stairs made the center of the museum [[inaccessible]] to disabled visitors."
+				]
+			}
+		]
+	},
+	{
+		"english": "discriminate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（不公正地）区别对待，歧视",
+				"en": "treat a person or group differently from another in an unfair way",
+				"examples": [
+					"Caulfield claimed the company had [[discriminated]] against him because of his nationality."
+				]
+			}
+		]
+	},
+	{
+		"english": "whip",
+		"senses": [
+			{
+				"pos": "n. [C] / v.",
+				"zh": "鞭子",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "youthfully",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "年轻地；像年轻人地；具有年轻人特点地",
+				"en": "in a way that is similar to, typical of, or relates to young people",
+				"examples": [
+					"Melania believes that dressing [[youthfully]] is about keeping up with trends."
+				]
+			}
+		]
+	},
+	{
+		"english": "vigorous",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "强健的；精力旺盛的",
+				"en": "strong and healthy",
+				"examples": [
+					"Cutting the bush back in the autumn will help promote [[vigorous]] growth in the spring.",
+					"According to a recent survey, a quarter of people over 12 get no [[vigorous]] exercise at all."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "强度大的；积极的",
+				"en": "using a lot of energy and strength or determination",
+				"examples": [
+					"Cutting the bush back in the autumn will help promote [[vigorous]] growth in the spring.",
+					"According to a recent survey, a quarter of people over 12 get no [[vigorous]] exercise at all."
+				]
+			}
+		]
+	},
+	{
+		"english": "hidebound",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "古板的，守旧的（含贬义）",
+				"en": "having old-fashioned attitudes and ideas — used to show disapproval",
+				"examples": [
+					"Tim was rude, unable to bear criticism, and more and more [[hidebound]] in his views as he got older."
+				]
+			}
+		]
+	},
+	{
+		"english": "recapture",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "使重温；使再次经历",
+				"en": "bring back the same feelings or qualities that you experienced in the past",
+				"examples": [
+					"I would say the film successfully [[recaptured]] the joyful atmosphere of those days."
+				]
+			}
+		]
+	},
+	{
+		"english": "portfolio career",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "组合型职业",
+				"en": "a working life in which you have several different jobs at one time, or a series of different kinds of job",
+				"examples": [
+					"There is a trend toward more temporary employment and [[portfolio]] careers."
+				]
+			}
+		]
+	},
+	{
+		"english": "accordingly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "相应地",
+				"en": "in a way that is suitable for a particular situation or that is based on what sb. has done or said",
+				"examples": [
+					"It is said that the new employee has broken the rule and will be punished [[accordingly]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "laborer",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "体力劳动者；工人",
+				"en": "(BrE labourer) sb. whose work needs physical strength, for example building work",
+				"examples": [
+					"Matthew has worked as a [[laborer]] in factories and on construction sites since he left his hometown."
+				]
+			}
+		]
+	},
+	{
+		"english": "accountant",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "会计师；会计",
+				"en": "sb. whose job is to keep and check financial accounts, calculate taxes, etc.",
+				"examples": [
+					"People setting up business on their own really need to employ an [[accountant]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "speculation",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "猜测；推测",
+				"en": "the act of guessing about the possible causes or effects of sth. without knowing all the facts, or the guesses that you make",
+				"examples": [
+					"There has been a great deal of [[speculation]] about what will happen after the president resigns."
+				]
+			}
+		]
+	},
+	{
+		"english": "trap",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "牢笼；困境",
+				"en": "an unpleasant or difficult situation that is difficult to escape from",
+				"examples": [
+					"Don't fall into the [[trap]] of investing all your money in one place."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "（捕捉动物的）夹子，罗网，陷阱",
+				"en": "",
+				"examples": [
+					"Don't fall into the [[trap]] of investing all your money in one place."
+				]
+			}
+		]
+	},
+	{
+		"english": "eternal",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "永远的；永恒的",
+				"en": "continuing forever and having no end",
+				"examples": [
+					"Three teenage girls took a vow (誓言) of [[eternal]] friendship during the summer of 1985."
+				]
+			}
+		]
+	},
+	{
+		"english": "wither",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "枯萎；干枯",
+				"en": "(cause to) dry and die",
+				"examples": [
+					"It is a pity that the spring flowers were already beginning to [[wither]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "cicada",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "蝉",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "caution",
+		"senses": [
+			{
+				"pos": "n. / v.",
+				"zh": "警告；告诫；提醒",
+				"en": "warn sb. that sth. might be dangerous, difficult, etc.",
+				"examples": [
+					"The business report released on Wednesday [[cautioned]] investors against over-optimistic expectations."
+				]
+			}
+		]
+	},
+	{
+		"english": "terrific",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "极好的；极棒的",
+				"en": "(infml.) very good, esp. in a way that makes you feel happy and excited",
+				"examples": [
+					"The actress who played the fashion designer in the movie was absolutely [[terrific]]!"
+				]
+			}
+		]
+	},
+	{
+		"english": "cram",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "把···塞进（小空间）；硬塞",
+				"en": "force sth. into a small space",
+				"examples": [
+					"You have to be realistic — it's difficult to [[cram]] everything into a tight schedule."
+				]
+			}
+		]
+	},
+	{
+		"english": "cope",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（成功地）应付，对付",
+				"en": "succeed in dealing with a difficult problem or situation",
+				"examples": [
+					"Some parents feel that they have got to the stage where they aren't able to [[cope]] on their own."
+				]
+			}
+		]
+	},
+	{
+		"english": "mortal",
+		"senses": [
+			{
+				"pos": "n. / adj.",
+				"zh": "不会长生不死的；终有一死的",
+				"en": "not able to live forever",
+				"examples": [
+					"Her father's death reminded her that she was [[mortal]], and it made her very sad."
+				]
+			}
+		]
+	},
+	{
+		"english": "immortality",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "永生；长存；永恒",
+				"en": "the state of living forever or being remembered forever",
+				"examples": [
+					"Some people want to achieve [[immortality]] through their works."
+				]
+			}
+		]
+	},
+	{
+		"english": "fantasist",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "幻想家；空想家；不切实际者",
+				"en": "sb. who often has fantasies, or who confuses fantasy and what is real",
+				"examples": [
+					"He is neither a liar nor a [[fantasist]], and he is careful about what he says."
+				]
+			}
+		]
+	},
+	{
+		"english": "bucket list",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "人生心愿清单",
+				"en": "a list of things that you want to do before you die",
+				"examples": [
+					"Traveling to the Potala Palace in Tibet has been on my [[bucket]] list for years."
+				]
+			}
+		]
+	},
+	{
+		"english": "cheat death / fate",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "死里逃生",
+				"en": "manage to avoid death or a very bad situation even though it seemed that you would not be able to",
+				"examples": [
+					"逃脱厄运等"
+				]
+			}
+		]
+	},
+	{
+		"english": "over the hill",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "不再年轻；人老珠黄",
+				"en": "no longer young, and therefore no longer attractive or good at doing things",
+				"examples": [
+					"Kathleen thinks she's [[over]] the [[hill]], but she's only 32."
+				]
+			}
+		]
+	},
+	{
+		"english": "on offer",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "可买到的； 供使用的；提供的",
+				"en": "available to be bought, chosen, or used",
+				"examples": [
+					"Activities [[on]] [[offer]] at the beach include sailing, rowing, canoeing and camping."
+				]
+			}
+		]
+	},
+	{
+		"english": "on the / your / its way",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "即将到达（发生）",
+				"en": "arriving or happening soon",
+				"examples": [
+					"Economists agree that the economic situation is good and recovery is [[on]] the [[way]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "be in the cards",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "很可能发生",
+				"en": "(BrE be on the cards) seem likely to happen",
+				"examples": [
+					"- So you think they'll get married next year? - I think it's in the [[cards]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "wear out",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "用坏 ;（使）磨损",
+				"en": "become damaged and useless, or make sth. like this, by using it a lot or for a long time",
+				"examples": [
+					"I bought a pair of boots three years ago and they are beginning to [[wear]] out."
+				]
+			}
+		]
+	},
+	{
+		"english": "set up shop",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "开业",
+				"en": "start a business",
+				"examples": [
+					"Dr. Rosen closed his downtown practice and [[set]] up [[shop]] in a suburban neighborhood."
+				]
+			}
+		]
+	},
+	{
+		"english": "run in the family",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（某种品质、疾病、技能等）在家族中遗传，是家族特征",
+				"en": "if sth. such as a quality, disease, or skill runs in the family, many people in that family have it",
+				"examples": [
+					"All the three kids of the Thompsons are good musicians. The musical talent seems to [[run]] in the [[family]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "the whip hand",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "支配权；控制权",
+				"en": "sb. who has the whip hand is in a good position because they can make other people do what they want",
+				"examples": [
+					"During the last decade, the right wing of the party has held the [[whip]] [[hand]] over the country."
+				]
+			}
+		]
+	},
+	{
+		"english": "round out",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "（尤指通过增加另一特点而）使更加完美，彻底完成",
+				"en": "make sth. more complete, esp. by adding another feature",
+				"examples": [
+					"The feedback is that more research and solid evidence are needed to [[round]] out the article."
+				]
+			}
+		]
+	},
+	{
+		"english": "draw up",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "起草，拟定（名单、合同等）",
+				"en": "prepare a written document, such as a list or contract",
+				"examples": [
+					"Local authorities have [[drawn]] up guidelines on waste treatment and disposal."
+				]
+			}
+		]
+	}
+]

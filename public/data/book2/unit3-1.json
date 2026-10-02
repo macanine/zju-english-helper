@@ -1,0 +1,671 @@
+[
+	{
+		"english": "drip",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（液体）滴下，沥下",
+				"en": "fall in drops",
+				"examples": [
+					"She was hot and sweat [[dripped]] into her eyes."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "滴（水）；滴下（液体）",
+				"en": "let liquid fall in drops",
+				"examples": [
+					"Her boots were muddy and her hair was [[dripping]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "breathtaking",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "使人喘不过气来的",
+				"en": "breathless",
+				"examples": [
+					"She had a car accident and suffered a [[breathtaking]] pain."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "激动人心的；惊人的；令人惊叹的",
+				"en": "very impressive, exciting, or surprising",
+				"examples": [
+					"The view from my bedroom window was absolutely [[breathtaking]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "fulfillment",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "成就感；充实感",
+				"en": "(BrE fulfilment) the feeling of being happy and satisfied with your life because you are doing interesting, useful, or important things",
+				"examples": [
+					"Are you looking for greater [[fulfillment]] and satisfaction in your work?"
+				]
+			}
+		]
+	},
+	{
+		"english": "joyful",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "欢乐的；令人高兴的",
+				"en": "very happy, or likely to make people very happy",
+				"examples": [
+					"It was a [[joyful]] reunion of all the family."
+				]
+			}
+		]
+	},
+	{
+		"english": "parallel",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "相似的；同时发生的",
+				"en": "(fml.) similar and happening at the same time",
+				"examples": [
+					"Social changes in Britain are matched by [[parallel]] trends in some other countries."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "平行的",
+				"en": "two lines, paths, etc. that are parallel to each other are the same distance apart along their whole length",
+				"examples": [
+					"The railway is [[parallel]] with the canal."
+				]
+			}
+		]
+	},
+	{
+		"english": "unparalleled",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "无比的；无双的；空前的",
+				"en": "(fml.) bigger, better, or worse than anything else",
+				"examples": [
+					"They enjoyed success on a scale [[unparalleled]] by any previous pop group."
+				]
+			}
+		]
+	},
+	{
+		"english": "brutal",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "伤人的；不顾他人感受的",
+				"en": "not pleasant and not sensitive to people's feelings",
+				"examples": [
+					"She spoke with [[brutal]] honesty — I was too old for the job."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "野蛮的；凶残的",
+				"en": "very cruel and violent",
+				"examples": [
+					"Jensen is a dangerous man, and can be very [[brutal]] and reckless (不顾后果的)."
+				]
+			}
+		]
+	},
+	{
+		"english": "honesty",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "诚实；正直；坦诚",
+				"en": "the quality of being honest",
+				"examples": [
+					"She answered all my questions with her usual [[honesty]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "unbearable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "难以忍受的；承受不住的；无法容忍的",
+				"en": "too unpleasant, painful, or annoying to deal with",
+				"examples": [
+					"The atmosphere at work at the moment is quite [[unbearable]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "tease",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "戏弄；逗弄；拿···取笑（开玩笑）",
+				"en": "laugh at sb. and make jokes in order to have fun by embarrassing them, either in a friendly way or in an unkind way",
+				"examples": [
+					"I used to hate being [[teased]] about my red hair when I was at school."
+				]
+			}
+		]
+	},
+	{
+		"english": "taunt",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "（用语言）挑衅，侮辱，嘲弄，奚落",
+				"en": "try to make sb. angry or upset by saying unkind things to them",
+				"examples": [
+					"It's wrong for you to [[taunt]] him because of his size."
+				]
+			}
+		]
+	},
+	{
+		"english": "tempt",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "诱惑；引诱；诱使",
+				"en": "make sb. want to have or do sth., even though they know they really should not",
+				"examples": [
+					"Don't [[tempt]] thieves by leaving valuables clearly visible."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "劝说；鼓励",
+				"en": "try to persuade sb. to do sth. by making it seem attractive",
+				"examples": [
+					"They [[tempted]] him to join the company by offering him a large salary and a company car."
+				]
+			}
+		]
+	},
+	{
+		"english": "loyal",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "忠贞的；忠实的；忠诚的",
+				"en": "always supporting your friends, principles, country, etc.",
+				"examples": [
+					"Jack has been a [[loyal]] worker in this company for almost 50 years."
+				]
+			}
+		]
+	},
+	{
+		"english": "resist",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "忍住；按捺",
+				"en": "(usu. in negatives) stop yourself from having sth. that you like very much or doing sth. that you want to do",
+				"examples": [
+					"He was unable to [[resist]] the temptation to buy the wallet."
+				]
+			}
+		]
+	},
+	{
+		"english": "celebration",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "庆祝；祝贺；颂扬",
+				"en": "the act of celebrating",
+				"examples": [
+					"This was not a memorial service but a [[celebration]] of his life."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "庆祝会；庆祝活动",
+				"en": "an occasion or party when you celebrate sth.",
+				"examples": [
+					"There were wild street [[celebrations]] when England won the Cup."
+				]
+			}
+		]
+	},
+	{
+		"english": "alongside",
+		"senses": [
+			{
+				"pos": "prep.",
+				"zh": "与···一起；与···同时",
+				"en": "used to say that people or things do sth. or exist together at the same time",
+				"examples": [
+					"Most of the staff refused to work [[alongside]] the new team."
+				]
+			},
+			{
+				"pos": "prep.",
+				"zh": "在（···）旁边",
+				"en": "next to the side of sth.",
+				"examples": [
+					"He crossed the street and walked [[alongside]] the park."
+				]
+			}
+		]
+	},
+	{
+		"english": "addiction",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "上瘾",
+				"en": "an inability to stop doing or using sth., esp. sth. harmful",
+				"examples": [
+					"He is now fighting his [[addiction]] to alcohol."
+				]
+			}
+		]
+	},
+	{
+		"english": "distraction",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "娱乐；消遣",
+				"en": "a pleasant activity",
+				"examples": [
+					"After a long day of work, I found boating a [[distraction]]."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "使人分心的事物",
+				"en": "sth. that stops you paying attention to what you are doing",
+				"examples": [
+					"I study in the library as there are too many [[distractions]] at home."
+				]
+			}
+		]
+	},
+	{
+		"english": "sunrise",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "日出；晨曦；朝霞",
+				"en": "the colored part of the sky where the sun is appearing in the morning",
+				"examples": [
+					"There was a glorious [[sunrise]] over the mountains."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "日出（时分）；黎明；拂晓",
+				"en": "the time when the sun first appears in the morning",
+				"examples": [
+					"They went out at [[sunrise]] to go bird-watching."
+				]
+			}
+		]
+	},
+	{
+		"english": "graciously",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "有礼貌地，仁慈地，和蔼地，亲切地（尤指对较低阶层的人们）",
+				"en": "in a polite, kind, and generous way, esp. to people of a lower rank",
+				"examples": [
+					"Mr. Martel [[graciously]] agreed to take time out of his busy schedule to answer some questions."
+				]
+			}
+		]
+	},
+	{
+		"english": "weaken",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）（某人）虚弱（衰弱）",
+				"en": "make sb. lose their physical strength, or become physically weak",
+				"examples": [
+					"Elsa was [[weakened]] by her long illness."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）变弱，削弱，减弱",
+				"en": "make sb. / sth. less powerful or less important, or become less powerful",
+				"examples": [
+					"The new evidence [[weakens]] the case against her."
+				]
+			}
+		]
+	},
+	{
+		"english": "bump",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "凸起；隆起； 鼓包",
+				"en": "a small raised area on a surface",
+				"examples": [
+					"Her bicycle hit a [[bump]] in the road and threw her off."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "碰；撞",
+				"en": "hit or knock against sth.",
+				"examples": [
+					"Tim was a clumsy boy, always [[bumping]] into the furniture."
+				]
+			}
+		]
+	},
+	{
+		"english": "foreshadow",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "预示；是···的预兆",
+				"en": "show or say that sth. will happen in the future",
+				"examples": [
+					"The storms of that year [[foreshadowed]] a long period of unstable weather conditions."
+				]
+			}
+		]
+	},
+	{
+		"english": "sideline",
+		"senses": [
+			{
+				"pos": "n. [pl., C]",
+				"zh": "（运动场的）场，边",
+				"en": "(~s) the area just outside the lines that form the edge of a sports field",
+				"examples": [
+					"Wenger stood on the [[sidelines]] shouting instructions to his team."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "副业；兼职",
+				"en": "an activity that you do as well as your main job or business, in order to earn more money",
+				"examples": [
+					"Jim works in a bank, but teaches French in the evenings as a [[sideline]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "permanently",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "永久地；长久地",
+				"en": "always, or for a very long time",
+				"examples": [
+					"Michael and his family have settled [[permanently]] in the States."
+				]
+			}
+		]
+	},
+	{
+		"english": "shrink",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（尤因恐惧而）退缩，畏缩",
+				"en": "(always + ad. / prep.) move back and away from sth., esp. because you are frightened",
+				"examples": [
+					"His anger was enough to make the others [[shrink away]] from him."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）缩小；（使）收缩",
+				"en": "become smaller, or make sth. smaller, through the effects of heat or water",
+				"examples": [
+					"Your sweater will [[shrink]] if you wash it at too high a temperature."
+				]
+			}
+		]
+	},
+	{
+		"english": "tackle",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "处理，对付（难题）",
+				"en": "try to deal with a difficult problem",
+				"examples": [
+					"There is more than one way to [[tackle]] the problem."
+				]
+			}
+		]
+	},
+	{
+		"english": "prospect",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "可能性；希望",
+				"en": "the possibility that sth. will happen",
+				"examples": [
+					"There is every [[prospect]] of the weather remaining dry this week."
+				]
+			}
+		]
+	},
+	{
+		"english": "curve",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "（道路、河流等的）弯曲处",
+				"en": "a bend in a road, river, etc.",
+				"examples": [
+					"As he rounded the [[curve]] he saw her standing by the gate."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "曲线；弧线",
+				"en": "a line that gradually bends like part of a circle",
+				"examples": [
+					"The seats were arranged to form a [[curve]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "hurdle",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "（跨栏赛跑或马术比赛中用的）栏架",
+				"en": "one of a series of small fences that a person or horse has to jump over during a race",
+				"examples": [
+					"She cleared all the [[hurdles]] easily and raced to the finishing line."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "障碍；困难",
+				"en": "a problem or difficulty that you must deal with before you can achieve sth.",
+				"examples": [
+					"Finding enough money for the project was the first [[hurdle]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "split",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "离婚，分手（尤作报刊用语）",
+				"en": "(infml.) the end of a marriage or relationship — used esp. in newspapers and magazines",
+				"examples": [
+					"She seems to be getting over her recent [[split]] with her fiancé."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（组织内部）产生分歧，分裂",
+				"en": "(split, split) divide, or make a group of people divide, into smaller groups that have very different opinions",
+				"examples": [
+					"The party is [[split]] over the issue of immigration."
+				]
+			}
+		]
+	},
+	{
+		"english": "crack",
+		"senses": [
+			{
+				"pos": "n. / v.",
+				"zh": "（使）破裂；（使）裂开",
+				"en": "break or make sth. break, either so that it gets lines on its surface, or so that it breaks into pieces",
+				"examples": [
+					"Due to her carelessness, she fell and [[cracked]] a bone in her leg."
+				]
+			}
+		]
+	},
+	{
+		"english": "cracked",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有裂缝的；有裂痕的",
+				"en": "having one or more lines on the surface because it is damaged but not completely broken",
+				"examples": [
+					"She passed her tongue over her [[cracked]] lips and tried to speak."
+				]
+			}
+		]
+	},
+	{
+		"english": "by choice",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "自己选择的；自愿的",
+				"en": "if you do sth. by choice, you do it because you want to do it and not because you are forced to do it",
+				"examples": [
+					"She repeated that she was very comfortable and lived here [[by choice]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "(all) to oneself",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "独有；专用",
+				"en": "for only sb. to have or use; not shared",
+				"examples": [
+					"I'm going out, so you'll have the place [[to yourself]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "run out (of)",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "用完，耗尽（某物）",
+				"en": "use all of sth. and not have any more left",
+				"examples": [
+					"Few of us would know what to do if the supermarkets [[ran out of]] food."
+				]
+			},
+			{
+				"pos": "短语动词",
+				"zh": "（供应品）被用完，被耗尽",
+				"en": "(of a supply of sth.) be used up",
+				"examples": [
+					"We must act now because time is [[running out]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "be sick (and tired) of",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "对某事感到气愤（厌倦）",
+				"en": "(also be sick to death of) (spoken) be angry or bored with sth. that has been happening for a long time",
+				"examples": [
+					"I'm [[sick of]] your rudeness — I won't have it any longer!"
+				]
+			}
+		]
+	},
+	{
+		"english": "take sth. out on sb.",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "向（某人）发泄（不满等）；拿（某人）出气",
+				"en": "treat sb. badly when you are angry or upset, even though it is not their fault",
+				"examples": [
+					"When he's under pressure at work, he [[takes it out on]] me."
+				]
+			}
+		]
+	},
+	{
+		"english": "a bump in the road",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "前进中的问题（通常是暂时的）",
+				"en": "(infml.) a problem that arises and interferes with forward progress (usu. only temporarily)",
+				"examples": [
+					"The project hit [[a bump in the road]] when Tom suddenly resigned."
+				]
+			}
+		]
+	},
+	{
+		"english": "move on",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "开始做（别的事）；换话题",
+				"en": "start doing or discussing sth. new",
+				"examples": [
+					"When you finish, [[move on]] to the next exercise."
+				]
+			}
+		]
+	},
+	{
+		"english": "stand on one's own (two) feet",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "自立；独立自主",
+				"en": "be able to do what you need to do, earn your own money, etc. without help from others",
+				"examples": [
+					"Jack's never learned to [[stand on his own two feet]]."
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,603 @@
+[
+	{
+		"english": "console",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "安慰；慰藉",
+				"en": "make sb. feel better when they are feeling sad or disappointed",
+				"examples": [
+					"He [[consoled]] himself that he would see Kate again soon."
+				]
+			}
+		]
+	},
+	{
+		"english": "heal",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（在精神或感情上）（使）复原；（使）坚强起来",
+				"en": "become mentally or emotionally strong again after a bad experience, or help sb. to do this",
+				"examples": [
+					"Bianca was the kind of woman who could [[heal]] his soul, if he had time to let her.",
+					"It took a long time for the wounds to [[heal]]."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）康复，复原",
+				"en": "(also heal up) become healthy again; make sth. healthy again",
+				"examples": [
+					"Bianca was the kind of woman who could [[heal]] his soul, if he had time to let her.",
+					"It took a long time for the wounds to [[heal]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "coincidence",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "巧合；巧事",
+				"en": "when two things happen at the same time, in the same place, or to the same people in a way that seems surprising or unusual",
+				"examples": [
+					"I think it is more than [[coincidence]] that all the complaints have come from the same group of people."
+				]
+			}
+		]
+	},
+	{
+		"english": "therapy",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "治疗；疗法",
+				"en": "a treatment that helps sb. feel better, grow stronger, etc., esp. after an illness",
+				"examples": [
+					"Many patients receiving these new [[therapies]] respond rapidly to them and get a lot of clinical benefit."
+				]
+			}
+		]
+	},
+	{
+		"english": "propose",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "提议；建议",
+				"en": "(fml.) suggest sth. as a plan or course of action",
+				"examples": [
+					"In his speech he [[proposed]] that the UN should set up an emergency center for the environment."
+				]
+			}
+		]
+	},
+	{
+		"english": "fleeting",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "短暂的；飞逝的",
+				"en": "(usu. before noun) lasting for only a short time",
+				"examples": [
+					"For one [[fleeting]] moment, Paula allowed herself to forget her troubles."
+				]
+			}
+		]
+	},
+	{
+		"english": "betrayal",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "背叛；出卖",
+				"en": "the act of betraying sb. / sth. or the fact of being betrayed",
+				"examples": [
+					"She wondered if he felt hurt at his best friend's [[betrayal]] but didn't have the courage to ask."
+				]
+			}
+		]
+	},
+	{
+		"english": "companionship",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "友谊；友好交往",
+				"en": "when you are with sb. you enjoy being with, and are not alone",
+				"examples": [
+					"That feeling of [[companionship]] can make a huge difference, especially at a stressful job."
+				]
+			}
+		]
+	},
+	{
+		"english": "insight",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（尤指对复杂情况、看法的）顿悟，猛醒",
+				"en": "a sudden clear understanding of sth. or part of sth., esp. a complicated situation or idea",
+				"examples": [
+					"The article gives us a real [[insight]] into the causes of the present economic crisis."
+				]
+			}
+		]
+	},
+	{
+		"english": "narrator",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "叙述者；讲述者",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "monologue",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "长篇独白",
+				"en": "(AmE also monolog) a long speech by one person",
+				"examples": [
+					"Blogs are not just about one person sharing in a [[monologue]] with everyone else listening."
+				]
+			}
+		]
+	},
+	{
+		"english": "paradoxically",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "自相矛盾地；反常地",
+				"en": "in a way that is surprising because it is the opposite of what you would expect",
+				"examples": [
+					"[[Paradoxically]], the economy is improving although many families complain about the poverty in which they live."
+				]
+			}
+		]
+	},
+	{
+		"english": "interior",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "内心的；精神的",
+				"en": "(only before noun) belonging to mental or spiritual life",
+				"examples": [
+					"[[Interior]] monolog is defined as the thoughts you have running through your brain or the things that you silently tell yourself.",
+					"The [[interior]] of the church was dark."
+				]
+			},
+			{
+				"pos": "n. [C, usu. sing.]",
+				"zh": "内部；里面",
+				"en": "the inner part or inside of sth.",
+				"examples": [
+					"[[Interior]] monolog is defined as the thoughts you have running through your brain or the things that you silently tell yourself.",
+					"The [[interior]] of the church was dark."
+				]
+			}
+		]
+	},
+	{
+		"english": "universal",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "普遍的；全体的；共同的",
+				"en": "existing everywhere or involving everyone",
+				"examples": [
+					"Smiling is apparently a [[universal]] sign of friendliness and approval."
+				]
+			}
+		]
+	},
+	{
+		"english": "universality",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "普遍性；通用性",
+				"en": "the quality or state of being universal",
+				"examples": [
+					"His lyrics aim for a certain timeless [[universality]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "timelessness",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "永恒；不朽",
+				"en": "the quality of not changing as the years go past, or as fashion changes",
+				"examples": [
+					"It is said that all diamonds are symbolic of love, commitment, and [[timelessness]], but adding yellow to the stone gives it even deeper meaning."
+				]
+			}
+		]
+	},
+	{
+		"english": "subconscious",
+		"senses": [
+			{
+				"pos": "n. / adj.",
+				"zh": "下意识的；潜意识的",
+				"en": "existing in the mind but not immediately available to consciousness",
+				"examples": [
+					"There are conscious thoughts that you're aware of and [[subconscious]] ones that you're not."
+				]
+			}
+		]
+	},
+	{
+		"english": "ease",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "缓解；减轻",
+				"en": "make or become less severe, difficult, unpleasant, painful, etc.",
+				"examples": [
+					"The school needs to take some measures to [[ease]] the burden on busy teachers.",
+					"He studied hard every day so that he could pass the exam with [[ease]]."
+				]
+			},
+			{
+				"pos": "n. [U]",
+				"zh": "容易；轻易；不费劲",
+				"en": "the fact that sth. is easy to do",
+				"examples": [
+					"The school needs to take some measures to [[ease]] the burden on busy teachers.",
+					"He studied hard every day so that he could pass the exam with [[ease]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "empathetic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "同情的；共鸣的",
+				"en": "(also empathic) having the ability to understand sb. else's feelings or emotions",
+				"examples": [
+					"Providing a loving home environment can help the child to become independent, self-confident, and [[empathetic]] toward others."
+				]
+			}
+		]
+	},
+	{
+		"english": "mild",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "不严重的；轻微的",
+				"en": "a mild illness or health problem is not serious",
+				"examples": [
+					"She had a [[mild]] headache, and went to bed much earlier than usual.",
+					"I like this kind of cheese because it has a pleasant [[mild]] flavor."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "不浓烈的；淡的；不辣的",
+				"en": "not very strong or hot-tasting",
+				"examples": [
+					"She had a [[mild]] headache, and went to bed much earlier than usual.",
+					"I like this kind of cheese because it has a pleasant [[mild]] flavor."
+				]
+			}
+		]
+	},
+	{
+		"english": "symptom",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "症状",
+				"en": "sth. wrong with your body or mind which shows that you have a particular illness",
+				"examples": [
+					"Tiredness is one of the most common [[symptoms]] of stress."
+				]
+			}
+		]
+	},
+	{
+		"english": "bibliotherapist",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "阅读治疗专家",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "continually",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "多次重复地；频繁地",
+				"en": "in a way that happens repeatedly",
+				"examples": [
+					"We are [[continually]] reassessing the situation.",
+					"The telephone has been ringing [[continually]] in the office all morning."
+				]
+			},
+			{
+				"pos": "adv.",
+				"zh": "持续地；不间断地",
+				"en": "in a way that continues for a long time without stopping",
+				"examples": [
+					"We are [[continually]] reassessing the situation.",
+					"The telephone has been ringing [[continually]] in the office all morning."
+				]
+			}
+		]
+	},
+	{
+		"english": "grieve",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（尤指因所爱之人去世而）感到悲痛",
+				"en": "feel extremely sad, esp. because sb. you love has died",
+				"examples": [
+					"He died, and every day since then I have [[grieved]] for him."
+				]
+			}
+		]
+	},
+	{
+		"english": "plot",
+		"senses": [
+			{
+				"pos": "n. [C] / v.",
+				"zh": "（书、电影、戏剧的）情节",
+				"en": "the events that form the main story of a book, film, or play",
+				"examples": [
+					"Although the cast (全体演员) was different back then, the [[plot]] was strikingly similar."
+				]
+			}
+		]
+	},
+	{
+		"english": "fictional",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "虚构的；编造的；小说（中）的",
+				"en": "fictional people, events, etc. are imaginary and from a book or story",
+				"examples": [
+					"He has created many lively [[fictional]] characters with his wonderful writing."
+				]
+			}
+		]
+	},
+	{
+		"english": "retirement",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "退休；退职",
+				"en": "when you stop working, usu. because of your age",
+				"examples": [
+					"He became a keen golfer after his [[retirement]] from politics."
+				]
+			}
+		]
+	},
+	{
+		"english": "transient",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "短暂的；转瞬即逝的；一时的",
+				"en": "(fml.) continuing only for a short time",
+				"examples": [
+					"The trading data show that these events had minimal and [[transient]] effect on the price of gold and silver."
+				]
+			}
+		]
+	},
+	{
+		"english": "transience",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "短暂；转瞬即逝",
+				"en": "the state of continuing only for a short time",
+				"examples": [
+					"History is a combination of permanence and [[transience]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "messy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（状况）棘手的",
+				"en": "(of a situation) complicated and unpleasant to deal with",
+				"examples": [
+					"If you find yourself in a [[messy]] situation, please take these five strategies to heart.",
+					"Sorry, the place is so [[messy]] because I haven't had time to clear up."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "脏的；乱的",
+				"en": "dirty or untidy",
+				"examples": [
+					"If you find yourself in a [[messy]] situation, please take these five strategies to heart.",
+					"Sorry, the place is so [[messy]] because I haven't had time to clear up."
+				]
+			}
+		]
+	},
+	{
+		"english": "grief",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "悲痛，极度悲伤（尤指因所爱之人去世）",
+				"en": "extreme sadness, esp. because sb. you love has died",
+				"examples": [
+					"The [[grief]] she felt over Helen's death was almost unbearable."
+				]
+			}
+		]
+	},
+	{
+		"english": "despair",
+		"senses": [
+			{
+				"pos": "n. [U] / v.",
+				"zh": "绝望",
+				"en": "a feeling that you have no hope at all",
+				"examples": [
+					"A few positive words can turn [[despair]] into hope."
+				]
+			}
+		]
+	},
+	{
+		"english": "memoir",
+		"senses": [
+			{
+				"pos": "n. [pl.]",
+				"zh": "传略；实录",
+				"en": "(fml.) a short piece of writing about a person or place that you knew well, or an event that you experienced",
+				"examples": [
+					"Her [[memoir]] of her friend will be published soon.",
+					"Angelou's first volume of [[memoirs]] dealt with her childhood."
+				]
+			},
+			{
+				"pos": "n. [pl.]",
+				"zh": "（名人）回忆录",
+				"en": "(~s) a book by sb. important and famous in which they write about their life and experiences",
+				"examples": [
+					"Her [[memoir]] of her friend will be published soon.",
+					"Angelou's first volume of [[memoirs]] dealt with her childhood."
+				]
+			}
+		]
+	},
+	{
+		"english": "narrative",
+		"senses": [
+			{
+				"pos": "n. [U, C]",
+				"zh": "叙述；叙述技巧",
+				"en": "(fml.) the act, process, or skill of telling a story",
+				"examples": [
+					"The novel contains too much dialog and not enough [[narrative]].",
+					"At several points in the [[narrative]] the two stories cross."
+				]
+			},
+			{
+				"pos": "n. [U, C]",
+				"zh": "（尤指小说中的）叙述，记叙",
+				"en": "(fml.) a description of events in a story, esp. in a novel",
+				"examples": [
+					"The novel contains too much dialog and not enough [[narrative]].",
+					"At several points in the [[narrative]] the two stories cross."
+				]
+			}
+		]
+	},
+	{
+		"english": "optimistic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "乐观的；乐观主义的",
+				"en": "believing that good things will happen in the future",
+				"examples": [
+					"Bankers are cautiously [[optimistic]] about the country's economic future."
+				]
+			}
+		]
+	},
+	{
+		"english": "one after the other",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "一个接一个地；接二连三地",
+				"en": "(also one after another) if a series of events or actions happen one after the other, each one happens soon after the previous one",
+				"examples": [
+					"The children walked silently, [[one after the other]], into the schoolhouse to begin their lesson."
+				]
+			}
+		]
+	},
+	{
+		"english": "in the hope of / that",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "抱着···的希望",
+				"en": "because you want sth. to happen",
+				"examples": [
+					"Shoppers flocked to the sales in the hope of finding a bargain."
+				]
+			}
+		]
+	},
+	{
+		"english": "Michel de Montaigne",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "米歇尔・德・蒙田 ( 法国作家、哲学家 )",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "University of Sussex",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "萨塞克斯大学 (英国大学，位于英格兰)",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Helen Garner",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "海伦・加纳 （澳大利亚作家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Robert Dessaix",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "罗伯特・德塞（澳大利亚作家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

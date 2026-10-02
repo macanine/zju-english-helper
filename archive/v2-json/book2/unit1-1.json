@@ -1,0 +1,848 @@
+[
+	{
+		"english": "entrepreneur",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "企业家",
+				"en": "a person who makes money by starting or running businesses, esp. when this involves taking financial risks",
+				"examples": [
+					"He would not have succeeded in such a risky business if he had not been such a clever [[entrepreneur]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "mistaken",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "意见（或判断）错误的，弄错的",
+				"en": "wrong in one's opinion or judgment",
+				"examples": [
+					"She wondered whether she'd been [[mistaken]] about his intentions."
+				]
+			}
+		]
+	},
+	{
+		"english": "mistakenly",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "错误地；曲解地；被误解地",
+				"en": "wrongly or by mistake",
+				"examples": [
+					"This app will help you get a photo or document back if you [[mistakenly]] delete it."
+				]
+			}
+		]
+	},
+	{
+		"english": "wormhole",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "虫洞（宇宙中可能存在的连接遥远空间的通道）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "sprawl",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "（建筑群）杂乱地延伸（扩展）",
+				"en": "if buildings sprawl, they spread out over a wide area in an untidy and unattractive way",
+				"examples": [
+					"The town [[sprawls]] along the side of the lake.",
+					"He was [[sprawling]] on the sofa watching his favorite TV program."
+				]
+			},
+			{
+				"zh": "（懒洋洋地或漫不经心地）摊开手脚躺（坐）着",
+				"en": "lie or sit with your arms or legs stretched out in a lazy or careless way",
+				"examples": [
+					"The town [[sprawls]] along the side of the lake.",
+					"He was [[sprawling]] on the sofa watching his favorite TV program."
+				]
+			}
+		]
+	},
+	{
+		"english": "wander",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "徘徊；闲逛；漫步于",
+				"en": "walk slowly across or around an area, usu. without a clear direction or purpose",
+				"examples": [
+					"She was [[wandering]] aimlessly up and down the road."
+				]
+			}
+		]
+	},
+	{
+		"english": "stall",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "（尤指集市上的）货摊，摊位，售货亭",
+				"en": "a table or small shop with an open front that people sell things from, esp. at a market",
+				"examples": [
+					"The street is lined with [[stalls]] selling Chinese New Year decorations."
+				]
+			}
+		]
+	},
+	{
+		"english": "spectrum",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（观点、人、情况等的）范围，幅度",
+				"en": "(pl. spectra) a complete range of opinions, people, situations, etc., going from one extreme to its opposite",
+				"examples": [
+					"A balanced diet should contain a broad [[spectrum]] of plant and animal foods."
+				]
+			}
+		]
+	},
+	{
+		"english": "cord",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "电线",
+				"en": "an electrical wire or wires with a protective covering, usu. for connecting electrical equipment to the supply of electricity",
+				"examples": [
+					"We used so many lights that we needed four extension [[cords]].",
+					"Have you got some [[cord]] that I can tie this parcel up with?"
+				]
+			},
+			{
+				"zh": "粗线；细绳；索；带",
+				"en": "a piece of thick string or thin rope",
+				"examples": [
+					"We used so many lights that we needed four extension [[cords]].",
+					"Have you got some [[cord]] that I can tie this parcel up with?"
+				]
+			}
+		]
+	},
+	{
+		"english": "assemble",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "组装；装配",
+				"en": "put all the parts of sth. together",
+				"examples": [
+					"The shelves are sold in kits that you have to [[assemble]] yourself.",
+					"Since she took over the department, she has [[assembled]] a talented team with a varied selection of skills."
+				]
+			},
+			{
+				"zh": "集合；聚集",
+				"en": "if you assemble a large number of people or things, or if they assemble, they are gathered together in one place, often for a particular purpose",
+				"examples": [
+					"The shelves are sold in kits that you have to [[assemble]] yourself.",
+					"Since she took over the department, she has [[assembled]] a talented team with a varied selection of skills."
+				]
+			}
+		]
+	},
+	{
+		"english": "amid",
+		"pos": "prep.",
+		"senses": [
+			{
+				"zh": "在···之中；被···所环绕",
+				"en": "(literary) among or surrounded by things",
+				"examples": [
+					"We camped in a shallow valley [[amid]] low hills covered with green pine trees.",
+					"The dollar has fallen in value [[amid]] rumors of weakness in the US economy."
+				]
+			},
+			{
+				"zh": "在（嘈杂、纷乱的事件）中（用于书面语或新闻报道中）",
+				"en": "while noisy, busy, or confused events are happening — used in writing or news reports",
+				"examples": [
+					"We camped in a shallow valley [[amid]] low hills covered with green pine trees.",
+					"The dollar has fallen in value [[amid]] rumors of weakness in the US economy."
+				]
+			}
+		]
+	},
+	{
+		"english": "glitter",
+		"pos": "v. / n.",
+		"senses": [
+			{
+				"zh": "闪烁；闪光",
+				"en": "shine brightly with flashing points of light",
+				"examples": [
+					"Smoothed flat by generations of wind and rain, the stone [[glitters]] in the sun."
+				]
+			}
+		]
+	},
+	{
+		"english": "glittering",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "闪光的；闪耀的",
+				"en": "(usu. before noun) giving off many small flashes of light",
+				"examples": [
+					"The day ended with a cruise on the Huangpu River where we saw the [[glittering]] skyline of Shanghai."
+				]
+			}
+		]
+	},
+	{
+		"english": "holdout",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "抵制者（或组织）；不合作者（或组织）",
+				"en": "a person or organization who resists sth. or refuses to accept an offer",
+				"examples": [
+					"A few [[holdouts]] still use typewriters, but nearly everybody uses computers now."
+				]
+			}
+		]
+	},
+	{
+		"english": "clone",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "复制；模仿",
+				"en": "make a copy of; imitate",
+				"examples": [
+					"Entrepreneurs have to move faster than ever to ensure others don't [[clone]] their ideas.",
+					"A team from the UK were the first to successfully [[clone]] an animal."
+				]
+			},
+			{
+				"zh": "克隆",
+				"en": "make an exact copy of a plant or animal by taking a cell from it and developing it artificially",
+				"examples": [
+					"Entrepreneurs have to move faster than ever to ensure others don't [[clone]] their ideas.",
+					"A team from the UK were the first to successfully [[clone]] an animal."
+				]
+			}
+		]
+	},
+	{
+		"english": "innovation",
+		"pos": "n. [U, C]",
+		"senses": [
+			{
+				"zh": "革新；创新",
+				"en": "the introduction of new ideas or methods",
+				"examples": [
+					"We must encourage [[innovation]] if the company is to remain competitive.",
+					"She believed she had come up with one of the greatest [[innovations]] of modern times."
+				]
+			},
+			{
+				"zh": "新观念；新方法；新发明",
+				"en": "a new idea, method, or invention",
+				"examples": [
+					"We must encourage [[innovation]] if the company is to remain competitive.",
+					"She believed she had come up with one of the greatest [[innovations]] of modern times."
+				]
+			}
+		]
+	},
+	{
+		"english": "coexist",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "共存；共处",
+				"en": "exist at the same time or in the same place",
+				"examples": [
+					"Different traditions [[coexist]] successfully in this country."
+				]
+			}
+		]
+	},
+	{
+		"english": "increasingly",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "不断增加地；越来越多地",
+				"en": "more and more all the time",
+				"examples": [
+					"[[Increasingly]], businesses are having to reduce their costs in order to survive."
+				]
+			}
+		]
+	},
+	{
+		"english": "poised",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "准备好的；蓄势待发的",
+				"en": "completely ready to do sth. or for sth. to happen, when it is likely to happen soon",
+				"examples": [
+					"The company is [[poised]] to launch its new advertising campaign.",
+					"Tina was tense, her hand [[poised]] over the telephone."
+				]
+			},
+			{
+				"zh": "（摆好姿势）准备行动的",
+				"en": "not moving, but ready to move or do sth. at any moment",
+				"examples": [
+					"The company is [[poised]] to launch its new advertising campaign.",
+					"Tina was tense, her hand [[poised]] over the telephone."
+				]
+			}
+		]
+	},
+	{
+		"english": "artificial",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "人造的；人工的",
+				"en": "not real or not made of natural things but made to be like sth. that is real or natural",
+				"examples": [
+					"Energy is being wasted by using [[artificial]] lighting when daylight is adequate."
+				]
+			}
+		]
+	},
+	{
+		"english": "artificial intelligence",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "人工智能",
+				"en": "(abbr. AI) the study of how to make computers do intelligent things that people can do, such as think and make decisions",
+				"examples": [
+					"Language is crucial to the development of [[artificial intelligence]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "drone",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "无人机",
+				"en": "",
+				"examples": [
+					"Above him an invisible plane [[droned]] through the night sky."
+				]
+			},
+			{
+				"zh": "发出持续的嗡嗡声；嗡嗡作响",
+				"en": "make a continuous low dull sound",
+				"examples": [
+					"Above him an invisible plane [[droned]] through the night sky."
+				]
+			}
+		]
+	},
+	{
+		"english": "miracle",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "意外的幸运事；不可思议的事；奇迹",
+				"en": "sth. very lucky or very good that happens which you did not expect to happen or did not think was possible",
+				"examples": [
+					"The economic [[miracle]] of this country has always been a mystery."
+				]
+			}
+		]
+	},
+	{
+		"english": "impetus",
+		"pos": "n. [U, sing.]",
+		"senses": [
+			{
+				"zh": "刺激；推动（力）；促进",
+				"en": "sth. that encourages a process or activity to develop more quickly",
+				"examples": [
+					"The grant for building the opera house gave [[impetus]] to the city's cultural life."
+				]
+			}
+		]
+	},
+	{
+		"english": "unrecognizable",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "（变得）不能识别的，认不出来的",
+				"en": "(BrE also unrecognisable) sb. / sth. that is unrecognizable has changed or been damaged so much that you do not recognize them",
+				"examples": [
+					"I hadn't been to the city for 20 years and it was almost [[unrecognizable]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "reign",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "支配；盛行",
+				"en": "be very important or a powerful influence at a particular time",
+				"examples": [
+					"Silence [[reigned]] while we waited for news anxiously.",
+					"Queen Victoria [[reigned]] over Britain from 1837 to 1901."
+				]
+			},
+			{
+				"zh": "为王；为君",
+				"en": "rule a nation or group of nations as their king, queen, or emperor",
+				"examples": [
+					"Silence [[reigned]] while we waited for news anxiously.",
+					"Queen Victoria [[reigned]] over Britain from 1837 to 1901."
+				]
+			}
+		]
+	},
+	{
+		"english": "supreme",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "（权力、重要性或影响力）最高的，至高无上的",
+				"en": "having the highest position of power, importance, or influence",
+				"examples": [
+					"Winning an Olympic gold medal was, I suppose, the [[supreme]] moment of my life."
+				]
+			}
+		]
+	},
+	{
+		"english": "sector",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（尤指商业、贸易等领域的）部门，行业",
+				"en": "a part of an area of activity, esp. of business, trade, etc.",
+				"examples": [
+					"Data is continuously transforming the current landscape of many industries, including the financial [[sector]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "glimmer",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "（希望等的）微弱迹象，一丝",
+				"en": "a small sign of sth. such as hope or understanding",
+				"examples": [
+					"Despite an occasional [[glimmer]] of hope, this campaign has not produced any results."
+				]
+			}
+		]
+	},
+	{
+		"english": "accomplish",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "（尤指通过努力）完成，实现",
+				"en": "succeed in doing sth., esp. after trying very hard",
+				"examples": [
+					"If we all work together, I think we can [[accomplish]] our goal."
+				]
+			}
+		]
+	},
+	{
+		"english": "feat",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "业绩；功绩；壮举",
+				"en": "sth. that is an impressive achievement, because it needs a lot of skill, strength, etc. to do",
+				"examples": [
+					"The Hong Kong-Zhuhai-Macao Bridge is a remarkable [[feat]] of engineering."
+				]
+			}
+		]
+	},
+	{
+		"english": "transform",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "使改观；使变形；使转化",
+				"en": "completely change the appearance, form, or character of sb. / sth., esp. in a way that improves it",
+				"examples": [
+					"The place was [[transformed]] from a quiet farming village into a busy port.",
+					"The trip to the cinema [[transforms]] into a full-day activity for the family."
+				]
+			},
+			{
+				"zh": "改观；变形；转化",
+				"en": "undergo a change in appearance, form, or character",
+				"examples": [
+					"The place was [[transformed]] from a quiet farming village into a busy port.",
+					"The trip to the cinema [[transforms]] into a full-day activity for the family."
+				]
+			}
+		]
+	},
+	{
+		"english": "momentum",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "动力；势头",
+				"en": "the ability to keep increasing, developing, or being more successful",
+				"examples": [
+					"They are anxious to maintain the [[momentum]] of the search for a solution."
+				]
+			}
+		]
+	},
+	{
+		"english": "consecutive",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "连续的；不间断的",
+				"en": "following one after another in a series without interruption",
+				"examples": [
+					"After six [[consecutive]] defeats, the team was almost ready to give up."
+				]
+			}
+		]
+	},
+	{
+		"english": "hub",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（地域、系统、活动等的）中心，枢纽",
+				"en": "the central and most important part of an area, system, activity, etc., which all the other parts are connected to",
+				"examples": [
+					"The city acts as the [[hub]] of the nation's railroads and highways."
+				]
+			}
+		]
+	},
+	{
+		"english": "overnight",
+		"pos": "adv. / adj.",
+		"senses": [
+			{
+				"zh": "突然；一下子",
+				"en": "suddenly or surprisingly quickly",
+				"examples": [
+					"He's realistic enough to know he's not going to succeed [[overnight]].",
+					"The temperature could fall below zero [[overnight]] in late autumn."
+				]
+			},
+			{
+				"zh": "夜里；在夜间",
+				"en": "for or during the night",
+				"examples": [
+					"He's realistic enough to know he's not going to succeed [[overnight]].",
+					"The temperature could fall below zero [[overnight]] in late autumn."
+				]
+			}
+		]
+	},
+	{
+		"english": "impressively",
+		"pos": "adv.",
+		"senses": [
+			{
+				"zh": "令人钦佩地",
+				"en": "in a way that people admire or respect",
+				"examples": [
+					"The team played [[impressively]] throughout the game."
+				]
+			}
+		]
+	},
+	{
+		"english": "burgeon",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "快速增长（发展）",
+				"en": "(fml.) grow or develop quickly",
+				"examples": [
+					"The company hoped to profit from the [[burgeoning]] market in artificial intelligence."
+				]
+			}
+		]
+	},
+	{
+		"english": "breakthrough",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "突破；重大进展",
+				"en": "an important new discovery in sth. you are studying, esp. one made after trying for a long time",
+				"examples": [
+					"Chinese scientists have made a major [[breakthrough]] in chip manufacturing."
+				]
+			}
+		]
+	},
+	{
+		"english": "aerospace",
+		"pos": "n. [U] / adj.",
+		"senses": [
+			{
+				"zh": "航空航天工业；宇航工业",
+				"en": "the industry that designs and builds aircraft and space vehicles",
+				"examples": [
+					"Many companies are conducting ground-breaking research for the future of the [[aerospace]] industry."
+				]
+			}
+		]
+	},
+	{
+		"english": "profound",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "巨大的；重大的；深远的；深切的",
+				"en": "very great; felt or experienced very strongly",
+				"examples": [
+					"Over time, habits and routines have a [[profound]] effect on our quality of life."
+				]
+			}
+		]
+	},
+	{
+		"english": "evolve",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "逐步形成；逐渐演变",
+				"en": "develop and change gradually over a long period of time",
+				"examples": [
+					"Computer software will continue to [[evolve]] in response to users' needs.",
+					"More complex animals gradually [[evolved]] from these very simple creatures."
+				]
+			},
+			{
+				"zh": "（植物、动物等）进化，进化形成",
+				"en": "(of plants, animals, etc.) change gradually over a long period of time",
+				"examples": [
+					"Computer software will continue to [[evolve]] in response to users' needs.",
+					"More complex animals gradually [[evolved]] from these very simple creatures."
+				]
+			}
+		]
+	},
+	{
+		"english": "envision",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "想象，展望（尤指美好的事）",
+				"en": "imagine sth. that you think might happen in the future, esp. sth. that you think will be good",
+				"examples": [
+					"As a young teacher, I [[envisioned]] a future of educational excellence."
+				]
+			}
+		]
+	},
+	{
+		"english": "consensus",
+		"pos": "n. [U, sing.]",
+		"senses": [
+			{
+				"zh": "共同意见；一致看法；共识",
+				"en": "an opinion that everyone in a group agrees with or accepts",
+				"examples": [
+					"Could we reach a [[consensus]] on this matter? Let's take a vote."
+				]
+			}
+		]
+	},
+	{
+		"english": "head-to-head",
+		"pos": "adv. / adj.",
+		"senses": [
+			{
+				"zh": "正面交锋地",
+				"en": "competing directly with another person or group",
+				"examples": [
+					"Rather than go [[head-to-head]] with their main rivals, they decided to try a more subtle approach.",
+					"He beat some of the world's greatest tennis players in [[head-to-head]] competition."
+				]
+			},
+			{
+				"zh": "正面交锋的",
+				"en": "(only before noun) in which two people or groups face each other directly in order to decide the result of a disagreement or competition",
+				"examples": [
+					"Rather than go [[head-to-head]] with their main rivals, they decided to try a more subtle approach.",
+					"He beat some of the world's greatest tennis players in [[head-to-head]] competition."
+				]
+			}
+		]
+	},
+	{
+		"english": "ranking",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "排行；排名；名次",
+				"en": "a position on a scale that shows how good sb. / sth. is when compared with others",
+				"examples": [
+					"Last year the tennis player rose from 39 to 35 in the world [[rankings]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "workforce",
+		"pos": "n. [sing.]",
+		"senses": [
+			{
+				"zh": "（行业的）全体从业人员；（公司的）全体员工；（国家或地区的）劳动力",
+				"en": "all the people who work in a particular industry or company, or are available to work in a particular country or area",
+				"examples": [
+					"Senior executives are looking to build a highly skilled [[workforce]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "dogged",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "顽强的；不屈不挠的；坚持不懈的",
+				"en": "(usu. before noun) showing determination; not giving up easily",
+				"examples": [
+					"Her ambition and [[dogged]] determination ensured that she rose to the top of her profession."
+				]
+			}
+		]
+	},
+	{
+		"english": "packed with",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "充满···的",
+				"en": "completely full of",
+				"examples": [
+					"This website is packed with expert advice on how to manage time."
+				]
+			}
+		]
+	},
+	{
+		"english": "for now",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "目前；暂时",
+				"en": "at the present moment; for the time being",
+				"examples": [
+					"[[For now]], our plan will remain unchanged until something convinces us otherwise."
+				]
+			}
+		]
+	},
+	{
+		"english": "reign supreme",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "主宰；称雄；呈极盛之势",
+				"en": "if sb. / sth. reigns supreme, they are the most important part of a situation or time",
+				"examples": [
+					"At that time, the bicycle [[reigned supreme]] as Britain's most popular mode of transportation."
+				]
+			}
+		]
+	},
+	{
+		"english": "in the long / short / medium term",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "长期 / 短期 / 中期",
+				"en": "used to say what will happen or what happens generally over a long, short, or medium period of time",
+				"examples": [
+					"In the long term, alcohol causes high blood pressure."
+				]
+			}
+		]
+	},
+	{
+		"english": "(it's) no / small / little wonder (that)",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "并不奇怪；不足为奇",
+				"en": "(esp. spoken) used to say that you are not surprised by sth.",
+				"examples": [
+					"Under such circumstances, it is little wonder that they experience difficulties."
+				]
+			}
+		]
+	},
+	{
+		"english": "Silicon Valley",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "硅谷（位于美国加利福尼亚州，因计算机和电子工业闻名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "the Global Innovation Index",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "全球创新指数",
+				"en": "(GII)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "the World Intellectual Property Organization",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "世界知识产权组织",
+				"en": "(WIPO)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "GDP",
+		"pos": "缩写",
+		"senses": [
+			{
+				"zh": "国内生产总值",
+				"en": "(gross domestic product)",
+				"examples": []
+			}
+		]
+	}
+]

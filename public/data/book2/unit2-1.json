@@ -1,0 +1,708 @@
+[
+	{
+		"english": "roam",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "闲逛；漫步；漫步于",
+				"en": "walk or travel, usu. for a long time, with no clear purpose or direction",
+				"examples": [
+					"Tigers once [[roamed]] far and wide across much of Southeast Asia."
+				]
+			}
+		]
+	},
+	{
+		"english": "passionate",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "感情强烈的；热情的",
+				"en": "having or showing strong feelings of love or of anger, etc.",
+				"examples": [
+					"Sarah was greeted with a [[passionate]] embrace by her husband and children at Heathrow Airport on returning to London."
+				]
+			}
+		]
+	},
+	{
+		"english": "dockside",
+		"senses": [
+			{
+				"pos": "n. [sing.]",
+				"zh": "码头边；坞边",
+				"en": "the edge of the land that is next to the water in a port",
+				"examples": [
+					"The [[dockside]] was the busiest place he had ever seen."
+				]
+			}
+		]
+	},
+	{
+		"english": "reunion",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "团圆；重逢",
+				"en": "the act of people coming together after they have been apart for some time",
+				"examples": [
+					"It was a very emotional [[reunion]], for the children weren't allowed to see her for nearly a week."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "聚会",
+				"en": "a social occasion or party attended by a group of people who have not seen each other for a long time",
+				"examples": [
+					"We all look forward to our class [[reunion]], an awesome celebration with old friends!"
+				]
+			}
+		]
+	},
+	{
+		"english": "stern",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "严厉的；严格的；苛刻的",
+				"en": "serious and strict, and showing strong disapproval of sb.'s behavior",
+				"examples": [
+					"The manager gave a [[stern]] warning to those who were on strike."
+				]
+			}
+		]
+	},
+	{
+		"english": "fretful",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "令人烦恼的",
+				"en": "marked by worry and distress; troublesome",
+				"examples": [
+					"Mr. Royama and others are likely to find the coming week a very [[fretful]] one indeed."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "烦恼的；发牢骚的",
+				"en": "anxious and complaining, and unable to relax",
+				"examples": [
+					"The boy appeared [[fretful]] and disappointed that he couldn't join the others on their trip."
+				]
+			}
+		]
+	},
+	{
+		"english": "refugee",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "难民；避难者",
+				"en": "sb. who has been forced to leave their country, esp. during a war, or for political or religious reasons",
+				"examples": [
+					"The [[refugees]] were packed shoulder to shoulder on the boat."
+				]
+			}
+		]
+	},
+	{
+		"english": "overloaded",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "超载的；超负荷的",
+				"en": "having or supplied with too much of sth.",
+				"examples": [
+					"Even a simple turn becomes risky when the truck is [[overloaded]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "lifeboat",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "（船上备用的）救生艇",
+				"en": "a small boat carried by ships in order to save people if the ship sinks",
+				"examples": [
+					"The captain ordered all passengers into [[lifeboats]]."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "（海上）救生艇（船）",
+				"en": "a boat that is sent out to help people who are in danger at sea",
+				"examples": [
+					"Sam's dog was saved by a [[lifeboat]] during the incident on Tuesday afternoon."
+				]
+			}
+		]
+	},
+	{
+		"english": "singular",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "单个的；独一无二的",
+				"en": "single; unique",
+				"examples": [
+					"She always thought of herself as [[singular]], as her father's only daughter."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "（词形）单数的",
+				"en": "of or relating to the form of a word used when referring to one person or thing",
+				"examples": [
+					"Can you tell me the [[singular]] form of this noun?"
+				]
+			}
+		]
+	},
+	{
+		"english": "double-decker",
+		"senses": [
+			{
+				"pos": "n. [C] / adj.",
+				"zh": "双层公共汽车",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "windmill",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "风车；风车磨坊",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "sidewalk",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "人行道",
+				"en": "(BrE pavement)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "grasp",
+		"senses": [
+			{
+				"pos": "n. [sing.]",
+				"zh": "（对复杂想法、情况或问题的）理解力，领悟力",
+				"en": "your ability to understand a complicated idea, situation, or subject",
+				"examples": [
+					"Steve has a good [[grasp]] of the European legal system."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "抓牢；握紧",
+				"en": "take and hold sth. firmly",
+				"examples": [
+					"I [[grasped]] his arm firmly and led him away."
+				]
+			}
+		]
+	},
+	{
+		"english": "queue",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "排队（等候）",
+				"en": "(also ~ up) (AmE line, line up) form or join a line of people or vehicles waiting to do sth. or go somewhere",
+				"examples": [
+					"People are [[queuing]] to get in from 7 a.m."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "（人或车辆为等候而排的）队，行列",
+				"en": "(AmE line) a line of people waiting to enter a building, buy sth., etc. or a line of vehicles waiting to move",
+				"examples": [
+					"All of a sudden a woman elbowed her way to the front of the [[queue]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "wherever",
+		"senses": [
+			{
+				"pos": "conj. / adv.",
+				"zh": "无论去哪里；无论在哪里；无论什么情况下",
+				"en": "to or at any place, position, or situation",
+				"examples": [
+					"[[Wherever]] you choose to live, there are always going to be advantages and disadvantages."
+				]
+			}
+		]
+	},
+	{
+		"english": "orderly",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有条理的；整齐的",
+				"en": "arranged or organized in a sensible or neat way",
+				"examples": [
+					"She put all the letters received in the last two years in three [[orderly]] piles."
+				]
+			}
+		]
+	},
+	{
+		"english": "scramble",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "争夺；抢夺",
+				"en": "struggle or compete with other people to get or reach sth.",
+				"examples": [
+					"Thousands of people will be [[scrambling]] for tickets."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（迅速而吃力地）爬，攀登",
+				"en": "(always + ad. / prep.) climb up, down, or over sth. quickly and with difficulty, esp. using your hands to help you",
+				"examples": [
+					"She [[scrambled]] down the tree quickly."
+				]
+			}
+		]
+	},
+	{
+		"english": "aboard",
+		"senses": [
+			{
+				"pos": "adv. / prep.",
+				"zh": "在船（飞机、火车）上；上船（飞机、火车）",
+				"en": "on or onto a ship, plane, or train",
+				"examples": [
+					"Given the early hour, the train was not crowded at all, with only about 30 passengers [[aboard]]."
+				]
+			},
+			{
+				"pos": "adv. / prep.",
+				"zh": "在（船、飞机、火车）上；上（船、飞机、火车）",
+				"en": "on or onto a ship, plane, or train",
+				"examples": [
+					"After all the troubles, they finally went [[aboard]] the plane."
+				]
+			}
+		]
+	},
+	{
+		"english": "upside down",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "倒置地；颠倒地",
+				"en": "with the top at the bottom and the bottom at the top",
+				"examples": [
+					"To get the plant out of the pot, turn it [[upside down]] and give it a gentle knock."
+				]
+			}
+		]
+	},
+	{
+		"english": "impulse",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "冲动；突然的欲望",
+				"en": "a sudden strong desire to do sth. without thinking about whether it is a sensible thing to do",
+				"examples": [
+					"Mary felt a sudden [[impulse]] to play some music."
+				]
+			}
+		]
+	},
+	{
+		"english": "bounce",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "（使）弹起；（使）反弹；（使）弹跳",
+				"en": "(cause to) move up or away after hitting a surface",
+				"examples": [
+					"The ball [[bounced]] twice before he could reach it."
+				]
+			}
+		]
+	},
+	{
+		"english": "humour",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "幽默感；幽默",
+				"en": "(AmE humor) the ability to find things funny, the way in which people see that some things are funny, or the quality of being funny",
+				"examples": [
+					"Even a speech on a serious subject could be delivered with a little [[humour]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "Swiss",
+		"senses": [
+			{
+				"pos": "adj. / n. [pl.]",
+				"zh": "瑞士人",
+				"en": "(the ~)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Spanish",
+		"senses": [
+			{
+				"pos": "n. [pl.] / adj.",
+				"zh": "西班牙人",
+				"en": "(the ~)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "excite",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "引起；激起",
+				"en": "(fml.) cause a particular feeling or reaction",
+				"examples": [
+					"This product has [[excited]] a great deal of media interest."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "使兴奋；使激动",
+				"en": "(not in progressive) make sb. feel happy, interested, or eager",
+				"examples": [
+					"His playing is technically brilliant, but it doesn't [[excite]] me."
+				]
+			}
+		]
+	},
+	{
+		"english": "childlike",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "孩子般的；像孩子似的；天真无邪的",
+				"en": "having qualities that are typical of a child",
+				"examples": [
+					"All her life she had a [[childlike]] trust in other people."
+				]
+			}
+		]
+	},
+	{
+		"english": "ignorant",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "无知的；愚昧的",
+				"en": "not knowing information or facts that you ought to know",
+				"examples": [
+					"They remained [[ignorant]] of the troubles that lay ahead."
+				]
+			}
+		]
+	},
+	{
+		"english": "reliably",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "可靠地；可信赖地",
+				"en": "in a way that can be trusted or believed",
+				"examples": [
+					"The website helps you find what you want faster and more [[reliably]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "endanger",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使处于险境；危及",
+				"en": "put sb. / sth. in danger of being hurt, damaged, or destroyed",
+				"examples": [
+					"We must be careful not to do anything that might [[endanger]] the economic recovery."
+				]
+			}
+		]
+	},
+	{
+		"english": "existence",
+		"senses": [
+			{
+				"pos": "n. [C, usu. sing., U]",
+				"zh": "生活；生活方式",
+				"en": "a particular way of life",
+				"examples": [
+					"Surfing the Internet has become part of our everyday [[existence]]."
+				]
+			},
+			{
+				"pos": "n. [C, usu. sing., U]",
+				"zh": "存在；实有",
+				"en": "the state of existing",
+				"examples": [
+					"The organization has been in [[existence]] for 25 years."
+				]
+			}
+		]
+	},
+	{
+		"english": "chambermaid",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "打扫房间的女工；（尤指宾馆里的）客房女服务员",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "packet",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（装商品的）小包，小袋，小盒",
+				"en": "(BrE) a small paper or cardboard container in which goods are packed for selling",
+				"examples": [
+					"Could you please kindly bring me a few [[packets]] of biscuits?"
+				]
+			}
+		]
+	},
+	{
+		"english": "sniff",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "嗅；闻",
+				"en": "smell sth. by taking air in through your nose",
+				"examples": [
+					"She put perfume on her wrist and [[sniffed]] it."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（因哭泣、感冒等）抽鼻子",
+				"en": "breathe air into your nose noisily, for example when you are crying or have a cold",
+				"examples": [
+					"We all had colds and couldn't stop [[sniffing]] and sneezing."
+				]
+			}
+		]
+	},
+	{
+		"english": "puzzle",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使困惑；使迷惑",
+				"en": "confuse sb. or make them feel slightly anxious because they do not understand sth.",
+				"examples": [
+					"The findings of the survey [[puzzled]] me — they were not at all what I would have expected."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "拼图游戏；拼图玩具",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "charm",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "吸引···的兴趣；迷住",
+				"en": "please and interest sb.",
+				"examples": [
+					"The story has [[charmed]] generations of children."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "魅力；吸引力",
+				"en": "a quality that makes you like or feel attracted to sb. / sth.",
+				"examples": [
+					"Snow White and the Seven Dwarfs, the 1937 Disney classic, has lost none of its original [[charm]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "no more … than",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "根本不···；完全不···",
+				"en": "used to emphasize that sb. / sth. does not have a particular quality or would not do sth.",
+				"examples": [
+					"He's no more fit to be the group leader than I am."
+				]
+			}
+		]
+	},
+	{
+		"english": "get around",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "（新闻或消息）传开",
+				"en": "(BrE get round) if news or information gets around, it is told to a lot of people",
+				"examples": [
+					"Word [[got around]] that the shopping mall might be closed."
+				]
+			}
+		]
+	},
+	{
+		"english": "for instance",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "例如",
+				"en": "for example",
+				"examples": [
+					"We found out that fruit loaf (水果面包) is better than cake or chocolate, for instance."
+				]
+			}
+		]
+	},
+	{
+		"english": "get the hang of sth.",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "掌握···的窍门",
+				"en": "(infml.) understand the technique of doing sth.",
+				"examples": [
+					"It's not difficult once you get the hang of it."
+				]
+			}
+		]
+	},
+	{
+		"english": "pull up",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "（车辆或司机）停车",
+				"en": "when a vehicle or driver pulls up, the vehicle slows down and stops",
+				"examples": [
+					"The taxi [[pulled up]] and the driver jumped out."
+				]
+			}
+		]
+	},
+	{
+		"english": "as far as sb. is concerned",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "在某人看来；就某人而言",
+				"en": "(spoken) used to show what sb.'s opinion on a subject is or how it affects them",
+				"examples": [
+					"As far as I am concerned, a change of policy is needed to reduce the unemployment rate."
+				]
+			}
+		]
+	},
+	{
+		"english": "wash out",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "洗净（尤指容器内壁）",
+				"en": "wash sth. quickly, esp. the inside of a container",
+				"examples": [
+					"When the bottle is empty, [[wash it out]] thoroughly before refilling."
+				]
+			}
+		]
+	},
+	{
+		"english": "in the end",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "最后；终于",
+				"en": "after a period of time, or after everything has been done",
+				"examples": [
+					"As long as you try hard, you'll surely succeed in the end."
+				]
+			}
+		]
+	},
+	{
+		"english": "Copenhagen",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "哥本哈根（丹麦首都）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Denmark",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "丹麦（欧洲国家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "the Netherlands",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "荷兰（欧洲国家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Oslo",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "奥斯陆（挪威首都）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

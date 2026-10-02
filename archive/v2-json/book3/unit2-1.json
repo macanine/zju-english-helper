@@ -1,0 +1,812 @@
+[
+	{
+		"english": "casual",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "便服；便装；便鞋",
+				"en": "(~s) clothes or shoes suitable for everyday wear rather than formal occasions",
+				"examples": [
+					"While the trend toward business [[casual]] is characterized by more comfort, for some, it means more confusion."
+				]
+			}
+		]
+	},
+	{
+		"english": "headphones",
+		"pos": "n. [pl.]",
+		"senses": [
+			{
+				"zh": "（头戴式）耳机",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "corporate",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "公司的",
+				"en": "(only before noun) belonging to or relating to a corporation",
+				"examples": [
+					"Owing to the shift of its strategic focus, the company is moving its [[corporate]] headquarters from New York to Houston."
+				]
+			}
+		]
+	},
+	{
+		"english": "mortgage",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "抵押贷款",
+				"en": "a legal arrangement by which you borrow money from a bank or similar organization in order to buy a house, etc. and pay back the money over a period of years",
+				"examples": [
+					"Since she was having trouble meeting her [[mortgage]] payments, she was considering selling her apartment."
+				]
+			}
+		]
+	},
+	{
+		"english": "time off",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "休息（或休假）时间",
+				"en": "time for rest or recreation away from the usual work or studies",
+				"examples": [
+					"You won't get paid for time off unless you have a doctor's note."
+				]
+			}
+		]
+	},
+	{
+		"english": "headquarters",
+		"pos": "n. [C, pl.]",
+		"senses": [
+			{
+				"zh": "总部；总公司；总办事处",
+				"en": "the main building or offices used by a large company or organization",
+				"examples": [
+					"There are now 400 staff at [[headquarters]], servicing our regional and overseas work."
+				]
+			}
+		]
+	},
+	{
+		"english": "perk",
+		"pos": "n. [C, usu. pl.] / v.",
+		"senses": [
+			{
+				"zh": "（工资以外的）额外收入（待遇）；津贴",
+				"en": "sth. that you get legally from your work in addition to your wages, such as goods, meals, or a car",
+				"examples": [
+					"I eat all three meals per day, five days a week, in the company because they are free — one of the [[perks]] of the job."
+				]
+			}
+		]
+	},
+	{
+		"english": "administrative",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "行政的；管理的",
+				"en": "relating to the work of managing a company ororganization",
+				"examples": [
+					"Even [[administrative]] regulations must be accompanied by persuasion and education."
+				]
+			}
+		]
+	},
+	{
+		"english": "distributor",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "分销商；经销商；批发商",
+				"en": "a company or person that supplies shops and companies with goods",
+				"examples": [
+					"Some US states require that foreign wines be shipped to an importer or [[distributor]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "liberal",
+		"pos": "adj. / n.",
+		"senses": [
+			{
+				"zh": "（思想）开放的",
+				"en": "supporting or allowing gradual political and social changes",
+				"examples": [
+					"The company has adopted a more [[liberal]] policy on the health care benefits of its employees.",
+					"He has a [[liberal]] attitude about whether students should wear uniforms to school."
+				]
+			},
+			{
+				"zh": "思想开明的；开通的",
+				"en": "willing to understand and respect other people's ideas, opinions, and feelings",
+				"examples": [
+					"The company has adopted a more [[liberal]] policy on the health care benefits of its employees.",
+					"He has a [[liberal]] attitude about whether students should wear uniforms to school."
+				]
+			}
+		]
+	},
+	{
+		"english": "barrier",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "分界线；屏障；隔阂",
+				"en": "sth. that exists between one thing or person and another and keeps them separate",
+				"examples": [
+					"There was no real [[barrier]] between reality and fantasy in his mind.",
+					"Lack of confidence is a psychological [[barrier]] to success."
+				]
+			},
+			{
+				"zh": "障碍；阻力；关卡",
+				"en": "a problem, rule or situation that prevents sb. from doing sth., or that makes sth. impossible",
+				"examples": [
+					"There was no real [[barrier]] between reality and fantasy in his mind.",
+					"Lack of confidence is a psychological [[barrier]] to success."
+				]
+			}
+		]
+	},
+	{
+		"english": "blurred",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "难以区分的；模棱两可的",
+				"en": "difficult to distinguish, so that differences are not clear",
+				"examples": [
+					"The boundaries between history and storytelling are sometimes [[blurred]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "cubicle",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "小隔间",
+				"en": "a small part of a room that is separated from the rest of the room",
+				"examples": [
+					"The rules of [[cubicle]] etiquette exist in order to make the workplace a harmonious place."
+				]
+			}
+		]
+	},
+	{
+		"english": "reinvent",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "彻底改造；重新创造",
+				"en": "change sth. so much that it appears to be entirely new",
+				"examples": [
+					"It's wonderful, because this fresh start gives us a chance to [[reinvent]] our lives and ourselves."
+				]
+			}
+		]
+	},
+	{
+		"english": "rat race",
+		"pos": "n. [sing.]",
+		"senses": [
+			{
+				"zh": "你死我活的竞争",
+				"en": "a way of life in which people compete aggressively to be successful",
+				"examples": [
+					"I have to get out of the [[rat]] [[race]] and take a look at what I really want in the first place."
+				]
+			}
+		]
+	},
+	{
+		"english": "hierarchy",
+		"pos": "n. [C, U]",
+		"senses": [
+			{
+				"zh": "等级制度",
+				"en": "a system of organization in which people or things are divided into levels of importance",
+				"examples": [
+					"She worked her way up through the corporate [[hierarchy]] to become a member of the top management."
+				]
+			}
+		]
+	},
+	{
+		"english": "flatten",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "（使）变平；（使）变得更平",
+				"en": "(also ~ out) become or make sth. flat or flatter",
+				"examples": [
+					"Martin [[flattened]] out a napkin and started to perform a magic trick which immediately engaged the kids."
+				]
+			}
+		]
+	},
+	{
+		"english": "wizard",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "男巫；术士",
+				"en": "a man who is supposed to have magic powers; witch",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "ninja",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（旧时的）忍者，日本武士",
+				"en": "in the past, a Japanese fighter with special skills",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "integration",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "结合；整合",
+				"en": "the combining of two or more things so that they work together effectively",
+				"examples": [
+					"His music is an [[integration]] of tradition and new technology."
+				]
+			}
+		]
+	},
+	{
+		"english": "acupuncture",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "针刺疗法",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "nap",
+		"pos": "n. [C] / v.",
+		"senses": [
+			{
+				"zh": "（尤指白天的）小睡，打盹",
+				"en": "a short sleep, esp. during the day",
+				"examples": [
+					"A midday [[nap]] may be a better way to cope with the mid-afternoon sleepiness than more nighttime sleep."
+				]
+			}
+		]
+	},
+	{
+		"english": "pod",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（飞机的）吊舱，发射架",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "nap pod",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "小憩舱；打盹舱",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "popularize",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "宣传；推广",
+				"en": "(BrE popularise) make sth. well known or liked",
+				"examples": [
+					"The musician collected and [[popularized]] many songs written by other musicians."
+				]
+			}
+		]
+	},
+	{
+		"english": "investigation",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "调查",
+				"en": "a formal inquiry or systematic study",
+				"examples": [
+					"An [[investigation]] has been launched into the potential impact of the oil spill on marine life around the island."
+				]
+			}
+		]
+	},
+	{
+		"english": "vocal",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "激烈地表达意见的；直言不讳的",
+				"en": "expressing strong opinions publicly, esp. about things that you disagree with",
+				"examples": [
+					"Foley has been particularly [[vocal]] in his criticism of the social injustice he has witnessed in his country."
+				]
+			}
+		]
+	},
+	{
+		"english": "opponent",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "反对者",
+				"en": "sb. who disagrees with or resists a proposal or practice",
+				"examples": [
+					"Leading [[opponents]] of the proposed increase in defense spending will meet later today."
+				]
+			}
+		]
+	},
+	{
+		"english": "newsroom",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（报社、电台或电视台的）新闻编辑室",
+				"en": "the area in a newspaper or broadcasting office where news is processed",
+				"examples": [
+					"The best hours of Walter's life were not spent in a [[newsroom]], but in pursuit of a worthy story."
+				]
+			}
+		]
+	},
+	{
+		"english": "start-up",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（尤指从事计算机或因特网的小型的）新兴公司，新创办企业",
+				"en": "a new small company or business, esp. one whose work involves computers or the Internet",
+				"examples": [
+					"For now the bright spots in the labor market are small businesses and high-tech [[start-ups]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "parody",
+		"pos": "n. [C, U] / v.",
+		"senses": [
+			{
+				"zh": "（文章、音乐等的）滑稽模仿作品",
+				"en": "a piece of writing, music, etc. or an action that copies sb. / sth. in an amusing way",
+				"examples": [
+					"Some stories from the TV series released by the local newspaper yesterday read like a [[parody]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "portrait",
+		"pos": "n.",
+		"senses": [
+			{
+				"zh": "（对某事物的）描绘，描述，表现",
+				"en": "a description or representation of sth.",
+				"examples": [
+					"Her latest novel paints a very vivid [[portrait]] of the aristocracy in the 1920s, which has been a mystery to most readers.",
+					"Today, she is still considered one of the greatest [[portrait]] painters of her time."
+				]
+			},
+			{
+				"zh": "人物画像；人物照片；肖像",
+				"en": "a painting, drawing, or photograph of a person",
+				"examples": [
+					"Her latest novel paints a very vivid [[portrait]] of the aristocracy in the 1920s, which has been a mystery to most readers.",
+					"Today, she is still considered one of the greatest [[portrait]] painters of her time."
+				]
+			}
+		]
+	},
+	{
+		"english": "misdirection",
+		"pos": "n. [C, U]",
+		"senses": [
+			{
+				"zh": "误导",
+				"en": "the action of making people pay attention to the wrong thing, usu. intentionally so that they will not notice sth. else",
+				"examples": [
+					"The global debate on bank capital has been characterized by rumor and [[misdirection]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "rotten",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "极糟的；恶劣的",
+				"en": "(infml.) very bad",
+				"examples": [
+					"I personally think it's a [[rotten]] idea to go camping on such a rainy day.",
+					"Check stored fruit every week and throw out any that has started to go [[rotten]]."
+				]
+			},
+			{
+				"zh": "腐烂的；变质的",
+				"en": "badly decayed and no longer good to use",
+				"examples": [
+					"I personally think it's a [[rotten]] idea to go camping on such a rainy day.",
+					"Check stored fruit every week and throw out any that has started to go [[rotten]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "recast",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "重塑；重组",
+				"en": "(recast, recast) change the form of sth.",
+				"examples": [
+					"She [[recast]] her novel as a musical comedy, which turned out to be a greater hit than the original work."
+				]
+			}
+		]
+	},
+	{
+		"english": "workaholism",
+		"pos": "n. [U]",
+		"senses": [
+			{
+				"zh": "醉心工作；迷恋工作",
+				"en": "a condition that makes sb. work a lot of the time and find it difficult not to work",
+				"examples": [
+					"It is a danger of [[workaholism]] that one may risk getting their identity caught up in the work."
+				]
+			}
+		]
+	},
+	{
+		"english": "unwind",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "（卷绕物）解绕；展开",
+				"en": "(unwound, unwound) undo or be undone after winding or being wound",
+				"examples": [
+					"She [[unwound]] her scarf after entering the house, and hung it on the rack in the corner."
+				]
+			}
+		]
+	},
+	{
+		"english": "absurdity",
+		"pos": "n. [C, U]",
+		"senses": [
+			{
+				"zh": "荒谬；荒唐",
+				"en": "the quality or state of being ridiculous or wildly unreasonable",
+				"examples": [
+					"Duncan shook his head and laughed at the [[absurdity]] of the situation."
+				]
+			}
+		]
+	},
+	{
+		"english": "norm",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "常态；规范；标准",
+				"en": "the usual or normal situation, way of doing sth., etc.",
+				"examples": [
+					"Short-term contracts are now the [[norm]] with some big companies."
+				]
+			}
+		]
+	},
+	{
+		"english": "suitcase",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "手提箱；衣箱",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "resign",
+		"pos": "v.",
+		"senses": [
+			{
+				"zh": "辞职；放弃（工作、职位）",
+				"en": "officially announce that you have decided to leave your job or an organization",
+				"examples": [
+					"Tom has [[resigned]] his membership of the golf club."
+				]
+			}
+		]
+	},
+	{
+		"english": "abusive",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "谩骂的；虐待的",
+				"en": "using cruel words or physical violence",
+				"examples": [
+					"The goalkeeper was sent off for using [[abusive]] language against a linesman (边线裁判员) ."
+				]
+			}
+		]
+	},
+	{
+		"english": "tweet",
+		"pos": "n. / v.",
+		"senses": [
+			{
+				"zh": "（使用推特社交网络）发送（信息）",
+				"en": "send a short message using the social networking service Twitter",
+				"examples": [
+					"Today you can [[tweet]] your messages out to the world with a mere click of the mouse."
+				]
+			}
+		]
+	},
+	{
+		"english": "allegation",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（尤指无证据的）宣称，指控",
+				"en": "a claim or assertion that sb. has done sth. illegal or wrong, typically one without proof",
+				"examples": [
+					"He made [[allegations]] of corruption against the administration."
+				]
+			}
+		]
+	},
+	{
+		"english": "trade-off",
+		"pos": "n. [C]",
+		"senses": [
+			{
+				"zh": "（两种对立事物之间的）平衡，妥协，协调",
+				"en": "a balance between two opposing things, that you are willing to accept in order to achieve sth.",
+				"examples": [
+					"There has to be a [[trade-off]] between quality and quantity if we want to keep prices low."
+				]
+			}
+		]
+	},
+	{
+		"english": "depressing",
+		"pos": "adj.",
+		"senses": [
+			{
+				"zh": "令人沮丧的；让人忧愁的",
+				"en": "making you feel very sad",
+				"examples": [
+					"There was another side to the story, just as dramatic, but not so [[depressing]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "pop up",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "突然出现",
+				"en": "appear in a place or situation unexpectedly",
+				"examples": [
+					"She was startled when Lisa [[popped]] up at the door all smiles."
+				]
+			}
+		]
+	},
+	{
+		"english": "tune out",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "不听；不注意；不理会",
+				"en": "stop listening or paying attention to what is being said",
+				"examples": [
+					"The pressure from information overload can make some people [[tune]] out messages altogether."
+				]
+			}
+		]
+	},
+	{
+		"english": "hang out",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "闲逛",
+				"en": "spend a lot of time in a place or area for no particular reason",
+				"examples": [
+					"I used to [[hang]] out with my friends in the park, but it has now changed beyond recognition."
+				]
+			}
+		]
+	},
+	{
+		"english": "let alone",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "更不用说，更谈不上（用于否定句之后）",
+				"en": "used after a negative statement to say that the next thing you mention is even more unlikely",
+				"examples": [
+					"Because of his knee injury, he cannot walk any more, let alone play golf."
+				]
+			}
+		]
+	},
+	{
+		"english": "come along",
+		"pos": "短语动词",
+		"senses": [
+			{
+				"zh": "不期而至",
+				"en": "occur or arrive by chance",
+				"examples": [
+					"I waited a long time until a film script [[came]] along that I thought was genuinely funny."
+				]
+			}
+		]
+	},
+	{
+		"english": "on tap",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "（液体）打开阀门即可获得的",
+				"en": "(of liquids) available by turning a tap",
+				"examples": [
+					"A lot of local pubs feature a wide selection of imported wines as well as beers on tap."
+				]
+			}
+		]
+	},
+	{
+		"english": "at the expense of",
+		"pos": "短语",
+		"senses": [
+			{
+				"zh": "以···为代价",
+				"en": "at the cost of",
+				"examples": [
+					"Prolonging life at the expense of its quality can rob elderly people of meaningful years."
+				]
+			}
+		]
+	},
+	{
+		"english": "Michigan",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "密歇根州（位于美国北部）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Ohio",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "俄亥俄州（位于美国东北部）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Gale King",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "盖尔 • 金（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Mike Robbins",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "迈克 • 罗宾斯（美国团队合作、领导力、情商等领域的专家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Dan Lyons",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "丹 • 莱昂斯（美国作家、编剧）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Silicon Valley",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "《硅谷》（电视连续剧剧名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "the Verge",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "前沿网（美国科技媒体网站）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Austen Allred",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "奥斯汀・奥尔雷德（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Ron Friedman",
+		"pos": "专有名词",
+		"senses": [
+			{
+				"zh": "罗恩・弗里德曼（美国心理学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

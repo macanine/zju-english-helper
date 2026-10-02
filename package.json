@@ -1,0 +1,29 @@
+{
+  "name": "zju-english-helper-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3300",
+    "build": "next build",
+    "start": "npx serve@latest out",
+    "typecheck": "tsc --noEmit",
+    "check:data": "node scripts/check-data.mjs",
+    "test": "npm run check:data && npm run test:unit",
+    "test:unit": "tsc -p tests/tsconfig.json && node --test .test-build/tests/*.test.js"
+  },
+  "dependencies": {
+    "@radix-ui/themes": "^3.3.0",
+    "@unocss/postcss": "^66.10.5",
+    "lucide-react": "^0.545.0",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "unocss": "^66.10.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}

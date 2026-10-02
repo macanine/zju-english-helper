@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "id": "book2",
+      "units": [
+        "unit1-1",
+        "unit1-2",
+        "unit2-1",
+        "unit2-2",
+        "unit3-1",
+        "unit3-2",
+        "unit4-1",
+        "unit4-2",
+        "unit5-1",
+        "unit5-2",
+        "unit6-1",
+        "unit6-2",
+        "unit7-1",
+        "unit7-2",
+        "unit8-1",
+        "unit8-2"
+      ]
+    },
+    {
+      "id": "book3",
+      "units": [
+        "unit1-1",
+        "unit1-2",
+        "unit2-1",
+        "unit2-2",
+        "unit3-1",
+        "unit3-2",
+        "unit4-1",
+        "unit4-2",
+        "unit5-1",
+        "unit5-2",
+        "unit6-1",
+        "unit6-2",
+        "unit7-1",
+        "unit7-2",
+        "unit8-1",
+        "unit8-2"
+      ]
+    }
+  ]
+}

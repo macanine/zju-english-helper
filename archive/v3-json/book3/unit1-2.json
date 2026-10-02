@@ -1,0 +1,638 @@
+[
+	{
+		"english": "wicker",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "干枝条；干柳条；芦苇杆",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "grumpy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "脾气坏的；易怒的",
+				"en": "bad-tempered and easily annoyed",
+				"examples": [
+					"I have not had enough sleep lately and I am feeling kind of [[grumpy]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "visualize",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "设想；想象",
+				"en": "(BrE visualise) form a picture of sb. / sth. in your mind",
+				"examples": [
+					"An architect can look at a drawing and [[visualize]] a three-dimensional shape."
+				]
+			}
+		]
+	},
+	{
+		"english": "assignment",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "（学生的）作业",
+				"en": "a piece of work that a student is asked to do",
+				"examples": [
+					"Students will need to complete three written [[assignments]] this semester.",
+					"She told me that she will be in Greece next week on [[assignment]] for one of the national newspapers."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "（分配的）任务",
+				"en": "a piece of work that is given to sb. as part of their job",
+				"examples": [
+					"Students will need to complete three written [[assignments]] this semester.",
+					"She told me that she will be in Greece next week on [[assignment]] for one of the national newspapers."
+				]
+			}
+		]
+	},
+	{
+		"english": "jeer",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "嘲笑；嘲弄",
+				"en": "laugh at sb. or shout rude remarks at them to show that you do not respect them",
+				"examples": [
+					"After the match, the disappointed fans were all [[jeering]] at the football team."
+				]
+			}
+		]
+	},
+	{
+		"english": "stun",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使（某人）震惊",
+				"en": "(not in progressive) surprise or upset sb. so much that they do not react immediately",
+				"examples": [
+					"Sasha was too [[stunned]] by what had happened in the office to say a word."
+				]
+			}
+		]
+	},
+	{
+		"english": "proceed",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "继续进行；继续做",
+				"en": "(fml.) (~ with) continue doing sth. that has already been started; continue being done",
+				"examples": [
+					"The discussions between the two firms are [[proceeding]] slowly but satisfactorily."
+				]
+			}
+		]
+	},
+	{
+		"english": "arch",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "（使）拱起；（使）成拱形",
+				"en": "form or make sth. form a curved shape",
+				"examples": [
+					"His eyebrows [[arched]] as if he were angry."
+				]
+			}
+		]
+	},
+	{
+		"english": "eyebrow",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "眉（毛）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "shrug",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "耸（肩）（以示怀疑、 与己无关、不知道等）",
+				"en": "raise one's shoulders slightly to express doubt, indifference, ignorance, etc.",
+				"examples": [
+					"He [[shrugged]] his shoulders as if to say that there was nothing he could do about it."
+				]
+			}
+		]
+	},
+	{
+		"english": "slum",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（城市中的）贫民窟，贫民区",
+				"en": "a house or an area of a city that is in very bad condition, where very poor people live",
+				"examples": [
+					"My friend Bobby lives with his three sisters in a [[slum]] near the city center, but he doesn't lose faith in life."
+				]
+			}
+		]
+	},
+	{
+		"english": "marketable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（商品、技能等）有市场的，有销路的，畅销的",
+				"en": "marketable goods, skills, etc. can be sold easily because people want them",
+				"examples": [
+					"The program is designed to provide students with real, [[marketable]] skills."
+				]
+			}
+		]
+	},
+	{
+		"english": "smug",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "自满的，自鸣得意的，沾沾自喜的（含贬义）",
+				"en": "showing too much satisfaction with your own cleverness or success — used to show disapproval",
+				"examples": [
+					"Peter was wearing an unbearably [[smug]] expression and waving the tickets in front of me."
+				]
+			}
+		]
+	},
+	{
+		"english": "leer",
+		"senses": [
+			{
+				"pos": "v. / n. [C]",
+				"zh": "挑逗性的或不怀好意的目光",
+				"en": "an unpleasant look suggesting lust or ill will",
+				"examples": [
+					"He has a most unpleasant [[leer]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "dimension",
+		"senses": [
+			{
+				"pos": "n. [C, usu. pl.]",
+				"zh": "大小；尺寸",
+				"en": "the length, height, width, depth or diameter of sth.",
+				"examples": [
+					"It is important to measure the exact [[dimensions]] of the room before buying furniture.",
+					"You can have a spiritual [[dimension]] to your life without being religious."
+				]
+			},
+			{
+				"pos": "n. [C, usu. pl.]",
+				"zh": "（形势或品质的）方面，层面",
+				"en": "a part of a situation or a quality involved in it",
+				"examples": [
+					"It is important to measure the exact [[dimensions]] of the room before buying furniture.",
+					"You can have a spiritual [[dimension]] to your life without being religious."
+				]
+			}
+		]
+	},
+	{
+		"english": "contemplate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "深思；细想",
+				"en": "think about sth. seriously for a period of time",
+				"examples": [
+					"As he lay in his hospital bed that night, he cried as he [[contemplated]] his future.",
+					"Many years ago he had [[contemplated]] writing a book about his childhood."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "打算；想；考虑",
+				"en": "think about sth. that you might do in the future",
+				"examples": [
+					"As he lay in his hospital bed that night, he cried as he [[contemplated]] his future.",
+					"Many years ago he had [[contemplated]] writing a book about his childhood."
+				]
+			}
+		]
+	},
+	{
+		"english": "warehouse",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "仓库；货栈",
+				"en": "a large building for storing large quantities of goods",
+				"examples": [
+					"Police are investigating a fire at a furniture [[warehouse]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "grain",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "谷粒",
+				"en": "a single seed of corn, wheat, etc.",
+				"examples": [
+					"Mum must have left in a hurry, since there were quite a few [[grains]] of corn left on the floor.",
+					"The government intends to import only five percent of the country's [[grain]]."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "谷物；粮食",
+				"en": "the seeds of crops such as corn, wheat or rice that are gathered for use as food, or these crops themselves",
+				"examples": [
+					"Mum must have left in a hurry, since there were quite a few [[grains]] of corn left on the floor.",
+					"The government intends to import only five percent of the country's [[grain]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "industrial",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "工业的；产业工人的",
+				"en": "relating to industry or the people working in it",
+				"examples": [
+					"Reports showed [[industrial]] production rose 1.3 percent in November from the month before."
+				]
+			}
+		]
+	},
+	{
+		"english": "revenue",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "（公司、机构的）收益，收入",
+				"en": "(also revenues) money that a business or organization receives over a period of time, esp. from selling goods or services",
+				"examples": [
+					"These companies are sure to encounter financial trouble if they only rely on advertising [[revenue]] for funding."
+				]
+			}
+		]
+	},
+	{
+		"english": "exterminator",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "职业的消灭害虫者",
+				"en": "a person whose job is to kill animals such as rats or mice, because they are annoying or dangerous",
+				"examples": [
+					"Can you believe that nearly one hundred million rats are killed each year by pest [[exterminators]]?"
+				]
+			}
+		]
+	},
+	{
+		"english": "feasible",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（计划、想法或方法）可行的，可实行的，行得通的",
+				"en": "a plan, idea, or method that is feasible is possible and is likely to work",
+				"examples": [
+					"It was no longer financially [[feasible]] to keep the community center open."
+				]
+			}
+		]
+	},
+	{
+		"english": "glare",
+		"senses": [
+			{
+				"pos": "n. / v.",
+				"zh": "怒目而视",
+				"en": "look angrily at sb. for a long time",
+				"examples": [
+					"Noah was furious at what I just said but he didn't shout and just [[glared]] at me silently."
+				]
+			}
+		]
+	},
+	{
+		"english": "pointedly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "明确地；尖锐地；直言不讳地",
+				"en": "in a way that is deliberately meant to show that you are annoyed, bored, or disapprove of sth.",
+				"examples": [
+					"Miss Phillips looked at the clock [[pointedly]] and I realized that it was time for me to leave."
+				]
+			}
+		]
+	},
+	{
+		"english": "groan",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "抱怨",
+				"en": "a complaint",
+				"examples": [
+					"They've got the usual moans and [[groans]] like everybody else.",
+					"The rescuers could hear the [[groans]] of someone trapped in the ruins."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "（疼痛时的）呻吟；（不愿做某事时的）哼哼声",
+				"en": "a long deep sound that you make when you are in pain or do not want to do sth.",
+				"examples": [
+					"They've got the usual moans and [[groans]] like everybody else.",
+					"The rescuers could hear the [[groans]] of someone trapped in the ruins."
+				]
+			}
+		]
+	},
+	{
+		"english": "audible",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "听得见的",
+				"en": "loud enough for you to hear it",
+				"examples": [
+					"His voice was barely [[audible]] above the noise of the crowd."
+				]
+			}
+		]
+	},
+	{
+		"english": "interrupt",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "打断某人的讲话；中断某人的行动；打扰",
+				"en": "stop sb. from continuing what they are saying or doing by suddenly speaking to them, making a noise, etc.",
+				"examples": [
+					"I'm sorry to [[interrupt]] your meeting, but may I speak to Michael for a moment?"
+				]
+			}
+		]
+	},
+	{
+		"english": "slam dunk",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "稳操胜券的事",
+				"en": "(fml.)1) sth. that is certain to be successful",
+				"examples": [
+					"His new movie is predicted by many critics to be this season's [[slam]] [[dunk]] hit.",
+					"He marked his first appearance with a [[slam]] [[dunk]] for his first points."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "强力灌篮；扣篮",
+				"en": "(in basketball) the act of jumping up and putting the ball through the net with a lot of force",
+				"examples": [
+					"His new movie is predicted by many critics to be this season's [[slam]] [[dunk]] hit.",
+					"He marked his first appearance with a [[slam]] [[dunk]] for his first points."
+				]
+			}
+		]
+	},
+	{
+		"english": "verbatim",
+		"senses": [
+			{
+				"pos": "adv. / adj.",
+				"zh": "逐字的（地）；一字不差的（地）",
+				"en": "(fml.) repeating the actual words that were spoken or written",
+				"examples": [
+					"The president's speeches are regularly reproduced [[verbatim]] in the state-run newspapers."
+				]
+			}
+		]
+	},
+	{
+		"english": "rustle",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "（使）（树叶、纸、衣物等）沙沙作响",
+				"en": "if leaves, papers, clothes, etc. rustle, or if you rustle them, they move about and make a soft, dry sound",
+				"examples": [
+					"A gentle breeze blew through the windows, lightly [[rustling]] the curtains."
+				]
+			}
+		]
+	},
+	{
+		"english": "frantic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "紧张忙乱的；手忙脚乱的",
+				"en": "done quickly and with a lot of activity, but in a way that is not very well organized",
+				"examples": [
+					"People were [[frantic]], trying to call relatives after the earthquake."
+				]
+			}
+		]
+	},
+	{
+		"english": "frantically",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "手忙脚乱地",
+				"en": "done in a hurried way and in a state of excitement or confusion",
+				"examples": [
+					"I've been working [[frantically]] all week to get the term paper finished before the deadline."
+				]
+			}
+		]
+	},
+	{
+		"english": "index",
+		"senses": [
+			{
+				"pos": "n. / v.",
+				"zh": "（书后的）索引",
+				"en": "(pl. indexes) an alphabetical list of names, subjects, etc. at the back of a book, with the numbers of the pages where they can be found",
+				"examples": [
+					"Look under B in the [[index]] to see if biology is covered in the book."
+				]
+			}
+		]
+	},
+	{
+		"english": "oddly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "奇怪的是；真奇怪",
+				"en": "(also ~ enough) used to say that sth. seems strange or surprising",
+				"examples": [
+					"[[Oddly]] enough, someone asked me the same question yesterday.",
+					"Didn't you think she was behaving very [[oddly]] at Susan's birthday party yesterday?"
+				]
+			},
+			{
+				"pos": "adv.",
+				"zh": "奇怪地；古怪地；异常地",
+				"en": "in a strange or unusual way",
+				"examples": [
+					"[[Oddly]] enough, someone asked me the same question yesterday.",
+					"Didn't you think she was behaving very [[oddly]] at Susan's birthday party yesterday?"
+				]
+			}
+		]
+	},
+	{
+		"english": "vice versa",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "反之亦然",
+				"en": "used to say the opposite of a situation you have just described is also true",
+				"examples": [
+					"He refuses to believe anything they say and vice versa."
+				]
+			}
+		]
+	},
+	{
+		"english": "cut one's losses",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "及早脱手以减少损失",
+				"en": "stop doing sth. that is failing, so that one does not waste any more money, time, or effort",
+				"examples": [
+					"[[Cut]] your losses with projects that are not going to work and do things that make you feel comfortable."
+				]
+			}
+		]
+	},
+	{
+		"english": "pack up",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "（在离开前）收好物品",
+				"en": "put your possessions into a bag, etc. before leaving a place",
+				"examples": [
+					"We arrived just as the musicians were [[packing]] up their instruments."
+				]
+			}
+		]
+	},
+	{
+		"english": "smile broadly",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "咧着嘴笑",
+				"en": "have a big smile on your face that clearly shows you are happy or amused",
+				"examples": [
+					"He tiptoed closer, [[smiling]] broadly, waiting for Suzanne to spot him."
+				]
+			}
+		]
+	},
+	{
+		"english": "cut into",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "削减",
+				"en": "make sth. less or smaller",
+				"examples": [
+					"Some business owners are [[cutting]] into their profits to help raise money for the foundation."
+				]
+			}
+		]
+	},
+	{
+		"english": "better still",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "更好的选择是",
+				"en": "used to say that a particular choice would be more satisfactory",
+				"examples": [
+					"I started to hunt for a cheap restaurant nearby or, better still, a snack shop."
+				]
+			}
+		]
+	},
+	{
+		"english": "hand out",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "分发；散发",
+				"en": "give sth. to each person in a group",
+				"examples": [
+					"He was busy [[handing]] out leaflets on the musical to the audience."
+				]
+			}
+		]
+	},
+	{
+		"english": "reason out",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "（通过推理）解释，解决",
+				"en": "find an explanation or solution to a problem, by thinking all the possibilities",
+				"examples": [
+					"I spent the entire night [[reasoning]] out the solution to the puzzle."
+				]
+			}
+		]
+	},
+	{
+		"english": "think through",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "认真地考虑（某事可能产生的结果）",
+				"en": "think carefully about the possible results of sth.",
+				"examples": [
+					"People need time to [[think]] through what the changes in taxation will mean for them."
+				]
+			}
+		]
+	},
+	{
+		"english": "Jack Wickert",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "杰克 • 维克特（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

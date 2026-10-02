@@ -1,0 +1,282 @@
+'use client'
+
+import * as React from 'react'
+import { useRouter } from 'next/navigation'
+import { CircleAlert, NotebookText, Play } from 'lucide-react'
+import {
+  Box,
+  Button,
+  Callout,
+  Card,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  SegmentedControl,
+  Switch,
+  Text,
+} from '@radix-ui/themes'
+import { unitLabel } from '@/lib/data'
+import type { MergeMode } from '@/lib/model'
+import { useBooks, useSettings, useWrongBook } from '@/lib/hooks'
+import { encodeSession, sessionFromSettings } from '@/lib/session'
+import type { Settings } from '@/lib/storage'
+import { TodayCard } from '@/components/today-stats'
+
+function FieldLabel({ children }: { children: React.ReactNode }) {
+  return <Text as="div" size="2" weight="medium" mb="1">{children}</Text>
+}
+
+export function SetupView() {
+  const router = useRouter()
+  const { books, error } = useBooks()
+  const [settings, update] = useSettings()
+  const { words } = useWrongBook()
+
+  if (!books || !settings) {
+    return (
+      <Container size="3" px="4" py="6">
+        <div className="h-96 animate-pulse rounded-2xl bg-[var(--gray-a3)]" />
+      </Container>
+    )
+  }
+
+  const units = books.find((b) => b.id === settings.bookId)?.units ?? []
+  const noUnits = settings.units.length === 0
+
+  const start = () => {
+    // 丢掉清单里已不存在的单元（旧设置残留），避免落到 404
+    const valid = settings.units.filter((u) => units.includes(u))
+    if (valid.length === 0) return
+    router.push(`/practice?${encodeSession(sessionFromSettings({ ...settings, units: valid }))}`)
+  }
+
+  const switchBook = (bookId: string) => {
+    update({ ...settings, bookId, units: [] })
+  }
+
+  const toggleUnit = (unit: string) => {
+    update({
+      ...settings,
+      units: settings.units.includes(unit)
+        ? settings.units.filter((u) => u !== unit)
+        : [...settings.units, unit],
+    })
+  }
+
+  return (
+    <Container size="3" px="4" py="6">
+      <Flex direction="column" gap="4">
+        <TodayCard />
+
+        <Card size="4" className="anim-in-up">
+        <Flex direction="column" gap="5">
+          <Box>
+            <Heading as="h2" size="4">
+              开始练习
+            </Heading>
+          </Box>
+
+          {/* 词书 */}
+          <Flex direction="column" gap="1">
+            <FieldLabel>词书</FieldLabel>
+            <SegmentedControl.Root
+              aria-label="选择词书"
+              value={settings.bookId}
+              onValueChange={switchBook}
+              className="w-full"
+            >
+              {books.map((b) => (
+                <SegmentedControl.Item key={b.id} value={b.id}>
+                  {b.name}
+                </SegmentedControl.Item>
+              ))}
+            </SegmentedControl.Root>
+          </Flex>
+
+          {/* 单元 */}
+          <Flex direction="column" gap="1">
+            <Flex align="center" justify="between" mb="1">
+              <FieldLabel>单元（已选 {settings.units.length} 个）</FieldLabel>
+              <Flex gap="2" className="shrink-0">
+                <Button
+                  variant="ghost"
+                  color="gray"
+                  size="2"
+                  onClick={() => update({ ...settings, units: [...units] })}
+                >
+                  全选
+                </Button>
+                <Button
+                  variant="ghost"
+                  color="gray"
+                  size="2"
+                  disabled={noUnits}
+                  onClick={() => update({ ...settings, units: [] })}
+                >
+                  清空
+                </Button>
+              </Flex>
+            </Flex>
+            {/* 单元就是开关按钮：选中 = 主题色实心（与词书切换的激活态同语言），未选 = 灰 surface。
+                按钮撑满格子（移动端 4 列、桌面 8 列，size 3 高 40px），比原来的行内勾选框好点得多 */}
+            <Grid columns={{ initial: '4', sm: '8' }} gap="2">
+              {units.map((u) => {
+                const selected = settings.units.includes(u)
+                return (
+                  <Button
+                    key={u}
+                    size="3"
+                    variant={selected ? 'solid' : 'surface'}
+                    color={selected ? undefined : 'gray'}
+                    aria-pressed={selected}
+                    onClick={() => toggleUnit(u)}
+                  >
+                    {unitLabel(u)}
+                  </Button>
+                )
+              })}
+            </Grid>
+          </Flex>
+
+          {/* 内容 */}
+          <Flex direction="column" gap="1">
+            <FieldLabel>内容</FieldLabel>
+            <SegmentedControl.Root
+              aria-label="选择内容"
+              value={settings.contentFilter}
+              onValueChange={(v) =>
+                update({ ...settings, contentFilter: v as Settings['contentFilter'] })
+              }
+              className="w-full"
+            >
+              <SegmentedControl.Item value="all">全部</SegmentedControl.Item>
+              <SegmentedControl.Item value="words_only">仅单词</SegmentedControl.Item>
+              <SegmentedControl.Item value="phrases_only">仅短语</SegmentedControl.Item>
+            </SegmentedControl.Root>
+          </Flex>
+
+          {/* 顺序 / 模式 */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Flex direction="column" gap="1">
+              <FieldLabel>顺序</FieldLabel>
+              <SegmentedControl.Root
+                aria-label="选择顺序"
+                value={settings.orderMode}
+                onValueChange={(v) =>
+                  update({ ...settings, orderMode: v as Settings['orderMode'] })
+                }
+                className="w-full"
+              >
+                <SegmentedControl.Item value="sequential">顺序</SegmentedControl.Item>
+                <SegmentedControl.Item value="random">随机</SegmentedControl.Item>
+              </SegmentedControl.Root>
+            </Flex>
+            <Flex direction="column" gap="1">
+              <FieldLabel>模式</FieldLabel>
+              <SegmentedControl.Root
+                aria-label="选择模式"
+                value={settings.questionMode}
+                onValueChange={(v) =>
+                  update({ ...settings, questionMode: v as Settings['questionMode'] })
+                }
+                className="w-full"
+              >
+              <SegmentedControl.Item value="word">单词</SegmentedControl.Item>
+              <SegmentedControl.Item value="listen">听写</SegmentedControl.Item>
+              <SegmentedControl.Item value="example">例句填空</SegmentedControl.Item>
+              </SegmentedControl.Root>
+            </Flex>
+          </div>
+
+          {/* 偏好 */}
+          <Flex direction="column" gap="4">
+            <Flex
+              justify="between"
+              align="center"
+              gap="4"
+              px="4"
+              py="3"
+              className="rounded-xl border border-[var(--gray-a4)]"
+            >
+              <Box className="min-w-0">
+                <Text as="label" size="2">
+                  显示首字母提示
+                </Text>
+              </Box>
+              <Switch
+                checked={settings.showFirstLetter}
+                onCheckedChange={(v) => update({ ...settings, showFirstLetter: v })}
+                aria-label="显示首字母提示"
+              />
+            </Flex>
+
+            <Flex
+              justify="between"
+              align="center"
+              gap="4"
+              px="4"
+              py="3"
+              className="rounded-xl border border-[var(--gray-a4)]"
+            >
+              <Box className="min-w-0">
+                <Text as="label" size="2">
+                  多义词只考一次
+                </Text>
+              </Box>
+              <Switch
+                checked={settings.mergeMode !== 'sense'}
+                onCheckedChange={(on) =>
+                  update({ ...settings, mergeMode: on ? 'all' : 'sense' })
+                }
+                aria-label="多义词只考一次"
+              />
+            </Flex>
+
+            {settings.mergeMode !== 'sense' && (
+              <Flex direction="column" gap="1">
+                <FieldLabel>题面提示</FieldLabel>
+                <SegmentedControl.Root
+                  aria-label="多义词题面提示"
+                  value={settings.mergeMode}
+                  onValueChange={(v) => update({ ...settings, mergeMode: v as MergeMode })}
+                  className="w-full"
+                >
+                  <SegmentedControl.Item value="all">列出全部释义</SegmentedControl.Item>
+                  <SegmentedControl.Item value="first">只给第一条释义</SegmentedControl.Item>
+                </SegmentedControl.Root>
+              </Flex>
+            )}
+          </Flex>
+
+          {error && (
+            <Callout.Root color="red" variant="soft" size="2">
+              <Callout.Icon>
+                <CircleAlert size={16} />
+              </Callout.Icon>
+              <Callout.Text>{error}</Callout.Text>
+            </Callout.Root>
+          )}
+
+          <Flex direction="column" gap="3">
+            <Button size="3" disabled={noUnits} onClick={start} className="w-full">
+              <Play size={16} />
+              开始练习
+            </Button>
+            <Button
+              size="3"
+              variant="soft"
+              disabled={words.length === 0}
+              onClick={() => router.push('/practice?review=1')}
+              className="w-full"
+            >
+              <NotebookText size={16} />
+              复习错题{words.length > 0 ? `（${words.length}）` : ''}
+            </Button>
+          </Flex>
+        </Flex>
+        </Card>
+      </Flex>
+    </Container>
+  )
+}

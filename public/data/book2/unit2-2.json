@@ -1,0 +1,1060 @@
+[
+	{
+		"english": "tuck",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "把···放起来",
+				"en": "put sth. into a small space, esp. in order to protect, hide, carry, or hold it",
+				"examples": [
+					"[[Tuck]] your gloves in your pocket so that you don't lose them."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "把（衣服等的末端）塞进",
+				"en": "push a loose end of a piece of clothing or material into a particular place or position, esp. to make it tidy or comfortable",
+				"examples": [
+					"The new housekeeper [[tucked]] the bottom of the sheet under the mattress as she was taught to."
+				]
+			}
+		]
+	},
+	{
+		"english": "casual",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "不认真的；随便的",
+				"en": "without any serious interest or attention",
+				"examples": [
+					"He gave us a [[casual]] glance as he walked by, but didn't stop."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "漫不经心的；不放在心上的",
+				"en": "relaxed and not worried, or seeming not to care about sth.",
+				"examples": [
+					"His eyes were angry, though he sounded [[casual]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "serendipity",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "（有趣或有价值事物的）碰巧发现，机缘巧合",
+				"en": "(literary) when interesting or valuable discoveries are made by accident",
+				"examples": [
+					"Meeting her like that, and there of all places, was true [[serendipity]]!"
+				]
+			}
+		]
+	},
+	{
+		"english": "devour",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "如饥似渴地阅读；津津有味地看",
+				"en": "read sth. quickly and eagerly, or watch sth. with great interest",
+				"examples": [
+					"She spent several evenings [[devouring]] the science fiction books borrowed from the library."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "狼吞虎咽地吃",
+				"en": "eat sth. quickly because you are very hungry",
+				"examples": [
+					"After the tennis match the boys [[devoured]] the sandwiches in seconds."
+				]
+			}
+		]
+	},
+	{
+		"english": "throes",
+		"senses": [
+			{
+				"pos": "n. [pl.]",
+				"zh": "处于···的困境中",
+				"en": "(in the ~ of sth.) (fml.) in the middle of a very difficult situation",
+				"examples": [
+					"The country is presently in the [[throes]] of a profound economic crisis."
+				]
+			}
+		]
+	},
+	{
+		"english": "transition",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "过渡；转变；变迁",
+				"en": "(fml.) when sth. changes from one form or state to another",
+				"examples": [
+					"Sometimes, making the [[transition]] from adolescence (青春期) to adulthood can be painful."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "过渡；转变",
+				"en": "change to a new state or start using sth. new",
+				"examples": [
+					"Having been in the position for over 10 years, Jack will finally [[transition]] to his new role next month."
+				]
+			}
+		]
+	},
+	{
+		"english": "cathedral",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "大教堂；教区总教堂",
+				"en": "the main church of a particular area under the control of a bishop",
+				"examples": [
+					"The old city around the [[cathedral]] is the most colorful part of town."
+				]
+			}
+		]
+	},
+	{
+		"english": "babushka",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（来自俄语）老婆婆；祖母",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "toothbrush",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "牙刷",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "metro",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "地铁",
+				"en": "(pl. metros)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "telling",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "说明问题的；显露真相的",
+				"en": "showing the true character or nature of sb. / sth., often without being intended",
+				"examples": [
+					"The tomb stands today as a [[telling]] memorial to the period."
+				]
+			}
+		]
+	},
+	{
+		"english": "snapshot",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "简要描述；简介",
+				"en": "a piece of information that quickly gives you an idea of what the situation is like at a particular time",
+				"examples": [
+					"The book gives us a [[snapshot]] of life in the Middle Ages."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "快照（通常技巧不高）",
+				"en": "a photograph taken quickly and often not very skillfully",
+				"examples": [
+					"He takes [[snapshots]] with a simple camera."
+				]
+			}
+		]
+	},
+	{
+		"english": "capitalism",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "资本主义",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "virtually",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "几乎",
+				"en": "almost; practically",
+				"examples": [
+					"He was [[virtually]] unknown in the community before running for office."
+				]
+			},
+			{
+				"pos": "adv.",
+				"zh": "虚拟地；模拟地",
+				"en": "on a computer, rather than in the real world",
+				"examples": [
+					"With the new technology, the tour of a museum can be done [[virtually]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "fossil",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "化石",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "fossilize",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）成化石，石化",
+				"en": "(usu. passive) become or form a fossil by being preserved in rock",
+				"examples": [
+					"In Wyoming, I visited a rock shop made entirely of [[fossilized]] dinosaur bones."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）（人、思想、体制等）僵化",
+				"en": "if people, ideas, systems, etc. fossilize or are fossilized, they never change or develop, even when there are good reasons why they should change",
+				"examples": [
+					"Most couples, however [[fossilized]] their relationship, have some interests in common."
+				]
+			}
+		]
+	},
+	{
+		"english": "volcanic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "火山的；由火山作用引起的",
+				"en": "relating to or caused by a volcano",
+				"examples": [
+					"Geologists understand many of the factors that cause [[volcanic]] eruptions."
+				]
+			}
+		]
+	},
+	{
+		"english": "mudflow",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "泥流",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "antidote",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "缓解方法；对抗手段",
+				"en": "sth. that makes an unpleasant situation better",
+				"examples": [
+					"Regular exercise is the best [[antidote]] to tiredness and depression."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "解毒剂",
+				"en": "a substance that stops the effects of a poison",
+				"examples": [
+					"There is no known [[antidote]] to a bite from this snake."
+				]
+			}
+		]
+	},
+	{
+		"english": "photography",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "摄影；摄影业；摄影术",
+				"en": "the art, profession, or method of producing photographs or the scenes in films",
+				"examples": [
+					"After I went on a [[photography]] course, my friend asked me to take some photos of her."
+				]
+			}
+		]
+	},
+	{
+		"english": "Victorian",
+		"senses": [
+			{
+				"pos": "adj. / n.",
+				"zh": "英国维多利亚（女王）时代的",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "critic",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "（艺术、音乐、电影等的）评论家，批评家",
+				"en": "sb. whose job is to make judgments about the good and bad qualities of art, music, films, etc.",
+				"examples": [
+					"The play has been well received by the [[critics]]."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "批评者",
+				"en": "sb. who criticizes a person, organization, or idea",
+				"examples": [
+					"[[Critics]] of the scheme have said that it will not solve the problem of teenage crime."
+				]
+			}
+		]
+	},
+	{
+		"english": "sketch",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（给···）画速写；（给···）画素描",
+				"en": "draw a sketch of sth.",
+				"examples": [
+					"The art students were told to [[sketch]] the landscape."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "素描；速写；草图",
+				"en": "a simple, quickly made drawing that does not show much detail",
+				"examples": [
+					"Cantor drew a rough [[sketch]] of his apartment."
+				]
+			}
+		]
+	},
+	{
+		"english": "jot",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "草草记下",
+				"en": "(jotted, jotting) (~ down) write a short piece of information quickly",
+				"examples": [
+					"Let me [[jot down]] your number and I'll call you tomorrow."
+				]
+			}
+		]
+	},
+	{
+		"english": "echo",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "附和（别人的观点）",
+				"en": "repeat an idea or opinion because you agree with it",
+				"examples": [
+					"I've heard the prime minister's view [[echoed]] throughout the party."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "回声；回音",
+				"en": "(pl. echoes) a sound that you hear again after a loud noise, because it was made near sth. such as a wall",
+				"examples": [
+					"Her scream was followed by a loud [[echo]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "thoughtful",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "经缜密思考的；注意的",
+				"en": "showing careful consideration or attention",
+				"examples": [
+					"It is a [[thoughtful]] and finely acted film, suggesting that no one has a fixed nature."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "想得周到的；体贴的；关心的",
+				"en": "always thinking of the things you can do to make people happy or comfortable",
+				"examples": [
+					"It was really [[thoughtful]] of you to remember my birthday."
+				]
+			}
+		]
+	},
+	{
+		"english": "capability",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（尤指完成困难事情的）能力，才干",
+				"en": "the natural ability, skill, or power that makes a machine, person, or organization able to do sth., esp. sth. difficult",
+				"examples": [
+					"I can speak French, but simultaneous interpretation is beyond my [[capabilities]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "layer",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "铺一层···；分层放置",
+				"en": "make a layer of sth. or put sth. down in layers",
+				"examples": [
+					"The cliffs are [[layered]] with fossil remains."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "表层；层",
+				"en": "an amount or piece of a material or substance that covers a surface or that is between two other things",
+				"examples": [
+					"The moon was shining through a thin [[layer]] of cloud."
+				]
+			}
+		]
+	},
+	{
+		"english": "maximize",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使增加到最大限度；使最大化",
+				"en": "(BrE also maximise) increase sth. such as profit or income as much as possible",
+				"examples": [
+					"The aim of everyone, irrespective of weight, should be to change their eating habits to [[maximize]] the health benefits."
+				]
+			}
+		]
+	},
+	{
+		"english": "closely",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "仔细地；严密地",
+				"en": "very carefully",
+				"examples": [
+					"The detective watched him [[closely]], waiting for a reply."
+				]
+			},
+			{
+				"pos": "adv.",
+				"zh": "密切地；在很大程度上",
+				"en": "to a very great degree",
+				"examples": [
+					"I have been [[closely]] involved in the work of both committees."
+				]
+			}
+		]
+	},
+	{
+		"english": "unfiltered",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（信息）未经过滤的",
+				"en": "with no information removed",
+				"examples": [
+					"The radio station provides millions of people with [[unfiltered]] news."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "未经过滤的",
+				"en": "not having had solids removed with a filter",
+				"examples": [
+					"[[Unfiltered]] apple juice is such a treat when it's in season in the fall."
+				]
+			}
+		]
+	},
+	{
+		"english": "mustache",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "髭；小胡子",
+				"en": "(BrE moustache) hair that grows on a man's upper lip",
+				"examples": [
+					"The old man had wavy hair, wore a thin [[mustache]], and was dressed conservatively."
+				]
+			}
+		]
+	},
+	{
+		"english": "musing",
+		"senses": [
+			{
+				"pos": "n. [C, U, usu. pl.]",
+				"zh": "沉思；诉说想法",
+				"en": "a period of thinking carefully about sth. or telling people your thoughts about it",
+				"examples": [
+					"We had to sit and listen to his [[musings]] on life."
+				]
+			}
+		]
+	},
+	{
+		"english": "cherish",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "重视；珍视",
+				"en": "if you cherish sth., it is very important to you",
+				"examples": [
+					"I [[cherish]] the memory of that day."
+				]
+			}
+		]
+	},
+	{
+		"english": "goat",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "山羊",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "whisperer",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（通过低声耳语和轻柔的身体动作）训练动物的人",
+				"en": "a person who can control and train a particular type of animal just by using the voice and gentle body movements, and without using force or threats",
+				"examples": [
+					"He's the original horse [[whisperer]]! He could get on the back of any horse in half an hour."
+				]
+			}
+		]
+	},
+	{
+		"english": "tap",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（常指连续）轻拍，轻叩，轻敲",
+				"en": "hit sth. gently, and often repeatedly, esp. making short, sharp noises",
+				"examples": [
+					"Mark [[tapped]] his fingers on the tabletop impatiently."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "（尤指为了引起某人注意）轻轻敲击，轻扣，轻拍",
+				"en": "an act of hitting sth. lightly, esp. to get sb.'s attention",
+				"examples": [
+					"I gave her a [[tap]] on the shoulder and she turned around."
+				]
+			}
+		]
+	},
+	{
+		"english": "snugly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "温暖舒适地",
+				"en": "in a way that feels warm, comfortable, and protected",
+				"examples": [
+					"Jamie was [[snugly]] wrapped in a white woolen scarf."
+				]
+			}
+		]
+	},
+	{
+		"english": "stripe",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "条纹；线条",
+				"en": "a line of colour, esp. one of several lines of color all close together",
+				"examples": [
+					"She wore a bright green jogging suit with a white [[stripe]] down the sides."
+				]
+			}
+		]
+	},
+	{
+		"english": "striped",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有（彩色）条纹的",
+				"en": "having lines or bands of color",
+				"examples": [
+					"The suspect was tall, and wore dark blue trousers with a blue and white [[striped]] shirt."
+				]
+			}
+		]
+	},
+	{
+		"english": "endure",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "持续存在",
+				"en": "continue to exist for a long time",
+				"examples": [
+					"He wasn't the only one who doubted the relationship would [[endure]]."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "忍耐；忍受",
+				"en": "be in a difficult or painful situation for a long time without complaining",
+				"examples": [
+					"It seemed impossible that anyone could [[endure]] such pain."
+				]
+			}
+		]
+	},
+	{
+		"english": "enduring",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "持久的；耐久的",
+				"en": "lasting for a long time",
+				"examples": [
+					"One of my most [[enduring]] memories is of going on holiday to France with my parents."
+				]
+			}
+		]
+	},
+	{
+		"english": "quotation",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "引文；引语；语录",
+				"en": "a group of words taken from a text or speech and repeated by sb. other than the original author or speaker",
+				"examples": [
+					"The following [[quotation]] is taken from a 19th-century travel diary."
+				]
+			}
+		]
+	},
+	{
+		"english": "sake",
+		"senses": [
+			{
+				"pos": "n.",
+				"zh": "为某事本身的缘故；鉴于某事本身的价值",
+				"en": "(for sth.'s ~ / for the ~ of it / for its own ~) because of the interest or value sth. has, not because of the advantages it may bring",
+				"examples": [
+					"I don't care about winning or losing; I just enjoy playing sports for sports’ [[sake]]."
+				]
+			},
+			{
+				"pos": "n.",
+				"zh": "为了某人 / 某事的缘故",
+				"en": "(for the ~ of sb. / sth.; for sb.'s / sth.'s ~) in order to help, improve, or please sb. / sth.",
+				"examples": [
+					"The family moved to a coastal city in the south for the [[sake]] of the boy's health."
+				]
+			}
+		]
+	},
+	{
+		"english": "obey",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "服从；遵守；顺从",
+				"en": "do what you are told or expected to do",
+				"examples": [
+					"The little girl made no effort to [[obey]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "disobey",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "不服从；不顺从；违抗",
+				"en": "refuse to do what a person, law, order, etc. tells you to do; refuse to obey",
+				"examples": [
+					"If you [[disobey]] the law, you will be punished."
+				]
+			}
+		]
+	},
+	{
+		"english": "spiky",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "带尖刺的；有刺的",
+				"en": "having long sharp points",
+				"examples": [
+					"Some corals are quite smooth, while others are sharp and [[spiky]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "chestnut",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "栗子；板栗",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "shell",
+		"senses": [
+			{
+				"pos": "n. [C] / v.",
+				"zh": "（禽蛋、坚果、种子的）壳",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "birch",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "桦树；桦木",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "sway",
+		"senses": [
+			{
+				"pos": "v. / n.",
+				"zh": "摇摆；摇动；摇晃",
+				"en": "move slowly from one side to another",
+				"examples": [
+					"The movement of the ship caused the mast (桅杆) to [[sway]] back and forth."
+				]
+			}
+		]
+	},
+	{
+		"english": "stumble upon / on / across",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "偶然发现（碰见）",
+				"en": "find or discover sth. by chance and unexpectedly",
+				"examples": [
+					"Workmen [[stumbled upon]] the relic while digging the foundations for a new building."
+				]
+			}
+		]
+	},
+	{
+		"english": "tuck away",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "把（尤指钱）存放在安全处",
+				"en": "(infml.) store sth. esp. money, in a safe place",
+				"examples": [
+					"The envelope was [[tucked away]] in her jewel box."
+				]
+			}
+		]
+	},
+	{
+		"english": "win out (over)",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "终于成功；胜出",
+				"en": "finally succeed or defeat other people or things",
+				"examples": [
+					"It remains to be seen whether the archaeologists will [[win out]] over the urban planners."
+				]
+			}
+		]
+	},
+	{
+		"english": "bring up",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "提起（话题）",
+				"en": "mention a subject or start to talk about it",
+				"examples": [
+					"Why did you have to [[bring up]] the subject of money?"
+				]
+			}
+		]
+	},
+	{
+		"english": "if not",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "甚至可能（用于提出更极端的说法）",
+				"en": "perhaps even (used to introduce a more extreme term than one first mentioned)",
+				"examples": [
+					"They cost thousands if not millions of pounds to build."
+				]
+			}
+		]
+	},
+	{
+		"english": "in real time",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "立刻；实时",
+				"en": "(AmE) at once; instantaneously",
+				"examples": [
+					"Smart meters show in real time how much electricity and gas is being used by households."
+				]
+			}
+		]
+	},
+	{
+		"english": "touch up",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "修改；改进；润色",
+				"en": "improve sth. by changing it slightly or adding a little more to it",
+				"examples": [
+					"We thought the photo had probably been [[touched up]], because he looked so much younger in it."
+				]
+			}
+		]
+	},
+	{
+		"english": "get off the ground",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "开始获得成功；取得进展",
+				"en": "start to be successful",
+				"examples": [
+					"Construction of the theme park never [[got off the ground]] for lack of money."
+				]
+			}
+		]
+	},
+	{
+		"english": "bring back",
+		"senses": [
+			{
+				"pos": "短语动词",
+				"zh": "使回忆起（想起）",
+				"en": "make sb. remember sth. or think about it again",
+				"examples": [
+					"The photographs [[brought back]] many pleasant memories."
+				]
+			}
+		]
+	},
+	{
+		"english": "follow in sb.'s footsteps",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "步某人的后尘；走某人走过的路；继承事业",
+				"en": "do as another person did before, esp. in making a journey or following a particular career",
+				"examples": [
+					"She wanted to follow in her mother's footsteps and be a ballroom dancer."
+				]
+			}
+		]
+	},
+	{
+		"english": "Vietnam",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "越南（亚洲国家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Ho Chi Minh City",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "胡志明市（越南城市，位于东南部）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Russia",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "俄罗斯（欧洲国家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Oregon",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "俄勒冈州（位于美国西北部）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Clarno Unit",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "克拉诺区 （约翰迪化石层国家遗址的三个区块之一）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "John Day Fossil Beds National Monument",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "约翰迪化石层国家遗址（美国国家公园，位于俄勒冈州）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "John Ruskin",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "约翰・罗斯金（英国艺术评论家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Bulgaria",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "保加利亚（欧洲国家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Vidin",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "维丁（保加利亚城市）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Robert Louis Stevenson",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "罗伯特・路易・史蒂文森（英国作家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Cévennes",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "塞文山脉（位于法国南部）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Le Cheylard",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "勒谢拉尔（法国市镇，位于法国南部）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Luc",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "吕克（法国市镇，位于法国南部）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]
