@@ -16,7 +16,7 @@ export function SectionCard({
   compact?: boolean
 }) {
   return (
-    <Card size={compact ? '2' : '4'} className="anim-in-up">
+    <Card size={{ initial: '2', sm: '3' }} className="anim-in-up">
       <Flex direction="column" gap={compact ? '3' : '4'}>
         <Flex align="center" gap="3">
           <Flex

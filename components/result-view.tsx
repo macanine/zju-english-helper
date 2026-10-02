@@ -25,7 +25,7 @@ function Stat({ value, label }: { value: string; label: string }) {
       p="3"
       className="rounded-xl bg-[var(--gray-a2)]"
     >
-      <Text size="5" weight="medium" className="tabular-nums whitespace-nowrap">
+      <Text size="5" weight="medium" className="tabular-nums" style={{ overflowWrap: 'anywhere' }}>
         {value}
       </Text>
       <Text size="2" color="gray" className="whitespace-nowrap">
@@ -60,8 +60,8 @@ export function ResultView() {
 
   return (
     <Container size="3" px="4" py="6">
-      <Card size="4" className="anim-in-up">
-        <Flex direction="column" align="center" gap="7" py="4">
+      <Card size={{ initial: '2', sm: '3' }} className="anim-in-up">
+        <Flex direction="column" align="center" gap="5" py="4">
           <CheckCircle2
             size={56}
             strokeWidth={1.5}
@@ -113,7 +113,7 @@ export function ResultView() {
               onClick={() => router.push('/')}
             >
               <Settings2 size={16} />
-              返回设置
+              返回首页
             </Button>
           </Flex>
         </Flex>

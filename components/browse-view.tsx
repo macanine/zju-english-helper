@@ -129,14 +129,14 @@ export function BrowseView() {
   return (
     <Container size="3" px="4" py="6">
       <Flex direction="column" gap="4">
-        <Card size="4" className="anim-in-up">
+        <Card size={{ initial: '2', sm: '3' }} className="anim-in-up">
           <Flex direction="column" gap="4">
             <Box>
               <Heading as="h2" size="4">
                 预习词库
               </Heading>
             </Box>
-            <Grid columns={{ initial: '1', md: '2' }} gap="3">
+            <Grid columns={{ initial: '1', sm: '2' }} gap="3">
               <Box>
                 <Text as="div" size="2" weight="medium" mb="1">
                   词书

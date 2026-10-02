@@ -299,7 +299,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
           <X size={16} />
         </IconButton>
         <Flex align="center" gap="3" className="min-w-0 flex-1">
-          <Progress value={progressValue} size="1" className="max-w-48 flex-1" />
+          <Progress value={progressValue} size="1" className="min-w-0 flex-1" aria-label="练习进度" />
           <Text size="2" color="gray" className="tabular-nums whitespace-nowrap">
             {question ? `${question.no} / ${question.total}` : '—'}
           </Text>
@@ -307,7 +307,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
       </Flex>
 
       {status === 'error' ? (
-        <Card size="4" style={{ borderColor: 'var(--red-a6)' }}>
+        <Card size={{ initial: '2', sm: '3' }} style={{ borderColor: 'var(--red-a6)' }}>
           <Flex direction="column" align="center" gap="3" py="6">
             <Text size="3" color="red">
               当前词组中没有可用的例句数据（缺少 [[..]] 标记）。
@@ -318,10 +318,10 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
           </Flex>
         </Card>
       ) : (
-        <Card size="4">
+        <Card size={{ initial: '2', sm: '3' }}>
           <Flex direction="column" gap="5">
             {/* 题目区 */}
-            <Flex direction="column" align="center" gap="3" className="justify-center text-center">
+            <div className={`practice-prompt ${isListenMode && canSpeak ? 'practice-prompt-listen' : ''}`}>
               {isExampleMode && example ? (
                 <ExamplePrompt example={example} hint={hint} pos={pos} cells={cells} />
               ) : isListenMode ? (
@@ -343,43 +343,24 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
                       )}
                     </>
                   ) : (
-                    <Text size="7" weight="medium" className="text-balance">
-                      {listenPos && (
-                        <Text as="span" size="4" weight="medium" color="gray" mr="2">
-                          {listenPos}
-                        </Text>
-                      )}
-                      {hint}
-                    </Text>
+                    <MeaningPrompt pos={listenPos} hint={hint} english={!word?.sense.zh} />
                   )}
                 </>
               ) : (
-                <Flex direction="column" align="center" gap="2">
-                  <Flex align="center" gap="2">
-                    <Text size="7" weight="medium" className="text-balance">
-                      {pos && (
-                        <Text as="span" size="4" weight="medium" color="gray" mr="2" className="whitespace-nowrap">
-                          {pos}
-                        </Text>
-                      )}
-                      {hint}
-                    </Text>
-                  </Flex>
+                <Flex direction="column" gap="3">
+                  <MeaningPrompt pos={pos} hint={hint} english={!word?.sense.zh} />
                   {/* 「同词只考一次 · 列出全部释义」：其余释义跟着列在下面 */}
                   {listAllSenses &&
                     word?.senses.slice(1).map((sense, i) => (
-                      <Text key={i} size="2" color="gray" className="text-balance">
-                        {sense.pos ? `${sense.pos} ` : ''}
-                        {sense.zh || sense.en}
-                      </Text>
+                      <MeaningPrompt key={i} pos={sense.pos} hint={sense.zh || sense.en} english={!sense.zh} secondary />
                     ))}
                 </Flex>
               )}
-            </Flex>
+            </div>
 
             {/* 打字区 */}
             <div
-              className="relative cursor-text select-none py-2 text-center"
+              className="typing-input-frame relative cursor-text select-none text-center"
               onClick={() => inputRef.current?.focus()}
             >
               <AnswerCells cells={cells} cursor={status === 'typing' ? cursorIndex : -1} />
@@ -407,8 +388,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
             {/* 看答案（Esc） */}
             {peeked && status !== 'reveal' && (
               <Text as="div" size="3" className="anim-in-up text-center">
-                答案：
-                <Text weight="medium" style={{ color: 'var(--amber-11)' }}>
+                <Text weight="medium" className="serif-en practice-answer" style={{ color: 'var(--amber-11)' }}>
                   {answer}
                 </Text>
               </Text>
@@ -420,10 +400,10 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
               justify="center"
               gap="2"
               wrap="wrap"
-              className="min-h-10 text-center"
+              className="practice-actions min-h-10 text-center"
             >
               {status === 'reveal' ? (
-                <Text size="3" className="anim-in-up">
+                <Text size="3" className="anim-in-up serif-en practice-answer">
                   {answer}
                 </Text>
               ) : status === 'complete' ? (
@@ -455,6 +435,20 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
 }
 
 /** 例句 + 空缺处：镜像打字进度（相同的多个空缺同步填充） */
+function MeaningPrompt({ pos, hint, english = false, secondary = false }: {
+  pos: string | null
+  hint: string
+  english?: boolean
+  secondary?: boolean
+}) {
+  return (
+    <div className={`practice-meaning ${secondary ? 'practice-meaning-secondary' : ''}`}>
+      {pos && <span className="practice-pos">{pos}</span>}
+      <span className={english ? 'serif-en' : undefined}>{hint}</span>
+    </div>
+  )
+}
+
 function ExamplePrompt({
   example,
   hint,
@@ -467,24 +461,19 @@ function ExamplePrompt({
   cells: Cell[]
 }) {
   return (
-    <Text size="3" style={{ lineHeight: 2 }} className="text-balance break-words">
-      {example.parts.map((part, i) => (
-        <React.Fragment key={i}>
-          <span>{part}</span>
-          {i < example.blanks.length && (
-            <>
+    <Flex direction="column" gap="4">
+      <Text as="div" className="serif-en practice-sentence">
+        {example.parts.map((part, i) => (
+          <React.Fragment key={i}>
+            <span>{part}</span>
+            {i < example.parts.length - 1 && (
               <Blank example={example} index={i} cells={cells} />
-              {i === example.blanks.length - 1 && (
-                <span className="mx-1 align-baseline" style={{ color: 'var(--gray-11)' }}>
-                  （{pos ? `${pos} ` : ''}
-                  {hint}）
-                </span>
-              )}
-            </>
-          )}
-        </React.Fragment>
-      ))}
-    </Text>
+            )}
+          </React.Fragment>
+        ))}
+      </Text>
+      <MeaningPrompt pos={pos} hint={hint} secondary />
+    </Flex>
   )
 }
 
@@ -499,7 +488,7 @@ function Blank({ example, index, cells }: { example: Example; index: number; cel
   const [from, to] = blankRange(example, index)
   return (
     <span
-      className="mx-1 inline-flex min-w-16 items-end justify-center border-b-2 border-dashed px-2 font-semibold"
+      className="mx-1 inline-flex min-w-16 max-w-full flex-wrap items-end justify-center border-b-2 border-dashed px-2 font-semibold"
       style={{ borderColor: 'var(--accent-9)' }}
     >
       {cells.slice(from, to).map((c, k) =>
@@ -514,42 +503,51 @@ function Blank({ example, index, cells }: { example: Example; index: number; cel
 }
 
 function AnswerCells({ cells, cursor }: { cells: Cell[]; cursor: number }) {
-  // 长词 / 长短语自动缩一点字号，保证一格一字母、格与格之间留空还能排在卡片里
-  const scale =
-    cells.length <= 10
-      ? 'text-3xl sm:text-4xl'
-      : cells.length <= 18
-        ? 'text-2xl sm:text-3xl'
-        : 'text-xl sm:text-2xl'
+  // 按完整单词换行，字号依据最长单词和输入区实际宽度缩放。
+  const groups: { cell: Cell; index: number }[][] = [[]]
+  cells.forEach((cell, index) => {
+    if (cell.ch === ' ') {
+      groups.push([{ cell, index }], [])
+    } else {
+      groups[groups.length - 1].push({ cell, index })
+    }
+  })
+  const longest = Math.max(1, ...groups.map((group) => group.length))
   return (
     <div
-      className={`flex flex-wrap justify-center gap-x-1.5 gap-y-3 font-mono font-medium ${scale}`}
+      className="answer-cells font-mono font-medium"
+      style={{ fontSize: `clamp(14px, calc((100cqw - 32px) / ${longest * 0.86}), 36px)` }}
+      aria-hidden="true"
     >
-      {cells.map((c, i) => {
-        const isCursor = i === cursor
-        const isSpace = c.ch === ' '
-        const shown = c.state === 'wrong' ? c.typed : c.ch
-        return (
-          <span
-            key={i}
-            className={`relative inline-flex justify-center border-b-2 ${isSpace ? 'w-6' : 'w-[0.72em]'}`}
-            style={{
-              borderColor: c.state === 'pending' ? 'var(--gray-6)' : CELL_COLOR[c.state],
-              paddingBottom: '0.06em',
-            }}
-          >
-            <span
-              style={{
-                color: c.state === 'pending' ? 'transparent' : CELL_COLOR[c.state],
-                fontStyle: c.state === 'wrong' ? 'normal' : undefined,
-              }}
-            >
-              {isSpace ? '\u00a0' : shown}
-            </span>
-            {isCursor && <Cursor />}
-          </span>
-        )
-      })}
+      {groups.filter((group) => group.length > 0).map((group) => (
+        <span key={group[0].index} className="answer-word">
+          {group.map(({ cell: c, index: i }) => {
+            const isCursor = i === cursor
+            const isSpace = c.ch === ' '
+            const shown = c.state === 'wrong' ? c.typed : c.ch
+            return (
+              <span
+                key={i}
+                className={`relative inline-flex justify-center border-b-2 ${isSpace ? 'w-[0.55em]' : 'w-[0.72em]'}`}
+                style={{
+                  borderColor: c.state === 'pending' ? 'var(--gray-6)' : CELL_COLOR[c.state],
+                  paddingBottom: '0.06em',
+                }}
+              >
+                <span
+                  style={{
+                    color: c.state === 'pending' ? 'transparent' : CELL_COLOR[c.state],
+                    fontStyle: c.state === 'wrong' ? 'normal' : undefined,
+                  }}
+                >
+                  {isSpace ? '\u00a0' : shown}
+                </span>
+                {isCursor && <Cursor />}
+              </span>
+            )
+          })}
+        </span>
+      ))}
     </div>
   )
 }

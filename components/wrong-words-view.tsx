@@ -64,9 +64,9 @@ export function WrongWordsView() {
             onValueChange={(v) => setTab(v as Tab)}
             className="w-full"
           >
-            <SegmentedControl.Item value="wrong">错题（{words.length}）</SegmentedControl.Item>
+            <SegmentedControl.Item value="wrong">错题 {words.length}</SegmentedControl.Item>
             <SegmentedControl.Item value="mastered">
-              已掌握（{mastered.length}）
+              已掌握 {mastered.length}
             </SegmentedControl.Item>
           </SegmentedControl.Root>
 
@@ -187,7 +187,7 @@ export function WrongWordsView() {
 /** 空态：图标圆块 + 一句话 + （错题为空时）去练习的出口 */
 function EmptyState({ tab }: { tab: Tab }) {
   return (
-    <Card size="4" className="anim-in-up">
+    <Card size={{ initial: '2', sm: '3' }} className="anim-in-up">
       <Flex direction="column" align="center" gap="2" py="7">
         <Flex
           align="center"

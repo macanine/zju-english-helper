@@ -76,7 +76,9 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 
 - 基础组件优先使用 `@radix-ui/themes`（如 Button、Card、Dialog、Flex、Grid、TextField、Switch、Progress、Badge、AlertDialog）。图标使用 `lucide-react`。Themes 没有的简单空态用 Themes 布局组件组合；危险操作用 `AlertDialog`。
 - UnoCSS 只负责布局、间距、网格、定位与响应式，不替代组件库。颜色用 Radix Themes CSS 变量和 `<Theme>` props；不要写 `dark:` 变体，暗色由根 `<html>` 的 `.dark` 类和 `appearance="inherit"` 驱动。
-- 交互文案用中文，遵循已有视觉语言。设置、帮助、错题本页头复用只有标题的 `components/section-card.tsx`。首页单元选择是整格按钮网格；错题行内操作保留带文字的按钮。
+- 交互文案用中文，遵循已有视觉语言。设置、帮助、错题本分区复用 `components/section-card.tsx` 的图标标题卡片。首页单元选择是整格按钮网格，小屏 4 列、640px 起 8 列；错题行内操作保留带文字的按钮。
+- 页面统一使用 `Container size="3"`；表单中并排的选择器要统一 Radix `size`，同时检查上下边缘。卡片使用响应式内边距，小屏 size 2、宽屏 size 3；设置页紧凑分区只收紧内容间距，卡片内边距与其他页面一致。
+- 词典表格与完整桌面导航从 768px 起显示，较窄屏幕使用词卡和移动菜单。桌面错题操作列保留整行按钮宽度；单词朗读用可聚焦按钮，不能只绑定文字点击。
 - 页面文案保持简洁：删除页脚致谢/归属、冗余副标题、重复辅助说明和悬停提示；保留字段标签、操作状态、错误与危险操作确认，以及必要的 `aria-label`。
 - 保持响应式、可键盘操作和可访问名称。小屏隐藏按钮文字时补 `aria-label`；透明打字输入框字号不得小于 16px；页面布局变更需检查 390px 宽度没有横向溢出。
 - 动效简短并遵守 `app/globals.css` 的 `prefers-reduced-motion`；按压反馈可用 `active:scale-[0.97]`，已有入场类为 `.anim-in-up` 和 `.anim-pop`。
@@ -85,6 +87,8 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 - 不要给 Chromium 表格重新添加 sticky 表头：目前会与首行错位。练习页状态、输入和计时的边界见下节。
 
 ### 打字练习和语音
+
+- 练习题面与输入区分区显示；英文例句用 `.serif-en`，中文提示独立成行，词性与释义分开对齐，避免把中文提示插进英文句子。字母格按完整单词分组换行，字号根据输入区宽度和最长单词缩放；透明输入层仍保持至少 16px 字号。
 
 - `components/typing-area.tsx` 用单个透明、受控 `<input>` 同时接收桌面键盘和移动软键盘输入；通过新旧 value 的 diff 更新逐字母格子。不要加全局 `keydown` 监听，也不要用 `key` 强制重挂载打字区，否则会打断输入焦点。
 - 处理输入先经过 `acceptInput()`：裁掉超出答案长度的字符，并吞掉当前答案位置不需要的空格，保证输入与格子逐位对应。首字母提示占据首格，用户照着整词输入时要由 `normalizeInput()` 去掉重复的提示首字母。

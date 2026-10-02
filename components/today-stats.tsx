@@ -15,8 +15,8 @@ export function TodayCard() {
   const hasAny = recent.some((d) => d.stat.words > 0)
 
   return (
-    <Card size="4" className="anim-in-up">
-      <Flex justify="between" align="center" gap="5" wrap="wrap">
+    <Card size={{ initial: '2', sm: '3' }} className="anim-in-up">
+      <div className="today-summary">
         <Flex direction="column" gap="1">
           <Text size="2" weight="medium" color="gray">
             今日
@@ -28,12 +28,17 @@ export function TodayCard() {
             <Text size="2" color="gray">
               词
             </Text>
-            {words > 0 && (
-              <Text size="2" color="gray" className="tabular-nums">
-                · 正确率 {accuracy}% · 用时 {durationText}
-              </Text>
-            )}
           </Flex>
+          {words > 0 && (
+            <Flex gap="2" wrap="wrap">
+              <Text size="2" color="gray" className="tabular-nums whitespace-nowrap">
+                正确率 {accuracy}%
+              </Text>
+              <Text size="2" color="gray" className="tabular-nums">
+                用时 {durationText}
+              </Text>
+            </Flex>
+          )}
           {streak > 0 && (
             <Text size="2" color="gray">
               连续练习 {streak} 天
@@ -56,7 +61,7 @@ export function TodayCard() {
             ))}
           </Flex>
         )}
-      </Flex>
+      </div>
     </Card>
   )
 }

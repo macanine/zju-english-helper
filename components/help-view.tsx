@@ -7,20 +7,20 @@ import { SectionCard } from '@/components/section-card'
 
 function Item({ label, children }: { label: React.ReactNode; children: React.ReactNode }) {
   return (
-    <Flex gap="3" align="baseline" wrap="wrap">
-      <Box className="w-24 shrink-0">{label}</Box>
+    <div className="help-item">
+      <Box>{label}</Box>
       <Text as="div" size="2" className="min-w-0 flex-1" style={{ lineHeight: 1.7 }}>
         {children}
       </Text>
-    </Flex>
+    </div>
   )
 }
 
 export function HelpView() {
   return (
     <Container size="3" px="4" py="6">
-      <Flex direction="column" gap="5">
-        <Heading as="h2" size="6">
+      <Flex direction="column" gap="4">
+        <Heading as="h2" size="5">
           帮助
         </Heading>
 

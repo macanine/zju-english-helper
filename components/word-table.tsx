@@ -61,7 +61,7 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
   return (
     <>
       {/* 桌面：词典表格 */}
-      <div className="anim-in-up max-sm:hidden">
+      <div className="anim-in-up max-md:hidden">
         <Table.Root variant="surface" size="3">
           <Table.Body>
             {sections.map((sec) => (
@@ -110,8 +110,8 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
                         />
                       </Table.Cell>
                       {renderActions && (
-                        <Table.Cell justify="end" pr="4">
-                          <Flex gap="3" justify="end" align="center" onClick={(e) => e.stopPropagation()}>
+                        <Table.Cell justify="end" pr="4" style={{ width: '1%' }}>
+                          <Flex gap="2" justify="end" align="center" style={{ width: 'max-content' }} onClick={(e) => e.stopPropagation()}>
                             {actions}
                           </Flex>
                         </Table.Cell>
@@ -127,10 +127,10 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
 
       {/* 移动端：堆叠卡片。分组标题收进卡片内部居中，四周间距由卡片 padding 统一；
           卡片之间 16px（space-y），与页面留白同宽 */}
-      <div className="anim-in-up sm:hidden space-y-4">
+      <div className="anim-in-up md:hidden space-y-4">
         {sections.map((sec) => (
           <section key={sec.key}>
-            <Card size="3">
+            <Card size={{ initial: '2', sm: '3' }}>
               {sec.label && (
                 <Text
                   as="div"
@@ -198,15 +198,22 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
 function WordText({ english }: { english: string }) {
   return (
     <Text
+      asChild
       size="5"
       weight="medium"
       className="serif-en cursor-pointer break-words"
-      onClick={(e) => {
-        e.stopPropagation()
-        speak(cleanEnglish(english))
-      }}
     >
-      {english}
+      <button
+        type="button"
+        className="word-speak"
+        aria-label={`朗读 ${english}`}
+        onClick={(e) => {
+          e.stopPropagation()
+          speak(cleanEnglish(english))
+        }}
+      >
+        {english}
+      </button>
     </Text>
   )
 }

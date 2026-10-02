@@ -66,7 +66,7 @@ export function PracticeView() {
   if (error) {
     return (
       <Container size="3" px="4" py="6">
-        <Card size="4" className="anim-in-up">
+        <Card size={{ initial: '2', sm: '3' }} className="anim-in-up">
           <Flex direction="column" align="center" gap="4" py="6">
             <CircleAlert size={40} strokeWidth={1.5} style={{ color: 'var(--red-9)' }} />
             <Heading as="h2" size="4">

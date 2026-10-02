@@ -119,11 +119,147 @@ html .voice-list-preview {
   margin: 0;
 }
 
-/* 单元按钮按最小可读宽度自动换列；保留标签整行显示，窄屏下不再出现 1- / 1。 */
+/* 单元按 4 / 8 列成组排列，标签保持整行。 */
 .unit-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-2);
+}
+
+@media (min-width: 640px) {
+  .unit-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+}
+
+.help-item {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: baseline;
+}
+
+.today-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+@media (max-width: 359px) {
+  .help-item { grid-template-columns: 1fr; gap: var(--space-2); }
+}
+
+html .word-speak {
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  color: inherit;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.word-speak:focus-visible,
+[role='button']:focus-visible {
+  outline: 2px solid var(--accent-8);
+  outline-offset: 3px;
+  border-radius: var(--radius-2);
+}
+
+.practice-prompt {
+  padding: clamp(16px, 3vw, 24px);
+  background: var(--gray-a2);
+  border-radius: var(--radius-3);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.practice-prompt-listen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.practice-meaning {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-size: clamp(20px, 2.5vw, 26px);
+  line-height: 1.65;
+}
+
+.practice-meaning > :last-child { min-width: 0; }
+
+.practice-pos {
+  flex-shrink: 0;
+  max-width: 35%;
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-11);
+}
+
+.practice-meaning-secondary {
+  font-size: 16px;
+  color: var(--gray-11);
+}
+
+html .practice-sentence {
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.85;
+}
+
+.typing-input-frame {
+  container-type: inline-size;
+  padding: 24px 16px;
+  border-radius: var(--radius-3);
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1px var(--gray-a5);
+  transition: box-shadow 0.15s;
+}
+
+.typing-input-frame:focus-within {
+  box-shadow: inset 0 0 0 2px var(--accent-a6);
+}
+
+.answer-cells {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 0.12em;
+  width: 100%;
+}
+
+.answer-word {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.12em;
+  max-width: 100%;
+}
+
+.practice-answer { overflow-wrap: anywhere; }
+
+html .practice-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 380px);
+  align-self: center;
+}
+
+html .practice-actions > .rt-Button {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding-inline: 6px;
+}
+
+.practice-actions > .rt-Text { grid-column: 1 / -1; }
+
+@media (max-width: 359px) {
+  html .practice-actions > .rt-Button { font-size: 14px; gap: 6px; }
 }
 
 html .unit-grid > .rt-Button {
@@ -146,7 +282,19 @@ html .rt-TextFieldInput {
 }
 
 html .rt-SegmentedControlItem {
-  flex-grow: 1;
+  min-width: 0;
+}
+
+html .rt-SegmentedControlRoot {
+  min-width: 0;
+  grid-auto-columns: minmax(0, 1fr);
+}
+
+@media (max-width: 359px) {
+  html .rt-SegmentedControlItemLabel {
+    padding-inline: 4px;
+    font-size: 14px;
+  }
 }
 
 /* Radix Select.Trigger keeps an intrinsic width unless its component style is overridden.

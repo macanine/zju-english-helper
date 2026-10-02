@@ -39,9 +39,10 @@ function NavItem({
   label: string
   ariaLabel?: string
 }) {
+  const active = (usePathname().replace(/\/$/, '') || '/') === href
   return (
-    <Button asChild variant="ghost" color="gray" size="3">
-      <Link href={href} aria-label={ariaLabel ?? label}>
+    <Button asChild variant={active ? 'soft' : 'ghost'} color={active ? undefined : 'gray'} size="3">
+      <Link href={href} aria-label={ariaLabel ?? label} aria-current={active ? 'page' : undefined}>
         {icon}
         <span className="max-sm:hidden">{label}</span>
       </Link>
@@ -132,7 +133,7 @@ function MobileMenu({
 
 export function AppHeader() {
   const { words } = useWrongBook()
-  const pathname = usePathname()
+  const pathname = usePathname().replace(/\/$/, '') || '/'
   const [menuOpen, setMenuOpen] = React.useState(false)
   const menuTriggerRef = React.useRef<HTMLButtonElement>(null)
 
@@ -195,7 +196,7 @@ export function AppHeader() {
 
           {/* 桌面：完整内联导航（显隐的响应式类不能写在 Flex 上——Themes 的 display:flex
               会盖掉 UnoCSS 的 hidden，所以包一层普通 div） */}
-          <div className="max-sm:hidden">
+          <div className="max-md:hidden">
             <Flex align="center" className="gap-2 sm:gap-5">
               <Flex align="center" className="gap-4 sm:gap-6">
                 <NavItem href="/browse" icon={<BookOpenText size={18} />} label="预习" ariaLabel="预习词库" />
@@ -222,7 +223,7 @@ export function AppHeader() {
           </div>
 
           {/* 移动端：保留主题切换和菜单入口，导航打开为全屏菜单 */}
-          <div className="sm:hidden">
+          <div className="md:hidden">
             <Flex align="center" gap="2">
               <ThemeToggle size="4" />
               <IconButton
