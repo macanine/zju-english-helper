@@ -10,7 +10,6 @@ import {
   Card,
   Container,
   Flex,
-  Grid,
   Heading,
   SegmentedControl,
   Switch,
@@ -96,7 +95,7 @@ export function SetupView() {
 
           {/* 单元 */}
           <Flex direction="column" gap="1">
-            <Flex align="center" justify="between" mb="1">
+            <Flex align="center" justify="between" gap="2" wrap="wrap" mb="1">
               <FieldLabel>单元（已选 {settings.units.length} 个）</FieldLabel>
               <Flex gap="2" className="shrink-0">
                 <Button
@@ -118,9 +117,8 @@ export function SetupView() {
                 </Button>
               </Flex>
             </Flex>
-            {/* 单元就是开关按钮：选中 = 主题色实心（与词书切换的激活态同语言），未选 = 灰 surface。
-                按钮撑满格子（移动端 4 列、桌面 8 列，size 3 高 40px），比原来的行内勾选框好点得多 */}
-            <Grid columns={{ initial: '4', sm: '8' }} gap="2">
+            {/* 列数随实际可用宽度变化，避免小屏或系统放大字体时把单元编号挤断行。 */}
+            <div className="unit-grid">
               {units.map((u) => {
                 const selected = settings.units.includes(u)
                 return (
@@ -131,12 +129,13 @@ export function SetupView() {
                     color={selected ? undefined : 'gray'}
                     aria-pressed={selected}
                     onClick={() => toggleUnit(u)}
+                    className="w-full min-w-0 whitespace-nowrap px-1"
                   >
                     {unitLabel(u)}
                   </Button>
                 )
               })}
-            </Grid>
+            </div>
           </Flex>
 
           {/* 内容 */}

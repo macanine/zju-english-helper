@@ -5,6 +5,7 @@
 
 body {
   font-family:
+    'MiSans',
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -18,11 +19,31 @@ body {
 /* 英文专用衬线（单词列 / 例句），中文与界面文案保持默认无衬线 */
 :root {
   --font-serif-en:
-    'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+    'Lora', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+  --font-sans:
+    'MiSans', ui-sans-serif, system-ui, -apple-system, 'PingFang SC', 'HarmonyOS Sans SC',
+    'Microsoft YaHei', 'Segoe UI', sans-serif;
+}
+
+html .radix-themes {
+  --default-font-family: var(--font-sans);
 }
 
 .serif-en {
   font-family: var(--font-serif-en);
+}
+
+/* 单元按钮按最小可读宽度自动换列；保留标签整行显示，窄屏下不再出现 1- / 1。 */
+.unit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr));
+  gap: var(--space-2);
+}
+
+html .unit-grid > .rt-Button {
+  min-width: 0;
+  padding-inline: var(--space-1);
+  white-space: nowrap;
 }
 
 /* 注意：Next 打包后本文件可能排在 Themes 样式之前，同特异性的覆盖会输，

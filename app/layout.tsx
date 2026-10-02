@@ -33,6 +33,29 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.cn" />
+        <link rel="preconnect" href="https://fonts.gstatic.cn" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSans-Regular.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSans-Medium.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSans-Demibold.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSans-Bold.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.cn/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="antialiased pb-[env(safe-area-inset-bottom)]">
