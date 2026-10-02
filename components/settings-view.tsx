@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { Check, ChevronRight, Database, Download, Eye, Keyboard, Upload, Volume2 } from 'lucide-react'
+import { Check, ChevronRight, Database, Download, Eye, Keyboard, Search, Upload, Volume2, X } from 'lucide-react'
 import {
   AlertDialog,
   Box,
@@ -17,6 +17,7 @@ import {
   Slider,
   Switch,
   Text,
+  TextField,
 } from '@radix-ui/themes'
 import { CardSkeleton } from '@/components/card-skeleton'
 import { SectionCard } from '@/components/section-card'
@@ -228,15 +229,20 @@ function VoicePicker({
   onChange: (voiceURI: string | null) => void
 }) {
   const [open, setOpen] = React.useState(false)
+  const [search, setSearch] = React.useState('')
   const selected = voices.find((voice) => voice.voiceURI === value)
   const choices = [
     { id: null, name: '自动', lang: '默认英文音色' },
     ...voices.map((voice) => ({ id: voice.voiceURI, name: voice.name, lang: voice.lang })),
   ]
+  const visibleChoices = choices.filter((choice) =>
+    `${choice.name} ${choice.lang}`.toLowerCase().includes(search.trim().toLowerCase()),
+  )
 
   return (
     <Dialog.Root open={open} onOpenChange={(next) => {
       if (!next && canSpeak) window.speechSynthesis.cancel()
+      if (!next) setSearch('')
       setOpen(next)
     }}>
       <Dialog.Trigger>
@@ -246,16 +252,36 @@ function VoicePicker({
         </Button>
       </Dialog.Trigger>
       <Dialog.Content maxWidth="520px" style={{ maxHeight: '85dvh' }}>
-        <Dialog.Title>选择音色</Dialog.Title>
+        <Flex align="center" justify="between" mb="2">
+          <Dialog.Title mb="0">选择音色</Dialog.Title>
+          <Dialog.Close>
+            <Button variant="ghost" color="gray" aria-label="关闭音色选择">
+              <X size={18} />
+            </Button>
+          </Dialog.Close>
+        </Flex>
         <Dialog.Description size="2" color="gray" mb="3">
           试听后选择，使用当前语速。
         </Dialog.Description>
+        <TextField.Root
+          placeholder="搜索音色或语言"
+          aria-label="搜索音色或语言"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+          mb="3"
+        >
+          <TextField.Slot><Search size={16} /></TextField.Slot>
+        </TextField.Root>
         <ScrollArea type="auto" style={{ height: 'min(52dvh, 420px)' }}>
-          <Flex direction="column" gap="2" pr="3">
-            {choices.map((choice) => (
-              <Flex key={choice.id ?? 'auto'} align="center" gap="2">
+          <div className="voice-list">
+            {visibleChoices.map((choice) => (
+              <div
+                key={choice.id ?? 'auto'}
+                className="voice-list-row"
+                data-selected={value === choice.id}
+              >
                 <Button
-                  variant={value === choice.id ? 'soft' : 'outline'}
+                  variant="ghost"
                   color={value === choice.id ? undefined : 'gray'}
                   aria-pressed={value === choice.id}
                   aria-label={`选择 ${choice.name}`}
@@ -266,15 +292,19 @@ function VoicePicker({
                     setOpen(false)
                   }}
                 >
-                  <Flex direction="column" align="start" className="min-w-0 flex-1">
-                    <Text className="truncate w-full">{choice.name}</Text>
-                    <Text size="1" color="gray">{choice.lang}</Text>
-                  </Flex>
-                  {value === choice.id && <Check size={16} className="shrink-0" />}
+                  <span className="voice-list-label">
+                    <span className="voice-list-name">{choice.name}</span>
+                    <span className="voice-list-language">{choice.lang}</span>
+                  </span>
+                  <span className="voice-list-check">
+                    {value === choice.id && <Check size={16} />}
+                  </span>
                 </Button>
                 <Button
                   size="2"
-                  variant="soft"
+                  variant="ghost"
+                  color="gray"
+                  className="voice-list-preview"
                   disabled={!canSpeak}
                   aria-label={`试听 ${choice.name}`}
                   onClick={() => speak(PREVIEW_SENTENCE, { voiceURI: choice.id })}
@@ -282,17 +312,15 @@ function VoicePicker({
                   <Volume2 size={14} />
                   试听
                 </Button>
-              </Flex>
+              </div>
             ))}
+            {visibleChoices.length === 0 && <Text as="p" size="2" color="gray">没有匹配的音色。</Text>}
             {!canSpeak && <Text size="2" color="gray">当前浏览器不支持朗读。</Text>}
             {canSpeak && voices.length === 0 && (
               <Text size="2" color="gray">浏览器暂未提供英文音色，可使用自动朗读。</Text>
             )}
-          </Flex>
+          </div>
         </ScrollArea>
-        <Flex justify="end" mt="3">
-          <Dialog.Close><Button variant="soft" color="gray">关闭</Button></Dialog.Close>
-        </Flex>
       </Dialog.Content>
     </Dialog.Root>
   )

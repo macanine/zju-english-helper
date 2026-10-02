@@ -51,13 +51,72 @@ html .settings-voice-trigger {
   min-width: 0;
 }
 
+.voice-list {
+  padding: 2px 12px 2px 2px;
+}
+
+.voice-list-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px;
+  align-items: center;
+  column-gap: var(--space-2);
+  border-bottom: 1px solid var(--gray-a4);
+}
+
+.voice-list-row:last-child {
+  border-bottom: 0;
+}
+
+.voice-list-row[data-selected='true'] {
+  background: var(--accent-a3);
+  border-radius: var(--radius-3);
+}
+
 html .settings-voice-choice {
-  flex: 1;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 16px;
+  gap: var(--space-2);
   min-width: 0;
-  height: auto;
-  padding: var(--space-2) var(--space-3);
-  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  margin: 0;
+  padding: var(--space-2) var(--space-2);
   text-align: left;
+}
+
+.voice-list-label {
+  display: block;
+  min-width: 0;
+}
+
+.voice-list-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: var(--font-weight-medium);
+}
+
+.voice-list-language {
+  display: block;
+  margin-top: 2px;
+  color: var(--gray-11);
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-1);
+}
+
+.voice-list-check {
+  display: flex;
+  align-items: center;
+  color: var(--accent-11);
+}
+
+html .voice-list-preview {
+  box-sizing: border-box;
+  width: 72px;
+  height: 36px;
+  margin: 0;
 }
 
 /* 单元按钮按最小可读宽度自动换列；保留标签整行显示，窄屏下不再出现 1- / 1。 */
