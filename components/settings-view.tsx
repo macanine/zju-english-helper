@@ -76,7 +76,7 @@ export function SettingsView() {
 
   if (!prefs) {
     return (
-      <Container size="2" px="4" py="6">
+      <Container size="3" px="4" py="6">
         <CardSkeleton />
       </Container>
     )
@@ -85,7 +85,7 @@ export function SettingsView() {
   const today = summarizeDay(days[dayKey()] ?? EMPTY_DAY)
 
   return (
-    <Container size="2" px="4" py="6">
+    <Container size="3" px="4" py="6">
       <Flex direction="column" gap="4">
         <Box>
           <Heading as="h2" size="5">
