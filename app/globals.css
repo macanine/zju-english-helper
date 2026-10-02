@@ -63,6 +63,13 @@ html .rt-SegmentedControlItem {
   flex-grow: 1;
 }
 
+/* Radix Select.Trigger keeps an intrinsic width unless its component style is overridden.
+   Match the book selector's full column width in the browse controls grid. */
+html .browse-unit-trigger {
+  width: 100%;
+  justify-content: space-between;
+}
+
 /* 词典表格细节：行悬停淡染。
    （试过 thead/th 吸顶：Chromium 对表格内部 sticky 的实现会恒定错位一个 inset，
    盖住首行，不值得 hack，放弃吸顶。） */

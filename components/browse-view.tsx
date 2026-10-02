@@ -163,7 +163,10 @@ export function BrowseView() {
                   value={isAllUnits ? 'all' : (unitIds[0] ?? 'all')}
                   onValueChange={(v) => update({ unitIds: v === 'all' ? 'all' : [v] })}
                 >
-                  <Select.Trigger aria-label="选择单元" className="w-full" />
+                  <Select.Trigger
+                    aria-label="选择单元"
+                    className="browse-unit-trigger"
+                  />
                   <Select.Content position="popper">
                     <Select.Item value="all">全部单元（{bookUnits.length}）</Select.Item>
                     {bookUnits.map((u) => (
