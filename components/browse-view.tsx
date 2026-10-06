@@ -18,6 +18,7 @@ import {
   Text,
 } from '@radix-ui/themes'
 import { CardSkeleton } from '@/components/card-skeleton'
+import { LoadingProgress } from '@/components/loading-progress'
 import { WordDisplay, type WordSection } from '@/components/word-table'
 import { unitLabel, loadWords } from '@/lib/data'
 import { useBooks, useSettings } from '@/lib/hooks'
@@ -60,20 +61,37 @@ export function BrowseView() {
   const unitKey = `${bookId}\u0000${unitIds.join(',')}`
   const [groups, setGroups] = React.useState<{ unit: string; words: WordEntry[] }[] | null>(null)
   const [error, setError] = React.useState<string | null>(null)
+  const [loadedUnits, setLoadedUnits] = React.useState(0)
+  const [loadingUnits, setLoadingUnits] = React.useState(false)
   React.useEffect(() => {
     if (!bookId || unitIds.length === 0) return
     let cancelled = false
     setGroups(null)
     setError(null)
+    setLoadedUnits(0)
+    setLoadingUnits(true)
+    const nextGroups: Array<{ unit: string; words: WordEntry[] } | null> =
+      Array.from({ length: unitIds.length }, () => null)
     Promise.all(
-      unitIds.map(async (unit) => ({ unit, words: await loadWords(bookId, [unit]) }))
-    )
-      .then((g) => {
-        if (!cancelled) setGroups(g)
-      })
-      .catch((err: unknown) => {
-        if (!cancelled) setError(err instanceof Error ? err.message : String(err))
-      })
+      unitIds.map(async (unit, index) => {
+        try {
+          const words = await loadWords(bookId, [unit])
+          if (!cancelled) {
+            nextGroups[index] = { unit, words }
+            setGroups(nextGroups.filter((group): group is { unit: string; words: WordEntry[] } => group !== null))
+          }
+        } catch (err: unknown) {
+          if (!cancelled) setError(err instanceof Error ? err.message : String(err))
+        } finally {
+          if (!cancelled) setLoadedUnits((count) => count + 1)
+        }
+      }),
+    ).then(() => {
+      if (!cancelled) {
+        setGroups(nextGroups.filter((group): group is { unit: string; words: WordEntry[] } => group !== null))
+        setLoadingUnits(false)
+      }
+    })
     return () => {
       cancelled = true
     }
@@ -204,7 +222,7 @@ export function BrowseView() {
         </Card>
 
         {!groups ? (
-          <div className="h-96 animate-pulse rounded-2xl bg-[var(--gray-a3)]" />
+          <CardSkeleton label="正在加载词库…" loaded={loadedUnits} total={unitIds.length} />
         ) : totalVisible === 0 ? (
           <Flex direction="column" align="center" gap="2" py="8">
             <Text size="5">🔍</Text>
@@ -214,6 +232,9 @@ export function BrowseView() {
           </Flex>
         ) : (
           <>
+            {loadingUnits && (
+              <LoadingProgress label="正在继续加载词条…" loaded={loadedUnits} total={unitIds.length} />
+            )}
             <WordDisplay sections={sections} />
             {totalVisible > shown && (
               <Flex justify="center" py="2">

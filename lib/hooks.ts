@@ -24,8 +24,11 @@ export function useEngine(): GameEngine | null {
 }
 
 /** 订阅引擎数据的通用钩子：read 必须是模块级稳定函数（否则每次渲染都会重订阅） */
-function useEngineValue<T>(read: (engine: GameEngine) => T, fallback: T): T {
-  const engine = useEngine()
+function useEngineValue<T>(
+  engine: GameEngine | null,
+  read: (engine: GameEngine) => T,
+  fallback: T,
+): T {
   const [value, setValue] = React.useState<T>(fallback)
 
   React.useEffect(() => {
@@ -49,25 +52,27 @@ const EMPTY_DAY_STATS: Record<string, DayStat> = {}
 /** 错题本：引擎实例 + 词条列表（随引擎变更实时刷新） */
 export function useWrongBook(): { engine: GameEngine | null; words: SenseCard[] } {
   const engine = useEngine()
-  const words = useEngineValue(readWrongWords, EMPTY_CARDS)
+  const words = useEngineValue(engine, readWrongWords, EMPTY_CARDS)
   return { engine, words }
 }
 
 /** 已掌握的词：词条列表（随引擎变更实时刷新） */
 export function useMasteredBook(): { engine: GameEngine | null; words: SenseCard[] } {
   const engine = useEngine()
-  const words = useEngineValue(readMastered, EMPTY_CARDS)
+  const words = useEngineValue(engine, readMastered, EMPTY_CARDS)
   return { engine, words }
 }
 
 /** 单词级学习记录（错误次数 / 最近作答），key 就是单词本身 */
 export function useWordStats(): Record<string, WordStat> {
-  return useEngineValue(readWordStats, EMPTY_WORD_STATS)
+  const engine = useEngine()
+  return useEngineValue(engine, readWordStats, EMPTY_WORD_STATS)
 }
 
 /** 每日练习记录（今日概览 / 连续天数） */
 export function useDayStats(): Record<string, DayStat> {
-  return useEngineValue(readDayStats, EMPTY_DAY_STATS)
+  const engine = useEngine()
+  return useEngineValue(engine, readDayStats, EMPTY_DAY_STATS)
 }
 
 /** 词库清单；books 为 null 表示加载中 */

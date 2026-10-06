@@ -6,18 +6,23 @@ import { CircleAlert } from 'lucide-react'
 import { Button, Card, Container, Flex, Heading, Text } from '@radix-ui/themes'
 import { CardSkeleton } from '@/components/card-skeleton'
 import { TypingArea } from '@/components/typing-area'
-import { loadWords } from '@/lib/data'
+import { loadWordsWithProgress, type LoadProgress } from '@/lib/data'
 import type { GameEngine } from '@/lib/engine'
 import { useEngine } from '@/lib/hooks'
 import { buildCards } from '@/lib/model'
 import { decodeSession, encodeResult, type Session } from '@/lib/session'
 
-async function startSession(engine: GameEngine, session: Session, key: string) {
+async function startSession(
+  engine: GameEngine,
+  session: Session,
+  key: string,
+  onProgress?: (progress: LoadProgress) => void,
+) {
   if (session.kind === 'review') {
     if (!engine.startReview(key)) throw new Error('错题本是空的，先完成一轮练习吧。')
     return
   }
-  const words = await loadWords(session.bookId, session.units)
+  const words = await loadWordsWithProgress(session.bookId, session.units, onProgress)
   if (words.length === 0) throw new Error('所选单元没有词条，请返回首页重新选择。')
   // 例句填空始终按释义出题：例句拆分后挂在各释义上，题面（句子）与提示（释义）天然配对
   const merge = session.options.questionMode === 'example' ? 'sense' : session.options.mergeMode
@@ -36,6 +41,7 @@ export function PracticeView() {
   const engine = useEngine()
   const [error, setError] = React.useState<string | null>(null)
   const [ready, setReady] = React.useState(false)
+  const [loadProgress, setLoadProgress] = React.useState<LoadProgress | null>(null)
 
   React.useEffect(() => {
     if (!engine) return
@@ -51,9 +57,17 @@ export function PracticeView() {
     let cancelled = false
     setReady(false)
     setError(null)
-    startSession(engine, session, query)
+    setLoadProgress(
+      session.kind === 'practice' ? { loaded: 0, total: session.units.length } : null,
+    )
+    startSession(engine, session, query, (progress) => {
+      if (!cancelled) setLoadProgress(progress)
+    })
       .then(() => {
-        if (!cancelled) setReady(true)
+        if (!cancelled) {
+          setLoadProgress(null)
+          setReady(true)
+        }
       })
       .catch((err: unknown) => {
         if (!cancelled) setError(err instanceof Error ? err.message : String(err))
@@ -87,7 +101,11 @@ export function PracticeView() {
   if (!ready || !engine || !session) {
     return (
       <Container size="3" px="4" py="6">
-        <CardSkeleton />
+        <CardSkeleton
+          label={session?.kind === 'practice' ? '正在加载练习词库…' : '正在准备复习…'}
+          loaded={loadProgress?.loaded}
+          total={loadProgress?.total}
+        />
       </Container>
     )
   }

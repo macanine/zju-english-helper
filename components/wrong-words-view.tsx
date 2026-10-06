@@ -39,6 +39,11 @@ export function WrongWordsView() {
       [...words].sort((a, b) => (stats[b.english]?.wrongs ?? 0) - (stats[a.english]?.wrongs ?? 0)),
     [words, stats]
   )
+  const current = tab === 'wrong' ? sortedWrong : mastered
+  const currentByEnglish = React.useMemo(
+    () => new Map(current.map((card) => [card.english, card])),
+    [current],
+  )
 
   if (!engine) {
     return (
@@ -47,8 +52,6 @@ export function WrongWordsView() {
       </Container>
     )
   }
-
-  const current = tab === 'wrong' ? sortedWrong : mastered
 
   return (
     <Container size="3" px="4" py="6">
@@ -103,7 +106,7 @@ export function WrongWordsView() {
                 )
               }}
               renderActions={(entry) => {
-                const card = current.find((c) => c.english === entry.english)
+                const card = currentByEnglish.get(entry.english)
                 if (!card) return null
                 if (tab === 'wrong') {
                   return (

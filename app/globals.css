@@ -124,6 +124,7 @@ html .voice-list-preview {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-2);
+  grid-auto-rows: 44px;
 }
 
 @media (min-width: 640px) {
@@ -263,9 +264,21 @@ html .practice-actions > .rt-Button {
 }
 
 html .unit-grid > .rt-Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
   min-width: 0;
   padding-inline: var(--space-1);
   white-space: nowrap;
+}
+
+html .unit-grid .unit-label {
+  display: block;
+  min-width: 3.5ch;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
 
 /* 注意：Next 打包后本文件可能排在 Themes 样式之前，同特异性的覆盖会输，

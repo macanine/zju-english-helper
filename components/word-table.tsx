@@ -32,6 +32,21 @@ function hasExamples(word: WordEntry): boolean {
   return word.senses.some((sense) => sense.examples.length > 0)
 }
 
+/** 只渲染当前断点需要的词条布局，避免桌面表格和移动词卡同时进入 DOM。 */
+function useIsDesktop(): boolean {
+  const [isDesktop, setIsDesktop] = React.useState(false)
+
+  React.useEffect(() => {
+    const media = window.matchMedia('(min-width: 768px)')
+    const sync = () => setIsDesktop(media.matches)
+    sync()
+    media.addEventListener('change', sync)
+    return () => media.removeEventListener('change', sync)
+  }, [])
+
+  return isDesktop
+}
+
 /**
  * 词条展示：单词 → 词性 + 中文释义 → 英文解释 → 例句，按阅读顺序紧凑排在一起，不再分列隔开。
  * 英文解释按偏好 enMode 显示：常显 / 默认收起 / 隐藏；收起时不放按钮，
@@ -43,6 +58,7 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
   const mode = prefs?.enMode ?? 'collapsible'
   const exampleMode = prefs?.exampleMode ?? 'always'
   const [expanded, setExpanded] = React.useState<Set<string>>(() => new Set())
+  const isDesktop = useIsDesktop()
 
   const toggle = React.useCallback((english: string) => {
     setExpanded((prev) => {
@@ -58,10 +74,8 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
     (mode === 'collapsible' && hasEnglish(word)) ||
     (exampleMode === 'collapsible' && hasExamples(word))
 
-  return (
-    <>
-      {/* 桌面：词典表格 */}
-      <div className="anim-in-up max-md:hidden">
+  return isDesktop ? (
+      <div className="anim-in-up">
         <Table.Root variant="surface" size="3">
           <Table.Body>
             {sections.map((sec) => (
@@ -124,10 +138,8 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
           </Table.Body>
         </Table.Root>
       </div>
-
-      {/* 移动端：堆叠卡片。分组标题收进卡片内部居中，四周间距由卡片 padding 统一；
-          卡片之间 16px（space-y），与页面留白同宽 */}
-      <div className="anim-in-up md:hidden space-y-4">
+    ) : (
+      <div className="anim-in-up space-y-4">
         {sections.map((sec) => (
           <section key={sec.key}>
             <Card size={{ initial: '2', sm: '3' }}>
@@ -146,6 +158,7 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
             {sec.words.map((word, i) => {
               const open = expanded.has(word.english)
               const actions = renderActions?.(word)
+              const meta = renderMeta?.(word)
               return (
                 <Flex
                   key={word.english}
@@ -159,9 +172,9 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
                     <Box className="min-w-0">
                       <WordText english={word.english} />
                     </Box>
-                    {renderMeta?.(word) && (
+                    {meta && (
                       <Box shrink-0 className="pt-1">
-                        {renderMeta(word)}
+                        {meta}
                       </Box>
                     )}
                   </Flex>
@@ -190,8 +203,7 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
           </section>
         ))}
       </div>
-    </>
-  )
+    )
 }
 
 /** 单词本身：点它朗读（阻止冒泡，免得同时触发词块的展开 / 收起） */

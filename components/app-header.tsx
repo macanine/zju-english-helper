@@ -33,13 +33,15 @@ function NavItem({
   icon,
   label,
   ariaLabel,
+  pathname,
 }: {
   href: string
   icon: React.ReactNode
   label: string
   ariaLabel?: string
+  pathname: string
 }) {
-  const active = (usePathname().replace(/\/$/, '') || '/') === href
+  const active = pathname === href
   return (
     <Button asChild variant={active ? 'soft' : 'ghost'} color={active ? undefined : 'gray'} size="3">
       <Link href={href} aria-label={ariaLabel ?? label} aria-current={active ? 'page' : undefined}>
@@ -199,8 +201,9 @@ export function AppHeader() {
           <div className="max-md:hidden">
             <Flex align="center" className="gap-2 sm:gap-5">
               <Flex align="center" className="gap-4 sm:gap-6">
-                <NavItem href="/browse" icon={<BookOpenText size={18} />} label="预习" ariaLabel="预习词库" />
+                <NavItem pathname={pathname} href="/browse" icon={<BookOpenText size={18} />} label="预习" ariaLabel="预习词库" />
                 <NavItem
+                  pathname={pathname}
                   href="/wrong-words"
                   icon={<NotebookText size={18} />}
                   label="错题本"
@@ -215,8 +218,8 @@ export function AppHeader() {
               />
 
               <Flex align="center" className="gap-4 sm:gap-6">
-                <NavItem href="/settings" icon={<Settings2 size={18} />} label="设置" />
-                <NavItem href="/help" icon={<CircleHelp size={18} />} label="帮助" />
+                <NavItem pathname={pathname} href="/settings" icon={<Settings2 size={18} />} label="设置" />
+                <NavItem pathname={pathname} href="/help" icon={<CircleHelp size={18} />} label="帮助" />
                 <ThemeToggle />
               </Flex>
             </Flex>

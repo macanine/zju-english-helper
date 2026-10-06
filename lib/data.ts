@@ -45,6 +45,11 @@ export function loadManifest(): Promise<Manifest> {
 
 const unitCache = new Map<string, Promise<WordEntry[]>>()
 
+export interface LoadProgress {
+  loaded: number
+  total: number
+}
+
 async function fetchUnit(bookId: string, unitId: string): Promise<WordEntry[]> {
   const key = `${bookId}/${unitId}`
   const res = await fetch(`/data/${key}.json`)
@@ -70,16 +75,34 @@ function loadUnit(bookId: string, unitId: string): Promise<WordEntry[]> {
   return hit
 }
 
-/** 加载一本词书若干单元的全部词条（按单元顺序拼接） */
-export async function loadWords(bookId: string, unitIds: string[]): Promise<WordEntry[]> {
+/** 加载一本词书若干单元的全部词条（按单元顺序拼接），并报告单元完成进度。 */
+export async function loadWordsWithProgress(
+  bookId: string,
+  unitIds: string[],
+  onProgress?: (progress: LoadProgress) => void,
+): Promise<WordEntry[]> {
   const manifest = await loadManifest()
   const book = manifest.books.find((entry) => entry.id === bookId)
   if (!book || unitIds.length === 0 || new Set(unitIds).size !== unitIds.length ||
       unitIds.some((unit) => !book.units.includes(unit))) {
     throw new Error('所选词书或单元不存在，请重新选择。')
   }
-  const perUnit = await Promise.all(unitIds.map((u) => loadUnit(bookId, u)))
+  const total = unitIds.length
+  let loaded = 0
+  const perUnit = await Promise.all(
+    unitIds.map(async (unit) => {
+      const words = await loadUnit(bookId, unit)
+      loaded += 1
+      onProgress?.({ loaded, total })
+      return words
+    }),
+  )
   return perUnit.flat()
+}
+
+/** 加载一本词书若干单元的全部词条（按单元顺序拼接） */
+export function loadWords(bookId: string, unitIds: string[]): Promise<WordEntry[]> {
+  return loadWordsWithProgress(bookId, unitIds)
 }
 
 export function unitLabel(unitId: string): string {

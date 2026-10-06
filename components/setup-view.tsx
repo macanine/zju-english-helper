@@ -21,6 +21,7 @@ import { useBooks, useSettings, useWrongBook } from '@/lib/hooks'
 import { encodeSession, sessionFromSettings } from '@/lib/session'
 import type { Settings } from '@/lib/storage'
 import { TodayCard } from '@/components/today-stats'
+import { CardSkeleton } from '@/components/card-skeleton'
 
 function FieldLabel({ children }: { children: React.ReactNode }) {
   return <Text as="div" size="2" weight="medium">{children}</Text>
@@ -46,7 +47,7 @@ export function SetupView() {
   if (!books || !settings) {
     return (
       <Container size="3" px="4" py="6">
-        <div className="h-96 animate-pulse rounded-2xl bg-[var(--gray-a3)]" />
+        <CardSkeleton label="正在加载词库与设置…" />
       </Container>
     )
   }
@@ -139,9 +140,9 @@ export function SetupView() {
                     color={selected ? undefined : 'gray'}
                     aria-pressed={selected}
                     onClick={() => toggleUnit(u)}
-                    className="w-full min-w-0 whitespace-nowrap px-1"
+                    className="unit-button w-full min-w-0 whitespace-nowrap px-1"
                   >
-                    {unitLabel(u)}
+                    <span className="unit-label">{unitLabel(u)}</span>
                   </Button>
                 )
               })}
