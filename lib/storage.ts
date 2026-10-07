@@ -43,6 +43,18 @@ export type EnMode = (typeof EN_MODES)[number]
 export const EXAMPLE_MODES = ['always', 'collapsible', 'hidden'] as const
 export type ExampleMode = (typeof EXAMPLE_MODES)[number]
 
+/** 语音服务节点；国内节点默认优先，海外节点作为备用。 */
+export const SPEECH_PROVIDER_IDS = ['domestic', 'international'] as const
+export type SpeechProviderId = (typeof SPEECH_PROVIDER_IDS)[number]
+
+export interface SpeechSettings {
+  provider: SpeechProviderId
+}
+
+export const DEFAULT_SPEECH_SETTINGS: SpeechSettings = {
+  provider: 'domestic',
+}
+
 /** 个性化偏好（设置页） */
 export interface Prefs {
   /** TTS provider 音色 ShortName；null = 自动（英音女声优先） */
@@ -96,6 +108,7 @@ interface StoredData {
   'zjueh.mastered': SenseCard[]
   'zjueh.settings': Settings
   'zjueh.prefs': Prefs
+  'zjueh.speech': SpeechSettings
   'zjueh.word-stats': Record<string, WordStat>
   'zjueh.day-stats': Record<string, DayStat>
 }
@@ -105,6 +118,7 @@ export const USER_DATA_KEYS = [
   'zjueh.mastered',
   'zjueh.settings',
   'zjueh.prefs',
+  'zjueh.speech',
   'zjueh.word-stats',
   'zjueh.day-stats',
 ] as const
@@ -149,6 +163,11 @@ function isPrefs(value: unknown): value is StoredData['zjueh.prefs'] {
     typeof value.practiceTts === 'boolean'
 }
 
+function isSpeechSettings(value: unknown): value is StoredData['zjueh.speech'] {
+  return hasFields(value, Object.keys(DEFAULT_SPEECH_SETTINGS)) &&
+    isOneOf(value.provider, SPEECH_PROVIDER_IDS)
+}
+
 function isWordStats(value: unknown): value is Record<string, WordStat> {
   return isRecord(value) && Object.entries(value).every(([word, stat]) =>
     isText(word) && !["__proto__", "constructor", "prototype"].includes(word) &&
@@ -170,6 +189,7 @@ export const STORAGE_VALIDATORS: { [K in keyof StoredData]: (value: unknown) => 
   'zjueh.mastered': isCards,
   'zjueh.settings': isSettings,
   'zjueh.prefs': isPrefs,
+  'zjueh.speech': isSpeechSettings,
   'zjueh.word-stats': isWordStats,
   'zjueh.day-stats': isDayStats,
 }
@@ -267,6 +287,19 @@ export function loadPrefs(): Prefs {
 
 export function savePrefs(prefs: Prefs) {
   write('zjueh.prefs', prefs)
+}
+
+export function loadSpeechSettings(): SpeechSettings {
+  const value = read('zjueh.speech')
+  if (value === undefined) {
+    write('zjueh.speech', DEFAULT_SPEECH_SETTINGS)
+    return DEFAULT_SPEECH_SETTINGS
+  }
+  return value
+}
+
+export function saveSpeechSettings(settings: SpeechSettings) {
+  write('zjueh.speech', settings)
 }
 
 /** 用户主动重置失效的偏好数据；不迁移旧字段，也不影响学习记录。 */

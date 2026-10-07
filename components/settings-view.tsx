@@ -28,7 +28,7 @@ import { downloadBackup, importBackup } from '@/lib/backup'
 import { useDayStats, useMasteredBook, usePrefs, useWrongBook } from '@/lib/hooks'
 import { speak, stopSpeaking, useSpeechProvider, type SpeechVoice } from '@/lib/speech'
 import { EMPTY_DAY, dayKey, summarizeDay } from '@/lib/stats'
-import type { EnMode, ExampleMode } from '@/lib/storage'
+import type { EnMode, ExampleMode, SpeechProviderId } from '@/lib/storage'
 
 const PREVIEW_SENTENCE = 'The entrepreneur assembled a brilliant team in Silicon Valley.'
 
@@ -113,6 +113,7 @@ function SpeechPreviewButton({
       onStatus: (status) => {
         if (status === 'ready') setLoading(false)
       },
+      onError: () => setLoading(false),
     })
   }
 
@@ -164,6 +165,23 @@ export function SettingsView() {
           icon={<Volume2 size={16} />}
           title="朗读"
         >
+          <FieldRow
+            label="后端服务"
+            control={
+              <SegmentedControl.Root
+                aria-label="语音后端服务"
+                value={speechProvider.providerId}
+                onValueChange={(value) => speechProvider.selectProvider(value as SpeechProviderId)}
+              >
+                {speechProvider.providers.map((provider) => (
+                  <SegmentedControl.Item key={provider.id} value={provider.id}>
+                    {provider.name}
+                  </SegmentedControl.Item>
+                ))}
+              </SegmentedControl.Root>
+            }
+          />
+          <Separator size="4" />
           <Flex direction={{ initial: 'column', sm: 'row' }} align={{ initial: 'start', sm: 'center' }} justify="between" gap="3" className="settings-provider-summary">
             <Flex align="center" gap="3" className="min-w-0">
               <Flex align="center" justify="center" className="settings-status-icon" data-status={speechProvider.status}>
@@ -171,7 +189,11 @@ export function SettingsView() {
               </Flex>
               <Box className="min-w-0">
                 <Text as="div" size="2" weight="medium">
-                  {speechProvider.status === 'checking' ? '正在检查云端语音' : speechProvider.status === 'available' ? '云端语音已连接' : '云端语音暂不可用'}
+                  {speechProvider.status === 'checking'
+                    ? `正在检查${speechProvider.provider.name}语音`
+                    : speechProvider.status === 'available'
+                      ? `${speechProvider.provider.name}语音已连接`
+                      : `${speechProvider.provider.name}语音暂不可用`}
                 </Text>
                 {speechProvider.status === 'unavailable' && speechProvider.error && (
                   <Text as="div" size="1" color="gray" className="settings-provider-description">
@@ -181,7 +203,7 @@ export function SettingsView() {
               </Box>
             </Flex>
             <Badge size="1" color="gray" variant="soft">
-              Edge TTS
+              {speechProvider.provider.name}
             </Badge>
           </Flex>
           <Box className="settings-voice-block">
