@@ -1,4 +1,5 @@
 import { Flex, Progress, Text } from '@radix-ui/themes'
+import { LoaderCircle } from 'lucide-react'
 
 interface LoadingProgressProps {
   label?: string
@@ -21,10 +22,18 @@ export function LoadingProgress({
   return (
     <Flex direction="column" gap="2" role="status" aria-live="polite">
       <Flex justify="between" gap="3" align="center">
-        <Text size="2" color="gray">{label}</Text>
+        <Flex align="center" gap="2">
+          <LoaderCircle size={15} className="loading-spinner text-[var(--accent-10)]" aria-hidden="true" />
+          <Text size="2" color="gray">{label}</Text>
+        </Flex>
         <Text size="1" color="gray" className="tabular-nums">{detail}</Text>
       </Flex>
-      <Progress value={value} size="2" aria-label={label} />
+      <Progress
+        value={value}
+        size="2"
+        className={`loading-progress${hasTotal ? '' : ' loading-progress-indeterminate'}`}
+        aria-label={label}
+      />
     </Flex>
   )
 }

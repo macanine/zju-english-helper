@@ -2,6 +2,8 @@
 
 import * as React from 'react'
 import { Box, Card, Flex, Table, Text } from '@radix-ui/themes'
+import { CardSkeleton } from '@/components/card-skeleton'
+import { PrefsError } from '@/components/prefs-error'
 import { usePrefs } from '@/lib/hooks'
 import { extractBlanks, type WordEntry } from '@/lib/model'
 import { speak } from '@/lib/speech'
@@ -54,9 +56,7 @@ function useIsDesktop(): boolean {
  * 桌面端为表格，移动端切换为堆叠卡片。预习页与错题本共用。
  */
 export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplayProps) {
-  const [prefs] = usePrefs()
-  const mode = prefs?.enMode ?? 'collapsible'
-  const exampleMode = prefs?.exampleMode ?? 'always'
+  const [prefs, , prefsError] = usePrefs()
   const [expanded, setExpanded] = React.useState<Set<string>>(() => new Set())
   const isDesktop = useIsDesktop()
 
@@ -68,6 +68,13 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
       return next
     })
   }, [])
+
+  if (!prefs) {
+    return prefsError ? <PrefsError error={prefsError} /> : <CardSkeleton label="正在读取显示设置…" />
+  }
+
+  const mode = prefs.enMode
+  const exampleMode = prefs.exampleMode
 
   /** 「默认收起」模式下，词条里有可收起的内容（英文解释 / 例句）时，词块才承担展开 / 收起 */
   const collapsible = (word: WordEntry) =>
@@ -212,7 +219,7 @@ function WordText({ english }: { english: string }) {
     <Text
       asChild
       size="5"
-      weight="medium"
+      weight="bold"
       className="serif-en cursor-pointer break-words"
     >
       <button
@@ -234,7 +241,7 @@ function WordText({ english }: { english: string }) {
 export function PosBadge({ pos }: { pos: string | null }) {
   if (!pos) return null
   return (
-    <Text as="span" size="2" weight="medium" color="gray" mr="2" className="whitespace-nowrap">
+    <Text as="span" size="2" weight="medium" color="gray" className="shrink-0 whitespace-nowrap">
       {pos}
     </Text>
   )
@@ -287,8 +294,10 @@ function Meanings({
         <Flex key={i} direction="column" gap="1">
           {(sense.zh || sense.pos) && (
             <Text as="div" size="2" className="break-words" style={{ lineHeight: 1.7 }}>
-              <PosBadge pos={sense.pos} />
-              {sense.zh}
+              <span className="meaning-zh-row">
+                <PosBadge pos={sense.pos} />
+                <span className="meaning-zh-text">{sense.zh}</span>
+              </span>
             </Text>
           )}
           {showEn && sense.en && (

@@ -8,7 +8,7 @@ import { usePrefs } from '@/lib/hooks'
 import { extractBlanks, pickExample, type SenseCard } from '@/lib/model'
 import type { Session, SessionStats } from '@/lib/session'
 import { playDone, playKey, playSkip, playWrong } from '@/lib/sound'
-import { speak, useCanSpeak } from '@/lib/speech'
+import { speak, useSpeechProvider } from '@/lib/speech'
 
 interface TypingAreaProps {
   engine: GameEngine
@@ -60,7 +60,8 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
   const [raw, setRaw] = React.useState('')
   const [peeked, setPeeked] = React.useState(false)
   const [prefs] = usePrefs()
-  const canSpeak = useCanSpeak()
+  const speechProvider = useSpeechProvider()
+  const canSpeak = speechProvider.status === 'available' && prefs?.practiceTts === true
 
   const inputRef = React.useRef<HTMLInputElement>(null)
   const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -191,7 +192,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
     clearTimer()
     if (prefs?.keySound) playDone()
     // 答对后用 TTS 读一遍单词加深记忆；排队播放，不取消当前正在播的内容
-    speak(answer, { queue: true })
+    if (canSpeak) speak(answer, { queue: true })
     timerRef.current = setTimeout(commit, 420)
   }
 

@@ -60,6 +60,7 @@ export function importBackup(text: string): ImportResult {
     return { ok: false, error: '备份包含无法识别的数据字段。' }
   }
   const keys = BACKUP_KEYS.filter((key) => Object.hasOwn(data, key))
+  if (keys.length === 0) return { ok: false, error: '备份里没有可导入的数据。' }
   for (const key of keys) {
     if (!STORAGE_VALIDATORS[key](data[key])) {
       return { ok: false, error: `备份数据格式无效：${key}` }

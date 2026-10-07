@@ -47,15 +47,8 @@ test('复习会话', () => {
   assert.deepEqual(decodeSession('review=1'), { kind: 'review' })
 })
 
-test('多义词出题方式编解码往返一致', () => {
-  const session = practice({ mergeMode: 'all' })
-  assert.match(encodeSession(session), /merge=all/)
-  assert.deepEqual(decodeSession(encodeSession(session)), session)
-})
-
-test('听写模式编解码往返一致', () => {
-  const session = practice({ questionMode: 'listen' })
-  assert.match(encodeSession(session), /mode=listen/)
+test('多义词和听写选项编解码往返一致', () => {
+  const session = practice({ mergeMode: 'all', questionMode: 'listen' })
   assert.deepEqual(decodeSession(encodeSession(session)), session)
 })
 
@@ -65,10 +58,8 @@ test('缺少词书或单元时解码失败', () => {
   assert.equal(decodeSession('units=unit1-1'), null)
 })
 
-test('无法识别的枚举值回退到默认', () => {
-  const session = decodeSession('book=book9&units=unit1-1&order=nope&mode=nope&filter=nope&hint=0')
-  assert.ok(session?.kind === 'practice')
-  assert.deepEqual(session.options, options())
+test('非法枚举值不会回退到默认值', () => {
+  assert.equal(decodeSession('book=book9&units=unit1-1&order=nope&mode=nope&filter=nope&hint=0'), null)
 })
 
 test('sessionFromSettings 拆出词书与选项', () => {

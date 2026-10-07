@@ -29,11 +29,13 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 | --- | --- |
 | `app/` | 路由薄壳、根布局、全局 CSS；布局统一渲染页头和根 `<Theme>` |
 | `components/` | 客户端页面视图与可复用 UI；页面主体放在 `*-view.tsx` |
+| `components/storage-error-boundary.tsx` | 当前本地 schema 错误边界与用户主动重置入口 |
+| `components/prefs-error.tsx` | 偏好 schema 错误提示与仅重置显示设置入口 |
 | `lib/data.ts` | 加载 `public/data/index.json` 与单元 JSON；失败不缓存，允许重试 |
 | `lib/model.ts` | 词库类型、练习卡片、多义词出题、例句空缺提取 |
 | `lib/session.ts` | 会话与结果的 URL 查询串编解码 |
 | `lib/engine.ts` | 练习牌组、判分、错题/掌握状态和统计；模块级单例 |
-| `lib/storage.ts` | 当前用户数据类型、默认值与 `localStorage` 读写 |
+| `lib/storage.ts` | 当前 schema、首次安装默认值与严格 `localStorage` 读写 |
 | `lib/stats.ts` | 日期、连续练习天数和每日统计的纯函数 |
 | `lib/hooks.ts` | React 组件读取词库、设置、偏好、引擎和统计的订阅入口 |
 | `lib/backup.ts` | 用户数据 JSON 备份导入与导出 |
@@ -57,10 +59,10 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 
 ### 本地数据和备份
 
-- 已有存储键是兼容契约，不要改名：`zjueh.wrong-words`、`zjueh.mastered`、`zjueh.settings`、`zjueh.prefs`、`zjueh.word-stats`、`zjueh.day-stats`、`zjueh.theme`。改名会让既有用户数据无法按原键读取。
-- 新增持久化数据时，在 `lib/storage.ts` 加载/保存函数、默认值与必要的旧数据兼容，并将键加入 `lib/backup.ts` 的 `BACKUP_KEYS`。不要把主题键误认为新增的业务设置；它由主题切换组件直接读写。
-- 浏览器 API 只能在 effect、事件处理器或有 `typeof window` 守卫的客户端路径使用，避免静态预渲染和水合错误。`localStorage` 写入失败需要保持功能可降级。
-- 只有听写题会在题目出现时自动朗读；答对后各模式都会朗读答案。
+- 当前存储键为：`zjueh.wrong-words`、`zjueh.mastered`、`zjueh.settings`、`zjueh.prefs`、`zjueh.word-stats`、`zjueh.day-stats`、`zjueh.theme`。当前 schema 是唯一持久化契约，不读取、迁移或合并旧结构；旧结构会被严格拒绝。
+- 新增持久化数据时，在 `lib/storage.ts` 增加当前 schema 的校验、首次安装默认值、加载/保存函数，并将键加入 `lib/backup.ts` 的 `BACKUP_KEYS`。不要把主题键误认为业务设置；它由主题切换组件直接读写。
+- 浏览器 API 只能在 effect、事件处理器或有 `typeof window` 守卫的客户端路径使用，避免静态预渲染和水合错误。存储读写错误应明确暴露，不要静默吞掉或用旧数据兜底。
+- 练习与复习的朗读由 `Prefs.practiceTts` 控制，首次安装默认开启。开启时只有听写题会在题目出现时自动朗读，答对后各模式都会朗读答案；关闭时听写题显示释义提示，不调用自动或手动练习朗读。词库朗读和设置页试听使用同一个 Edge TTS provider。
 
 ### 词库与例句
 
@@ -92,12 +94,12 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 - `components/typing-area.tsx` 用单个透明、受控 `<input>` 同时接收桌面键盘和移动软键盘输入；通过新旧 value 的 diff 更新逐字母格子。不要加全局 `keydown` 监听，也不要用 `key` 强制重挂载打字区，否则会打断输入焦点。
 - 处理输入先经过 `acceptInput()`：裁掉超出答案长度的字符，并吞掉当前答案位置不需要的空格，保证输入与格子逐位对应。首字母提示占据首格，用户照着整词输入时要由 `normalizeInput()` 去掉重复的提示首字母。
 - 保持四种状态 `typing / complete / reveal / error`：正确字符绿色、错误字符红色并保留，退格可修正且已正确字符继续保持正确色；全对后约 420ms 自动推进，空格或 Enter 可立即推进。Tab 跳过并 `preventDefault`，但 Shift+Tab 应允许离开输入区。Esc 显示答案并按错题记。
-- 音效由 `lib/sound.ts` 使用 Web Audio 合成，只在输入 diff 的事件路径触发一次，不要放入 state updater（Strict Mode 下可能重复执行）。听写模式在题目出现时朗读；普通默写和例句填空不能提前泄露答案。答对后排队朗读作答答案。
+- 音效由 `lib/sound.ts` 使用 Web Audio 合成，由 `Prefs.keySound` 控制；只在输入 diff 的事件路径触发一次，不要放入 state updater（Strict Mode 下可能重复执行）。启用练习朗读时，听写模式在题目出现时通过 Edge TTS 朗读，答对后排队朗读作答答案；普通默写和例句填空不能提前泄露答案。项目不调用浏览器 `speechSynthesis`，也不把 provider 失败降级到浏览器语音。
 - `useSearchParams` 所在路由首屏显示 Suspense fallback 属预期行为。`next.config.mjs` 的 `trailingSlash: true` 生成 `out/<route>/index.html`；词库 fetch 使用 `/data/...` 绝对路径，部署到站点子路径时需要相应配置，不能直接双击 `out/index.html`。
 
 ## 测试与变更维护
 
 - 纯逻辑放在可独立测试的 `lib/` 函数中；现有测试覆盖引擎、会话编解码、词条模型、统计、存储和备份。逻辑行为变更时补对应 `tests/*.test.ts`，使用 `node:test` 和 `node:assert`，不要为测试给生产代码加无必要的导出或钩子。
 - 纯 UI 与路由靠浏览器检查；优先验证受影响路径和交互，不把浏览器手测伪装成自动化测试。
-- 修改数据格式、持久化格式、URL 参数、判分推进语义或公开使用说明时，同时检查相关调用点、兼容路径、备份和文档。
+- 修改数据格式、持久化格式、URL 参数、判分推进语义或公开使用说明时，同时检查相关调用点、备份和文档。持久化格式只维护当前版本，不增加旧数据迁移路径。
 - README 面向用户与新开发者，只保留安装、功能、数据及部署说明；本文件承载实现不变量和容易回归的边界。新坑应写成可复现条件与应采取的做法，避免堆叠不再适用的历史描述。

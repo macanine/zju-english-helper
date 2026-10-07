@@ -12,7 +12,12 @@ export function CardSkeleton({ label, loaded, total }: CardSkeletonProps) {
   return (
     <Flex direction="column" gap="3">
       <LoadingProgress label={label} loaded={loaded} total={total} />
-      <div className="h-80 animate-pulse rounded-2xl bg-[var(--gray-a3)]" />
+      <div className="loading-skeleton-card" aria-hidden="true">
+        <span className="loading-skeleton-line loading-skeleton-line-title" />
+        <span className="loading-skeleton-line" />
+        <span className="loading-skeleton-line loading-skeleton-line-short" />
+        <span className="loading-skeleton-block" />
+      </div>
     </Flex>
   )
 }

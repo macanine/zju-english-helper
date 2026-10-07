@@ -3,6 +3,10 @@
 /* 组件主题（颜色/圆角/灰阶）由 @radix-ui/themes 管理（见 app/layout.tsx 的 <Theme>），
    本文件只保留：字体、极简动效、少量全局微调。 */
 
+html {
+  overflow-x: clip;
+}
+
 body {
   font-family:
     'MiSans',
@@ -14,6 +18,88 @@ body {
     'Microsoft YaHei',
     'Segoe UI',
     sans-serif;
+}
+
+@keyframes loading-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loading-shimmer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(220%); }
+}
+
+@keyframes loading-indeterminate {
+  0% { transform: translateX(-100%); }
+  50%, 100% { transform: translateX(200%); }
+}
+
+.loading-spinner {
+  animation: loading-spin 0.9s linear infinite;
+}
+
+.loading-progress-indeterminate .rt-ProgressIndicator {
+  width: 42%;
+  animation: loading-indeterminate 1.35s ease-in-out infinite;
+}
+
+.loading-skeleton-card,
+.settings-voice-loading-pill,
+.voice-loading-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--gray-a3);
+}
+
+.loading-skeleton-card::after,
+.settings-voice-loading-pill::after,
+.voice-loading-card::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 20%, var(--gray-a4) 45%, transparent 70%);
+  content: '';
+  animation: loading-shimmer 1.6s ease-in-out infinite;
+}
+
+.loading-skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 20rem;
+  padding: var(--space-5);
+  border-radius: var(--radius-4);
+}
+
+.loading-skeleton-line,
+.loading-skeleton-block {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--gray-a4);
+}
+
+.loading-skeleton-line-title {
+  width: 32%;
+  height: 18px;
+}
+
+.loading-skeleton-line-short {
+  width: 58%;
+}
+
+.loading-skeleton-block {
+  width: 100%;
+  height: 8rem;
+  margin-top: var(--space-2);
+  border-radius: var(--radius-3);
+}
+
+/* 让页头按视口宽度布局，页面滚动条出现或消失时不重新计算导航位置。 */
+.app-header {
+  width: 100vw;
+  max-width: 100vw;
 }
 
 /* 英文专用衬线（单词列 / 例句），中文与界面文案保持默认无衬线 */
@@ -33,12 +119,129 @@ html .radix-themes {
   font-family: var(--font-serif-en);
 }
 
+.meaning-zh-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.meaning-zh-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .settings-field {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);
   align-items: center;
   gap: var(--space-3);
   min-height: 36px;
+}
+
+.settings-field-inline {
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 48px;
+}
+
+.settings-field-inline > :first-child,
+.settings-field-inline > :last-child {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+
+.settings-field-inline > :last-child {
+  width: auto;
+  justify-content: flex-end;
+}
+
+.settings-heading {
+  padding-block: var(--space-1);
+}
+
+.settings-provider-summary {
+  padding: var(--space-3);
+  border-radius: var(--radius-3);
+  background: var(--gray-a2);
+}
+
+.settings-status-icon {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-3);
+  color: var(--gray-11);
+  background: var(--gray-a4);
+}
+
+.settings-status-icon[data-status='available'] {
+  color: var(--green-11);
+  background: var(--green-a3);
+}
+
+.settings-status-icon[data-status='unavailable'] {
+  color: var(--orange-11);
+  background: var(--orange-a3);
+}
+
+.settings-provider-description {
+  overflow-wrap: anywhere;
+}
+
+.settings-voice-block {
+  padding-top: var(--space-1);
+}
+
+.settings-rate-block {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--gray-a4);
+}
+
+.settings-voice-picker-head {
+  margin-bottom: var(--space-1);
+}
+
+.settings-quick-voices {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+html .settings-quick-voice {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 15px;
+  align-items: center;
+  justify-content: start;
+  gap: var(--space-1);
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+html .settings-auto-quick-voice {
+  grid-template-columns: 13px minmax(0, 1fr) 15px;
+}
+
+.settings-quick-voice-check {
+  display: flex;
+  justify-content: center;
+  color: var(--accent-11);
+}
+
+.settings-quick-voice-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: var(--font-weight-medium);
+}
+
+.settings-voice-loading-pill {
+  min-height: 32px;
+  border-radius: var(--radius-3);
 }
 
 html .settings-rate {
@@ -49,61 +252,82 @@ html .settings-rate {
 html .settings-voice-trigger {
   max-width: 100%;
   min-width: 0;
+  width: 100%;
+  justify-content: space-between;
+  min-height: 44px;
 }
 
 .voice-list {
   padding: 2px 12px 2px 2px;
 }
 
-.voice-list-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 72px;
+.voice-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 2px 12px 2px 2px;
+}
+
+.voice-groups .rt-Separator {
+  flex: 1;
+}
+
+.settings-auto-voice {
+  display: flex;
   align-items: center;
-  column-gap: var(--space-2);
-  border-bottom: 1px solid var(--gray-a4);
-}
-
-.voice-list-row:last-child {
-  border-bottom: 0;
-}
-
-.voice-list-row[data-selected='true'] {
-  background: var(--accent-a3);
+  justify-content: space-between;
+  width: 100%;
+  min-height: 36px;
+  padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-3);
+}
+
+.voice-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-1);
+}
+
+.voice-loading-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-1);
+}
+
+.voice-loading-card {
+  min-height: 38px;
+  border-radius: var(--radius-3);
+}
+
+html .rt-Card.voice-choice-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px;
+  align-items: center;
+  min-width: 0;
+  padding: 0;
 }
 
 html .settings-voice-choice {
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 16px;
-  gap: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1);
   min-width: 0;
   width: 100%;
-  height: 64px;
+  height: 38px;
   margin: 0;
-  padding: var(--space-2) var(--space-2);
+  padding: var(--space-1) var(--space-2);
   text-align: left;
 }
 
 .voice-list-label {
-  display: block;
   min-width: 0;
-}
-
-.voice-list-name {
-  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: var(--font-size-2);
   font-weight: var(--font-weight-medium);
-}
-
-.voice-list-language {
-  display: block;
-  margin-top: 2px;
-  color: var(--gray-11);
-  font-size: var(--font-size-1);
-  line-height: var(--line-height-1);
 }
 
 .voice-list-check {
@@ -114,8 +338,8 @@ html .settings-voice-choice {
 
 html .voice-list-preview {
   box-sizing: border-box;
-  width: 72px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   margin: 0;
 }
 
@@ -147,6 +371,56 @@ html .voice-list-preview {
 
 @media (max-width: 359px) {
   .help-item { grid-template-columns: 1fr; gap: var(--space-2); }
+}
+
+@media (max-width: 639px) {
+  .settings-field {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+
+  .settings-field > :last-child {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .settings-field .rt-SegmentedControlRoot {
+    width: 100%;
+  }
+
+  .settings-field .rt-SegmentedControlItem {
+    flex: 1 1 0;
+  }
+
+  .settings-field-inline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-height: 48px;
+  }
+
+  .settings-field-inline > :last-child {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .voice-choice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .voice-loading-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .settings-quick-voices {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+  }
+
+  html .settings-auto-quick-voice {
+    grid-column: 1 / -1;
+  }
 }
 
 html .word-speak {

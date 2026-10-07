@@ -45,7 +45,7 @@ export type ExampleMode = (typeof EXAMPLE_MODES)[number]
 
 /** 个性化偏好（设置页） */
 export interface Prefs {
-  /** TTS 语音 voiceURI；null = 自动（英音女声优先） */
+  /** TTS provider 音色 ShortName；null = 自动（英音女声优先） */
   voiceURI: string | null
   /** TTS 语速 */
   rate: number
@@ -55,6 +55,8 @@ export interface Prefs {
   exampleMode: ExampleMode
   /** 打字音效（按键 / 错误 / 完成） */
   keySound: boolean
+  /** 练习与复习中的语音朗读；不影响词库朗读和设置页试听 */
+  practiceTts: boolean
 }
 
 export const DEFAULT_PREFS: Prefs = {
@@ -63,6 +65,7 @@ export const DEFAULT_PREFS: Prefs = {
   enMode: 'collapsible',
   exampleMode: 'always',
   keySound: true,
+  practiceTts: true,
 }
 
 /** 单词级学习记录：用于错题本排序、错误次数展示与「已掌握」判断 */
@@ -97,6 +100,22 @@ interface StoredData {
   'zjueh.day-stats': Record<string, DayStat>
 }
 
+export const USER_DATA_KEYS = [
+  'zjueh.wrong-words',
+  'zjueh.mastered',
+  'zjueh.settings',
+  'zjueh.prefs',
+  'zjueh.word-stats',
+  'zjueh.day-stats',
+] as const
+
+class StorageSchemaError extends Error {
+  constructor(public readonly key: string, message: string) {
+    super(message)
+    this.name = 'StorageSchemaError'
+  }
+}
+
 function isCards(value: unknown): value is SenseCard[] {
   if (!Array.isArray(value)) return false
   const seen = new Set<string>()
@@ -120,12 +139,14 @@ function isSettings(value: unknown): value is Settings {
     typeof value.showFirstLetter === 'boolean'
 }
 
-function isPrefs(value: unknown): value is Prefs {
-  return hasFields(value, Object.keys(DEFAULT_PREFS)) &&
+function isPrefs(value: unknown): value is StoredData['zjueh.prefs'] {
+  const fields = Object.keys(DEFAULT_PREFS)
+  return hasFields(value, fields) &&
     (value.voiceURI === null || isText(value.voiceURI)) &&
     typeof value.rate === 'number' && Number.isFinite(value.rate) && value.rate >= 0.5 && value.rate <= 1.5 &&
     isOneOf(value.enMode, EN_MODES) && isOneOf(value.exampleMode, EXAMPLE_MODES) &&
-    typeof value.keySound === 'boolean'
+    typeof value.keySound === 'boolean' &&
+    typeof value.practiceTts === 'boolean'
 }
 
 function isWordStats(value: unknown): value is Record<string, WordStat> {
@@ -153,26 +174,37 @@ export const STORAGE_VALIDATORS: { [K in keyof StoredData]: (value: unknown) => 
   'zjueh.day-stats': isDayStats,
 }
 
-function read<K extends keyof StoredData>(key: K): StoredData[K] | null {
+function read<K extends keyof StoredData>(key: K): StoredData[K] | undefined {
+  const raw = localStorage.getItem(key)
+  if (raw === null) return undefined
+  let value: unknown
   try {
-    const raw = localStorage.getItem(key)
-    const value: unknown = raw === null ? null : JSON.parse(raw)
-    return STORAGE_VALIDATORS[key](value) ? value : null
+    value = JSON.parse(raw)
   } catch {
-    return null
+    throw new StorageSchemaError(key, `本地数据损坏：${key}`)
   }
+  if (!STORAGE_VALIDATORS[key](value)) throw new StorageSchemaError(key, `本地数据版本不匹配：${key}`)
+  return value
 }
 
 function write<K extends keyof StoredData>(key: K, value: StoredData[K]) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value))
-  } catch {
-    /* 存储不可用时，本次会话仍可在内存中使用。 */
-  }
+  localStorage.setItem(key, JSON.stringify(value))
+}
+
+function loadCollection<K extends 'zjueh.wrong-words' | 'zjueh.mastered'>(key: K): SenseCard[] {
+  const value = read(key)
+  if (value === undefined) return []
+  return value
+}
+
+function loadRecord<K extends 'zjueh.word-stats' | 'zjueh.day-stats'>(key: K): StoredData[K] {
+  const value = read(key)
+  if (value === undefined) return {}
+  return value
 }
 
 export function loadWrongWords(): SenseCard[] {
-  return read('zjueh.wrong-words') ?? []
+  return loadCollection('zjueh.wrong-words')
 }
 
 export function saveWrongWords(words: SenseCard[]) {
@@ -180,7 +212,7 @@ export function saveWrongWords(words: SenseCard[]) {
 }
 
 export function loadMastered(): SenseCard[] {
-  return read('zjueh.mastered') ?? []
+  return loadCollection('zjueh.mastered')
 }
 
 export function saveMastered(words: SenseCard[]) {
@@ -188,7 +220,7 @@ export function saveMastered(words: SenseCard[]) {
 }
 
 export function loadWordStats(): Record<string, WordStat> {
-  return read('zjueh.word-stats') ?? {}
+  return loadRecord('zjueh.word-stats')
 }
 
 export function saveWordStats(stats: Record<string, WordStat>) {
@@ -196,7 +228,7 @@ export function saveWordStats(stats: Record<string, WordStat>) {
 }
 
 export function loadDayStats(): Record<string, DayStat> {
-  return read('zjueh.day-stats') ?? {}
+  return loadRecord('zjueh.day-stats')
 }
 
 export function saveDayStats(days: Record<string, DayStat>) {
@@ -204,7 +236,13 @@ export function saveDayStats(days: Record<string, DayStat>) {
 }
 
 export function loadSettings(): Settings {
-  return read('zjueh.settings') ?? { ...DEFAULT_SETTINGS, units: [] }
+  const value = read('zjueh.settings')
+  if (value === undefined) {
+    const initial = { ...DEFAULT_SETTINGS, units: [] }
+    write('zjueh.settings', initial)
+    return initial
+  }
+  return value
 }
 
 export function saveSettings(settings: Settings) {
@@ -212,9 +250,31 @@ export function saveSettings(settings: Settings) {
 }
 
 export function loadPrefs(): Prefs {
-  return read('zjueh.prefs') ?? { ...DEFAULT_PREFS }
+  try {
+    const value = read('zjueh.prefs')
+    if (value === undefined) {
+      write('zjueh.prefs', DEFAULT_PREFS)
+      return DEFAULT_PREFS
+    }
+    return value
+  } catch (error: unknown) {
+    if (!(error instanceof StorageSchemaError) || error.key !== 'zjueh.prefs') throw error
+    localStorage.removeItem('zjueh.prefs')
+    write('zjueh.prefs', DEFAULT_PREFS)
+    return DEFAULT_PREFS
+  }
 }
 
 export function savePrefs(prefs: Prefs) {
   write('zjueh.prefs', prefs)
+}
+
+/** 用户主动重置失效的偏好数据；不迁移旧字段，也不影响学习记录。 */
+export function resetPrefs() {
+  localStorage.removeItem('zjueh.prefs')
+}
+
+/** 用户主动重置当前 schema；不执行迁移，也不触碰主题偏好。 */
+export function resetUserData() {
+  for (const key of USER_DATA_KEYS) localStorage.removeItem(key)
 }

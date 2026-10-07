@@ -27,7 +27,7 @@ export function HelpView() {
         <SectionCard icon={<Layers size={16} />} title="练习模式">
           <Item label="单词">看词性和中文释义默写。</Item>
           <Separator size="4" />
-          <Item label="听写">听发音默写；不支持语音的浏览器会显示释义。</Item>
+          <Item label="听写">由云端 Edge TTS 朗读后默写；可在设置中关闭练习朗读。</Item>
           <Separator size="4" />
           <Item label="例句填空">按例句中的词形填写空缺。</Item>
         </SectionCard>

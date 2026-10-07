@@ -3,6 +3,7 @@ import { Box, Flex, Theme } from '@radix-ui/themes'
 import '@radix-ui/themes/styles.css'
 import './globals.css'
 import { AppHeader } from '@/components/app-header'
+import { StorageErrorBoundary } from '@/components/storage-error-boundary'
 
 export const metadata: Metadata = {
   title: { default: '大英默写器 Pro', template: '%s · 大英默写器 Pro' },
@@ -62,10 +63,12 @@ export default function RootLayout({
         {/* appearance="inherit"：跟随 <html> 上的 .dark 类，暗色切换由 theme-toggle 完成 */}
         <Theme appearance="inherit" accentColor="indigo" grayColor="slate" radius="large">
           <Flex direction="column" className="min-h-dvh">
-            <AppHeader />
-            <Box asChild flexGrow="1">
-              <main>{children}</main>
-            </Box>
+            <StorageErrorBoundary>
+              <AppHeader />
+              <Box asChild flexGrow="1">
+                <main>{children}</main>
+              </Box>
+            </StorageErrorBoundary>
           </Flex>
         </Theme>
       </body>

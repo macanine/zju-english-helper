@@ -13,6 +13,7 @@ import {
   Heading,
   IconButton,
   Portal,
+  ScrollArea,
   Text,
   Theme,
 } from '@radix-ui/themes'
@@ -74,59 +75,62 @@ function MobileMenu({
           必须镜像根主题的 <Theme> props 补一层 */}
       <Theme appearance="inherit" accentColor="indigo" grayColor="slate" radius="large">
         <Box className="fixed inset-0 z-50">
-          <Flex
-            id="app-drawer"
-            role="dialog"
-            aria-modal="true"
-            aria-label="导航菜单"
-            direction="column"
-            gap="1"
-            className="anim-slide-in-right absolute inset-0 overflow-y-auto px-4 pb-[max(1rem,env(safe-area-inset-bottom))]"
-            style={{ backgroundColor: 'var(--color-panel-solid)' }}
-          >
-            {/* 与原页头同高、同字号：菜单标题和「大英默写器 Pro」基线齐平 */}
-            <Flex justify="between" align="center" height="64px" className="shrink-0">
-              <Heading as="h2" size="4">
-                菜单
-              </Heading>
-              <IconButton
-                variant="ghost"
-                color="gray"
-                size="4"
-                aria-label="关闭菜单"
-                autoFocus
-                onClick={onClose}
+          <Box className="absolute inset-0" style={{ backgroundColor: 'var(--color-panel-solid)' }}>
+            <ScrollArea type="auto" scrollbars="vertical" style={{ height: '100%' }}>
+              <Flex
+                id="app-drawer"
+                role="dialog"
+                aria-modal="true"
+                aria-label="导航菜单"
+                direction="column"
+                gap="1"
+                className="anim-slide-in-right min-h-full px-4 pb-[max(1rem,env(safe-area-inset-bottom))]"
               >
-                <X size={22} />
-              </IconButton>
-            </Flex>
-            {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
-              const active = pathname === href
-              return (
-                <Link
-                  key={href}
-                  href={href}
-                  aria-current={active ? 'page' : undefined}
-                  onClick={onClose}
-                  className="flex h-12 min-h-12 items-center gap-3 rounded-lg px-3 transition-colors hover:bg-[var(--gray-a3)]"
-                  style={{
-                    backgroundColor: active ? 'var(--accent-a3)' : undefined,
-                    color: active ? 'var(--accent-11)' : 'var(--gray-12)',
-                  }}
-                >
-                  <Icon size={18} className="shrink-0" />
-                  <Text size="3" weight="medium" className="leading-6">
-                    {label}
-                  </Text>
-                  {href === '/wrong-words' && wrongCount > 0 && (
-                    <Badge color="red" variant="soft" size="2" className="ml-auto">
-                      {wrongCount}
-                    </Badge>
-                  )}
-                </Link>
-              )
-            })}
-          </Flex>
+                {/* 与原页头同高、同字号：菜单标题和「大英默写器 Pro」基线齐平 */}
+                <Flex justify="between" align="center" height="64px" className="shrink-0">
+                  <Heading as="h2" size="4">
+                    菜单
+                  </Heading>
+                  <IconButton
+                    variant="ghost"
+                    color="gray"
+                    size="4"
+                    aria-label="关闭菜单"
+                    autoFocus
+                    onClick={onClose}
+                  >
+                    <X size={22} />
+                  </IconButton>
+                </Flex>
+                {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+                  const active = pathname === href
+                  return (
+                    <Link
+                      key={href}
+                      href={href}
+                      aria-current={active ? 'page' : undefined}
+                      onClick={onClose}
+                      className="flex h-12 min-h-12 items-center gap-3 rounded-lg px-3 transition-colors hover:bg-[var(--gray-a3)]"
+                      style={{
+                        backgroundColor: active ? 'var(--accent-a3)' : undefined,
+                        color: active ? 'var(--accent-11)' : 'var(--gray-12)',
+                      }}
+                    >
+                      <Icon size={18} className="shrink-0" />
+                      <Text size="3" weight="medium" className="leading-6">
+                        {label}
+                      </Text>
+                      {href === '/wrong-words' && wrongCount > 0 && (
+                        <Badge color="red" variant="soft" size="2" className="ml-auto">
+                          {wrongCount}
+                        </Badge>
+                      )}
+                    </Link>
+                  )
+                })}
+              </Flex>
+            </ScrollArea>
+          </Box>
         </Box>
       </Theme>
     </Portal>
@@ -181,7 +185,7 @@ export function AppHeader() {
 
   return (
     <header
-      className="sticky top-0 z-40 border-b border-[var(--gray-a4)] backdrop-blur-md"
+      className="app-header sticky top-0 z-40 border-b border-[var(--gray-a4)] backdrop-blur-md"
       style={{ backgroundColor: 'var(--gray-a3)' }}
     >
       {/* 用与页面相同的 Container：页头内容与页面内容共用同一条内容栏（桌面端不内缩） */}

@@ -3,19 +3,21 @@ import { beforeEach, test } from 'node:test'
 
 import {
   DEFAULT_PREFS,
+  DEFAULT_SETTINGS,
   loadPrefs,
+  loadSettings,
   loadWordStats,
   loadWrongWords,
   savePrefs,
+  saveSettings,
+  type Prefs,
 } from '../lib/storage'
+import type { SenseCard } from '../lib/model'
 
-/** storage.ts 直接用全局 localStorage，测试里换成内存实现 */
 const store = new Map<string, string>()
 Object.assign(globalThis, {
   localStorage: {
-    get length() {
-      return store.size
-    },
+    get length() { return store.size },
     clear: () => store.clear(),
     getItem: (key: string) => store.get(key) ?? null,
     key: (index: number) => [...store.keys()][index] ?? null,
@@ -26,90 +28,51 @@ Object.assign(globalThis, {
 
 beforeEach(() => store.clear())
 
-test('loadPrefs 没存过时给默认值', () => {
+const card: SenseCard = {
+  english: 'apple',
+  sense: { pos: 'n.', zh: '苹果', en: 'a fruit', examples: ['I ate an [[apple]].'] },
+  senses: [{ pos: 'n.', zh: '苹果', en: 'a fruit', examples: ['I ate an [[apple]].'] }],
+}
+
+test('首次读取会初始化当前 schema 的默认设置', () => {
   assert.deepEqual(loadPrefs(), DEFAULT_PREFS)
+  assert.deepEqual(loadSettings(), DEFAULT_SETTINGS)
+  assert.deepEqual(JSON.parse(store.get('zjueh.prefs')!), DEFAULT_PREFS)
+  assert.deepEqual(JSON.parse(store.get('zjueh.settings')!), DEFAULT_SETTINGS)
 })
 
-test('旧版 showEn 布尔值映射到三态 enMode', () => {
-  store.set('zjueh.prefs', JSON.stringify({ showEn: true, rate: 1.1 }))
-  const shown = loadPrefs()
-  assert.equal(shown.enMode, 'always')
-  assert.equal(shown.rate, 1.1)
-
-  store.set('zjueh.prefs', JSON.stringify({ showEn: false }))
-  assert.equal(loadPrefs().enMode, 'hidden')
+test('当前偏好和练习设置可以原样往返', () => {
+  const prefs: Prefs = { ...DEFAULT_PREFS, enMode: 'always', practiceTts: false }
+  const settings = { ...DEFAULT_SETTINGS, bookId: 'book3', units: ['unit3-1'] }
+  savePrefs(prefs)
+  saveSettings(settings)
+  assert.deepEqual(loadPrefs(), prefs)
+  assert.deepEqual(loadSettings(), settings)
 })
 
-test('enMode 合法值原样读取，非法值回退默认', () => {
-  store.set('zjueh.prefs', JSON.stringify({ enMode: 'hidden' }))
-  assert.equal(loadPrefs().enMode, 'hidden')
-
-  store.set('zjueh.prefs', JSON.stringify({ enMode: 'nope' }))
-  assert.equal(loadPrefs().enMode, DEFAULT_PREFS.enMode)
-
-  // 有 showEn 又有非法 enMode 时，按 showEn 迁移
-  store.set('zjueh.prefs', JSON.stringify({ enMode: 'nope', showEn: true }))
-  assert.equal(loadPrefs().enMode, 'always')
+test('旧偏好结构会被丢弃并重建当前默认设置', () => {
+  store.set('zjueh.prefs', JSON.stringify({ enMode: 'always', rate: 1.1 }))
+  assert.deepEqual(loadPrefs(), DEFAULT_PREFS)
+  assert.deepEqual(JSON.parse(store.get('zjueh.prefs')!), DEFAULT_PREFS)
 })
 
-test('savePrefs / loadPrefs 往返一致', () => {
-  savePrefs({ ...DEFAULT_PREFS, enMode: 'always', autoSpeak: true, keySound: true })
-  const prefs = loadPrefs()
-  assert.equal(prefs.enMode, 'always')
-  assert.equal(prefs.autoSpeak, true)
-  assert.equal(prefs.keySound, true)
+test('旧错题卡片结构不会被迁移', () => {
+  store.set('zjueh.wrong-words', JSON.stringify([{ english: 'apple', chinese: '苹果' }]))
+  assert.throws(() => loadWrongWords(), /本地数据版本不匹配：zjueh\.wrong-words/)
 })
 
-test('旧版按释义存的错题卡片会合并成按词一条', () => {
-  store.set(
-    'zjueh.wrong-words',
-    JSON.stringify([
-      { english: 'sprawl', pos: 'v.', senseNo: 1, senseCount: 2, sense: { zh: '杂乱地延伸', en: '', examples: [] } },
-      { english: 'sprawl', pos: 'v.', senseNo: 2, senseCount: 2, sense: { zh: '摊开手脚躺着', en: '', examples: [] } },
-      { english: 'amid', pos: 'prep.', sense: { zh: '在···之中', en: '', examples: [] } },
-    ])
-  )
-  const cards = loadWrongWords()
-  assert.equal(cards.length, 2) // 同词合并
-  const sprawl = cards.find((c) => c.english === 'sprawl')!
-  assert.deepEqual(
-    sprawl.senses.map((s) => s.zh),
-    ['杂乱地延伸', '摊开手脚躺着']
-  )
-  assert.equal(sprawl.sense.zh, '杂乱地延伸') // 首条释义当题面
-  assert.equal(sprawl.senses[0].pos, 'v.') // 卡片上的旧词性搬进释义
+test('当前错题卡片和统计结构严格读取', () => {
+  store.set('zjueh.wrong-words', JSON.stringify([card]))
+  store.set('zjueh.word-stats', JSON.stringify({
+    apple: { attempts: 2, wrongs: 1, lastSeen: 100, lastWrong: 100 },
+  }))
+  assert.deepEqual(loadWrongWords(), [card])
+  assert.deepEqual(loadWordStats(), {
+    apple: { attempts: 2, wrongs: 1, lastSeen: 100, lastWrong: 100 },
+  })
 })
 
-test('v1 数据（chinese 混合文本）仍能迁移成按词一条', () => {
-  store.set(
-    'zjueh.wrong-words',
-    JSON.stringify([{ english: 'apple', chinese: '[C] a fruit 苹果', examples: 'e.g. I ate an [[apple]].' }])
-  )
-  const cards = loadWrongWords()
-  assert.equal(cards.length, 1)
-  assert.equal(cards[0].english, 'apple')
-  assert.equal(cards[0].sense.zh, '苹果')
-  assert.equal(cards[0].sense.en, 'a fruit')
-  assert.equal(cards[0].senses.length, 1)
-})
-
-test('旧版按释义存的统计 key 合并到单词上', () => {
-  store.set(
-    'zjueh.word-stats',
-    JSON.stringify({
-      'sprawl\u0000杂乱地延伸': { attempts: 2, wrongs: 1, lastSeen: 100, lastWrong: 100 },
-      'sprawl\u0000摊开手脚躺着': { attempts: 3, wrongs: 2, lastSeen: 300, lastWrong: 200 },
-      amid: { attempts: 1, wrongs: 0, lastSeen: 50, lastWrong: 0 },
-    })
-  )
-  const stats = loadWordStats()
-  assert.deepEqual(Object.keys(stats).sort(), ['amid', 'sprawl'])
-  assert.deepEqual(stats['sprawl'], { attempts: 5, wrongs: 3, lastSeen: 300, lastWrong: 200 })
-  assert.deepEqual(stats['amid'], { attempts: 1, wrongs: 0, lastSeen: 50, lastWrong: 0 })
-})
-
-test('统计里的坏数据被忽略', () => {
-  store.set('zjueh.word-stats', JSON.stringify({ apple: 'nope', banana: { attempts: 1 } }))
-  const stats = loadWordStats()
-  assert.deepEqual(stats, { banana: { attempts: 1, wrongs: 0, lastSeen: 0, lastWrong: 0 } })
+test('损坏 JSON 不会静默变成空数据', () => {
+  store.set('zjueh.word-stats', '{ broken')
+  assert.throws(() => loadWordStats(), /本地数据损坏：zjueh\.word-stats/)
 })

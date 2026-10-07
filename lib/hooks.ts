@@ -89,18 +89,26 @@ export function useBooks(): { books: BookMeta[] | null; error: string | null } {
   return { books, error }
 }
 
-/** 个性化偏好（TTS 语音 / 语速 / 显示英文释义）；null = 尚未从 localStorage 读出 */
-export function usePrefs(): [Prefs | null, (next: Prefs) => void] {
+/** 个性化偏好；初次挂载读取当前 schema，旧或损坏数据通过 error 暴露。 */
+export function usePrefs(): [Prefs | null, (next: Prefs) => void, string | null] {
   const [prefs, setPrefs] = React.useState<Prefs | null>(null)
+  const [error, setError] = React.useState<string | null>(null)
 
-  React.useEffect(() => setPrefs(loadPrefs()), [])
-
-  const update = React.useCallback((next: Prefs) => {
-    setPrefs(next)
-    savePrefs(next)
+  React.useEffect(() => {
+    try {
+      setPrefs(loadPrefs())
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : String(err))
+    }
   }, [])
 
-  return [prefs, update]
+  const update = React.useCallback((next: Prefs) => {
+    savePrefs(next)
+    setPrefs(next)
+    setError(null)
+  }, [])
+
+  return [prefs, update, error]
 }
 
 /** 练习设置；settings 为 null 表示尚未从 localStorage 读出 */
