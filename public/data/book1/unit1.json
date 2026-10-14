@@ -1,0 +1,1273 @@
+[
+	{
+		"english": "ambition",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "抱负；雄心；野心",
+				"en": "determination to be successful, rich, powerful, etc.",
+				"examples": [
+					"She was intelligent but suffered from a lack of [[ambition]]."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "追求；夙愿；理想",
+				"en": "a strong desire to achieve sth.",
+				"examples": [
+					"Earlier this year, he achieved his [[ambition]] of competing in the Olympic Games."
+				]
+			}
+		]
+	},
+	{
+		"english": "ambitious",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有抱负的；有雄心的；野心勃勃的",
+				"en": "determined to be successful, rich, powerful, etc.",
+				"examples": [
+					"She's extremely [[ambitious]] and intends to be running her own company by the time she's 30."
+				]
+			}
+		]
+	},
+	{
+		"english": "someday",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "将来会有一天；有朝一日",
+				"en": "(also 'some day') at an unknown time in the future, esp. a long time in the future",
+				"examples": [
+					"He hopes, [[someday]], to have his own business."
+				]
+			}
+		]
+	},
+	{
+		"english": "matter-of-factly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "就事论事地；不带感情地；实事求是地",
+				"en": "in a way that shows no emotion when you are talking about sth. exciting, frightening, etc.",
+				"examples": [
+					"To my surprise, he spoke about his divorce [[matter-of-factly]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "biology",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "生物学",
+				"en": "the scientific study of living things",
+				"examples": [
+					"Students might pursue a degree in [[biology]] as a path to medical school or a variety of professions."
+				]
+			}
+		]
+	},
+	{
+		"english": "resolve",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "解决（问题、困难）",
+				"en": "find a satisfactory way of dealing with a problem or difficulty",
+				"examples": [
+					"There weren't enough beds, but the matter was [[resolved]] by George sleeping on the sofa."
+				]
+			}
+		]
+	},
+	{
+		"english": "fiction",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "小说",
+				"en": "books and stories about imaginary people and events",
+				"examples": [
+					"The book is a work of [[fiction]] and not intended as a historical account."
+				]
+			}
+		]
+	},
+	{
+		"english": "freshman",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（高中或大学的）一年级学生",
+				"en": "(AmE) a student in the first year of high school or university",
+				"examples": [
+					"It is necessary for [[freshmen]] to get to know their new studying environment in university as soon as possible."
+				]
+			}
+		]
+	},
+	{
+		"english": "pretend",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "假装；装作",
+				"en": "behave as if sth. is true when in fact you know it is not, in order to deceive people or for fun",
+				"examples": [
+					"She [[pretended]] that she was not at home when we rang the bell."
+				]
+			}
+		]
+	},
+	{
+		"english": "desperate",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "非常需要···的；极其需要···的",
+				"en": "(~ for sth.; ~ to do sth.) needing or wanting sth. very much",
+				"examples": [
+					"The healthcare industry is [[desperate]] for solutions to its business models."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "（为了改变糟糕境遇而）不惜冒险的，拼命的，绝望的",
+				"en": "willing to do anything to change a very bad situation, and not caring about danger",
+				"examples": [
+					"I had no money left and was [[desperate]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "buddy",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "朋友；伙伴",
+				"en": "(infml.) a friend",
+				"examples": [
+					"Bob and I have been great [[buddies]] for years."
+				]
+			}
+		]
+	},
+	{
+		"english": "entertaining",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "使人愉快的；有趣的",
+				"en": "amusing and interesting",
+				"examples": [
+					"His books aren't particularly well-written, but they're always [[entertaining]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "apologetic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "道歉的；谢罪的；愧疚的",
+				"en": "showing or saying that you are sorry that sth. has happened, esp. because you feel guilty or embarrassed about it",
+				"examples": [
+					"She was [[apologetic]] about my injury."
+				]
+			}
+		]
+	},
+	{
+		"english": "attain",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（通过长时间努力而）得到，获得，赢得",
+				"en": "succeed in achieving sth. after trying for a long time",
+				"examples": [
+					"More and more women are [[attaining]] positions of power."
+				]
+			}
+		]
+	},
+	{
+		"english": "attainable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "可以达到的；可以获得的",
+				"en": "possible to achieve, reach, or get",
+				"examples": [
+					"We must make sure that we do not set ourselves goals that are not [[attainable]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "determination",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "决心；坚韧；毅力",
+				"en": "the quality of trying to do sth. even when it is difficult",
+				"examples": [
+					"He shows great [[determination]] to learn English."
+				]
+			}
+		]
+	},
+	{
+		"english": "realistic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "现实的；实际的；实事求是的",
+				"en": "accepting things as they are in fact and not making decisions based on unlikely hopes for the future",
+				"examples": [
+					"Let's be [[realistic]] about this 一 I just can't afford to pay that much money."
+				]
+			}
+		]
+	},
+	{
+		"english": "jungle",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "（热带）丛林",
+				"en": "a thick tropical forest with many large plants growing very close together",
+				"examples": [
+					"We had to cut our way through dense [[jungle]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "fated",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "命运决定的；命中注定的",
+				"en": "certain to happen or to do sth. because a mysterious force is controlling events",
+				"examples": [
+					"She says she was [[fated]] to become a writer."
+				]
+			}
+		]
+	},
+	{
+		"english": "adventurous",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "喜欢冒险的；有冒险精神的",
+				"en": "eager to go to new places and do exciting or dangerous things",
+				"examples": [
+					"I took an [[adventurous]] ski trip in Austria last year."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "大胆创新的",
+				"en": "not afraid of taking risks or trying new things",
+				"examples": [
+					"Warren is a very [[adventurous]] cook, always trying to make new dishes."
+				]
+			}
+		]
+	},
+	{
+		"english": "exotic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "异国风情的；外国情调的",
+				"en": "sth. that is exotic seems unusual and interesting because it is related to a foreign country",
+				"examples": [
+					"She likes traveling to all kinds of [[exotic]] locations."
+				]
+			}
+		]
+	},
+	{
+		"english": "string",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "一系列",
+				"en": "(~ of) a group of similar things",
+				"examples": [
+					"We've had a [[string]] of complaints about the program."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "（由几股合成的）线，细绳，带子",
+				"en": "",
+				"examples": [
+					"Her key hung on a [[string]] around her neck."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "用（线、 链等）穿起来",
+				"en": "(strung, strung) put things together onto a thread, chain, etc.",
+				"examples": [
+					"She had [[strung]] the shells on a silver chain."
+				]
+			}
+		]
+	},
+	{
+		"english": "conflict",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "（意见等的）抵触，冲突，矛盾",
+				"en": "a state of disagreement or argument between people, groups, countries, etc.",
+				"examples": [
+					"She found herself in [[conflict]] with her parents over her future career."
+				]
+			}
+		]
+	},
+	{
+		"english": "whole-heartedly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "全心全意地；全力以赴地",
+				"en": "in a way that involves all your feelings, interest, etc.",
+				"examples": [
+					"I agree [[whole-heartedly]] with the mayor on this issue."
+				]
+			}
+		]
+	},
+	{
+		"english": "single-mindedly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "一心一意地；专心致志地",
+				"en": "if one person does sth. single-mindedly, they have one clear aim and work very hard to achieve it",
+				"examples": [
+					"His ability to concentrate [[single-mindedly]] on the most important thing leads to his success."
+				]
+			}
+		]
+	},
+	{
+		"english": "greedy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "贪婪的；贪心的； 贪吃的；贪喝的",
+				"en": "always wanting more food, money, power, possessions, etc. than you need",
+				"examples": [
+					"He looked at the gold with [[greedy]] eyes."
+				]
+			}
+		]
+	},
+	{
+		"english": "chaotic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "混乱的； 毫无秩序的",
+				"en": "a chaotic situation is one in which everything is happening in a confused way",
+				"examples": [
+					"The traffic in the city is [[chaotic]] in the rush hour."
+				]
+			}
+		]
+	},
+	{
+		"english": "overdue",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "迟到的；延误的",
+				"en": "if sb. /sth. is overdue, they should have arrived before now",
+				"examples": [
+					"If you're [[overdue]] for a vacation, you can prepare for an adventure instead of cancelling it."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "过期未完成的；过期未付的；过期未还的",
+				"en": "not done, paid, returned, etc. by the time expected",
+				"examples": [
+					"These books are [[overdue]] and you should pay a fine."
+				]
+			}
+		]
+	},
+	{
+		"english": "mature",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（尤指小孩或年轻人举止）成熟的，理智的，明白事理的",
+				"en": "sb., esp. a child or young person, who is mature behaves in a sensible and reasonable way, as you would expect an adult to behave",
+				"examples": [
+					"We're [[mature]] enough to disagree on this issue but still respect each other."
+				]
+			}
+		]
+	},
+	{
+		"english": "assign",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "分配，分派，指派（任务）",
+				"en": "give sb. a particular job or make them responsible for a particular person or thing",
+				"examples": [
+					"I've been [[assigned]] the task of looking after the new students."
+				]
+			}
+		]
+	},
+	{
+		"english": "pediatrician",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "儿科医生",
+				"en": "(BrE paediatrician) a doctor who deals with children and their illnesses",
+				"examples": [
+					"He dreams of becoming a doctor, specifically a [[pediatrician]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "best-seller",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "畅销产品；畅销书",
+				"en": "a popular product, esp. a book, that many people buy",
+				"examples": [
+					"His new book went straight to No. 1 on the [[best-seller]] list."
+				]
+			}
+		]
+	},
+	{
+		"english": "anymore",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "再也（不）；（不）再",
+				"en": "(often used in negative sentences or questions) any longer",
+				"examples": [
+					"You're describing a world that just doesn't exist [[anymore]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "strive",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "努力；奋斗",
+				"en": "(strove, striven) (~ to do sth.; ~ for / after sth.) make a great effort to achieve sth.",
+				"examples": [
+					"We encourage all members to [[strive]] for the highest standards."
+				]
+			}
+		]
+	},
+	{
+		"english": "best-selling",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "畅销的",
+				"en": "(only before noun) extremely popular",
+				"examples": [
+					"It's almost every author's dream to become a [[best-selling]] author."
+				]
+			}
+		]
+	},
+	{
+		"english": "press conference",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "记者招待会；新闻发布会",
+				"en": "a meeting held by a person or group at which they answer questions from people who write or present news reports",
+				"examples": [
+					"The football coach held a [[press conference]] to announce his retirement."
+				]
+			}
+		]
+	},
+	{
+		"english": "appealing",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有吸引力的；有趣的",
+				"en": "attractive or interesting",
+				"examples": [
+					"The city offers an [[appealing]] combination of sporting and cultural events."
+				]
+			}
+		]
+	},
+	{
+		"english": "tongue",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "舌；舌头",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "depression",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "忧伤；沮丧；消沉",
+				"en": "a feeling of sadness that makes you think there is no hope for the future",
+				"examples": [
+					"She suffered from severe [[depression]] after losing her job."
+				]
+			}
+		]
+	},
+	{
+		"english": "isolation",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "孤独；孤单",
+				"en": "when sb. feels alone and unable to meet or speak to other people",
+				"examples": [
+					"After all the visitors had left, she experienced a feeling of complete [[isolation]]."
+				]
+			},
+			{
+				"pos": "n. [U]",
+				"zh": "隔绝；孤立；分离",
+				"en": "when one group, person, or thing is separate from others",
+				"examples": [
+					"Because of its geographical [[isolation]], the area developed its own unique culture."
+				]
+			}
+		]
+	},
+	{
+		"english": "employee",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "受雇者；雇员",
+				"en": "sb. who is paid to work for sb. else",
+				"examples": [
+					"Alibaba Group has more than 100,000 global [[employees]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "philosopher",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "哲学家",
+				"en": "sb. who studies and develops ideas about the nature and meaning of existence, truth, good and evil, etc.",
+				"examples": [
+					"Socrates and Plato are two famous Greek [[philosophers]] whose ideas are still influential today."
+				]
+			}
+		]
+	},
+	{
+		"english": "unfold",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）（故事、计划等）展开；逐渐呈现；展示",
+				"en": "if a story, plan, etc. unfolds, it becomes clearer as you hear or learn more about it",
+				"examples": [
+					"The scandal is still [[unfolding]], but there may be a solution soon."
+				]
+			}
+		]
+	},
+	{
+		"english": "mindset",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "思维模式",
+				"en": "sb.'s general attitude, and the way in which they think about things and make decisions",
+				"examples": [
+					"It's quite difficult to change the [[mindset]] of the public and the press."
+				]
+			}
+		]
+	},
+	{
+		"english": "lessen",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）降低；（使）减少",
+				"en": "become smaller in size, importance, or value, or make sth. do this",
+				"examples": [
+					"The new project will [[lessen]] the effects of car pollution."
+				]
+			}
+		]
+	},
+	{
+		"english": "emotional",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "情绪（上）的；情感（上）的",
+				"en": "(only before noun) relating to your feelings or how you control them",
+				"examples": [
+					"Mothers are often the ones who provide [[emotional]] support for the family."
+				]
+			}
+		]
+	},
+	{
+		"english": "perceive",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "察觉；注意到；发觉",
+				"en": "(fml.) notice, see, or recognize sth.",
+				"examples": [
+					"That morning, he [[perceived]] a change in his wife's mood."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（以某种方式）看待，理解",
+				"en": "(written) understand or think of sb. / sth. in a particular way",
+				"examples": [
+					"Even as a young woman she had been [[perceived]] as a future chief executive."
+				]
+			}
+		]
+	},
+	{
+		"english": "heroic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "英雄的；英勇的",
+				"en": "extremely brave or determined, and admired by many people",
+				"examples": [
+					"These doctors performed [[heroic]] work in difficult conditions."
+				]
+			}
+		]
+	},
+	{
+		"english": "consistent",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（行为、态度、标准等）一贯的，一致的",
+				"en": "always behaving in the same way or having the same attitudes, standards, etc.",
+				"examples": [
+					"He has been the team's most [[consistent]] player."
+				]
+			}
+		]
+	},
+	{
+		"english": "sustainable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "可持续的",
+				"en": "able to continue for a long time",
+				"examples": [
+					"That sort of extreme diet is not [[sustainable]] over a long period."
+				]
+			}
+		]
+	},
+	{
+		"english": "fitness",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "健壮；健康",
+				"en": "when you are healthy and strong enough to do hard work or play sports",
+				"examples": [
+					"They're doing some regular exercise to improve their [[fitness]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "creativity",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "独创性；创造性；创造力",
+				"en": "the ability to use your imagination to produce new ideas, make things, etc.",
+				"examples": [
+					"We should have an education system that lets children use their [[creativity]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "marathon",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "马拉松赛跑",
+				"en": "a long race of about 42 kilometers or 26 miles",
+				"examples": [
+					"She ran her first [[marathon]] in just under three hours."
+				]
+			}
+		]
+	},
+	{
+		"english": "literally",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "的确；确实",
+				"en": "used to emphasize that sth., esp. a large number, is actually true",
+				"examples": [
+					"The Olympic Games were watched by [[literally]] billions of people around the world."
+				]
+			},
+			{
+				"pos": "adv.",
+				"zh": "按照原意；根据字面意思",
+				"en": "according to the most basic or original meaning of a word or expression",
+				"examples": [
+					"I said I felt like quitting, but I didn't mean it [[literally]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "overextend",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "把···做得过分；把···使用过头",
+				"en": "try to do or use too much of sth., causing problems, illness, or damage",
+				"examples": [
+					"Be careful not to [[overextend]] yourself. You've been very ill."
+				]
+			}
+		]
+	},
+	{
+		"english": "obsess",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使痴迷；使迷恋；使心神不宁（含贬义）",
+				"en": "(be obsessed with / by) if sb. / sth. obsesses you, you think or worry about them all the time and you cannot think about anything else — used to show disapproval",
+				"examples": [
+					"A lot of young girls are [[obsessed]] by their weight."
+				]
+			}
+		]
+	},
+	{
+		"english": "maximum",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "最大量的；最大限度的；最大值的",
+				"en": "(only before noun) the maximum amount, quantity, speed, etc. is the largest that is possible or is allowed",
+				"examples": [
+					"To get the [[maximum]] benefit, do the exercises slowly."
+				]
+			}
+		]
+	},
+	{
+		"english": "workout",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "体育锻炼；训练",
+				"en": "a period of physical exercise, esp. as training for a sport",
+				"examples": [
+					"She does a 20-minute [[workout]] every morning."
+				]
+			}
+		]
+	},
+	{
+		"english": "unlike",
+		"senses": [
+			{
+				"pos": "prep.",
+				"zh": "与···不同",
+				"en": "used to contrast sb. / sth. with another person or thing",
+				"examples": [
+					"[[Unlike]] most people in the office, I don't come to work by car."
+				]
+			}
+		]
+	},
+	{
+		"english": "paradox",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "自相矛盾（的情况）",
+				"en": "a situation that seems strange because it involves two ideas or qualities that are very different",
+				"examples": [
+					"It is a [[paradox]] that in such a rich country there can be so much poverty."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "悖论；似非而是的说法",
+				"en": "a statement that seems impossible because it contains two opposing ideas that are both true",
+				"examples": [
+					"The [[paradox]] is that fishermen would catch more fish if they fished less."
+				]
+			}
+		]
+	},
+	{
+		"english": "perform",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "表现得好 / 差等",
+				"en": "(~ well / badly, etc.) work or do sth. well, badly, etc.",
+				"examples": [
+					"The company has been [[performing]] poorly over the past year."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "表演；演出",
+				"en": "do sth. to entertain people, for example by acting a play or playing a piece of music",
+				"examples": [
+					"I'd like to hear the music [[performed]] live."
+				]
+			}
+		]
+	},
+	{
+		"english": "chase",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "努力赢得；设法获得",
+				"en": "use a lot of time and effort trying to get sth. such as work or money",
+				"examples": [
+					"Top graduates from the university are [[chased]] by major companies."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "追逐；追赶；追捕",
+				"en": "quickly follow sb. / sth. in order to catch them",
+				"examples": [
+					"The dogs saw him running and [[chased]] him."
+				]
+			}
+		]
+	},
+	{
+		"english": "grounded",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "对自己有清醒认识的",
+				"en": "sb. who is grounded understands their own character and knows what is really important",
+				"examples": [
+					"Mary says that she knows what she really wants because her family always keeps her [[grounded]]."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "理性的；有理智的；克制的",
+				"en": "2）reasonable and in control of your emotions, even when this is difficult",
+				"examples": [
+					"Charles can always keep himself [[grounded]], even when he runs into difficulty."
+				]
+			}
+		]
+	},
+	{
+		"english": "productive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "多产的；丰饶的；富有成效的",
+				"en": "producing or achieving a lot",
+				"examples": [
+					"We had a very [[productive]] meeting 一 I felt we sorted out a lot of problems."
+				]
+			}
+		]
+	},
+	{
+		"english": "ethos",
+		"senses": [
+			{
+				"pos": "n. [sing.]",
+				"zh": "（某团体的）精神特质，道德意识",
+				"en": "the set of ideas and moral attitudes that are typical of a particular group",
+				"examples": [
+					"It is a community in which people lived according to an [[ethos]] of sharing and caring."
+				]
+			}
+		]
+	},
+	{
+		"english": "be sb's for the asking",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "某人只要提出要求（就可以得到）",
+				"en": "(infml.) if sth. is yours for the asking, you can have it if you want it",
+				"examples": [
+					"A good deal of extra support [[is hers for the asking]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "hit it big",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "大获成功",
+				"en": "have great success",
+				"examples": [
+					"I wasn't expecting it to work, but I [[hit it big]] when I tried the new approach."
+				]
+			}
+		]
+	},
+	{
+		"english": "to tell (you) the truth",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "老实说；实话对你讲",
+				"en": "(spoken) used when giving your personal opinion or admitting sth.",
+				"examples": [
+					"[[To tell the truth]], I don't really like her."
+				]
+			}
+		]
+	},
+	{
+		"english": "leave behind",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "忘记带走；留下",
+				"en": "not take sb. / sth. with you when you leave a place",
+				"examples": [
+					"He departed for the United States, [[leaving]] the children [[behind]] with his mother."
+				]
+			}
+		]
+	},
+	{
+		"english": "sit back",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "不采取行动；袖手旁观",
+				"en": "relax and make no effort to get involved in sth. or influence what happens",
+				"examples": [
+					"Don't just [[sit back]] and wait for new business to come to you."
+				]
+			}
+		]
+	},
+	{
+		"english": "for one reason or another",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "由于这样或那样的原因",
+				"en": "used for saying that there is more than one reason for sth.",
+				"examples": [
+					"His travel articles are always, [[for one reason or another]], fascinating."
+				]
+			}
+		]
+	},
+	{
+		"english": "grab for ∕ at",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "抓住（机会）；立即接受（邀请等）",
+				"en": "(infml.) take an opportunity, accept an invitation, etc. immediately",
+				"examples": [
+					"This is our chance to [[grab at]] this new market."
+				]
+			}
+		]
+	},
+	{
+		"english": "come to terms with",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "与某事妥协，对某事让步；接受（令人不快或悲伤的现实）",
+				"en": "accept an unpleasant or sad situation and no longer feel upset or angry about it",
+				"examples": [
+					"It's hard for the couple to [[come to terms with]] the fact that they will never have children."
+				]
+			}
+		]
+	},
+	{
+		"english": "hold back",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "阻碍某人 / 某事发展",
+				"en": "prevent sb. / sth. from making progress",
+				"examples": [
+					"Do you think that mixed-ability teaching [[holds]] the brighter children [[back]]?"
+				]
+			}
+		]
+	},
+	{
+		"english": "roll / trip off the tongue",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（某个名字或短语）顺口",
+				"en": "(infml.) if a name or phrase rolls or trips off your tongue, it is easy or pleasant to say",
+				"examples": [
+					"Their names [[roll off the tongue]] very easily."
+				]
+			}
+		]
+	},
+	{
+		"english": "be / get / feel burned out",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "感到精疲力竭",
+				"en": "be in a state of physical or mental exhaustion caused by overwork or stress",
+				"examples": [
+					"He [[was burned out]] by the time he was 21 and retired from the sport."
+				]
+			}
+		]
+	},
+	{
+		"english": "the here and now",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "现时",
+				"en": "the present time",
+				"examples": [
+					"To be able to live fully in [[the here and now]], one must first learn how to honor the past."
+				]
+			}
+		]
+	},
+	{
+		"english": "come up short",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "未能赢取；未能获得",
+				"en": "fail to win or achieve sth.",
+				"examples": [
+					"We're so close to getting the job done, but we keep [[coming up short]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "add up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "积累；积少成多",
+				"en": "increase by small amounts until there is a large total",
+				"examples": [
+					"When you're feeding a family of six the bills soon [[add up]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "string together",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "把···拼在一起",
+				"en": "combine things in order to make sth. that is complete, good, useful, etc.",
+				"examples": [
+					"They [[string together]] image after image until the documentary is completed."
+				]
+			}
+		]
+	},
+	{
+		"english": "prior to",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "在···以前",
+				"en": "(fml.) before",
+				"examples": [
+					"All the arrangements should be completed [[prior to]] your departure."
+				]
+			}
+		]
+	},
+	{
+		"english": "at peace",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "心平气和的",
+				"en": "if you are at peace, you do not feel angry, unhappy, etc.",
+				"examples": [
+					"For the first time in months, she felt calm and [[at peace]] with the world."
+				]
+			}
+		]
+	},
+	{
+		"english": "quite / just the opposite",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "正好 / 完全相反",
+				"en": "used to say that sth. is completely different from what has just been said",
+				"examples": [
+					"I didn't feel sleepy at all 一 [[just the opposite]], in fact."
+				]
+			}
+		]
+	},
+	{
+		"english": "run / be / go counter to",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "违背某事；与某事背道而驰",
+				"en": "be the opposite of",
+				"examples": [
+					"The governor's newest policy seems to be [[running counter to]] everything he promised during his election campaign."
+				]
+			}
+		]
+	},
+	{
+		"english": "Beth",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "贝丝（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Secretary of State",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "（美国政府的）国务卿（主要负责外交事务）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Jane Goodall",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "简·古多尔（英国生物学家、动物行为学家、人类学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "J.J. Watt",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "J.J. 瓦特（美国橄榄球运动员）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Eliud Kipchoge",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "埃利乌德 ; 基普乔盖（肯尼亚马拉松运动员）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "The New York Times",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "《纽约时报》（报刊名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "The Times",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "《泰晤士报》（报刊名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

@@ -1,0 +1,954 @@
+[
+	{
+		"english": "wrestle",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（与某人）摔跤，扭打",
+				"en": "fight sb. by holding them and pulling or pushing them",
+				"examples": [
+					"The two men [[wrestled]] with each other, and it was hard to tell who would win."
+				]
+			}
+		]
+	},
+	{
+		"english": "outcome",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（讨论、战争等无法预知的）结果、后果",
+				"en": "the final result of a discussion, war, etc. — used esp. when no one knows what it will be until it actually happens",
+				"examples": [
+					"People who had heard the evidence at the trial were surprised at the [[outcome]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "tense",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使（肌肉）绷紧；僵硬",
+				"en": "(also 'tense up') make your muscles tight and stiff, or become tight and stiff",
+				"examples": [
+					"Every time the phone rang, she [[tensed]] up, being afraid to hear the bad news."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "令人紧张的；令人不安的；令人着急的",
+				"en": "making you feel nervous and not relaxed, usu. because you are worried about what is going to happen",
+				"examples": [
+					"There was a [[tense]] silence as everyone waited for his reaction."
+				]
+			}
+		]
+	},
+	{
+		"english": "strain",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使劲；竭力；用尽全力",
+				"en": "try very hard to do sth. using all your strength or ability",
+				"examples": [
+					"She was [[straining]] to keep her head above the water."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "拉伤；扭伤",
+				"en": "injure a muscle or part of your body by using it too much or making it work too hard",
+				"examples": [
+					"I've [[strained]] a muscle in my leg and I have to go to hospital."
+				]
+			}
+		]
+	},
+	{
+		"english": "wrist",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "腕（关节）",
+				"en": "",
+				"examples": [
+					"He grasped her [[wrist]] with his free hand."
+				]
+			}
+		]
+	},
+	{
+		"english": "grin",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "露齿而笑；咧着嘴笑",
+				"en": "smile widely",
+				"examples": [
+					"He walked out of the pool, [[grinning]] widely."
+				]
+			}
+		]
+	},
+	{
+		"english": "teen",
+		"senses": [
+			{
+				"pos": "n. [pl.]",
+				"zh": "青少年时期（13 到 19 岁之间的阶段）",
+				"en": "(~s) the period of your life when you are between 13 and 19 years old",
+				"examples": [
+					"She was in her [[teens]] when she met her boyfriend who became her husband."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "（青）少年；十几岁的孩子",
+				"en": "(AmE, infml.) a teenager",
+				"examples": [
+					"In real life, every [[teen]] can, and should, make their own decision."
+				]
+			}
+		]
+	},
+	{
+		"english": "athletic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "强壮的；擅长运动的",
+				"en": "physically strong and good at sport",
+				"examples": [
+					"I am not a brave man, nor am I [[athletic]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "athleticism",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "运动能力",
+				"en": "the ability to play sports or do physical activities well",
+				"examples": [
+					"Except for the second game he seemed to be in control and showed some great [[athleticism]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "gasp",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（由于呼吸困难而）急促吸气",
+				"en": "breathe quickly in a way that can be heard because you are having difficulty breathing",
+				"examples": [
+					"Brendan climbed slowly, [[gasping]] for breath."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（尤因惊讶或疼痛而）大声吸气，倒抽气",
+				"en": "breathe in suddenly in a way that can be heard, esp. because you are surprised or in pain",
+				"examples": [
+					"The visitors [[gasped]] at the wonderful view."
+				]
+			}
+		]
+	},
+	{
+		"english": "recall",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "回想，回忆起（某事物）",
+				"en": "remember a particular fact, event, or situation from the past",
+				"examples": [
+					"Henry [[recalled]] that he first met Pollard during a business trip to Washington."
+				]
+			}
+		]
+	},
+	{
+		"english": "clip",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（从报纸、杂志等上）剪下",
+				"en": "cut an article or picture from a newspaper, magazine, etc.",
+				"examples": [
+					"He showed me a cartoon [[clipped]] from a newspaper."
+				]
+			}
+		]
+	},
+	{
+		"english": "clipping",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "剪报",
+				"en": "an article or picture that has been cut out of a newspaper or magazine",
+				"examples": [
+					"He searched through piles of letters and [[clippings]] for his mother's letter."
+				]
+			}
+		]
+	},
+	{
+		"english": "underline",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "在···之下画线（以示重要）",
+				"en": "draw a line under a word, sentence, etc. to show that it is important",
+				"examples": [
+					"Please [[underline]] all the noun clauses in the reading passage."
+				]
+			}
+		]
+	},
+	{
+		"english": "helmet",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "头盔；钢盔；安全帽",
+				"en": "a strong hard hat that soldiers, motorcycle riders, the police, etc. wear to protect their heads",
+				"examples": [
+					"Protective [[helmets]] must be worn on the construction site."
+				]
+			}
+		]
+	},
+	{
+		"english": "grapple",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "扭打；搏斗",
+				"en": "fight or struggle with sb., holding them tightly",
+				"examples": [
+					"Two men didn't stop [[grappling]] with a guard at the door until the police came."
+				]
+			}
+		]
+	},
+	{
+		"english": "ritual",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "惯例；老规矩；例行公事",
+				"en": "sth. that you do regularly and in the same way each time",
+				"examples": [
+					"He lights his cigar after getting up every morning and this [[ritual]] has not changed for many years."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "（为纪念重要宗教或社会事件举行的）仪式，典礼",
+				"en": "a ceremony that is always performed in the same way, in order to mark an important religious or social occasion",
+				"examples": [
+					"The lady of the house still performs the [[ritual]] of lighting candles at dinner."
+				]
+			}
+		]
+	},
+	{
+		"english": "competitive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "好竞争的；求胜心切的",
+				"en": "having or displaying a strong desire to be more successful than others",
+				"examples": [
+					"I could never play team sports 一 I lack the [[competitive]] spirit."
+				]
+			}
+		]
+	},
+	{
+		"english": "palm",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "手掌；掌部",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "twist",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "扭动（身体）",
+				"en": "turn a part of your body around or change your position by turning",
+				"examples": [
+					"He [[twisted]] his head slightly and looked up at her."
+				]
+			}
+		]
+	},
+	{
+		"english": "wrap",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（用手臂、腿或手指）围住（某物）",
+				"en": "if you wrap your arms, legs, or fingers around sth., you use them to hold it",
+				"examples": [
+					"He [[wrapped]] his arms around her, unwilling to leave."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（用纸或布）包，裹（某物）",
+				"en": "(also 'wrap up') put paper or cloth over sth. to cover it",
+				"examples": [
+					"The present was beautifully [[wrapped]] in gold paper."
+				]
+			}
+		]
+	},
+	{
+		"english": "grip",
+		"senses": [
+			{
+				"pos": "n. [C, usu. sing.]",
+				"zh": "紧握；紧抓",
+				"en": "the way you hold sth. tightly, or your ability to do this",
+				"examples": [
+					"Hold the microphone in a firm [[grip]] and keep it still."
+				]
+			}
+		]
+	},
+	{
+		"english": "elbow",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "肘",
+				"en": "",
+				"examples": [
+					"He rested one [[elbow]] on the wall as he spoke."
+				]
+			}
+		]
+	},
+	{
+		"english": "indentation",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "凹口；凹陷；缺口",
+				"en": "(also 'indent') a cut into the surface or edge of sth.",
+				"examples": [
+					"The kid made an [[indentation]] in the center of each cookie."
+				]
+			}
+		]
+	},
+	{
+		"english": "itchy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（衣服）令人发痒的",
+				"en": "if clothes are itchy, they make your skin feel slightly unpleasant, so that you want to rub your skin with your nails",
+				"examples": [
+					"The shirt is [[itchy]] and uncomfortable."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "发痒的",
+				"en": "if part of your body is itchy, it feels slightly unpleasant and you want to rub it with your nails",
+				"examples": [
+					"My eyes sometimes get red and [[itchy]] in the summer."
+				]
+			}
+		]
+	},
+	{
+		"english": "defeat",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "失败",
+				"en": "failure to win or succeed",
+				"examples": [
+					"She was a woman who hated to admit [[defeat]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "yield",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "屈服；让步",
+				"en": "stop resisting sb. / sth.; agree to do sth. that you do not want to do",
+				"examples": [
+					"He reluctantly [[yielded]] to their demands."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "产生，得出（结果、答案或消息）",
+				"en": "produce a result, answer, or piece of information",
+				"examples": [
+					"Our research has only recently begun to [[yield]] important results."
+				]
+			}
+		]
+	},
+	{
+		"english": "steady",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "稳定的；牢固的；不摇晃的",
+				"en": "firmly held in a particular position and not moving or shaking",
+				"examples": [
+					"Keep the camera [[steady]] while you take a picture."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "平稳的；持续的；逐渐的",
+				"en": "developing gradually or without stopping, and not likely to change",
+				"examples": [
+					"The study also notes a [[steady]] drop in the number of college students taking science courses."
+				]
+			}
+		]
+	},
+	{
+		"english": "unsteadily",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "颤抖地；抖动地",
+				"en": "in a way that involves shaking or moving in a way you cannot control",
+				"examples": [
+					"I walked [[unsteadily]] to another room and looked outside."
+				]
+			}
+		]
+	},
+	{
+		"english": "unexpected",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "想不到的；意外的；突然的",
+				"en": "used to describe sth. that is surprising because you were not expecting it",
+				"examples": [
+					"The experiment with new methods produced some [[unexpected]] results."
+				]
+			}
+		]
+	},
+	{
+		"english": "handshake",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "握手",
+				"en": "the act of taking sb.'s right hand and shaking it, which people do when they meet or leave each other or when they have reached an agreement",
+				"examples": [
+					"He greeted me with a firm [[handshake]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "suck",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "吸；吮；啜",
+				"en": "take air, liquid, etc. into your mouth by making your lips form a small hole and using the muscles of your mouth to pull it in",
+				"examples": [
+					"He [[sucked]] hard for air to keep breathing."
+				]
+			}
+		]
+	},
+	{
+		"english": "brace",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）准备迎接（令人不快的事）",
+				"en": "(~ oneself / sb. for) mentally or physically prepare yourself or sb. else for sth. unpleasant that is going to happen",
+				"examples": [
+					"Nancy [[braced]] herself for the inevitable arguments during the meeting."
+				]
+			}
+		]
+	},
+	{
+		"english": "embrace",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "拥抱",
+				"en": "the act of holding sb. close to you, esp. as a sign of love",
+				"examples": [
+					"They held each other in a tender [[embrace]]."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "抱；拥抱",
+				"en": "put your arms around sb. and hold them in a friendly or loving way",
+				"examples": [
+					"The couple were sort of crying for joy and [[embracing]] each other."
+				]
+			}
+		]
+	},
+	{
+		"english": "throat",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "喉咙；咽喉",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "sadness",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "悲伤；悲痛",
+				"en": "the state of feeling sad",
+				"examples": [
+					"It was with great [[sadness]] that we learned of his death."
+				]
+			}
+		]
+	},
+	{
+		"english": "dresser",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "梳妆台",
+				"en": "a low table with a mirror where one sits while applying makeup",
+				"examples": [
+					"Mary took the watch out of her [[dresser]] and put it on."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "衣橱",
+				"en": "a piece of furniture with drawers for storing clothes, sometimes with a mirror on top",
+				"examples": [
+					"He put the pants in the [[dresser]] and went to bed."
+				]
+			}
+		]
+	},
+	{
+		"english": "sling",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（松松垮垮地）挂，吊，悬",
+				"en": "(slung, slung) hang sth. loosely",
+				"examples": [
+					"She likes to wear a belt [[slung]] around her waist."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（随意而稍用力地）拐，掷，抛",
+				"en": "(slung, slung) throw or put sth. somewhere with a careless movement and some force",
+				"examples": [
+					"He stood up and [[slung]] his gun over his shoulder."
+				]
+			}
+		]
+	},
+	{
+		"english": "oversized",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "大于一般的；太大的",
+				"en": "bigger than usual or too big",
+				"examples": [
+					"I'm sorry. Your parcel is a bit [[oversized]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "sunglasses",
+		"senses": [
+			{
+				"pos": "n. [pl.]",
+				"zh": "太阳镜；墨镜",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "entire",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "全部的；整个的",
+				"en": "(only before noun) used when you want to emphasize that you mean all of a group, period of time, amount, etc.",
+				"examples": [
+					"He was so tired that he slept through the [[entire]] movie."
+				]
+			}
+		]
+	},
+	{
+		"english": "porch",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（房屋前后的）游廊，走廊；阳台",
+				"en": "(AmE) a structure built onto the front or back entrance of a house, with a floor and a roof but no walls",
+				"examples": []
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "（房子或教堂前门外有顶的）入口，门廊",
+				"en": "(BrE) an entrance covered by a roof outside the front door of a house or church",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "carton",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "硬纸盒；塑料盒",
+				"en": "a small box made of cardboard or plastic that contains food or a drink",
+				"examples": [
+					"She was so thirsty that she drank a [[carton]] of orange juice."
+				]
+			}
+		]
+	},
+	{
+		"english": "rewind",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "倒回（录音带或录像带）",
+				"en": "(rewound, rewound) make a cassette tape or video go backward in order to see or hear it again",
+				"examples": [
+					"He [[rewound]] the tape and replayed a few pieces."
+				]
+			}
+		]
+	},
+	{
+		"english": "sip",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "小口地喝；抿；呷",
+				"en": "drink sth. slowly, taking very small mouthfuls",
+				"examples": [
+					"She was sitting at the table [[sipping]] her coffee."
+				]
+			}
+		]
+	},
+	{
+		"english": "patio",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（房屋外面的）露台，平台",
+				"en": "(pl. patios) a flat hard area near a house, where people sit outside",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "seagull",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "海鸥",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "rail",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "铁路系统",
+				"en": "the railway system",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "obligation",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "（道义或法律上的）义务，职责，责任",
+				"en": "a moral or legal duty to do sth.",
+				"examples": [
+					"Employers have an [[obligation]] to treat all employees equally."
+				]
+			}
+		]
+	},
+	{
+		"english": "reassure",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使安心；使放心；使消除疑虑",
+				"en": "make sb. feel calmer and less worried or frightened about a problem or situation",
+				"examples": [
+					"He tried to [[reassure]] me, but I still felt anxious."
+				]
+			}
+		]
+	},
+	{
+		"english": "handwritten",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "手写的",
+				"en": "written by hand, not printed",
+				"examples": [
+					"Would you like the essay typed or [[handwritten]]?"
+				]
+			}
+		]
+	},
+	{
+		"english": "shamelessly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "无耻地；不知羞耻地",
+				"en": "without feeling ashamed of your bad behavior although other people think you should be ashamed",
+				"examples": [
+					"He [[shamelessly]] abandoned the project when he realized he would not gain any benefits from it."
+				]
+			}
+		]
+	},
+	{
+		"english": "drunk",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "喝醉的",
+				"en": "(not before noun) unable to control your behavior, speech, etc. because you have drunk too much alcohol",
+				"examples": [
+					"David got [[drunk]] and I had to take him home and put him to bed."
+				]
+			}
+		]
+	},
+	{
+		"english": "thunderstorm",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "雷暴",
+				"en": "a storm with thunder and lightning",
+				"examples": [
+					"Eventually, the [[thunderstorm]] stopped and we saw a beautiful rainbow in the sky."
+				]
+			}
+		]
+	},
+	{
+		"english": "cuddle",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（尤指表示喜爱而）抱，拥抱，搂抱",
+				"en": "hold sb. / sth. very close to you with your arms around them, esp. to show that you love them",
+				"examples": [
+					"Dawn and her boyfriend were [[cuddling]] on the sofa."
+				]
+			}
+		]
+	},
+	{
+		"english": "dependent",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "取决于某物",
+				"en": "(be ~ on / upon) be directly affected or decided by sth. else",
+				"examples": [
+					"Your pay is [[dependent]] on how much you produce."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "依靠的；依赖的",
+				"en": "needing sb. / sth. in order to survive or be successful",
+				"examples": [
+					"You can't be [[dependent]] on your parents all your life."
+				]
+			}
+		]
+	},
+	{
+		"english": "pick up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "搭载；接载",
+				"en": "let sb. get into your car, boat, etc. and take them somewhere",
+				"examples": [
+					"I'll [[pick]] you [[up]] at the station and take you to the dinner party afterward."
+				]
+			}
+		]
+	},
+	{
+		"english": "work against",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "有效地对抗；击败",
+				"en": "work effectively toward countering or defeating sb. / sth.",
+				"examples": [
+					"I heard that pepper spray [[works]] well [[against]] bears."
+				]
+			}
+		]
+	},
+	{
+		"english": "lift off",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（飞机）起飞；（航天器）升空",
+				"en": "if an aircraft or spacecraft lifts off, it leaves the ground and rises into the air",
+				"examples": [
+					"The aeroplane [[lifted off]] at noon for New York with more than 100 passengers."
+				]
+			}
+		]
+	},
+	{
+		"english": "stay up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "熬夜；深夜不睡觉",
+				"en": "not go to bed at the time you would normally go to bed",
+				"examples": [
+					"With so much homework to do, I will have to [[stay up]] late tonight."
+				]
+			}
+		]
+	},
+	{
+		"english": "settle for",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "勉强接受；将就",
+				"en": "accept sth. even though it is not the best, or not what you really want",
+				"examples": [
+					"They want $2,500 for it, but they might [[settle for]] $2,000."
+				]
+			}
+		]
+	},
+	{
+		"english": "within walking distance",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "在步行距离之内",
+				"en": "near enough to walk to easily",
+				"examples": [
+					"She used to live [[within walking distance]] of her children."
+				]
+			}
+		]
+	},
+	{
+		"english": "on one's mind",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "挂在心上的；惦念的",
+				"en": "if sth. is on your mind, you keep thinking or worrying about it",
+				"examples": [
+					"He looked as though he had something [[on his mind]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "at the top of one's lungs",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "尽量大声地；放声地",
+				"en": "as loudly as possible",
+				"examples": [
+					"He came running up to me screaming [[at the top of his lungs]], \"I love you!\""
+				]
+			}
+		]
+	},
+	{
+		"english": "cuddle up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "偎依",
+				"en": "lie or sit very close to sb. / sth.",
+				"examples": [
+					"We [[cuddled up]] together to keep out the cold."
+				]
+			}
+		]
+	},
+	{
+		"english": "Netflix",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "网飞（在线影片租赁提供商，总部位于美国加利福尼亚州）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

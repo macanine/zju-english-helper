@@ -1,0 +1,1231 @@
+[
+	{
+		"english": "foolish",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "愚蠢的；笨的",
+				"en": "unwise, without good sense",
+				"examples": [
+					"It would be [[foolish]] to spend money on something you can't afford."
+				]
+			}
+		]
+	},
+	{
+		"english": "intersection",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（尤指两条道路的）交叉点，十字路口；（线的）交叉点",
+				"en": "a place where roads, lines, etc. cross each other, esp. where two roads meet",
+				"examples": [
+					"Traffic lights have been placed at all major [[intersections]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "encounter",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "偶然碰到（某人）",
+				"en": "(fml.) meet sb. without planning to",
+				"examples": [
+					"I first [[encountered]] him when I was studying at Cambridge."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "遇到，遭遇（尤指问题或反对）",
+				"en": "experience sth., esp. problems or opposition",
+				"examples": [
+					"The more dangers we [[encounter]], the harder should we push forward."
+				]
+			}
+		]
+	},
+	{
+		"english": "peer",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（尤指因看起来费劲而）凝视，盯着看",
+				"en": "look very carefully or hard at sth., esp. because you are having difficulty seeing it",
+				"examples": [
+					"I had been [[peering]] at a computer printout that made no sense at all."
+				]
+			},
+			{
+				"pos": "n. [C, usu. pl.]",
+				"zh": "同龄人；身份（或地位）相同的人",
+				"en": "(fml.) sb. of the same age, social class, etc.",
+				"examples": [
+					"Children compete to win the approval of their [[peers]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "upward",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "向上；朝上",
+				"en": "(esp. AmE) moving or pointing toward a higher position",
+				"examples": [
+					"Pointing [[upward]], he indicated a large nest high in the tree."
+				]
+			}
+		]
+	},
+	{
+		"english": "cloakroom",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "衣帽间；衣帽寄存处",
+				"en": "a small room where you can leave your coat",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "herd",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "兽群；牧群",
+				"en": "a group of animals of one kind that live and feed together",
+				"examples": [
+					"The milkman selected the spotted cows, from among a [[herd]] of 200."
+				]
+			}
+		]
+	},
+	{
+		"english": "instinct",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "本能；直觉；天性",
+				"en": "a natural tendency to behave in a particular way or a natural ability to know sth., which is not learned",
+				"examples": [
+					"Hearing the loud noise, Mary's first [[instinct]] was to hide under the blankets."
+				]
+			}
+		]
+	},
+	{
+		"english": "herd instinct",
+		"senses": [
+			{
+				"pos": "n. [sing.]",
+				"zh": "群体本能（人或动物在行为或思维上从众的自然趋势）",
+				"en": "the natural tendency in people or animals to behave or think like other people or animals",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "dictate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "支配；影响；决定",
+				"en": "control or influence sth.",
+				"examples": [
+					"Circumstances [[dictated]] that they played a defensive rather than attacking game."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "口授；让（某人）听写",
+				"en": "say words for sb. else to write down",
+				"examples": [
+					"She's [[dictating]] a letter to her secretary right now."
+				]
+			}
+		]
+	},
+	{
+		"english": "evil",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "罪恶；邪恶",
+				"en": "a force that causes bad things to happen",
+				"examples": [
+					"There's always a conflict between good and [[evil]] in his plays."
+				]
+			}
+		]
+	},
+	{
+		"english": "stock",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "股份；股票",
+				"en": "(esp. AmE) a share in a company",
+				"examples": []
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "存货；现货",
+				"en": "a supply of a particular type of thing that a shop has available to sell",
+				"examples": [
+					"We have a huge [[stock]] of quality carpets on sale."
+				]
+			}
+		]
+	},
+	{
+		"english": "stock market",
+		"senses": [
+			{
+				"pos": "n. [C, usu. sing.]",
+				"zh": "证券交易（所）；股票交易（所）；股市",
+				"en": "the business of buying and selling shares in companies and the place where this happens",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "panic",
+		"senses": [
+			{
+				"pos": "n. [C, usu. sing.]",
+				"zh": "人心惶惶的局面；惶恐不安",
+				"en": "a situation in which people are suddenly made very anxious, and make quick decisions without thinking carefully",
+				"examples": [
+					"The magazine article is about the recent [[panic]] over the safety of baby milk."
+				]
+			},
+			{
+				"pos": "n. [C, usu. sing.]",
+				"zh": "恐慌；惊恐",
+				"en": "an overwhelming feeling of fear and anxiety",
+				"examples": [
+					"The audience were thrown into a [[panic]] when the fire started."
+				]
+			}
+		]
+	},
+	{
+		"english": "religion",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "宗教；宗教信仰",
+				"en": "the belief in the existence of a god or gods, and the activities that are connected with the worship of them",
+				"examples": [
+					"Try to avoid as much as possible subjects such as [[religion]], sex, or politics."
+				]
+			}
+		]
+	},
+	{
+		"english": "paralyze",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使无法正常运转",
+				"en": "make sth. unable to operate normally",
+				"examples": [
+					"The regional capital was [[paralyzed]] by a general strike."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "使瘫痪；使麻痹",
+				"en": "make sb. lose the ability to move part or all of their body, or to feel it",
+				"examples": [
+					"Her legs were partly [[paralyzed]] in the crash."
+				]
+			}
+		]
+	},
+	{
+		"english": "legendary",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "非常有名的；大名鼎鼎的；传奇式的",
+				"en": "very famous and admired",
+				"examples": [
+					"He is [[legendary]] for his fearlessness and determination."
+				]
+			}
+		]
+	},
+	{
+		"english": "psychologist",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "心理学家",
+				"en": "a scientist trained in psychology",
+				"examples": [
+					"[[Psychologist]] Martin Lloyd-Elliott is also a best-selling author."
+				]
+			}
+		]
+	},
+	{
+		"english": "warp",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使（行为等）不合情理",
+				"en": "influence sb. so that they begin to behave in an unacceptable or shocking way",
+				"examples": [
+					"I never had any toys since my father thought that they would [[warp]] my personal values."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）扭曲，弯曲，变形",
+				"en": "become, or make sth. become, twisted or bent out of its natural shape, for example because it has become too hot, too damp, etc.",
+				"examples": [
+					"The window frame must have been [[warped]]; it won't close properly."
+				]
+			}
+		]
+	},
+	{
+		"english": "correspond",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "相一致；符合",
+				"en": "(~ to / with) be the same as or match sth.",
+				"examples": [
+					"Your account of the event does not [[correspond]] with hers."
+				]
+			}
+		]
+	},
+	{
+		"english": "survival",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "生存；幸存",
+				"en": "the state of continuing to live or exist",
+				"examples": [
+					"The man's [[survival]] was surprising, as the doctors thought he would die."
+				]
+			}
+		]
+	},
+	{
+		"english": "hunter-gatherer",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "采猎者（以打猎和采集植物为生的人）",
+				"en": "a member of a group of people that lives by hunting and looking for plants that can be eaten, rather than by keeping animals for food or by growing crops",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "bolt",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "逃跑；跑开",
+				"en": "suddenly run somewhere very quickly, esp. in order to escape or because you are frightened",
+				"examples": [
+					"The thief [[bolted]] when he saw the policeman."
+				]
+			}
+		]
+	},
+	{
+		"english": "scratch",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "抓；搔",
+				"en": "rub your fingernails against your skin",
+				"examples": [
+					"Jessica lifted her sunglasses and [[scratched]] her nose."
+				]
+			}
+		]
+	},
+	{
+		"english": "sprint",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（短距离）快速奔跑，冲刺",
+				"en": "run very fast for a short distance",
+				"examples": [
+					"I saw Charlie [[sprinting]] through the traffic toward me."
+				]
+			}
+		]
+	},
+	{
+		"english": "gene",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "基因",
+				"en": "a part of a cell in a living thing which controls its physical characteristics, growth, and development",
+				"examples": [
+					"He said he was good at sports because he had the athletic [[gene]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "descendant",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "后代；后裔",
+				"en": "sb. who is related to a person who lived a long time ago, or to a family, group of people, etc. that existed in the past",
+				"examples": [
+					"They are [[descendants]] of the original English and Scottish settlers."
+				]
+			}
+		]
+	},
+	{
+		"english": "rooted",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（观念、原则等）根深蒂固的",
+				"en": "firmly fixed and unchangeable",
+				"examples": [
+					"The report suggests that deeply [[rooted]] cultural and social factors play a role in these behaviors."
+				]
+			}
+		]
+	},
+	{
+		"english": "impressive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "给人印象深刻的",
+				"en": "(of things or people) making a strong impression, because they are very large, good, skillful, etc.",
+				"examples": [
+					"The building looked as [[impressive]] in reality as it did in photographs."
+				]
+			}
+		]
+	},
+	{
+		"english": "Nazi",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "纳粹党的",
+				"en": "belonging to or connected with the National Socialist German Workers' Party which controlled Germany from 1933 to 1945",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "propaganda",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "（政府或政党为了影响民意而进行的）宣传",
+				"en": "information which is false or which emphasizes just one part of a situation, used by a government or political group to make people agree with them",
+				"examples": [
+					"These reports clearly contain elements of [[propaganda]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "radical",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "彻底的；完全的",
+				"en": "thorough and complete",
+				"examples": [
+					"The Football League has announced its proposals for a [[radical]] reform of the way football is run in England."
+				]
+			}
+		]
+	},
+	{
+		"english": "roar",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "咆哮；大声喊叫",
+				"en": "shout sth. in a deep powerful voice",
+				"examples": [
+					"It was such a great performance that the audience [[roared]] with appreciation."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "吼叫；呼啸",
+				"en": "make a deep, very loud noise",
+				"examples": [
+					"We were so afraid as we heard a lion [[roar]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "anonymously",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "以匿名的方式；不透露姓名地",
+				"en": "namelessly; without giving a name",
+				"examples": [
+					"The latest photographs were sent [[anonymously]] to the magazine's Paris headquarters."
+				]
+			}
+		]
+	},
+	{
+		"english": "consent",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "同意；允许",
+				"en": "(~ to) give your permission for sth., or agree to do sth.",
+				"examples": [
+					"She asked her mother whether she would [[consent]] to a small celebration after her graduation."
+				]
+			}
+		]
+	},
+	{
+		"english": "advertising",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "广告活动；广告业",
+				"en": "the activity or business of drawing public attention to goods and services on television, in newspapers, etc.",
+				"examples": [
+					"The [[advertising]] campaign is aimed primarily at young people."
+				]
+			}
+		]
+	},
+	{
+		"english": "disadvantage",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "不利因素；缺点",
+				"en": "sth. that causes problems and tends to stop sb. / sth. from succeeding or making progress",
+				"examples": [
+					"You have to balance the advantages of living downtown against the [[disadvantages]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "skeptical",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "怀疑的；心存疑惑的",
+				"en": "(BrE sceptical) having doubts that a claim or statement is true or that sth. will happen",
+				"examples": [
+					"They are [[skeptical]] about my chances of winning."
+				]
+			}
+		]
+	},
+	{
+		"english": "novelist",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "小说家",
+				"en": "a person who writes novels",
+				"examples": [
+					"Mark Twain has been regarded as the greatest American [[novelist]] of his generation."
+				]
+			}
+		]
+	},
+	{
+		"english": "transit",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "交通运输系统",
+				"en": "(BrE transport) a system for moving people from place to place",
+				"examples": [
+					"The president wants to improve the nation's highway and mass [[transit]] system."
+				]
+			},
+			{
+				"pos": "n. [U]",
+				"zh": "（货物或人的）运输",
+				"en": "the process of moving goods or people from one place to another",
+				"examples": [
+					"They promised that my baggage would not be damaged in [[transit]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "convert",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使转变；使转化；使改造",
+				"en": "change sth. into a different form, or change sth. so that it can be used for a different purpose or in a different way",
+				"examples": [
+					"This device can be used to [[convert]] a signal into a digital code."
+				]
+			}
+		]
+	},
+	{
+		"english": "prototype",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "原型；雏形；最初形态",
+				"en": "the first design of sth. from which other forms are copied or developed",
+				"examples": [
+					"We plan to release a [[prototype]] this autumn for trial in hospitals."
+				]
+			}
+		]
+	},
+	{
+		"english": "input",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（向计算机）输入",
+				"en": "(input, input; inputted, inputted) put information into a computer",
+				"examples": [
+					"All call center staff do is [[input]] data into computers and so it makes every sense that you do it yourself to cut cost."
+				]
+			}
+		]
+	},
+	{
+		"english": "smartphone",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "智能手机",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "existing",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "目前的；现存的",
+				"en": "(only before noun) found or used now",
+				"examples": [
+					"Under [[existing]] regulations, you are not allowed to bring animals into the country."
+				]
+			}
+		]
+	},
+	{
+		"english": "web-based",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "基于网络的",
+				"en": "relating to or done using the Web (the system of connected documents on the Internet)",
+				"examples": [
+					"With the new [[web-based]] software, creating a purchase order should take just a few minutes."
+				]
+			}
+		]
+	},
+	{
+		"english": "code",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "密码；暗码；电码；代码",
+				"en": "a system of words, letters, numbers, or symbols that represent a message or record information secretly or in a shorter form",
+				"examples": [
+					"He received a message written in [[code]] yesterday and he didn't know what to do about it."
+				]
+			}
+		]
+	},
+	{
+		"english": "metropolitan",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "大城市的；大都会的",
+				"en": "(only before noun) connected with a large or capital city",
+				"examples": [
+					"This is an issue that should be decided by local and [[metropolitan]] governments."
+				]
+			}
+		]
+	},
+	{
+		"english": "real-time",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "即时处理的；实时的",
+				"en": "(only before noun) of or being the very rapid use, handling, or showing of information by a computer",
+				"examples": [
+					"We are designing a secure and [[real-time]] voice transmission system."
+				]
+			}
+		]
+	},
+	{
+		"english": "avenue",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "街；大街",
+				"en": "used in the names of streets in a town or city",
+				"examples": [
+					"When we visited New York, we stayed in a hotel on Fifth [[Avenue]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "effective",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有效的；产生预期效果的",
+				"en": "successful, and working in the way that was intended",
+				"examples": [
+					"The cheaper drugs are just as [[effective]] in treating this disease."
+				]
+			}
+		]
+	},
+	{
+		"english": "underestimate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "低估；（对···）估计不足；看轻",
+				"en": "think or guess that sth. is smaller, cheaper, easier, etc. than it really is",
+				"examples": [
+					"None of us should ever [[underestimate]] the degree of difficulty women face in career advancement."
+				]
+			}
+		]
+	},
+	{
+		"english": "epiphany",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "顿悟的时刻",
+				"en": "a moment when you suddenly realize or understand sth. important",
+				"examples": [
+					"People are all familiar with the story of Issac Newton's [[epiphany]] about gravity (地球引力) and a falling apple."
+				]
+			}
+		]
+	},
+	{
+		"english": "aging",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "变老的；陈旧的",
+				"en": "(only before noun) becoming old; rather old",
+				"examples": [
+					"We need to replace some of the [[aging]] office equipment."
+				]
+			}
+		]
+	},
+	{
+		"english": "shelter",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "躲避风雨的地方；避难处",
+				"en": "a building or an area with a roof over it that protects you from the weather or from danger",
+				"examples": [
+					"They built a rough [[shelter]] from old pieces of wood."
+				]
+			},
+			{
+				"pos": "n. [U]",
+				"zh": "栖身之地；住处",
+				"en": "a place to live, considered as one of the basic needs of life",
+				"examples": [
+					"They were in need of food and [[shelter]] after the earthquake."
+				]
+			}
+		]
+	},
+	{
+		"english": "bus shelter",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "公共汽车候车亭",
+				"en": "(BrE) a small structure with a roof where you wait for a bus",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "solar-powered",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "太阳能驱动的",
+				"en": "powered by energy from sunlight",
+				"examples": [
+					"The company is developing a fully [[solar-powered]] car."
+				]
+			}
+		]
+	},
+	{
+		"english": "civic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "城镇的；城市的",
+				"en": "(only before noun) relating to a town or city",
+				"examples": [
+					"The president's visit was the most important [[civic]] event of the year."
+				]
+			}
+		]
+	},
+	{
+		"english": "temper",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使缓和；使温和；冲淡",
+				"en": "(fml.) make sth. less severe or extreme",
+				"examples": [
+					"The heat in this coastal town is [[tempered]] by the cool sea breeze (微风)."
+				]
+			}
+		]
+	},
+	{
+		"english": "install",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "安装，设置（设备）",
+				"en": "put a piece of equipment somewhere and connect it so that it is ready to be used",
+				"examples": [
+					"It would cost about £3,000 to [[install]] a new heating system in a flat such as theirs."
+				]
+			}
+		]
+	},
+	{
+		"english": "commute",
+		"senses": [
+			{
+				"pos": "n. [C, usu. sing.]",
+				"zh": "上下班路程",
+				"en": "the journey to work every day",
+				"examples": [
+					"I want to rent an apartment near my office because my daily [[commute]] takes too long."
+				]
+			}
+		]
+	},
+	{
+		"english": "mayor",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（民选的）市长，镇长",
+				"en": "the head of the government of a town or city, etc., elected by the public",
+				"examples": [
+					"The crowd gathered in the town square to hear the [[mayor]] speak."
+				]
+			}
+		]
+	},
+	{
+		"english": "uncertain",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "不确定的；没把握的；拿不准的",
+				"en": "(not before noun) feeling doubt about sth.",
+				"examples": [
+					"It's still [[uncertain]] whether the College Spring Sports will be held this year."
+				]
+			}
+		]
+	},
+	{
+		"english": "upbeat",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "乐观的；积极向上的",
+				"en": "positive and making you feel that good things will happen",
+				"examples": [
+					"New research shows that all it may take to avoid this common disease is a positive and [[upbeat]] attitude."
+				]
+			}
+		]
+	},
+	{
+		"english": "en route",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "在路上；在途中",
+				"en": "on the way",
+				"examples": [
+					"We stopped for a picnic [[en route]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "crane",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "吊车；起重机",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "deed",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（尤指很好或很坏的）行为，行动",
+				"en": "(fml.) sth. sb. does, esp. sth. that is very good or very bad",
+				"examples": [
+					"His heroic [[deeds]] were celebrated in every corner of the city."
+				]
+			}
+		]
+	},
+	{
+		"english": "spark",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "引发；触发",
+				"en": "cause sth. to start or develop, esp. suddenly",
+				"examples": [
+					"Will the rapid rise in oil prices [[spark]] another crisis?"
+				]
+			}
+		]
+	},
+	{
+		"english": "join in",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "加入，参加（活动）",
+				"en": "take part in an activity with other people",
+				"examples": [
+					"Now and again he'd [[join in]] when we were playing video games."
+				]
+			}
+		]
+	},
+	{
+		"english": "in other words",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "换言之；换句话说；也就是说",
+				"en": "used to introduce an explanation of sth.",
+				"examples": [
+					"[[In other words]], we have to build different ways of working."
+				]
+			}
+		]
+	},
+	{
+		"english": "one after another",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "一个接一个",
+				"en": "used to talk about a series of similar things or events that are done or happening with very little time between them",
+				"examples": [
+					"[[One after another]], people described how hard it was for them to get medical care."
+				]
+			}
+		]
+	},
+	{
+		"english": "stay put",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "留在原地",
+				"en": "stay in the original place",
+				"examples": [
+					"Nigel says for the moment he is very happy to [[stay put]] in London."
+				]
+			}
+		]
+	},
+	{
+		"english": "weigh up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "权衡；仔细考虑",
+				"en": "consider sth. carefully so that you can make a decision about it",
+				"examples": [
+					"You have to [[weigh up]] in your mind whether to pursue your goal or not."
+				]
+			}
+		]
+	},
+	{
+		"english": "later on",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "过后；后来",
+				"en": "at a time in the future",
+				"examples": [
+					"I hate to rush you but I have another appointment [[later on]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "go from bad to worse",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "每况愈下；越来越糟",
+				"en": "become even more unpleasant, difficult, etc.",
+				"examples": [
+					"For the past couple of years my health has [[gone from bad to worse]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "make a / no / some / etc. difference",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "有（或没有、有些等）作用，关系，影响",
+				"en": "have an effect / no effect on sb. / sth.",
+				"examples": [
+					"The new central heating has [[made]] an enormous [[difference]] to the house."
+				]
+			}
+		]
+	},
+	{
+		"english": "up and running",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "正常运转",
+				"en": "operating normally",
+				"examples": [
+					"We're trying to get the medical facilities [[up and running]] again."
+				]
+			}
+		]
+	},
+	{
+		"english": "call in",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "打电话到（电台、电视台）",
+				"en": "telephone a radio or television program with a comment or question",
+				"examples": [
+					"It's a hot topic, and people have been [[calling in]] all morning."
+				]
+			}
+		]
+	},
+	{
+		"english": "check out",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "核实；查证；调查",
+				"en": "make sure that sth. is actually true, correct, or acceptable",
+				"examples": [
+					"Maybe we ought to go down to the library and [[check]] it [[out]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "tear down",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "拆毁，拆除（建筑物、墙等）",
+				"en": "pull or knock down a building, wall, etc.",
+				"examples": [
+					"The city government has decided to [[tear down]] several buildings and create a park."
+				]
+			}
+		]
+	},
+	{
+		"english": "sb. can't help (doing) sth.",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "某人忍不住做某事；某人不能停止做某事",
+				"en": "(also 'sb. can't help but do sth.') used to say that sb. is unable to change their behavior, or feelings, or to prevent themselves from doing sth.",
+				"examples": [
+					"In fact, I [[can't help]] wondering what someone with your experience is doing in a place like this."
+				]
+			}
+		]
+	},
+	{
+		"english": "write off",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "认定某人/某事无用（不重要，失败）",
+				"en": "decide that sb. / sth. is useless, unimportant, or a failure",
+				"examples": [
+					"It's too soon to [[write off]] the project as a failure."
+				]
+			}
+		]
+	},
+	{
+		"english": "pull over",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（使）车辆停靠在路边",
+				"en": "drive to the side of the road and stop your car, bike, etc. or make sb. else do this",
+				"examples": [
+					"The police signaled to him to [[pull over]] and gave him a drunk driving test."
+				]
+			}
+		]
+	},
+	{
+		"english": "Solomon Asch",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "所罗门 • 阿希（美国社会心理学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Serengeti",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "（非洲）塞伦盖蒂（联合国教科文组织‘人与生物圈计划’的生物圈保护区）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Joseph Goebbels",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "约瑟夫 • 戈培尔（纳粹德国宣传部长）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "W. Somerset Maugham",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "W. 萨默塞特 • 毛姆（英国著名小说家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "John Keefe",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "约翰 · 基夫（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Manhattan",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "曼哈顿（美国纽约市一个行政区，纽约市的商业和文化中心）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Twilio",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "美国加利福尼亚州的一家科技公司",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Menlo Park",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "门洛帕克（美国加利福尼亚州城市）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]
