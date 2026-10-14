@@ -62,7 +62,7 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 - 当前存储键为：`zjueh.wrong-words`、`zjueh.mastered`、`zjueh.settings`、`zjueh.prefs`、`zjueh.speech`、`zjueh.word-stats`、`zjueh.day-stats`、`zjueh.theme`。当前 schema 是唯一持久化契约，不读取、迁移或合并旧结构；旧结构会被严格拒绝。
 - 新增持久化数据时，在 `lib/storage.ts` 增加当前 schema 的校验、首次安装默认值、加载/保存函数，并将键加入 `lib/backup.ts` 的 `BACKUP_KEYS`。不要把主题键误认为业务设置；它由主题切换组件直接读写。
 - 浏览器 API 只能在 effect、事件处理器或有 `typeof window` 守卫的客户端路径使用，避免静态预渲染和水合错误。存储读写错误应明确暴露，不要静默吞掉或用旧数据兜底。
-- 练习与复习的朗读由 `Prefs.practiceTts` 控制，首次安装默认开启。开启时只有听写题会在题目出现时自动朗读，答对后各模式都会朗读答案；关闭时听写题显示释义提示，不调用自动或手动练习朗读。语音服务节点由 `zjueh.speech` 保存，国内 Edge TTS 节点默认启用，设置页可切换国际节点；词库朗读和设置页试听使用当前选中的 provider。
+- 练习与复习的朗读由 `Prefs.practiceTts` 控制，首次安装默认开启。开启时只有听写题会在题目出现时自动朗读，答对后各模式都会朗读答案；关闭时听写题显示释义提示，不调用自动或手动练习朗读。语音服务由 `zjueh.speech` 保存，可选国内 Edge TTS、国际 Edge TTS 和本地浏览器（`browser`），默认国内。云端探测、合成或播放失败时自动使用浏览器语音，不改写保存的服务选择；设置页显示实际使用的服务和音色。失败服务 30 秒后可重试，重试探测时继续提供浏览器兜底，避免禁用朗读或打断焦点。
 
 ### 词库与例句
 
@@ -82,6 +82,7 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 - 词典表格与完整桌面导航从 768px 起显示，较窄屏幕使用词卡和移动菜单。桌面错题操作列保留整行按钮宽度；单词朗读用可聚焦按钮，不能只绑定文字点击。
 - 页面文案保持简洁：删除页脚致谢/归属、冗余副标题、重复辅助说明和悬停提示；保留字段标签、操作状态、错误与危险操作确认，以及必要的 `aria-label`。
 - 保持响应式、可键盘操作和可访问名称。小屏隐藏按钮文字时补 `aria-label`；透明打字输入框字号不得小于 16px；页面布局变更需检查 390px 宽度没有横向溢出。
+- 页头宽度使用 `100%` 跟随页面可用宽度；`100vw` 会在出现竖向滚动条时撑出页面，不能靠根节点裁剪掩盖溢出。
 - 动效简短并遵守 `app/globals.css` 的 `prefers-reduced-motion`；按压反馈可用 `active:scale-[0.97]`，已有入场类为 `.anim-in-up` 和 `.anim-pop`。
 - 需要跨出页头的移动端菜单必须使用 Radix `Portal`，且在 Portal 子树中再包与根布局一致的 `<Theme>`。页头有 `backdrop-blur`，裸的 fixed 子元素会受其包含块影响，Portal 则需要 Theme tokens。
 - Themes CSS 在 UnoCSS 工具类之后可能覆盖组件自身属性。不要用工具类硬改 `.rt-*` 组件的 `position` 等内置属性，优先调整 DOM 包装结构。根主题全屏高度只应用到 `html .radix-themes[data-is-root-theme='true']`，不能撑大 Portal 弹层；需要视口裁剪的长 Select 使用 `position="popper"`。Dialog 长内容需限制高度并放进 `ScrollArea`。
@@ -94,12 +95,13 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 - `components/typing-area.tsx` 用单个透明、受控 `<input>` 同时接收桌面键盘和移动软键盘输入；通过新旧 value 的 diff 更新逐字母格子。不要加全局 `keydown` 监听，也不要用 `key` 强制重挂载打字区，否则会打断输入焦点。
 - 处理输入先经过 `acceptInput()`：裁掉超出答案长度的字符，并吞掉当前答案位置不需要的空格，保证输入与格子逐位对应。首字母提示占据首格，用户照着整词输入时要由 `normalizeInput()` 去掉重复的提示首字母。
 - 保持四种状态 `typing / complete / reveal / error`：正确字符绿色、错误字符红色并保留，退格可修正且已正确字符继续保持正确色；全对后约 420ms 自动推进，空格或 Enter 可立即推进。Tab 跳过并 `preventDefault`，但 Shift+Tab 应允许离开输入区。Esc 显示答案并按错题记。
-- 音效由 `lib/sound.ts` 使用 Web Audio 合成，由 `Prefs.keySound` 控制；只在输入 diff 的事件路径触发一次，不要放入 state updater（Strict Mode 下可能重复执行）。启用练习朗读时，听写模式在题目出现时通过当前选中的 Edge TTS provider 朗读，答对后排队朗读作答答案；普通默写和例句填空不能提前泄露答案。项目不调用浏览器 `speechSynthesis`，也不把 provider 失败降级到浏览器语音。
+- 音效由 `lib/sound.ts` 使用 Web Audio 合成，由 `Prefs.keySound` 控制；只在输入 diff 的事件路径触发一次，不要放入 state updater（Strict Mode 下可能重复执行）。启用练习朗读时，听写模式在题目出现时通过所选语音服务朗读，答对后排队朗读作答答案；普通默写和例句填空不能提前泄露答案。浏览器朗读由 `lib/browser-speech.ts` 使用 `speechSynthesis` 实现，等待首次 `voiceschanged` 并优先选本机英文音色；音色 ID 只在所属服务中匹配，切换服务后失配时自动选英文音色。云端与浏览器共享播放队列，播放结束后才出队；停止朗读要取消合成请求、音频、浏览器朗读和队列，旧请求或取消事件不能启动兜底或后续播放。兜底状态变化不能让同一道听写题重复自动朗读。
 - `useSearchParams` 所在路由首屏显示 Suspense fallback 属预期行为。`next.config.mjs` 的 `trailingSlash: true` 生成 `out/<route>/index.html`；词库 fetch 使用 `/data/...` 绝对路径，部署到站点子路径时需要相应配置，不能直接双击 `out/index.html`。
 
 ## 测试与变更维护
 
 - 纯逻辑放在可独立测试的 `lib/` 函数中；现有测试覆盖引擎、会话编解码、词条模型、统计、存储和备份。逻辑行为变更时补对应 `tests/*.test.ts`，使用 `node:test` 和 `node:assert`，不要为测试给生产代码加无必要的导出或钩子。
+- `tests/tsconfig.json` 必须自行覆盖 `exclude`，不能继承主配置对 `tests` 的排除，否则只会编译 `lib` 并误跑 `.test-build/tests` 中的旧产物。
 - 纯 UI 与路由靠浏览器检查；优先验证受影响路径和交互，不把浏览器手测伪装成自动化测试。
 - 修改数据格式、持久化格式、URL 参数、判分推进语义或公开使用说明时，同时检查相关调用点、备份和文档。持久化格式只维护当前版本，不增加旧数据迁移路径。
 - README 面向用户与新开发者，只保留安装、功能、数据及部署说明；本文件承载实现不变量和容易回归的边界。新坑应写成可复现条件与应采取的做法，避免堆叠不再适用的历史描述。

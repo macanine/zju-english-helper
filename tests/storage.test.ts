@@ -4,12 +4,15 @@ import { beforeEach, test } from 'node:test'
 import {
   DEFAULT_PREFS,
   DEFAULT_SETTINGS,
+  DEFAULT_SPEECH_SETTINGS,
   loadPrefs,
   loadSettings,
+  loadSpeechSettings,
   loadWordStats,
   loadWrongWords,
   savePrefs,
   saveSettings,
+  saveSpeechSettings,
   type Prefs,
 } from '../lib/storage'
 import type { SenseCard } from '../lib/model'
@@ -37,8 +40,18 @@ const card: SenseCard = {
 test('首次读取会初始化当前 schema 的默认设置', () => {
   assert.deepEqual(loadPrefs(), DEFAULT_PREFS)
   assert.deepEqual(loadSettings(), DEFAULT_SETTINGS)
+  assert.deepEqual(loadSpeechSettings(), DEFAULT_SPEECH_SETTINGS)
   assert.deepEqual(JSON.parse(store.get('zjueh.prefs')!), DEFAULT_PREFS)
   assert.deepEqual(JSON.parse(store.get('zjueh.settings')!), DEFAULT_SETTINGS)
+})
+
+test('三种语音服务均可保存，未知服务仍严格拒绝', () => {
+  for (const provider of ['domestic', 'international', 'browser'] as const) {
+    saveSpeechSettings({ provider })
+    assert.deepEqual(loadSpeechSettings(), { provider })
+  }
+  store.set('zjueh.speech', JSON.stringify({ provider: 'unknown' }))
+  assert.throws(() => loadSpeechSettings(), /本地数据版本不匹配：zjueh\.speech/)
 })
 
 test('当前偏好和练习设置可以原样往返', () => {

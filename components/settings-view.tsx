@@ -50,6 +50,7 @@ const LOCALE_LABELS: Record<string, string> = {
 }
 
 function voiceDisplayName(voice: SpeechVoice) {
+  if (!/Neural$/i.test(voice.id)) return voice.name
   const name = voice.id.split('-').slice(2).join('-')
     .replace(/MultilingualNeural$/i, '')
     .replace(/Neural$/i, '')
@@ -106,30 +107,35 @@ function SpeechPreviewButton({
   compact?: boolean
 }) {
   const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState<string | null>(null)
   const preview = () => {
+    setError(null)
     setLoading(true)
     speak(PREVIEW_SENTENCE, {
       voiceURI,
       onStatus: (status) => {
         if (status === 'ready') setLoading(false)
       },
-      onError: () => setLoading(false),
+      onError: (error) => { setLoading(false); setError(error.message) },
     })
   }
 
   return (
-    <Button
-      size={compact ? '1' : '2'}
-      variant={compact ? 'ghost' : 'soft'}
-      color={compact ? 'gray' : undefined}
-      className={compact ? 'voice-list-preview' : undefined}
-      disabled={!canSpeak || loading}
-      aria-label={compact ? `试听${label ? ` ${label}` : '音色'}` : undefined}
-      onClick={preview}
-    >
-      {loading ? <LoaderCircle size={compact ? 13 : 14} className="loading-spinner" /> : <Volume2 size={compact ? 13 : 14} />}
-      {!compact && '试听'}
-    </Button>
+    <Flex direction="column" gap="1" align="end" className="min-w-0">
+      <Button
+        size={compact ? '1' : '2'}
+        variant={compact ? 'ghost' : 'soft'}
+        color={compact ? 'gray' : undefined}
+        className={compact ? 'voice-list-preview' : undefined}
+        disabled={!canSpeak || loading}
+        aria-label={compact ? `试听${label ? ` ${label}` : '音色'}` : undefined}
+        onClick={preview}
+      >
+        {loading ? <LoaderCircle size={compact ? 13 : 14} className="loading-spinner" /> : <Volume2 size={compact ? 13 : 14} />}
+        {!compact && '试听'}
+      </Button>
+      {error && <Text size="1" color="red" role="alert" className="settings-provider-description">{error}</Text>}
+    </Flex>
   )
 }
 
@@ -166,10 +172,10 @@ export function SettingsView() {
           title="朗读"
         >
           <FieldRow
-            label="后端服务"
+            label="语音服务"
             control={
               <SegmentedControl.Root
-                aria-label="语音后端服务"
+                aria-label="语音服务"
                 value={speechProvider.providerId}
                 onValueChange={(value) => speechProvider.selectProvider(value as SpeechProviderId)}
               >
@@ -190,10 +196,16 @@ export function SettingsView() {
               <Box className="min-w-0">
                 <Text as="div" size="2" weight="medium">
                   {speechProvider.status === 'checking'
-                    ? `正在检查${speechProvider.provider.name}语音`
+                    ? speechProvider.usingFallback
+                      ? `${speechProvider.provider.name}语音不可用，正在检查本地浏览器`
+                      : `正在检查${speechProvider.provider.name}语音`
                     : speechProvider.status === 'available'
-                      ? `${speechProvider.provider.name}语音已连接`
-                      : `${speechProvider.provider.name}语音暂不可用`}
+                      ? speechProvider.usingFallback
+                        ? `${speechProvider.provider.name}语音不可用，已使用本地浏览器`
+                        : `${speechProvider.provider.name}语音可用`
+                      : speechProvider.usingFallback
+                        ? '云端与本地浏览器语音均不可用'
+                        : `${speechProvider.provider.name}语音暂不可用`}
                 </Text>
                 {speechProvider.status === 'unavailable' && speechProvider.error && (
                   <Text as="div" size="1" color="gray" className="settings-provider-description">
@@ -203,7 +215,7 @@ export function SettingsView() {
               </Box>
             </Flex>
             <Badge size="1" color="gray" variant="soft">
-              {speechProvider.provider.name}
+              {speechProvider.activeProvider.name}
             </Badge>
           </Flex>
           <Box className="settings-voice-block">
@@ -345,12 +357,18 @@ function VoicePicker({
   const [open, setOpen] = React.useState(false)
   const [search, setSearch] = React.useState('')
   const selected = voices.find((voice) => voice.id === value)
-  const quickVoices = [
+  // 当前服务不存在保存的音色时，实际朗读会自动选择英文音色。
+  const selectedValue = selected?.id ?? null
+  const edgeQuickVoices = [
     voices.find((voice) => voice.id === 'en-GB-SoniaNeural'),
     voices.find((voice) => voice.id === 'en-GB-LibbyNeural'),
     voices.find((voice) => voice.id === 'en-GB-RyanNeural'),
     voices.find((voice) => voice.id === 'en-US-AvaNeural'),
   ].filter((voice): voice is SpeechVoice => Boolean(voice))
+  const suggestedVoices = edgeQuickVoices.length > 0 ? edgeQuickVoices : voices.slice(0, 4)
+  const quickVoices = selected && !suggestedVoices.some((voice) => voice.id === selected.id)
+    ? [selected, ...suggestedVoices.slice(0, 3)]
+    : suggestedVoices
   const filteredVoices = voices.filter((voice) =>
     `${voice.name} ${voice.locale} ${voice.gender ?? ''}`.toLowerCase().includes(search.trim().toLowerCase()),
   )
@@ -381,36 +399,36 @@ function VoicePicker({
         </Flex>
         <div className="settings-quick-voices">
           <Button
-            variant={value === null ? 'soft' : 'outline'}
-            color={value === null ? undefined : 'gray'}
+            variant={selectedValue === null ? 'soft' : 'outline'}
+            color={selectedValue === null ? undefined : 'gray'}
             size="2"
             className="settings-quick-voice settings-auto-quick-voice"
             onClick={() => choose(null)}
           >
             <Sparkles size={13} />
             <span className="settings-quick-voice-label">自动</span>
-            <span className="settings-quick-voice-check">{value === null && <CircleCheck size={15} />}</span>
+            <span className="settings-quick-voice-check">{selectedValue === null && <CircleCheck size={15} />}</span>
           </Button>
           {loading
             ? Array.from({ length: 4 }, (_, index) => <span key={index} className="settings-voice-loading-pill" aria-hidden="true" />)
             : quickVoices.map((voice) => (
               <Button
                 key={voice.id}
-                variant={value === voice.id ? 'soft' : 'outline'}
-                color={value === voice.id ? undefined : 'gray'}
+                variant={selectedValue === voice.id ? 'soft' : 'outline'}
+                color={selectedValue === voice.id ? undefined : 'gray'}
                 size="2"
                 className="settings-quick-voice"
                 onClick={() => choose(voice.id)}
               >
                 <span className="settings-quick-voice-label">{voiceDisplayName(voice)}</span>
-                <span className="settings-quick-voice-check">{value === voice.id && <CircleCheck size={15} />}</span>
+                <span className="settings-quick-voice-check">{selectedValue === voice.id && <CircleCheck size={15} />}</span>
               </Button>
             ))}
         </div>
       </Flex>
       <Dialog.Content maxWidth="520px" style={{ maxHeight: '85dvh' }}>
         <Flex align="center" justify="between" mb="2">
-          <Dialog.Title mb="0">选择云端音色</Dialog.Title>
+          <Dialog.Title mb="0">选择音色</Dialog.Title>
           <Dialog.Close>
             <Button variant="ghost" color="gray" aria-label="关闭音色选择">
               <X size={18} />
@@ -429,17 +447,17 @@ function VoicePicker({
         <ScrollArea type="auto" scrollbars="vertical" style={{ height: 'min(52dvh, 420px)' }}>
           <div className="voice-groups">
             <Button
-              variant={value === null ? 'soft' : 'outline'}
-              color={value === null ? undefined : 'gray'}
+              variant={selectedValue === null ? 'soft' : 'outline'}
+              color={selectedValue === null ? undefined : 'gray'}
               className="settings-auto-voice"
-              aria-pressed={value === null}
+              aria-pressed={selectedValue === null}
               onClick={() => { choose(null); setOpen(false) }}
             >
               <Flex align="center" gap="2" className="min-w-0">
                 <Sparkles size={14} />
                 <span className="min-w-0 text-left">自动</span>
               </Flex>
-              {value === null && <Check size={16} />}
+              {selectedValue === null && <Check size={16} />}
             </Button>
             {loading && (
               <div className="voice-loading-grid" role="status" aria-label="正在加载音色">
@@ -456,15 +474,15 @@ function VoicePicker({
                   {localeVoices.map((voice) => (
                     <Card key={voice.id} size="1" className="voice-choice-card">
                       <Button
-                        variant={value === voice.id ? 'soft' : 'ghost'}
-                        color={value === voice.id ? undefined : 'gray'}
-                        aria-pressed={value === voice.id}
+                        variant={selectedValue === voice.id ? 'soft' : 'ghost'}
+                        color={selectedValue === voice.id ? undefined : 'gray'}
+                        aria-pressed={selectedValue === voice.id}
                         aria-label={`选择 ${voiceDisplayName(voice)}`}
                         className="settings-voice-choice"
                         onClick={() => { choose(voice.id); setOpen(false) }}
                       >
                         <span className="voice-list-label">{voiceDisplayName(voice)}</span>
-                        <span className="voice-list-check">{value === voice.id && <Check size={16} />}</span>
+                        <span className="voice-list-check">{selectedValue === voice.id && <Check size={16} />}</span>
                       </Button>
                       <SpeechPreviewButton canSpeak={canSpeak} voiceURI={voice.id} label={voiceDisplayName(voice)} compact />
                     </Card>

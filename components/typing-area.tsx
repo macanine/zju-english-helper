@@ -67,6 +67,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
   const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null)
   const hadMistakeRef = React.useRef(false)
   const committedRef = React.useRef(false)
+  const autoSpokenQuestionRef = React.useRef<CurrentQuestion | null>(null)
 
   const word = question?.word ?? null
   const isExampleMode =
@@ -172,9 +173,10 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
 
   // 只有听写模式会在出题时朗读答案；普通默写与例句题必须先作答，避免提前泄露答案。
   React.useEffect(() => {
-    if (!word || !canSpeak || !speakText || !isListenMode) return
+    if (!question || !canSpeak || !speakText || !isListenMode || autoSpokenQuestionRef.current === question) return
+    autoSpokenQuestionRef.current = question
     speak(speakText)
-  }, [word, speakText, canSpeak, isListenMode])
+  }, [question, speakText, canSpeak, isListenMode])
 
   function commit() {
     if (committedRef.current || !question) return

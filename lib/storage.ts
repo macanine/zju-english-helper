@@ -43,8 +43,8 @@ export type EnMode = (typeof EN_MODES)[number]
 export const EXAMPLE_MODES = ['always', 'collapsible', 'hidden'] as const
 export type ExampleMode = (typeof EXAMPLE_MODES)[number]
 
-/** 语音服务节点；国内节点默认优先，海外节点作为备用。 */
-export const SPEECH_PROVIDER_IDS = ['domestic', 'international'] as const
+/** 国内 / 国际 Edge TTS 与本地浏览器语音；云端失败时使用浏览器兜底。 */
+export const SPEECH_PROVIDER_IDS = ['domestic', 'international', 'browser'] as const
 export type SpeechProviderId = (typeof SPEECH_PROVIDER_IDS)[number]
 
 export interface SpeechSettings {
@@ -57,7 +57,7 @@ export const DEFAULT_SPEECH_SETTINGS: SpeechSettings = {
 
 /** 个性化偏好（设置页） */
 export interface Prefs {
-  /** TTS provider 音色 ShortName；null = 自动（英音女声优先） */
+  /** Edge 音色 ShortName 或浏览器 voiceURI；null = 自动选择英文音色 */
   voiceURI: string | null
   /** TTS 语速 */
   rate: number

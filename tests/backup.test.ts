@@ -75,3 +75,13 @@ test('导出再导入保持当前 schema 不变', () => {
   assert.deepEqual(JSON.parse(store.get('zjueh.prefs')!), DEFAULT_PREFS)
   assert.deepEqual(JSON.parse(store.get('zjueh.wrong-words')!), [card])
 })
+
+test('本地浏览器语音选择可以随备份往返', () => {
+  store.set('zjueh.speech', JSON.stringify({ provider: 'browser' }))
+  store.set('zjueh.prefs', JSON.stringify({ ...DEFAULT_PREFS, voiceURI: 'local-british' }))
+  const backup = buildBackup()
+  store.clear()
+  assert.deepEqual(importBackup(JSON.stringify(backup)), { ok: true, keys: 2 })
+  assert.deepEqual(JSON.parse(store.get('zjueh.speech')!), { provider: 'browser' })
+  assert.equal(JSON.parse(store.get('zjueh.prefs')!).voiceURI, 'local-british')
+})
