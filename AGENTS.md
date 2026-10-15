@@ -5,7 +5,8 @@
 ## 项目边界
 
 - 项目是「大英默写器 Pro」的纯前端 Web 应用：Next.js 15 App Router、React 19、TypeScript，静态导出到 `out/`。没有应用后端、登录或云端用户数据。
-- 运行时词库来自 `public/data/` 的 JSON；用户数据保存在浏览器 `localStorage`。原 PyQt6 桌面版不属于当前产品，不要恢复桌面程序、Python 运行时或 exe 发布逻辑。
+- 运行时词库来自 `public/data/` 的 JSON；用户数据保存在浏览器 `localStorage`。
+- 桌面与 Android 分发由 `src-tauri/` 的 Tauri 2 壳复用同一份 `out/` 产物（asset protocol 从根路径提供，`/data/...` 绝对路径在两端都兼容），只提供原生窗口、安装包和 APK，不写 Rust 业务逻辑；原 PyQt6 桌面版仍不属于当前产品，不要恢复 Python 运行时。
 - UI 使用 `@radix-ui/themes` 与 UnoCSS。不要另加组件库或单独安装 `@radix-ui/react-*` 原语。
 
 ## 开发命令
@@ -19,9 +20,15 @@ npm run test:unit   # 编译并运行 tests/*.test.ts（node:test）
 npm test            # check:data + test:unit
 npm run build       # Next.js 静态导出到 out/
 npm run start       # 用 serve 托管 out/（先运行 build）
+npm run desktop:dev   # Tauri 桌面窗口调试（需要 Rust 工具链，devUrl 指向 3300）
+npm run desktop:build # 打当前平台安装包到 src-tauri/target/release/bundle/
+npm run android:dev   # Android 模拟器/设备调试（额外需要 JAVA_HOME(17+)、ANDROID_HOME、NDK_HOME）
+npm run android:build # 打通用 APK 到 src-tauri/gen/android/app/build/outputs/apk/
 ```
 
-按改动范围验证：词库改动跑 `npm run check:data`；纯逻辑改动跑相关单测或 `npm test`；应用、路由或配置改动跑类型检查和构建，并在浏览器检查受影响页面。UI 改动还要检查窄屏布局（390px）和键盘可用性。不要为纯文档改动启动应用或运行构建。
+按改动范围验证：词库改动跑 `npm run check:data`；纯逻辑改动跑相关单测或 `npm test`；应用、路由或配置改动跑类型检查和构建，并在浏览器检查受影响页面。UI 改动还要检查窄屏布局（390px）和键盘可用性。`src-tauri/` 改动先 `npm run build` 再 `cargo check --manifest-path src-tauri/Cargo.toml`，或 `npm run desktop:dev` 冒烟；涉及移动端改动再跑 `npm run android:build`。不要为纯文档改动启动应用或运行构建。
+
+发布只认版本：`package.json` 的 version 与 `v*` tag 必须一致（`release.yml` 先校验再构建），打包版本号由 `tauri.conf.json` 的 `version: "../package.json"` 从根 `package.json` 读取，Android `versionCode` 由 CLI 从同一版本生成写入 `tauri.properties`，不要在两处分别维护或在 Gradle 工程里手改版本。Android 发布签名读取 `ANDROID_KEY_BASE64`、`ANDROID_KEY_ALIAS`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_PASSWORD` secrets，未配置时回退 debug 签名（仅适合测试）；APK 由 `attach-android` job 附加到草稿 Release。
 
 ## 目录与职责
 
@@ -42,6 +49,9 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 | `public/data/` | 随仓库维护的当前词库 JSON，唯一运行时词库来源 |
 | `scripts/` | 词库校验工具 |
 | `tests/` | `node:test` 纯逻辑测试；不引入测试框架依赖 |
+| `src-tauri/` | Tauri 2 壳（桌面与 Android）：窗口、打包和图标配置；`frontendDist` 指向 `../out`，无自定义 Rust 命令 |
+| `src-tauri/gen/android/` | 已入库的 Android 工程；`keystore.properties`、签名密钥与构建产物由其间 `.gitignore` 排除，不要提交 |
+| `.github/workflows/` | `ci.yml` 检查 PR 与 main；`release.yml` 由 `v*` tag 触发，构建全平台安装包与 Android APK 并创建草稿 Release |
 
 路由由 `app/` 中的页面文件映射：`/` 首页、`/browse` 预习、`/practice` 练习、`/result` 成绩、`/wrong-words` 错题本、`/settings` 设置、`/help` 帮助。页面文件尽量只处理 metadata、加载边界和 Suspense；页面交互放在对应视图组件。使用 `useSearchParams` 的 `/browse`、`/practice`、`/result` 页面必须在页面层套 `<Suspense>`，静态导出依赖这个边界。
 

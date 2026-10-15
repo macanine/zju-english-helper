@@ -1,0 +1,166 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  verify-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: 校验 tag 与 package.json 版本一致
+        run: |
+          node -e "
+            const version = require('./package.json').version;
+            const tag = process.env.GITHUB_REF_NAME;
+            if (tag !== 'v' + version) {
+              console.error('tag ' + tag + ' 与 package.json 的 v' + version + ' 不一致，请先同步版本再打 tag');
+              process.exit(1);
+            }
+            console.log('版本一致：' + tag);
+          "
+
+  publish-desktop:
+    needs: verify-version
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-latest
+            args: '--target aarch64-apple-darwin'
+          - platform: macos-latest
+            args: '--target x86_64-apple-darwin'
+          - platform: ubuntu-22.04
+            args: ''
+          - platform: ubuntu-22.04-arm
+            args: ''
+          - platform: windows-latest
+            args: ''
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: 安装 Linux 系统依赖
+        if: startsWith(matrix.platform, 'ubuntu')
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf xdg-utils
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: './src-tauri -> target'
+
+      - run: npm ci
+
+      - uses: tauri-apps/tauri-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: '大英默写器 Pro v__VERSION__'
+          releaseBody: |
+            安装包见下方 Assets：
+
+            - macOS：`aarch64` 对应 Apple 芯片，`x64` 对应 Intel
+            - Windows：`.exe`（NSIS 安装器）或 `.msi`
+            - Linux：`.deb` / `.AppImage` / `.rpm`
+            - Android：`.apk`（通用包，含 arm64 / armv7 / x86_64 / x86）
+
+            安装包未经代码签名。macOS 首次打开如提示无法验证，请在「系统设置 → 隐私与安全性」中允许打开，或右键应用选择「打开」；Windows 出现 SmartScreen 提示时选择「仍要运行」；Android 安装时需允许安装未知来源应用。
+          releaseDraft: true
+          prerelease: false
+          args: ${{ matrix.args }}
+
+  publish-android:
+    needs: verify-version
+    runs-on: ubuntu-latest
+    env:
+      ANDROID_KEY_BASE64: ${{ secrets.ANDROID_KEY_BASE64 }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: 安装 Android SDK 组件
+        run: |
+          SDKMANAGER="${ANDROID_HOME:-/usr/local/lib/android/sdk}/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$SDKMANAGER" --licenses > /dev/null || true
+          "$SDKMANAGER" "platforms;android-37.0" "build-tools;37.0.0" "ndk;29.0.13846066"
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-linux-android,armv7-linux-androideabi,i686-linux-android,x86_64-linux-android
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: './src-tauri -> target'
+
+      - run: npm ci
+
+      - name: 配置 Android 签名
+        if: env.ANDROID_KEY_BASE64 != ''
+        env:
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          echo "$ANDROID_KEY_BASE64" | base64 --decode > "$RUNNER_TEMP/zjueh-release.jks"
+          cat > src-tauri/gen/android/keystore.properties <<EOF
+          storeFile=$RUNNER_TEMP/zjueh-release.jks
+          storePassword=$ANDROID_KEYSTORE_PASSWORD
+          keyAlias=$ANDROID_KEY_ALIAS
+          keyPassword=$ANDROID_KEY_PASSWORD
+          EOF
+
+      - name: 构建 APK
+        run: |
+          export NDK_HOME="$ANDROID_HOME/ndk/29.0.13846066"
+          npx tauri android build --apk --ci
+          VERSION="${GITHUB_REF_NAME#v}"
+          mv src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release.apk \
+             "ZJU English Helper_${VERSION}_android-universal.apk"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: android-apk
+          path: ZJU English Helper_*_android-universal.apk
+          if-no-files-found: error
+
+  attach-android:
+    needs: [publish-desktop, publish-android]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: android-apk
+
+      - name: 附加 APK 到草稿 Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "$GITHUB_REF_NAME" ./*_android-universal.apk --clobber --repo "$GITHUB_REPOSITORY"

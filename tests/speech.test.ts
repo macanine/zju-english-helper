@@ -59,7 +59,9 @@ function cloudResponse(url: string): Promise<Response> {
 }
 
 async function flush() {
-  await new Promise<void>((resolve) => setImmediate(resolve))
+  for (let i = 0; i < 10; i += 1) {
+    await new Promise<void>((resolve) => setImmediate(resolve))
+  }
 }
 
 beforeEach(() => {

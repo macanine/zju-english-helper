@@ -76,6 +76,30 @@ npm run start      # 本地托管 out/，先运行 build
 
 当前词库通过 `/data/...` 绝对路径加载，因此站点应部署在域名根路径；部署到子路径时需要同时适配 Next.js 路由、静态资源和词库 fetch 路径。不要直接双击 `out/index.html`，浏览器的 `file://` 协议无法按应用使用的方式加载 JSON。
 
+## 桌面版与 Android
+
+GitHub Releases 提供安装包：Windows（`.exe` / `.msi`）、macOS（`.dmg`，Apple 芯片选 `aarch64`，Intel 选 `x64`）、Linux（`.deb` / `.rpm` / `.AppImage`）、Android（`.apk` 通用包，含 arm64 / armv7 / x86_64 / x86）。桌面版与 Android 版和网页版是同一份应用，数据保存在应用自己的本地存储中，与浏览器互不影响。
+
+Android 安装时需允许安装未知来源应用。仓库未配置 Android 发布密钥时，APK 使用调试签名，仅适合自行测试；正式分发前应配置 `ANDROID_KEY_*` secrets（见 `AGENTS.md`），并使用配置后的签名重新安装。
+
+安装包未经代码签名：macOS 首次打开如提示无法验证，请在「系统设置 → 隐私与安全性」中允许打开，或右键选择「打开」；Windows 出现 SmartScreen 提示时选择「仍要运行」。
+
+本地桌面调试或自行打包需要 Rust 工具链（见 [Tauri 前置要求](https://v2.tauri.app/start/prerequisites/)）：
+
+```bash
+npm run desktop:dev    # 在桌面窗口运行开发版本
+npm run desktop:build  # 构建当前平台安装包到 src-tauri/target/release/bundle/
+```
+
+Android 本地构建还需要 JDK 17+（`JAVA_HOME`）、Android SDK（`ANDROID_HOME`，平台 37、Build-Tools 37、NDK 29.0.13846066）和 4 个 Rust Android target：
+
+```bash
+npm run android:dev    # 在模拟器或连接的设备上运行
+npm run android:build  # 构建 APK 到 src-tauri/gen/android/app/build/outputs/apk/
+```
+
+发布：确认 `package.json` 版本与 `v<版本>` 标签一致后推送标签，CI 会构建各平台安装包与 Android APK 并创建草稿 Release，确认后手动发布。
+
 ## 数据与隐私
 
 词库文件位于 `public/data/`，每本词书的单元由 `index.json` 列出。错题本、学习记录和设置使用浏览器 `localStorage`；选择云端朗读时，文本会按需发送到所选 Edge TTS 服务。本地浏览器朗读及自动兜底使用浏览器语音接口，优先选择系统本机英文音色；部分浏览器音色仍可能需要联网。
@@ -113,7 +137,9 @@ lib/                 词库、会话、引擎、本地存储、统计和备份
 pics/                README 展示用海报
 public/data/         运行时词库 JSON
 scripts/             词库校验工具
+src-tauri/           Tauri 2 桌面壳与打包配置
 tests/               node:test 单元测试
+.github/workflows/   CI 与 Release 流水线
 ```
 
 面向仓库编码代理的架构说明与实现约定见 [`AGENTS.md`](./AGENTS.md)。
