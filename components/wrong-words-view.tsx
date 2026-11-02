@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { useRouter } from 'next/navigation'
-import { NotebookText, Plus, Search, MoreHorizontal } from 'lucide-react'
+import { ChevronDown, NotebookText, Plus, Search, MoreHorizontal } from 'lucide-react'
 import { AlertDialog, Badge, Button, Checkbox, Container, Dialog, DropdownMenu, Flex, Grid, ScrollArea,
   SegmentedControl, Select, Text, TextArea, TextField } from '@radix-ui/themes'
 import { SectionCard } from '@/components/section-card'
@@ -18,6 +18,9 @@ import { encodeSession } from '@/lib/session'
 
 const PAGE_SIZE = 50
 type Tab = 'due' | 'all' | 'favorites'
+const STATUS_OPTIONS = [
+  ['all', '全部状态'], ['active', '学习中'], ['consolidated', '已稳固'], ['paused', '已暂停'], ['none', '未加入计划'],
+]
 
 export function WrongWordsView() {
   const router = useRouter()
@@ -38,6 +41,22 @@ export function WrongWordsView() {
   const [detail, setDetail] = React.useState<string | null>(null)
   const [remove, setRemove] = React.useState<string | null>(null)
   const [addOpen, setAddOpen] = React.useState(false)
+  const activeFilters = [
+    status !== 'all' && STATUS_OPTIONS.find(([value]) => value === status)?.[1],
+    book !== 'all' && (books?.find(item => item.id === book)?.name ?? book),
+    unit !== 'all' && `Unit ${unitLabel(unit)}`,
+    wrongOnly && '曾答错',
+    manualOnly && '手动加入',
+    favoriteOnly && '已收藏',
+  ].filter(Boolean)
+  const clearFilters = () => {
+    setStatus('all')
+    setBook('all')
+    setUnit('all')
+    setWrongOnly(false)
+    setManualOnly(false)
+    setFavoriteOnly(false)
+  }
   React.useEffect(() => setNow(Date.now()), [items])
   React.useEffect(() => {
     const sync = () => setNow(Date.now())
@@ -93,22 +112,39 @@ export function WrongWordsView() {
       <TextField.Root size="3" value={search} onChange={e => setSearch(e.target.value)} aria-label="搜索复习本" placeholder="搜索单词、释义或笔记">
         <TextField.Slot><Search size={16} /></TextField.Slot>
       </TextField.Root>
-      <Grid columns={{ initial: '1', sm: '3' }} gap="3">
-        <Filter label="状态" value={status} onChange={setStatus} options={[
-          ['all', '全部状态'], ['active', '学习中'], ['consolidated', '已稳固'], ['paused', '已暂停'], ['none', '未加入计划']]} />
-        <Filter label="词书" value={book} onChange={value => { setBook(value); setUnit('all') }}
-          options={[['all', '全部词书'], ...(books ?? []).map(b => [b.id, b.name])]} />
-        <Filter label="单元" value={unit} onChange={setUnit} options={[['all', '全部单元'],
-          ...(books?.find(b => b.id === book)?.units ?? []).map(u => [u, `Unit ${unitLabel(u)}`])]} />
-      </Grid>
-      <Flex gap="4" wrap="wrap">
-        <Text as="label" size="2"><Checkbox checked={wrongOnly} onCheckedChange={v => setWrongOnly(v === true)} /> 曾答错</Text>
-        <Text as="label" size="2"><Checkbox checked={manualOnly} onCheckedChange={v => setManualOnly(v === true)} /> 手动加入</Text>
-        <Text as="label" size="2"><Checkbox checked={favoriteOnly} onCheckedChange={v => setFavoriteOnly(v === true)} /> 已收藏</Text>
-      </Flex>
+      <details className="disclosure-panel">
+        <summary className="disclosure-trigger">
+          <span className="disclosure-copy">
+            <Text as="span" size="2" weight="medium">筛选条件</Text>
+            {activeFilters.length > 0 && <Text as="span" size="1" color="gray">{activeFilters.join(' · ')}</Text>}
+          </span>
+          <ChevronDown size={18} className="disclosure-chevron" aria-hidden="true" />
+        </summary>
+        <Flex direction="column" gap="3" className="disclosure-content">
+          <Grid columns={{ initial: '1', sm: '3' }} gap="3">
+            <Filter label="状态" value={status} onChange={setStatus} options={STATUS_OPTIONS} />
+            <Filter label="词书" value={book} onChange={value => { setBook(value); setUnit('all') }}
+              options={[['all', '全部词书'], ...(books ?? []).map(b => [b.id, b.name])]} />
+            <Filter label="单元" value={unit} onChange={setUnit} options={[['all', '全部单元'],
+              ...(books?.find(b => b.id === book)?.units ?? []).map(u => [u, `Unit ${unitLabel(u)}`])]} />
+          </Grid>
+          <Flex gap="4" wrap="wrap">
+            <Text as="label" size="2" className="filter-check"><Checkbox checked={wrongOnly} onCheckedChange={v => setWrongOnly(v === true)} />曾答错</Text>
+            <Text as="label" size="2" className="filter-check"><Checkbox checked={manualOnly} onCheckedChange={v => setManualOnly(v === true)} />手动加入</Text>
+            <Text as="label" size="2" className="filter-check"><Checkbox checked={favoriteOnly} onCheckedChange={v => setFavoriteOnly(v === true)} />已收藏</Text>
+          </Flex>
+          {activeFilters.length > 0 && <Button size="2" variant="soft" color="gray" onClick={clearFilters}>清除筛选</Button>}
+        </Flex>
+      </details>
       {filtered.length > 0 && tab !== 'due' && <Button variant="soft" color="gray" onClick={() => router.push(`/practice?${encodeSession({ kind: 'review', scope: 'extra', words: visible.slice(0, 20).map(i => i.word.english) })}`)}>额外练习当前页（最多 20 词）</Button>}
     </SectionCard>
-    {filtered.length === 0 ? <Text align="center" color="gray" style={{ paddingBlock: 'var(--space-6)' }}>{items.length === 0 ? '从词库收藏或添加重点，开始建立复习本。' : tab === 'due' && due.length === 0 ? '当前没有到期任务，可以添加重点或提前练习。' : '没有符合筛选的词。'}</Text> : <>
+    {filtered.length === 0 ? <Flex direction="column" align="center" gap="3" py="6">
+      <Text align="center" color="gray">{items.length === 0 ? '从词库收藏或添加重点，开始建立复习本。' : tab === 'due' && due.length === 0 ? '当前没有到期任务。' : '没有符合筛选的词。'}</Text>
+      {items.length > 0 && (activeFilters.length > 0 || search.trim()) ?
+        <Button variant="soft" color="gray" onClick={() => { clearFilters(); setSearch('') }}>清除筛选</Button> :
+        items.length > 0 && tab === 'due' && due.length === 0 &&
+          <Button variant="soft" onClick={() => setTab('all')}>查看全部词条</Button>}
+    </Flex> : <>
       <WordDisplay sections={[{ key: `${tab}-${currentPage}`, words: visible.map(item => item.word) }]}
         renderMeta={word => {
           const item = byWord.get(word.english)!

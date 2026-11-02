@@ -167,7 +167,7 @@ const WordRow = React.memo(function WordRow({ word, mode, exampleMode, desktop, 
       className={divider ? 'border-t border-[var(--gray-a3)]' : 'pb-3 pt-0'}>
       <Flex align="start" justify="between" gap="2">
         <Box className="min-w-0"><WordText english={word.english} /></Box>
-        {meta && <Box shrink-0 className="pt-1">{meta}</Box>}
+        {meta && <Box className="shrink-0 pt-1">{meta}</Box>}
       </Flex>
       {meanings}
       {actions && (

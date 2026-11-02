@@ -86,7 +86,7 @@ npm run start       # 用 serve 托管 out/（先运行 build）
 - 保持响应式、可键盘操作和可访问名称。小屏隐藏按钮文字时补 `aria-label`；透明打字输入框字号不得小于 16px；页面布局变更需检查 390px 宽度没有横向溢出。
 - 页头宽度使用 `100%` 跟随页面可用宽度；`100vw` 会在出现竖向滚动条时撑出页面，不能靠根节点裁剪掩盖溢出。
 - 动效简短并遵守 `app/globals.css` 的 `prefers-reduced-motion`；按压反馈可用 `active:scale-[0.97]`，已有入场类为 `.anim-in-up` 和 `.anim-pop`。
-- 需要跨出页头的移动端菜单必须使用 Radix `Portal`，且在 Portal 子树中再包与根布局一致的 `<Theme>`。页头有 `backdrop-blur`，裸的 fixed 子元素会受其包含块影响，Portal 则需要 Theme tokens。
+- 需要跨出页头的移动端菜单必须使用 Radix `Portal`，且在 Portal 子树中再包与根布局一致的 `<Theme>`。页头有 `backdrop-blur`，裸的 fixed 子元素会受其包含块影响，Portal 则需要 Theme tokens。Portal 子树可能晚于父组件 effect 挂载，焦点循环应在按键时查找菜单节点，避免首次打开时 Shift+Tab 逃出菜单。
 - Themes CSS 在 UnoCSS 工具类之后可能覆盖组件自身属性。不要用工具类硬改 `.rt-*` 组件的 `position` 等内置属性，优先调整 DOM 包装结构。根主题全屏高度只应用到 `html .radix-themes[data-is-root-theme='true']`，不能撑大 Portal 弹层；需要视口裁剪的长 Select 使用 `position="popper"`。Dialog 长内容需限制高度并放进 `ScrollArea`。
 - 不要给 Chromium 表格重新添加 sticky 表头：目前会与首行错位。练习页状态、输入和计时的边界见下节。
 

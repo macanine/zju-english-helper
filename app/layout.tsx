@@ -68,7 +68,7 @@ export default function RootLayout({
               <AppHeader />
               <SaveStatus />
               <Box asChild flexGrow="1">
-                <main>{children}</main>
+                <main className="app-main">{children}</main>
               </Box>
             </StorageErrorBoundary>
           </Flex>
