@@ -139,7 +139,7 @@ const WordRow = React.memo(function WordRow({ word, mode, exampleMode, desktop, 
   renderMeta?: WordDisplayProps['renderMeta']
 }) {
   const [open, setOpen] = React.useState(false)
-  const toggle = () => setOpen((value) => !value)
+  const toggle = React.useCallback(() => setOpen((value) => !value), [])
   const collapsible = (mode === 'collapsible' && hasEnglish(word)) ||
     (exampleMode === 'collapsible' && hasExamples(word))
   const actions = renderActions?.(word)
@@ -179,7 +179,7 @@ const WordRow = React.memo(function WordRow({ word, mode, exampleMode, desktop, 
 })
 
 /** 单词本身：点它朗读（阻止冒泡，免得同时触发词块的展开 / 收起） */
-function WordText({ english }: { english: string }) {
+const WordText = React.memo(function WordText({ english }: { english: string }) {
   return (
     <Text
       asChild
@@ -200,7 +200,7 @@ function WordText({ english }: { english: string }) {
       </button>
     </Text>
   )
-}
+})
 
 /** 词性徽章（跟着释义走，展示在中文释义前面） */
 export function PosBadge({ pos }: { pos: string | null }) {
@@ -217,7 +217,7 @@ export function PosBadge({ pos }: { pos: string | null }) {
  * 多条释义之间只留一点间距、不加 1. 2. 编号。英文解释按 enMode、例句按 exampleMode（设置页「显示」）
  * 决定是否显示。可收起时整块就是开关（键盘 / 读屏也能用），没有独立的展开按钮。
  */
-function Meanings({
+const Meanings = React.memo(function Meanings({
   word,
   mode,
   exampleMode,
@@ -304,7 +304,7 @@ function Meanings({
       {body}
     </div>
   )
-}
+})
 
 /** 例句：紧跟在该释义的英文解释下面，不另起区块 */
 function SenseExamples({ examples }: { examples: string[] }) {

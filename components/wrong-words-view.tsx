@@ -156,7 +156,8 @@ export function WrongWordsView() {
         renderActions={word => {
           const item = byWord.get(word.english)!
           return <Flex gap="2" wrap="wrap">
-            <ReviewWordActions engine={engine} word={word} item={item} origins={item.origins} />
+            <ReviewWordActions engine={engine} word={word} favorite={item.favoriteAt != null}
+              inPlan={item.schedule !== null} origins={item.origins} />
             {item.schedule && <Button size="2" variant="soft" color="gray" onClick={() => item.schedule?.status === 'consolidated' ? engine.restartReview(word) : engine.pauseReview(word.english)}>
               {item.schedule.status === 'consolidated' ? '重新学习' : item.schedule.status === 'paused' ? '恢复' : '暂停'}</Button>}
             <DropdownMenu.Root><DropdownMenu.Trigger><Button size="2" variant="soft" color="gray" aria-label={`更多操作 ${word.english}`}><MoreHorizontal size={16} /></Button></DropdownMenu.Trigger>
@@ -209,11 +210,12 @@ function ItemDetail({ item, engine }: { item: ReviewItem; engine: GameEngine }) 
   </Dialog.Content>
 }
 
-function AddWordsDialog({ open, onOpenChange, engine }: { open: boolean; onOpenChange: (open: boolean) => void; engine: GameEngine }) {
+const AddWordsDialog = React.memo(function AddWordsDialog({ open, onOpenChange, engine }: { open: boolean; onOpenChange: (open: boolean) => void; engine: GameEngine }) {
   const { books } = useBooks()
   const [book, setBook] = React.useState('')
   const [unit, setUnit] = React.useState('all')
   const [search, setSearch] = React.useState('')
+  const deferredSearch = React.useDeferredValue(search)
   const [data, setData] = React.useState<{ words: WordEntry[]; origins: Map<string, WordOrigin[]> } | null>(null)
   const [error, setError] = React.useState<string | null>(null)
   const [selected, setSelected] = React.useState<Set<string>>(new Set())
@@ -228,7 +230,12 @@ function AddWordsDialog({ open, onOpenChange, engine }: { open: boolean; onOpenC
       .catch(cause => { if (!cancelled) setError(String(cause)) })
     return () => { cancelled = true }
   }, [open, books, activeBook, unit])
-  const matches = data?.words.filter(w => `${w.english} ${w.senses.map(s => s.zh).join(' ')}`.toLowerCase().includes(search.trim().toLowerCase())) ?? []
+  const matches = React.useMemo(() => {
+    if (!open || !data) return []
+    const query = deferredSearch.trim().toLowerCase()
+    if (!query) return data.words
+    return data.words.filter(w => `${w.english} ${w.senses.map(s => s.zh).join(' ')}`.toLowerCase().includes(query))
+  }, [data, deferredSearch, open])
   const [limit, setLimit] = React.useState(50)
   React.useEffect(() => setLimit(50), [search, activeBook, unit, open])
   return <Dialog.Root open={open} onOpenChange={onOpenChange}><Dialog.Content maxWidth="600px" style={{ maxHeight: '90dvh' }}>
@@ -258,4 +265,4 @@ function AddWordsDialog({ open, onOpenChange, engine }: { open: boolean; onOpenC
         }}>加入复习（{selected.size}）</Button></Flex>
     </Flex>
   </Dialog.Content></Dialog.Root>
-}
+})

@@ -15,7 +15,7 @@ import {
   Switch,
   Text,
 } from '@radix-ui/themes'
-import { unitLabel } from '@/lib/data'
+import { preloadWords, unitLabel } from '@/lib/data'
 import type { MergeMode } from '@/lib/model'
 import { useBooks, useSettings, useWrongCount } from '@/lib/hooks'
 import { encodeSession, sessionFromSettings } from '@/lib/session'
@@ -92,6 +92,36 @@ export function SetupView() {
   const [settings, update] = useSettings()
   const dueCount = useWrongCount()
 
+  React.useEffect(() => {
+    if (!books || !settings || settings.units.length === 0) return
+    const book = books.find((item) => item.id === settings.bookId)
+    if (!book || settings.units.some((unit) => !book.units.includes(unit))) return
+
+    let idle: number | null = null
+    const timer = window.setTimeout(() => {
+      const warmUp = () => {
+        const connection = (navigator as Navigator & {
+          connection?: { saveData?: boolean; effectiveType?: string }
+        }).connection
+        if (document.visibilityState !== 'visible' || connection?.saveData ||
+            connection?.effectiveType === '2g' || connection?.effectiveType === 'slow-2g') return
+        router.prefetch(`/practice?${encodeSession(sessionFromSettings(settings))}`)
+        // 预加载失败不缓存；真正开始时重新请求并正常显示错误。
+        void preloadWords(settings.bookId, settings.units).catch(() => {})
+      }
+      if (typeof window.requestIdleCallback === 'function') {
+        idle = window.requestIdleCallback(warmUp, { timeout: 2000 })
+      } else {
+        warmUp()
+      }
+    }, 800)
+
+    return () => {
+      window.clearTimeout(timer)
+      if (idle !== null) window.cancelIdleCallback?.(idle)
+    }
+  }, [books, router, settings])
+
   if (error) {
     return (
       <Container size="3" px="4" py="6">
@@ -125,6 +155,8 @@ export function SetupView() {
 
   const start = () => {
     if (noUnits) return
+    // 点击后立即开始取词，与练习页代码加载并行；失败由练习页统一处理。
+    void preloadWords(settings.bookId, settings.units).catch(() => {})
     router.push(`/practice?${encodeSession(sessionFromSettings(settings))}`)
   }
 

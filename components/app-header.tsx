@@ -45,7 +45,8 @@ function NavItem({
   const active = pathname === href
   return (
     <Button asChild variant={active ? 'soft' : 'ghost'} color={active ? undefined : 'gray'} size="3">
-      <Link href={href} aria-label={ariaLabel ?? label} aria-current={active ? 'page' : undefined}>
+      <Link href={href} prefetch={href === '/settings' || href === '/help' ? false : undefined}
+        aria-label={ariaLabel ?? label} aria-current={active ? 'page' : undefined}>
         {icon}
         <span className="max-sm:hidden">{label}</span>
       </Link>
