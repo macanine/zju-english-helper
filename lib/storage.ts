@@ -1,5 +1,7 @@
 import { MERGE_MODES, isSense, type MergeMode, type SenseCard } from './model'
 import { hasFields, isCount, isId, isOneOf, isRecord, isText } from './validation'
+import { discardPendingSaves } from './persistence'
+import { isReviewNotebook, upgradeCards, type ReviewItem } from './review'
 
 export const CONTENT_FILTERS = ['all', 'words_only', 'phrases_only'] as const
 export const ORDER_MODES = ['sequential', 'random'] as const
@@ -18,6 +20,7 @@ export interface SessionOptions {
   /** 多义词出题：sense = 每个释义各考一遍；first = 同词只考一次给首条释义；all = 同词只考一次列出全部释义 */
   mergeMode: MergeMode
   showFirstLetter: boolean
+  includeConsolidated?: boolean
 }
 
 export interface Settings extends SessionOptions {
@@ -104,6 +107,7 @@ export interface DayStat {
 
 /** 每个存储键的当前数据结构，也是备份导入的校验契约。 */
 interface StoredData {
+  'zjueh.review-notebook': ReviewItem[]
   'zjueh.wrong-words': SenseCard[]
   'zjueh.mastered': SenseCard[]
   'zjueh.settings': Settings
@@ -114,6 +118,7 @@ interface StoredData {
 }
 
 export const USER_DATA_KEYS = [
+  'zjueh.review-notebook',
   'zjueh.wrong-words',
   'zjueh.mastered',
   'zjueh.settings',
@@ -146,11 +151,11 @@ function isCards(value: unknown): value is SenseCard[] {
 }
 
 function isSettings(value: unknown): value is Settings {
-  return hasFields(value, Object.keys(DEFAULT_SETTINGS)) && isId(value.bookId) &&
+  return (hasFields(value, Object.keys(DEFAULT_SETTINGS)) || hasFields(value, [...Object.keys(DEFAULT_SETTINGS), 'includeConsolidated'])) && isId(value.bookId) &&
     Array.isArray(value.units) && value.units.every(isId) && new Set(value.units).size === value.units.length &&
     isOneOf(value.contentFilter, CONTENT_FILTERS) && isOneOf(value.orderMode, ORDER_MODES) &&
     isOneOf(value.questionMode, QUESTION_MODES) && isOneOf(value.mergeMode, MERGE_MODES) &&
-    typeof value.showFirstLetter === 'boolean'
+    typeof value.showFirstLetter === 'boolean' && (value.includeConsolidated === undefined || typeof value.includeConsolidated === 'boolean')
 }
 
 function isPrefs(value: unknown): value is StoredData['zjueh.prefs'] {
@@ -185,6 +190,7 @@ function isDayStats(value: unknown): value is Record<string, DayStat> {
 }
 
 export const STORAGE_VALIDATORS: { [K in keyof StoredData]: (value: unknown) => value is StoredData[K] } = {
+  'zjueh.review-notebook': isReviewNotebook,
   'zjueh.wrong-words': isCards,
   'zjueh.mastered': isCards,
   'zjueh.settings': isSettings,
@@ -192,6 +198,35 @@ export const STORAGE_VALIDATORS: { [K in keyof StoredData]: (value: unknown) => 
   'zjueh.speech': isSpeechSettings,
   'zjueh.word-stats': isWordStats,
   'zjueh.day-stats': isDayStats,
+}
+
+export const UPGRADE_BACKUP_KEY = 'zjueh.upgrade-backup-v2'
+
+/** 一次性升级上一版完整词卡。先写原始快照，新本写成功后才移除旧键。 */
+export function loadReviewNotebook(): ReviewItem[] {
+  const existing = read('zjueh.review-notebook')
+  if (existing !== undefined) return existing
+  const wrong = loadWrongWords()
+  const mastered = loadMastered()
+  const upgraded = upgradeCards(wrong, mastered, Date.now())
+  if (localStorage.getItem('zjueh.wrong-words') !== null || localStorage.getItem('zjueh.mastered') !== null) {
+    if (localStorage.getItem(UPGRADE_BACKUP_KEY) === null) {
+      const data: Record<string, unknown> = {}
+      for (const key of USER_DATA_KEYS) {
+        const raw = localStorage.getItem(key)
+        if (raw !== null) data[key] = JSON.parse(raw)
+      }
+      localStorage.setItem(UPGRADE_BACKUP_KEY, JSON.stringify({ app: 'zjueh', version: 2, exportedAt: new Date().toISOString(), data }))
+    }
+    saveReviewNotebook(upgraded)
+    localStorage.removeItem('zjueh.wrong-words')
+    localStorage.removeItem('zjueh.mastered')
+  }
+  return upgraded
+}
+
+export function saveReviewNotebook(items: ReviewItem[]) {
+  write('zjueh.review-notebook', items)
 }
 
 function read<K extends keyof StoredData>(key: K): StoredData[K] | undefined {
@@ -309,5 +344,7 @@ export function resetPrefs() {
 
 /** 用户主动重置当前 schema；不执行迁移，也不触碰主题偏好。 */
 export function resetUserData() {
+  discardPendingSaves()
   for (const key of USER_DATA_KEYS) localStorage.removeItem(key)
+  localStorage.removeItem(UPGRADE_BACKUP_KEY)
 }

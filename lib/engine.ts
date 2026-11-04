@@ -2,19 +2,21 @@ import { hasUsableExamples, type SenseCard } from './model'
 import { dayKey, recordAnswer } from './stats'
 import {
   loadDayStats,
-  loadMastered,
+  loadReviewNotebook,
   loadWordStats,
-  loadWrongWords,
   saveDayStats,
-  saveMastered,
+  saveReviewNotebook,
   saveWordStats,
-  saveWrongWords,
   type DayStat,
   type QuestionMode,
   type SessionOptions,
   type WordStat,
 } from './storage'
 import type { SessionStats } from './session'
+import { deferSave, flushPendingSaves } from './persistence'
+import { applyReview, initialSchedule, isDue, newReviewItem, REVIEW_BATCH_SIZE, type ReviewItem, type WordOrigin } from './review'
+import type { WordEntry } from './model'
+import type { Session } from './session'
 
 export type NextQuestion =
   | { kind: 'question'; word: SenseCard }
@@ -68,9 +70,15 @@ export class GameEngine {
   questionMode: QuestionMode = 'word'
   showFirstLetter = false
 
-  private wrongMap = new Map<string, SenseCard>()
-  /** 已掌握的词：不再进入练习与复习队列 */
-  private masteredMap = new Map<string, SenseCard>()
+  private notebook = new Map<string, ReviewItem>()
+  private reviewRevisions = new Map<string, number>()
+  private reviewedWords = new Set<string>()
+  private failedWords = new Set<string>()
+  private roundWrong = new Map<string, SenseCard>()
+  private skipped = 0
+  private canAdvance = false
+  private roundId = ''
+  private origins = new Map<string, WordOrigin[]>()
   /** 单词级学习记录（错误次数 / 最近作答），用于复习排序与错题本展示 */
   private wordStats: Record<string, WordStat> = {}
   /** 每日练习记录（今日概览 / 连续天数） */
@@ -82,12 +90,7 @@ export class GameEngine {
   private lastTick = 0
 
   constructor() {
-    for (const w of loadWrongWords()) {
-      this.wrongMap.set(w.english, w)
-    }
-    for (const w of loadMastered()) {
-      this.masteredMap.set(w.english, w)
-    }
+    for (const item of loadReviewNotebook()) this.notebook.set(item.word.english, item)
     this.wordStats = loadWordStats()
     this.days = loadDayStats()
   }
@@ -101,48 +104,122 @@ export class GameEngine {
     this.listeners.forEach((l) => l())
   }
 
-  private persist() {
-    saveWrongWords([...this.wrongMap.values()])
+  private persist(deferred = false) {
+    if (deferred) {
+      deferSave('review-notebook', () => saveReviewNotebook(this.reviewItems))
+    } else {
+      flushPendingSaves()
+      saveReviewNotebook(this.reviewItems)
+    }
   }
 
   get wrongWords(): SenseCard[] {
-    return [...this.wrongMap.values()]
+    return this.reviewItems.filter(item => item.firstWrongAt !== null && item.schedule?.status === 'active')
+      .map(item => ({ ...item.word, sense: item.word.senses[0] }))
   }
 
   get wrongCount(): number {
-    return this.wrongMap.size
+    return this.wrongWords.length
   }
 
   get masteredWords(): SenseCard[] {
-    return [...this.masteredMap.values()]
+    return this.reviewItems.filter(item => item.schedule?.status === 'consolidated')
+      .map(item => ({ ...item.word, sense: item.word.senses[0] }))
   }
 
   get masteredCount(): number {
-    return this.masteredMap.size
+    return this.masteredWords.length
   }
 
   isMastered(card: SenseCard): boolean {
-    return this.masteredMap.has(card.english)
+    return this.notebook.get(card.english)?.schedule?.status === 'consolidated'
   }
 
   /** 标记已掌握：移出错题本，之后不再进入练习与复习 */
   masterWord(card: SenseCard) {
-    const key = card.english
-    this.masteredMap.set(key, card)
-    this.wrongMap.delete(key)
-    saveMastered(this.masteredWords)
+    const item = this.ensureItem(card)
+    item.schedule = { ...initialSchedule(Date.now(), (item.schedule?.revision ?? 0) + 1), status: 'consolidated', stage: 6 }
     this.persist()
     this.notify()
   }
 
   /** 取消已掌握：放回错题本（已掌握列表只从错题本进入，说明它本来就错过） */
   unmasterWord(card: SenseCard) {
-    const key = card.english
-    if (!this.masteredMap.delete(key)) return
-    this.wrongMap.set(key, card)
-    saveMastered(this.masteredWords)
-    this.persist()
-    this.notify()
+    this.restartReview(card)
+  }
+
+  get reviewItems(): ReviewItem[] { return [...this.notebook.values()] }
+  get dueCount(): number { return this.reviewItems.filter(item => isDue(item, Date.now())).length }
+  get roundWrongWords(): SenseCard[] { return [...this.roundWrong.values()] }
+  get roundSummary() { return { wrong: this.failedWords.size, skipped: this.skipped, remaining: this.dueCount } }
+  reviewItem(english: string): ReviewItem | undefined { return this.notebook.get(english) }
+
+  private ensureItem(word: WordEntry, origins: WordOrigin[] = []): ReviewItem {
+    const now = Date.now()
+    const item = this.notebook.get(word.english) ?? newReviewItem(word, now)
+    item.word = { english: word.english, senses: [...new Map([...item.word.senses, ...word.senses]
+      .map(sense => [JSON.stringify(sense), sense])).values()] }
+    item.origins = [...new Map([...item.origins, ...origins].map(o => [`${o.bookId}/${o.unitId}`, o])).values()]
+    item.updatedAt = now
+    this.notebook.set(word.english, item)
+    return item
+  }
+
+  toggleFavorite(word: WordEntry, origins: WordOrigin[] = []) {
+    const item = this.ensureItem(word, origins)
+    item.favoriteAt = item.favoriteAt === null ? Date.now() : null
+    this.persist(true); this.notify()
+  }
+
+  focusWord(word: WordEntry) {
+    const item = this.ensureItem(word, this.origins.get(word.english))
+    item.favoriteAt ??= Date.now()
+    item.manuallyAddedAt ??= Date.now()
+    if (!item.schedule) item.schedule = initialSchedule(Date.now())
+    this.persist(true); this.notify()
+  }
+
+  addToReview(word: WordEntry, origins: WordOrigin[] = [], favorite = false) {
+    const item = this.ensureItem(word, origins)
+    item.manuallyAddedAt ??= Date.now()
+    if (favorite) item.favoriteAt ??= Date.now()
+    if (!item.schedule) item.schedule = initialSchedule(Date.now())
+    else if (item.schedule.status === 'paused') item.schedule = { ...item.schedule, status: 'active', revision: item.schedule.revision + 1 }
+    this.persist(true); this.notify()
+  }
+
+  pauseReview(english: string) {
+    const item = this.notebook.get(english)
+    if (!item?.schedule) return
+    item.schedule = { ...item.schedule, status: item.schedule.status === 'paused' ? 'active' : 'paused', revision: item.schedule.revision + 1 }
+    item.updatedAt = Date.now()
+    this.persist(true); this.notify()
+  }
+
+  restartReview(word: WordEntry) {
+    const item = this.ensureItem(word)
+    item.schedule = initialSchedule(Date.now(), (item.schedule?.revision ?? 0) + 1)
+    item.manuallyAddedAt ??= Date.now()
+    this.persist(true); this.notify()
+  }
+
+  saveNote(english: string, note: string) {
+    const item = this.notebook.get(english)
+    if (!item) return
+    item.note = note.slice(0, 2000); item.updatedAt = Date.now()
+    this.persist(true); this.notify()
+  }
+
+  removeReviewItem(english: string) {
+    this.notebook.delete(english)
+    this.persist(true); this.notify()
+  }
+
+  private beginRound(sessionKey: string) {
+    this.index = 0; this.sessionKey = sessionKey; this.firstTryCorrect = 0
+    this.startedAt = Date.now(); this.lastTick = this.startedAt
+    this.roundId = `${this.startedAt}-${Math.random().toString(36).slice(2)}`
+    this.reviewedWords.clear(); this.failedWords.clear(); this.roundWrong.clear(); this.skipped = 0
   }
 
   wordStat(card: SenseCard): WordStat {
@@ -163,40 +240,40 @@ export class GameEngine {
   }
 
   /** 开始练习：按内容过滤 + 排序生成牌组；返回牌组词数（0 表示过滤后没有可练的词） */
-  startSession(allCards: SenseCard[], options: SessionOptions, sessionKey: string): number {
-    let deck = allCards.filter((w) => !this.masteredMap.has(w.english))
+  startSession(allCards: SenseCard[], options: SessionOptions, sessionKey: string, origins = new Map<string, WordOrigin[]>()): number {
+    let deck = allCards.filter((w) => options.includeConsolidated || !this.isMastered(w))
     if (options.contentFilter === 'words_only') {
       deck = deck.filter((w) => !w.english.includes(' '))
     } else if (options.contentFilter === 'phrases_only') {
       deck = deck.filter((w) => w.english.includes(' '))
     }
     this.deck = options.orderMode === 'random' ? shuffle(deck) : [...deck]
-    this.index = 0
+    this.beginRound(sessionKey)
+    this.origins = origins
+    this.canAdvance = false
     this.questionMode = options.questionMode
     this.showFirstLetter = options.showFirstLetter
-    this.sessionKey = sessionKey
-    this.firstTryCorrect = 0
-    this.startedAt = Date.now()
-    this.lastTick = this.startedAt
     return this.deck.length
   }
 
-  /** 错题本复习：错得最多 / 最久没答对的排前面，强制单词模式 + 首字母提示；
-      开始时清空错题本（答错会重新加入） */
-  startReview(sessionKey: string): boolean {
-    if (this.wrongMap.size === 0) return false
-    const queue = this.wrongWords.filter((w) => !this.masteredMap.has(w.english))
+  /** 到期任务按时间排序，每轮取快照；不清空个人复习记录。 */
+  startReview(sessionKey: string, session: Extract<Session, { kind: 'review' }> = { kind: 'review' }): boolean {
+    const now = Date.now()
+    const scope = session.scope ?? 'due'
+    if (session.words?.some(word => !this.notebook.has(word))) return false
+    const queue = this.reviewItems.filter(item => scope === 'due' ? isDue(item, now) :
+      session.words?.length ? session.words.includes(item.word.english) : item.favoriteAt !== null)
+      .sort((a, b) => (a.schedule?.dueAt ?? Infinity) - (b.schedule?.dueAt ?? Infinity) ||
+        (this.wordStats[b.word.english]?.wrongs ?? 0) - (this.wordStats[a.word.english]?.wrongs ?? 0))
+      .slice(0, REVIEW_BATCH_SIZE)
     if (queue.length === 0) return false
-    this.deck = orderForReview(queue, this.wordStats)
-    this.wrongMap = new Map()
-    this.persist()
+    this.deck = queue.map(item => ({ ...item.word, sense: item.word.senses[0] }))
+    this.beginRound(sessionKey)
+    this.origins = new Map(queue.map(item => [item.word.english, item.origins]))
+    this.reviewRevisions = new Map(queue.filter(item => isDue(item, now)).map(item => [item.word.english, item.schedule!.revision]))
+    this.canAdvance = scope !== 'extra'
     this.questionMode = 'word'
-    this.showFirstLetter = true
-    this.index = 0
-    this.sessionKey = sessionKey
-    this.firstTryCorrect = 0
-    this.startedAt = Date.now()
-    this.lastTick = this.startedAt
+    this.showFirstLetter = false
     this.notify()
     return true
   }
@@ -236,18 +313,30 @@ export class GameEngine {
    */
   checkAnswer(
     userInput: string,
-    opts?: { expected?: string; markWrong?: boolean }
+    opts?: { expected?: string; markWrong?: boolean; assisted?: boolean }
   ): boolean {
     const word = this.currentWord()
     if (!word) return false
     const correct = (opts?.expected ?? word.english).toLowerCase()
     const isCorrect = userInput.trim().toLowerCase() === correct
-    const firstTry = isCorrect && !opts?.markWrong
+    const assisted = opts?.assisted === true || this.showFirstLetter
+    const firstTry = isCorrect && !opts?.markWrong && !assisted
     if (firstTry) {
       this.firstTryCorrect++
     } else {
-      this.wrongMap.set(word.english, word)
-      this.persist()
+      this.failedWords.add(word.english)
+      this.roundWrong.set(word.english, word)
+    }
+    const existing = this.notebook.get(word.english)
+    if (!firstTry || existing) {
+      const item = this.ensureItem(word, this.origins.get(word.english))
+      const next = applyReview(item, { id: `${this.roundId}:${word.english}:${firstTry ? 'success' : 'relearn'}`,
+        now: Date.now(), success: firstTry, assisted,
+        canAdvance: this.canAdvance && this.reviewRevisions.has(word.english) && !this.failedWords.has(word.english) && !this.reviewedWords.has(word.english),
+        expectedRevision: this.reviewRevisions.get(word.english) })
+      this.notebook.set(word.english, next)
+      this.persist(true)
+      if (firstTry && next !== item) this.reviewedWords.add(word.english)
     }
     this.recordAnswer(word, firstTry)
     this.index++
@@ -266,38 +355,31 @@ export class GameEngine {
       lastSeen: now,
       lastWrong: firstTry ? prev.lastWrong : now,
     }
-    saveWordStats(this.wordStats)
+    deferSave('word-stats', () => saveWordStats(this.wordStats))
 
     const elapsed = this.lastTick ? Math.min(Math.max(0, now - this.lastTick), MAX_ANSWER_MS) : 0
     this.lastTick = now
     this.days = recordAnswer(this.days, dayKey(new Date(now)), firstTry, elapsed)
-    saveDayStats(this.days)
+    deferSave('day-stats', () => saveDayStats(this.days))
   }
 
-  /** 跳过当前词，且不计入错题本（如已在错题本中则移除） */
+  /** 跳过不修改复习计划、不删除词条，也不计学习统计。 */
   skipWithoutPenalty(): SenseCard | null {
     const word = this.currentWord()
     if (!word) return null
-    const key = word.english
-    if (this.wrongMap.has(key)) {
-      this.wrongMap.delete(key)
-      this.persist()
-      this.notify()
-    }
+    this.skipped++
     this.index++
     return word
   }
 
   clearWrongWords() {
-    this.wrongMap = new Map()
+    for (const item of this.reviewItems) if (item.firstWrongAt !== null) this.notebook.delete(item.word.english)
     this.persist()
     this.notify()
   }
 
   removeWrongWord(word: SenseCard) {
-    this.wrongMap.delete(word.english)
-    this.persist()
-    this.notify()
+    this.removeReviewItem(word.english)
   }
 
   progress(): [number, number] {

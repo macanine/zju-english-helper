@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { Eye, EyeOff, SkipForward, Volume2, X } from 'lucide-react'
+import { Eye, EyeOff, SkipForward, Volume2, X, Star } from 'lucide-react'
 import { Button, Card, Container, Flex, IconButton, Progress, Text } from '@radix-ui/themes'
 import type { GameEngine } from '@/lib/engine'
 import { usePrefs } from '@/lib/hooks'
@@ -59,6 +59,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
   const [typed, setTyped] = React.useState<string[]>([])
   const [raw, setRaw] = React.useState('')
   const [peeked, setPeeked] = React.useState(false)
+  const [favoriteVersion, setFavoriteVersion] = React.useState(0)
   const [prefs] = usePrefs()
   const speechProvider = useSpeechProvider()
   const canSpeak = speechProvider.status === 'available' && prefs?.practiceTts === true
@@ -81,8 +82,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
 
   /** 「同词只考一次 · 列出全部释义」：题面把该词其余释义也列出来（例句模式除外） */
   const listAllSenses =
-    session.kind === 'practice' &&
-    session.options.mergeMode === 'all' &&
+    (session.kind === 'review' || session.options.mergeMode === 'all') &&
     !isExampleMode &&
     (word?.senses.length ?? 0) > 1
 
@@ -184,6 +184,7 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
     engine.checkAnswer(answer, {
       expected: isExampleMode ? answer : undefined,
       markWrong: hadMistakeRef.current,
+      assisted: engine.showFirstLetter || peeked,
     })
     goNext()
   }
@@ -360,6 +361,17 @@ export function TypingArea({ engine, session, onExit, onFinish }: TypingAreaProp
                 </Flex>
               )}
             </div>
+
+            {word && <Button variant="soft" color={engine.reviewItem(word.english)?.favoriteAt != null ? 'amber' : 'gray'}
+              aria-pressed={engine.reviewItem(word.english)?.favoriteAt != null}
+              onClick={() => {
+                if (engine.reviewItem(word.english)?.favoriteAt != null) engine.toggleFavorite(word)
+                else engine.focusWord(word)
+                setFavoriteVersion(favoriteVersion + 1)
+                inputRef.current?.focus()
+              }}>
+              <Star size={15} />{engine.reviewItem(word.english)?.favoriteAt != null ? '已重点关注' : '重点关注'}
+            </Button>}
 
             {/* 打字区 */}
             <div

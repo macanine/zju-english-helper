@@ -4,7 +4,7 @@ import { beforeEach, test } from 'node:test'
 import { GameEngine, orderForReview } from '../lib/engine'
 import { buildCards, type WordEntry } from '../lib/model'
 import { dayKey } from '../lib/stats'
-import { loadDayStats, loadMastered, loadWordStats, loadWrongWords, type SessionOptions } from '../lib/storage'
+import { loadDayStats, loadReviewNotebook, loadWordStats, type SessionOptions } from '../lib/storage'
 
 /** storage.ts 直接用全局 localStorage，测试里换成内存实现 */
 const store = new Map<string, string>()
@@ -109,7 +109,7 @@ test('答错记入错题本并持久化', () => {
   assert.equal(engine.checkAnswer('appel'), false)
   assert.equal(engine.wrongCount, 1)
   assert.equal(engine.stats().firstTryCorrect, 0)
-  assert.deepEqual(loadWrongWords(), [apple])
+  assert.deepEqual(loadReviewNotebook().map(item => item.word.english), ['apple'])
   // 新实例（模拟刷新页面）能读回错题本
   assert.equal(new GameEngine().wrongCount, 1)
 })
@@ -129,7 +129,7 @@ test('例句模式按句中变形词判分', () => {
   assert.equal(engine.wrongCount, 0)
 })
 
-test('skipWithoutPenalty 把已在错题本的词移除', () => {
+test('skipWithoutPenalty 保留已有词条及到期计划', () => {
   const engine = new GameEngine()
   engine.startSession([apple], options(), 'k')
   engine.checkAnswer('appel')
@@ -138,12 +138,12 @@ test('skipWithoutPenalty 把已在错题本的词移除', () => {
   const resumed = new GameEngine()
   resumed.startSession([apple], options(), 'k')
   assert.deepEqual(resumed.skipWithoutPenalty(), apple)
-  assert.equal(resumed.wrongCount, 0)
+  assert.equal(resumed.wrongCount, 1)
   assert.equal(resumed.stats().firstTryCorrect, 0)
-  assert.deepEqual(loadWrongWords(), [])
+  assert.equal(loadReviewNotebook().length, 1)
 })
 
-test('startReview 清空错题本并强制单词模式 + 首字母提示', () => {
+test('startReview 保留复习本并使用无提示单词默写', () => {
   const engine = new GameEngine()
   engine.startSession(words, options({ questionMode: 'example' }), 'k')
   engine.checkAnswer('x')
@@ -151,11 +151,11 @@ test('startReview 清空错题本并强制单词模式 + 首字母提示', () =>
   assert.equal(engine.wrongCount, 2)
 
   assert.equal(engine.startReview('review=1'), true)
-  assert.equal(engine.wrongCount, 0)
+  assert.equal(engine.wrongCount, 2)
   assert.equal(engine.deck.length, 2)
   assert.equal(engine.questionMode, 'word')
-  assert.equal(engine.showFirstLetter, true)
-  assert.equal(engine.startReview('review=1'), false) // 空错题本无法复习
+  assert.equal(engine.showFirstLetter, false)
+  assert.equal(engine.startReview('review=1'), true)
 })
 
 test('isActive 只在同一会话且还有未答题时成立', () => {
@@ -211,7 +211,7 @@ test('错题本支持逐条移除与清空', () => {
 
   engine.clearWrongWords()
   assert.equal(engine.wrongCount, 0)
-  assert.deepEqual(loadWrongWords(), [])
+  assert.deepEqual(loadReviewNotebook(), [])
 })
 
 test('checkAnswer 记录单词级与当日练习记录', () => {
@@ -256,7 +256,7 @@ test('已掌握的词不进练习与复习，可取消掌握', () => {
   engine.masterWord(apple)
   assert.equal(engine.isMastered(apple), true)
   assert.equal(engine.wrongCount, 0) // 标记掌握时移出错题本
-  assert.deepEqual(loadMastered(), [apple])
+  assert.equal(loadReviewNotebook()[0].schedule?.status, 'consolidated')
 
   // 练习与复习都不再收到已掌握的词
   assert.equal(engine.startSession([apple, banana], options(), 'k'), 1)
@@ -274,14 +274,14 @@ test('已掌握的词不进练习与复习，可取消掌握', () => {
 
   engine.unmasterWord(apple)
   assert.equal(engine.isMastered(apple), false)
-  assert.deepEqual(loadMastered(), [])
+  assert.equal(engine.reviewItem('apple')?.schedule?.status, 'active')
   // 取消掌握后放回错题本（banana 之前也答错进了错题本）
   assert.equal(engine.wrongCount, 2)
   assert.ok(engine.wrongWords.some((w) => w.english === 'apple'))
   assert.equal(engine.startSession([apple], options(), 'k'), 1)
 })
 
-test('startReview 按错误次数从多到少排队', () => {
+test('startReview 按到期时间排序，重新答错的词进入十分钟重学', () => {
   const engine = new GameEngine()
   engine.startSession(words, options(), 'k')
   engine.checkAnswer('x') // apple 错 1 次
@@ -295,8 +295,8 @@ test('startReview 按错误次数从多到少排队', () => {
 
   const review = new GameEngine()
   assert.equal(review.startReview('review=1'), true)
-  assert.equal(review.deck[0].english, 'apple') // 错得最多排最前
-  assert.equal(review.deck.length, 3)
+  assert.equal(review.deck[0].english, 'look after')
+  assert.equal(review.deck.length, 2)
 })
 
 test('orderForReview 错误次数相同则久未答错的优先', () => {

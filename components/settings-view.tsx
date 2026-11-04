@@ -24,11 +24,11 @@ import {
 import { CardSkeleton } from '@/components/card-skeleton'
 import { PrefsError } from '@/components/prefs-error'
 import { SectionCard } from '@/components/section-card'
-import { downloadBackup, importBackup } from '@/lib/backup'
-import { useDayStats, useMasteredBook, usePrefs, useWrongBook } from '@/lib/hooks'
+import { downloadBackup, downloadUpgradeBackup, importBackup } from '@/lib/backup'
+import { useDayStats, useReviewNotebook, usePrefs, useWrongCount } from '@/lib/hooks'
 import { speak, stopSpeaking, useSpeechProvider, type SpeechVoice } from '@/lib/speech'
 import { EMPTY_DAY, dayKey, summarizeDay } from '@/lib/stats'
-import type { EnMode, ExampleMode, SpeechProviderId } from '@/lib/storage'
+import { UPGRADE_BACKUP_KEY, type EnMode, type ExampleMode, type SpeechProviderId } from '@/lib/storage'
 
 const PREVIEW_SENTENCE = 'The entrepreneur assembled a brilliant team in Silicon Valley.'
 
@@ -144,8 +144,8 @@ export function SettingsView() {
   const [prefs, update, prefsError] = usePrefs()
   const speechProvider = useSpeechProvider()
   const canSpeak = speechProvider.status === 'available'
-  const { words: wrongWords } = useWrongBook()
-  const { words: masteredWords } = useMasteredBook()
+  const { items } = useReviewNotebook()
+  const dueCount = useWrongCount()
   const days = useDayStats()
 
   if (!prefs) {
@@ -330,8 +330,9 @@ export function SettingsView() {
             py="3"
             className="rounded-xl bg-[var(--gray-a2)]"
           >
-            <Stat value={String(wrongWords.length)} label="错题" />
-            <Stat value={String(masteredWords.length)} label="已掌握" />
+            <Stat value={String(dueCount)} label="待复习" />
+            <Stat value={String(items.filter(i => i.favoriteAt !== null).length)} label="收藏" />
+            <Stat value={String(items.filter(i => i.schedule?.status === 'consolidated').length)} label="已稳固" />
             <Stat value={`${today.words}`} label="今日练习（词）" />
           </Flex>
           <DataSection />
@@ -500,6 +501,8 @@ function VoicePicker({
 
 /** 导出 / 导入本地数据（纯前端，文件不经过服务器） */
 function DataSection() {
+  const [hasUpgradeBackup, setHasUpgradeBackup] = React.useState(false)
+  React.useEffect(() => setHasUpgradeBackup(localStorage.getItem(UPGRADE_BACKUP_KEY) !== null), [])
   const fileRef = React.useRef<HTMLInputElement>(null)
   const [pending, setPending] = React.useState<{ name: string; text: string } | null>(null)
   const [error, setError] = React.useState<string | null>(null)
@@ -563,6 +566,9 @@ function DataSection() {
           aria-hidden
           tabIndex={-1}
         />
+        {hasUpgradeBackup && <Button variant="soft" color="gray" onClick={() => {
+          try { downloadUpgradeBackup() } catch { setError('升级前备份导出失败，请重试。') }
+        }}><Download size={16} />升级前备份</Button>}
       </Flex>
 
       {error && (
@@ -575,7 +581,7 @@ function DataSection() {
         <AlertDialog.Content maxWidth="400px">
           <AlertDialog.Title>导入备份？</AlertDialog.Title>
           <AlertDialog.Description size="3">
-            将用「{pending?.name}」覆盖当前的错题本、学习记录与设置，此操作不可撤销。
+            将用「{pending?.name}」覆盖备份包含的复习本、学习记录与设置；v2 备份会转换为新复习本，此操作不可撤销。
           </AlertDialog.Description>
           <Flex gap="3" mt="4" justify="end">
             <AlertDialog.Cancel>

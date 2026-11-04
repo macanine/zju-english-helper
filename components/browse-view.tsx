@@ -20,9 +20,9 @@ import {
 import { CardSkeleton } from '@/components/card-skeleton'
 import { LoadingProgress } from '@/components/loading-progress'
 import { WordDisplay, type WordSection } from '@/components/word-table'
-import { unitLabel, loadWords } from '@/lib/data'
-import { useBooks, useSettings } from '@/lib/hooks'
-import type { WordEntry } from '@/lib/model'
+import { ReviewWordActions } from '@/components/review-word-actions'
+import { indexWordOrigins, unitLabel, loadWords, type UnitWords } from '@/lib/data'
+import { useBooks, useSettings, useReviewNotebook } from '@/lib/hooks'
 import { encodeSession } from '@/lib/session'
 import { DEFAULT_SETTINGS } from '@/lib/storage'
 
@@ -35,6 +35,8 @@ export function BrowseView() {
   const searchParams = useSearchParams()
   const { books, error: booksError } = useBooks()
   const [settings] = useSettings()
+  const { engine, items } = useReviewNotebook()
+  const byWord = React.useMemo(() => new Map(items.map(item => [item.word.english, item])), [items])
 
   // 选择状态放在 URL 查询串里（units 缺省 = 全部单元），刷新 / 分享不丢
   const bookId = books?.some((b) => b.id === searchParams.get('book')) ? searchParams.get('book')! : (books?.[0]?.id ?? '')
@@ -59,7 +61,7 @@ export function BrowseView() {
 
   // 按单元逐个加载，保留分组顺序
   const unitKey = `${bookId}\u0000${unitIds.join(',')}`
-  const [groups, setGroups] = React.useState<{ unit: string; words: WordEntry[] }[] | null>(null)
+  const [groups, setGroups] = React.useState<UnitWords[] | null>(null)
   const [error, setError] = React.useState<string | null>(null)
   const [loadedUnits, setLoadedUnits] = React.useState(0)
   const [loadingUnits, setLoadingUnits] = React.useState(false)
@@ -70,15 +72,15 @@ export function BrowseView() {
     setError(null)
     setLoadedUnits(0)
     setLoadingUnits(true)
-    const nextGroups: Array<{ unit: string; words: WordEntry[] } | null> =
+    const nextGroups: Array<UnitWords | null> =
       Array.from({ length: unitIds.length }, () => null)
     Promise.all(
       unitIds.map(async (unit, index) => {
         try {
           const words = await loadWords(bookId, [unit])
           if (!cancelled) {
-            nextGroups[index] = { unit, words }
-            setGroups(nextGroups.filter((group): group is { unit: string; words: WordEntry[] } => group !== null))
+            nextGroups[index] = { unitId: unit, words }
+            setGroups(nextGroups.filter((group): group is UnitWords => group !== null))
           }
         } catch (err: unknown) {
           if (!cancelled) setError(err instanceof Error ? err.message : String(err))
@@ -88,7 +90,7 @@ export function BrowseView() {
       }),
     ).then(() => {
       if (!cancelled) {
-        setGroups(nextGroups.filter((group): group is { unit: string; words: WordEntry[] } => group !== null))
+        setGroups(nextGroups.filter((group): group is UnitWords => group !== null))
         setLoadingUnits(false)
       }
     })
@@ -100,6 +102,7 @@ export function BrowseView() {
 
   const [visibleLimit, setVisibleLimit] = React.useState(PAGE_SIZE)
   React.useEffect(() => setVisibleLimit(PAGE_SIZE), [unitKey])
+  const originsByWord = React.useMemo(() => indexWordOrigins(bookId, groups ?? []), [bookId, groups])
 
   if (!books) {
     return (
@@ -121,9 +124,9 @@ export function BrowseView() {
     const take = g.words.slice(0, visibleLimit - shown)
     shown += take.length
     sections.push({
-      key: g.unit,
+      key: g.unitId,
       // 多单元时才显示分组行；数量取该组匹配到的词数
-      label: unitIds.length > 1 ? `Unit ${unitLabel(g.unit)} · ${g.words.length} 词` : undefined,
+      label: unitIds.length > 1 ? `Unit ${unitLabel(g.unitId)} · ${g.words.length} 词` : undefined,
       words: take,
     })
   }
@@ -140,6 +143,7 @@ export function BrowseView() {
         questionMode: base.questionMode,
         mergeMode: base.mergeMode,
         showFirstLetter: base.showFirstLetter,
+        ...(base.includeConsolidated ? { includeConsolidated: true } : {}),
       },
     })}`
   }
@@ -235,7 +239,11 @@ export function BrowseView() {
             {loadingUnits && (
               <LoadingProgress label="正在继续加载词条…" loaded={loadedUnits} total={unitIds.length} />
             )}
-            <WordDisplay sections={sections} />
+            <WordDisplay sections={sections} renderActions={engine ? word => {
+              const item = byWord.get(word.english)
+              return <ReviewWordActions engine={engine} word={word} favorite={item?.favoriteAt != null}
+                inPlan={item?.schedule != null} origins={originsByWord.get(word.english)} />
+            } : undefined} />
             {totalVisible > shown && (
               <Flex justify="center" py="2">
                 <Button

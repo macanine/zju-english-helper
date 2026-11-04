@@ -44,15 +44,17 @@ export function HelpView() {
           <Item label={<Kbd>Backspace</Kbd>}>删除上一个字母。</Item>
         </SectionCard>
 
-        <SectionCard icon={<NotebookText size={16} />} title="错题本">
+        <SectionCard icon={<NotebookText size={16} />} title="复习本">
           <Text as="div" size="2" style={{ lineHeight: 1.7 }}>
-            错题按单词累计。可以标记已掌握、移除错题或开始复习。
+            答错自动加入，也可手动添加重点或收藏。收藏不会自动安排复习；加入计划后立即到期，每轮最多 20 词。
           </Text>
+          <Text size="2">到期时无提示首次答对，依次安排 1、2、4、7、15、30 天后复习，最后通过后成为已稳固。使用提示、看答案或打错后修正需重学，10 分钟后再次到期；跳过保留任务。提前练习答对不推迟计划。</Text>
+          <Text size="2">暂停只停止计划；再次答错会重新加入。已稳固词默认不进入常规练习，可在首页「更多选项」开启「包含已稳固词」。</Text>
         </SectionCard>
 
         <SectionCard icon={<Database size={16} />} title="数据备份">
           <Text as="div" size="2" style={{ lineHeight: 1.7 }}>
-            在设置页导出或导入备份。
+            在设置页导出或导入备份。上一版错题和已掌握词会自动升级，原数据保留为「升级前备份」；支持导入上一版 v2 备份。
           </Text>
         </SectionCard>
       </Flex>

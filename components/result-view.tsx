@@ -5,7 +5,8 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { CheckCircle2, NotebookText, RotateCcw, Settings2 } from 'lucide-react'
 import { Box, Button, Card, Container, Flex, Heading, Text } from '@radix-ui/themes'
 import { CardSkeleton } from '@/components/card-skeleton'
-import { useWrongBook } from '@/lib/hooks'
+import { useEngine, useWrongCount } from '@/lib/hooks'
+import { dueLabel } from '@/lib/review'
 import { decodeResult, encodeSession } from '@/lib/session'
 
 function formatDuration(ms: number): string {
@@ -40,7 +41,9 @@ export function ResultView() {
   const router = useRouter()
   const query = useSearchParams().toString()
   const result = React.useMemo(() => decodeResult(query), [query])
-  const { words } = useWrongBook()
+  const dueCount = useWrongCount()
+  const engine = useEngine()
+  const [favorited, setFavorited] = React.useState(false)
 
   React.useEffect(() => {
     if (!result) router.replace('/')
@@ -94,7 +97,18 @@ export function ResultView() {
                 再来一轮
               </Button>
             )}
-            {words.length > 0 && (
+            {engine && engine.sessionKey === encodeSession(session) && <>
+              <Text size="2" color="gray">需要重学 {engine.roundSummary.wrong} · 跳过 {engine.roundSummary.skipped} · 仍到期 {dueCount}</Text>
+              {engine.roundWrongWords.length > 0 && <Button variant="soft" color="amber" disabled={favorited} onClick={() => {
+                for (const word of engine.roundWrongWords) if (engine.reviewItem(word.english)?.favoriteAt == null) engine.toggleFavorite(word)
+                setFavorited(true)
+              }}>{favorited ? '已收藏本轮错词' : '收藏本轮错词'}</Button>}
+              {isReview && engine.deck.map(word => {
+                const item = engine.reviewItem(word.english)
+                return item ? <Text key={word.english} size="2">{word.english} · {dueLabel(item, Date.now())}</Text> : null
+              })}
+            </>}
+            {dueCount > 0 && (
               <Button
                 size="3"
                 variant="soft"
@@ -102,9 +116,10 @@ export function ResultView() {
                 onClick={() => router.push('/practice?review=1')}
               >
                 <NotebookText size={16} />
-                复习错题（{words.length}）
+                继续今日复习（{dueCount}）
               </Button>
             )}
+            <Button variant="soft" color="gray" onClick={() => router.push('/wrong-words')}>打开复习本</Button>
             <Button
               size="3"
               variant="surface"

@@ -11,7 +11,7 @@ import {
 
 /** 一次练习会话的完整描述 —— 由 URL 查询串承载，可分享、刷新后能恢复 */
 export type Session =
-  | { kind: 'review' }
+  | { kind: 'review'; scope?: 'due' | 'selected' | 'extra'; words?: string[] }
   | { kind: 'practice'; bookId: string; units: string[]; options: SessionOptions }
 
 export interface SessionStats {
@@ -34,12 +34,15 @@ function encodeOptions(p: URLSearchParams, o: SessionOptions) {
   if (o.questionMode !== DEFAULT_SETTINGS.questionMode) p.set('mode', o.questionMode)
   if (o.mergeMode !== DEFAULT_SETTINGS.mergeMode) p.set('merge', o.mergeMode)
   if (o.showFirstLetter !== DEFAULT_SETTINGS.showFirstLetter) p.set('hint', '1')
+  if (o.includeConsolidated) p.set('consolidated', '1')
 }
 
 export function encodeSession(session: Session): string {
   const p = new URLSearchParams()
   if (session.kind === 'review') {
     p.set('review', '1')
+    if (session.scope && session.scope !== 'due') p.set('scope', session.scope)
+    if (session.words?.length) p.set('words', JSON.stringify(session.words))
     return p.toString()
   }
   p.set('book', session.bookId)
@@ -54,7 +57,21 @@ function pick<T extends string>(value: string | null, allowed: readonly T[], def
 
 export function decodeSession(query: string): Session | null {
   const p = new URLSearchParams(query)
-  if (p.get('review') === '1') return { kind: 'review' }
+  if (p.get('review') === '1') {
+    const scope = p.get('scope')
+    if (scope !== null && !['due', 'selected', 'extra'].includes(scope)) return null
+    let words: string[] | undefined
+    if (p.has('words')) {
+      try {
+        const parsed: unknown = JSON.parse(p.get('words')!)
+        if (!Array.isArray(parsed) || parsed.length === 0 || parsed.length > 50 ||
+          !parsed.every(w => typeof w === 'string' && w.trim() === w && w.length > 0 && w.length <= 200) || new Set(parsed).size !== parsed.length) return null
+        words = parsed
+      } catch { return null }
+    }
+    if (scope === 'selected' && !words) return null
+    return { kind: 'review', ...(scope ? { scope: scope as 'due' | 'selected' | 'extra' } : {}), ...(words ? { words } : {}) }
+  }
   const bookId = p.get('book')
   const units = (p.get('units') ?? '').split(',')
   if (!isId(bookId) || !units.every(isId) || new Set(units).size !== units.length) return null
@@ -63,7 +80,7 @@ export function decodeSession(query: string): Session | null {
   const questionMode = pick(p.get('mode'), QUESTION_MODES, DEFAULT_SETTINGS.questionMode)
   const mergeMode = pick(p.get('merge'), MERGE_MODES, DEFAULT_SETTINGS.mergeMode)
   if (!contentFilter || !orderMode || !questionMode || !mergeMode ||
-      (p.has('hint') && p.get('hint') !== '1')) return null
+      (p.has('hint') && p.get('hint') !== '1') || (p.has('consolidated') && p.get('consolidated') !== '1')) return null
   return {
     kind: 'practice',
     bookId,
@@ -74,6 +91,7 @@ export function decodeSession(query: string): Session | null {
       questionMode,
       mergeMode,
       showFirstLetter: p.get('hint') === '1',
+      ...(p.has('consolidated') ? { includeConsolidated: true } : {}),
     },
   }
 }

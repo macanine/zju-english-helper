@@ -3,7 +3,9 @@ import { Box, Flex, Theme } from '@radix-ui/themes'
 import '@radix-ui/themes/styles.css'
 import './globals.css'
 import { AppHeader } from '@/components/app-header'
+import { CloudFonts } from '@/components/cloud-fonts'
 import { StorageErrorBoundary } from '@/components/storage-error-boundary'
+import { SaveStatus } from '@/components/save-status'
 
 export const metadata: Metadata = {
   title: { default: '大英默写器 Pro', template: '%s · 大英默写器 Pro' },
@@ -34,39 +36,18 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.cn" />
-        <link rel="preconnect" href="https://fonts.gstatic.cn" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSans-Regular.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSans-Medium.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSans-Demibold.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/misans@5.0.0/lib/Normal/MiSans-Bold.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.cn/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-        />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="antialiased pb-[env(safe-area-inset-bottom)]">
+        <CloudFonts />
         {/* appearance="inherit"：跟随 <html> 上的 .dark 类，暗色切换由 theme-toggle 完成 */}
         <Theme appearance="inherit" accentColor="indigo" grayColor="slate" radius="large">
           <Flex direction="column" className="min-h-dvh">
             <StorageErrorBoundary>
               <AppHeader />
+              <SaveStatus />
               <Box asChild flexGrow="1">
-                <main>{children}</main>
+                <main className="app-main">{children}</main>
               </Box>
             </StorageErrorBoundary>
           </Flex>

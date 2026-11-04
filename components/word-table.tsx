@@ -57,17 +57,7 @@ function useIsDesktop(): boolean {
  */
 export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplayProps) {
   const [prefs, , prefsError] = usePrefs()
-  const [expanded, setExpanded] = React.useState<Set<string>>(() => new Set())
   const isDesktop = useIsDesktop()
-
-  const toggle = React.useCallback((english: string) => {
-    setExpanded((prev) => {
-      const next = new Set(prev)
-      if (next.has(english)) next.delete(english)
-      else next.add(english)
-      return next
-    })
-  }, [])
 
   if (!prefs) {
     return prefsError ? <PrefsError error={prefsError} /> : <CardSkeleton label="正在读取显示设置…" />
@@ -75,11 +65,6 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
 
   const mode = prefs.enMode
   const exampleMode = prefs.exampleMode
-
-  /** 「默认收起」模式下，词条里有可收起的内容（英文解释 / 例句）时，词块才承担展开 / 收起 */
-  const collapsible = (word: WordEntry) =>
-    (mode === 'collapsible' && hasEnglish(word)) ||
-    (exampleMode === 'collapsible' && hasExamples(word))
 
   return isDesktop ? (
       <div className="anim-in-up">
@@ -102,44 +87,10 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
                     </Table.Cell>
                   </Table.Row>
                 )}
-                {sec.words.map((word) => {
-                  const open = expanded.has(word.english)
-                  const actions = renderActions?.(word)
-                  return (
-                    <Table.Row
-                      key={word.english}
-                      className="cursor-pointer"
-                      onClick={() =>
-                        collapsible(word) ? toggle(word.english) : speak(word.english)
-                      }
-                    >
-                      {/* 没有表头行，列宽在单元格上给：单词列固定占比，释义列吃掉剩下的 */}
-                      <Table.Cell pl="6" style={{ width: '22%' }}>
-                        <Flex align="baseline" gap="2" wrap="wrap">
-                          <WordText english={word.english} />
-                          {renderMeta?.(word)}
-                        </Flex>
-                      </Table.Cell>
-                      <Table.Cell pr={renderActions ? undefined : '6'}>
-                        <Meanings
-                          word={word}
-                          mode={mode}
-                          exampleMode={exampleMode}
-                          open={open}
-                          collapsible={collapsible(word)}
-                          onToggle={() => toggle(word.english)}
-                        />
-                      </Table.Cell>
-                      {renderActions && (
-                        <Table.Cell justify="end" pr="4" style={{ width: '1%' }}>
-                          <Flex gap="2" justify="end" align="center" style={{ width: 'max-content' }} onClick={(e) => e.stopPropagation()}>
-                            {actions}
-                          </Flex>
-                        </Table.Cell>
-                      )}
-                    </Table.Row>
-                  )
-                })}
+                 {sec.words.map((word) => (
+                   <WordRow key={word.english} word={word} mode={mode} exampleMode={exampleMode}
+                     desktop renderActions={renderActions} renderMeta={renderMeta} />
+                 ))}
               </React.Fragment>
             ))}
           </Table.Body>
@@ -162,49 +113,11 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
                 </Text>
               )}
               <Flex direction="column">
-            {sec.words.map((word, i) => {
-              const open = expanded.has(word.english)
-              const actions = renderActions?.(word)
-              const meta = renderMeta?.(word)
-              return (
-                <Flex
-                  key={word.english}
-                  direction="column"
-                  gap="2"
-                  py="3"
-                  className={i > 0 || sec.label ? 'border-t border-[var(--gray-a3)]' : 'pb-3 pt-0'}
-                >
-                  {/* 词名占左、附加信息（错 N 次）顶右，把短单词腾出的空白用起来 */}
-                  <Flex align="start" justify="between" gap="2">
-                    <Box className="min-w-0">
-                      <WordText english={word.english} />
-                    </Box>
-                    {meta && (
-                      <Box shrink-0 className="pt-1">
-                        {meta}
-                      </Box>
-                    )}
-                  </Flex>
-                  <Meanings
-                    word={word}
-                    mode={mode}
-                    exampleMode={exampleMode}
-                    open={open}
-                    collapsible={collapsible(word)}
-                    onToggle={() => toggle(word.english)}
-                  />
-                  {/* 操作条：通栏等宽按钮，左右边缘与上方内容严格对齐 */}
-                  {actions && (
-                    <div
-                      className="grid auto-cols-fr grid-flow-col gap-2 border-t border-[var(--gray-a3)] pt-2"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {actions}
-                    </div>
-                  )}
-                </Flex>
-              )
-            })}
+                 {sec.words.map((word, i) => (
+                   <WordRow key={word.english} word={word} mode={mode} exampleMode={exampleMode}
+                     desktop={false} divider={i > 0 || !!sec.label}
+                     renderActions={renderActions} renderMeta={renderMeta} />
+                 ))}
               </Flex>
             </Card>
           </section>
@@ -213,8 +126,60 @@ export function WordDisplay({ sections, renderActions, renderMeta }: WordDisplay
     )
 }
 
+/** 展开状态留在词条内；展开一词不会重新渲染其他词条。 */
+const WordRow = React.memo(function WordRow({ word, mode, exampleMode, desktop, divider,
+  renderActions, renderMeta,
+}: {
+  word: WordEntry
+  mode: EnMode
+  exampleMode: ExampleMode
+  desktop: boolean
+  divider?: boolean
+  renderActions?: WordDisplayProps['renderActions']
+  renderMeta?: WordDisplayProps['renderMeta']
+}) {
+  const [open, setOpen] = React.useState(false)
+  const toggle = React.useCallback(() => setOpen((value) => !value), [])
+  const collapsible = (mode === 'collapsible' && hasEnglish(word)) ||
+    (exampleMode === 'collapsible' && hasExamples(word))
+  const actions = renderActions?.(word)
+  const meta = renderMeta?.(word)
+  const meanings = <Meanings word={word} mode={mode} exampleMode={exampleMode}
+    open={open} collapsible={collapsible} onToggle={toggle} />
+
+  if (desktop) return (
+    <Table.Row className="cursor-pointer" onClick={() => collapsible ? toggle() : speak(word.english)}>
+      <Table.Cell pl="6" style={{ width: '22%' }}>
+        <Flex align="baseline" gap="2" wrap="wrap"><WordText english={word.english} />{meta}</Flex>
+      </Table.Cell>
+      <Table.Cell pr={renderActions ? undefined : '6'}>{meanings}</Table.Cell>
+      {renderActions && (
+        <Table.Cell justify="end" pr="4" style={{ width: '1%' }}>
+          <Flex gap="2" justify="end" align="center" style={{ width: 'max-content' }} onClick={(e) => e.stopPropagation()}>
+            {actions}
+          </Flex>
+        </Table.Cell>
+      )}
+    </Table.Row>
+  )
+  return (
+    <Flex direction="column" gap="2" py="3"
+      className={divider ? 'border-t border-[var(--gray-a3)]' : 'pb-3 pt-0'}>
+      <Flex align="start" justify="between" gap="2">
+        <Box className="min-w-0"><WordText english={word.english} /></Box>
+        {meta && <Box className="shrink-0 pt-1">{meta}</Box>}
+      </Flex>
+      {meanings}
+      {actions && (
+        <div className="grid auto-cols-fr grid-flow-col gap-2 border-t border-[var(--gray-a3)] pt-2"
+          onClick={(e) => e.stopPropagation()}>{actions}</div>
+      )}
+    </Flex>
+  )
+})
+
 /** 单词本身：点它朗读（阻止冒泡，免得同时触发词块的展开 / 收起） */
-function WordText({ english }: { english: string }) {
+const WordText = React.memo(function WordText({ english }: { english: string }) {
   return (
     <Text
       asChild
@@ -235,7 +200,7 @@ function WordText({ english }: { english: string }) {
       </button>
     </Text>
   )
-}
+})
 
 /** 词性徽章（跟着释义走，展示在中文释义前面） */
 export function PosBadge({ pos }: { pos: string | null }) {
@@ -252,7 +217,7 @@ export function PosBadge({ pos }: { pos: string | null }) {
  * 多条释义之间只留一点间距、不加 1. 2. 编号。英文解释按 enMode、例句按 exampleMode（设置页「显示」）
  * 决定是否显示。可收起时整块就是开关（键盘 / 读屏也能用），没有独立的展开按钮。
  */
-function Meanings({
+const Meanings = React.memo(function Meanings({
   word,
   mode,
   exampleMode,
@@ -339,7 +304,7 @@ function Meanings({
       {body}
     </div>
   )
-}
+})
 
 /** 例句：紧跟在该释义的英文解释下面，不另起区块 */
 function SenseExamples({ examples }: { examples: string[] }) {

@@ -6,11 +6,12 @@ import { CircleAlert } from 'lucide-react'
 import { Button, Card, Container, Flex, Heading, Text } from '@radix-ui/themes'
 import { CardSkeleton } from '@/components/card-skeleton'
 import { TypingArea } from '@/components/typing-area'
-import { loadWordsWithProgress, type LoadProgress } from '@/lib/data'
+import { loadWordsWithOrigins, type LoadProgress } from '@/lib/data'
 import type { GameEngine } from '@/lib/engine'
 import { useEngine } from '@/lib/hooks'
 import { buildCards } from '@/lib/model'
 import { decodeSession, encodeResult, type Session } from '@/lib/session'
+import { flushPendingSaves } from '@/lib/persistence'
 
 async function startSession(
   engine: GameEngine,
@@ -19,16 +20,16 @@ async function startSession(
   onProgress?: (progress: LoadProgress) => void,
 ) {
   if (session.kind === 'review') {
-    if (!engine.startReview(key)) throw new Error('错题本是空的，先完成一轮练习吧。')
+    if (!engine.startReview(key, session)) throw new Error('当前没有可复习的词，请到复习本添加重点或选择额外练习。')
     return
   }
-  const words = await loadWordsWithProgress(session.bookId, session.units, onProgress)
+  const { words, origins } = await loadWordsWithOrigins(session.bookId, session.units, onProgress)
   if (words.length === 0) throw new Error('所选单元没有词条，请返回首页重新选择。')
   // 例句填空始终按释义出题：例句拆分后挂在各释义上，题面（句子）与提示（释义）天然配对
   const merge = session.options.questionMode === 'example' ? 'sense' : session.options.mergeMode
-  if (engine.startSession(buildCards(words, merge), session.options, key) === 0) {
+  if (engine.startSession(buildCards(words, merge), session.options, key, origins) === 0) {
     throw new Error(
-      '所选单元过滤后没有可练的词条（可能都被标记为「已掌握」），请换一组单元或改选「全部」。'
+      '所选单元过滤后没有可练的词条，请换一组单元、改选「全部」或开启「包含已稳固词」。'
     )
   }
 }
@@ -42,6 +43,10 @@ export function PracticeView() {
   const [error, setError] = React.useState<string | null>(null)
   const [ready, setReady] = React.useState(false)
   const [loadProgress, setLoadProgress] = React.useState<LoadProgress | null>(null)
+
+  React.useEffect(() => () => {
+    try { flushPendingSaves() } catch { /* 根布局的保存提示显示错误并提供重试。 */ }
+  }, [])
 
   React.useEffect(() => {
     if (!engine) return

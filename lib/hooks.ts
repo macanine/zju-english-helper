@@ -5,6 +5,7 @@ import * as React from 'react'
 import { loadManifest, type BookMeta } from './data'
 import { getEngine, type GameEngine } from './engine'
 import type { SenseCard } from './model'
+import type { ReviewItem } from './review'
 import {
   loadPrefs,
   loadSettings,
@@ -19,7 +20,13 @@ import {
 /** 练习引擎单例；构造函数要读 localStorage，因此挂载后才可用（null = 未就绪） */
 export function useEngine(): GameEngine | null {
   const [engine, setEngine] = React.useState<GameEngine | null>(null)
-  React.useEffect(() => setEngine(getEngine()), [])
+  const [error, setError] = React.useState<Error | null>(null)
+  React.useEffect(() => {
+    try { setEngine(getEngine()) } catch (cause) {
+      setError(cause instanceof Error ? cause : new Error('无法读取本地数据'))
+    }
+  }, [])
+  if (error) throw error
   return engine
 }
 
@@ -42,12 +49,36 @@ function useEngineValue<T>(
 }
 
 const readWrongWords = (engine: GameEngine) => engine.wrongWords
+const readWrongCount = (engine: GameEngine) => engine.dueCount
+const readReviewItems = (engine: GameEngine) => engine.reviewItems
+const EMPTY_REVIEW_ITEMS: ReviewItem[] = []
 const readMastered = (engine: GameEngine) => engine.masteredWords
 const readWordStats = (engine: GameEngine) => engine.allWordStats()
 const readDayStats = (engine: GameEngine) => engine.dayStats()
 const EMPTY_CARDS: SenseCard[] = []
 const EMPTY_WORD_STATS: Record<string, WordStat> = {}
 const EMPTY_DAY_STATS: Record<string, DayStat> = {}
+
+/** 页头只订阅数量，不复制整个错题本，也不因无关作答重新渲染。 */
+export function useWrongCount(): number {
+  const engine = useEngine()
+  const [count, setCount] = React.useState(0)
+  React.useEffect(() => {
+    if (!engine) return
+    const sync = () => setCount(readWrongCount(engine))
+    sync()
+    const unsubscribe = engine.onChange(sync)
+    const timer = setInterval(sync, 30_000)
+    return () => { unsubscribe(); clearInterval(timer) }
+  }, [engine])
+  return count
+}
+
+export function useReviewNotebook() {
+  const engine = useEngine()
+  const items = useEngineValue(engine, readReviewItems, EMPTY_REVIEW_ITEMS)
+  return { engine, items }
+}
 
 /** 错题本：引擎实例 + 词条列表（随引擎变更实时刷新） */
 export function useWrongBook(): { engine: GameEngine | null; words: SenseCard[] } {

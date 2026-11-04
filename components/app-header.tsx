@@ -18,12 +18,12 @@ import {
   Theme,
 } from '@radix-ui/themes'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { useWrongBook } from '@/lib/hooks'
+import { useWrongCount } from '@/lib/hooks'
 
 /** 页头导航清单：桌面端内联、移动端全屏菜单，共用同一份 */
 const NAV_ITEMS = [
   { href: '/browse', label: '预习词库', icon: BookOpenText },
-  { href: '/wrong-words', label: '错题本', icon: NotebookText },
+  { href: '/wrong-words', label: '复习本', icon: NotebookText },
   { href: '/settings', label: '设置', icon: Settings2 },
   { href: '/help', label: '帮助', icon: CircleHelp },
 ]
@@ -45,7 +45,8 @@ function NavItem({
   const active = pathname === href
   return (
     <Button asChild variant={active ? 'soft' : 'ghost'} color={active ? undefined : 'gray'} size="3">
-      <Link href={href} aria-label={ariaLabel ?? label} aria-current={active ? 'page' : undefined}>
+      <Link href={href} prefetch={href === '/settings' || href === '/help' ? false : undefined}
+        aria-label={ariaLabel ?? label} aria-current={active ? 'page' : undefined}>
         {icon}
         <span className="max-sm:hidden">{label}</span>
       </Link>
@@ -138,7 +139,7 @@ function MobileMenu({
 }
 
 export function AppHeader() {
-  const { words } = useWrongBook()
+  const wrongCount = useWrongCount()
   const pathname = usePathname().replace(/\/$/, '') || '/'
   const [menuOpen, setMenuOpen] = React.useState(false)
   const menuTriggerRef = React.useRef<HTMLButtonElement>(null)
@@ -146,13 +147,15 @@ export function AppHeader() {
   // 菜单打开期间：锁背景滚动、Esc 关闭并将键盘焦点限制在菜单里
   React.useEffect(() => {
     if (!menuOpen) return
-    const dialog = document.getElementById('app-drawer')
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setMenuOpen(false)
         return
       }
-      if (e.key !== 'Tab' || !dialog) return
+      if (e.key !== 'Tab') return
+      // Portal 内容可能在本 effect 之后挂载，按键时再查找才能可靠地限制焦点。
+      const dialog = document.getElementById('app-drawer')
+      if (!dialog) return
 
       const focusable = Array.from(
         dialog.querySelectorAll<HTMLElement>(
@@ -186,7 +189,6 @@ export function AppHeader() {
   return (
     <header
       className="app-header sticky top-0 z-40 border-b border-[var(--gray-a4)] backdrop-blur-md"
-      style={{ backgroundColor: 'var(--gray-a3)' }}
     >
       {/* 用与页面相同的 Container：页头内容与页面内容共用同一条内容栏（桌面端不内缩） */}
       <Container size="3" px="4">
@@ -210,8 +212,8 @@ export function AppHeader() {
                   pathname={pathname}
                   href="/wrong-words"
                   icon={<NotebookText size={18} />}
-                  label="错题本"
-                  ariaLabel={words.length > 0 ? `错题本（${words.length} 词）` : '错题本'}
+                  label="复习本"
+                  ariaLabel={wrongCount > 0 ? `复习本（待复习 ${wrongCount} 词）` : '复习本'}
                 />
               </Flex>
 
@@ -254,7 +256,7 @@ export function AppHeader() {
         open={menuOpen}
         onClose={() => setMenuOpen(false)}
         pathname={pathname}
-        wrongCount={words.length}
+        wrongCount={wrongCount}
       />
     </header>
   )

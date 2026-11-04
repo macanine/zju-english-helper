@@ -1,11 +1,13 @@
 import { dayKey } from './stats'
-import { STORAGE_VALIDATORS } from './storage'
+import { STORAGE_VALIDATORS, loadReviewNotebook, UPGRADE_BACKUP_KEY } from './storage'
+import { upgradeCards } from './review'
 import { hasFields, isRecord } from './validation'
+import { flushPendingSaves } from './persistence'
 
-/** 备份覆盖的键：错题本 / 设置 / 偏好 / 单词记录 / 每日记录 / 已掌握 */
+/** 当前备份覆盖复习本、设置、偏好、语音及学习统计；旧集合仅用于 v2 导入。 */
 type BackupKey = keyof typeof STORAGE_VALIDATORS
-const BACKUP_KEYS = Object.keys(STORAGE_VALIDATORS) as BackupKey[]
-const BACKUP_VERSION = 2
+const BACKUP_KEYS = Object.keys(STORAGE_VALIDATORS).filter(key => !['zjueh.wrong-words', 'zjueh.mastered'].includes(key)) as BackupKey[]
+const BACKUP_VERSION = 3
 
 interface BackupFile {
   app: 'zjueh'
@@ -15,6 +17,8 @@ interface BackupFile {
 }
 
 export function buildBackup(): BackupFile {
+  flushPendingSaves()
+  loadReviewNotebook()
   const data: Record<string, unknown> = {}
   for (const key of BACKUP_KEYS) {
     const raw = localStorage.getItem(key)
@@ -50,7 +54,7 @@ export function importBackup(text: string): ImportResult {
     return { ok: false, error: '文件不是有效的 JSON。' }
   }
   if (!hasFields(parsed, ['app', 'version', 'exportedAt', 'data']) ||
-      parsed.app !== 'zjueh' || parsed.version !== BACKUP_VERSION ||
+      parsed.app !== 'zjueh' || ![2, BACKUP_VERSION].includes(parsed.version as number) ||
       typeof parsed.exportedAt !== 'string' || !Number.isFinite(Date.parse(parsed.exportedAt)) ||
       !isRecord(parsed.data)) {
     return { ok: false, error: '备份格式或版本不受支持，请使用当前应用导出的备份。' }
@@ -58,6 +62,20 @@ export function importBackup(text: string): ImportResult {
   const data = parsed.data
   if (Object.keys(data).some((key) => !Object.hasOwn(STORAGE_VALIDATORS, key))) {
     return { ok: false, error: '备份包含无法识别的数据字段。' }
+  }
+  if (parsed.version === 2) {
+    if (Object.hasOwn(data, 'zjueh.review-notebook')) return { ok: false, error: '旧版备份包含不匹配的复习本。' }
+    for (const key of ['zjueh.wrong-words', 'zjueh.mastered'] as const) {
+      if (Object.hasOwn(data, key) && !STORAGE_VALIDATORS[key](data[key])) return { ok: false, error: `旧版词条格式无效：${key}` }
+    }
+    if (Object.hasOwn(data, 'zjueh.wrong-words') || Object.hasOwn(data, 'zjueh.mastered')) {
+      data['zjueh.review-notebook'] = upgradeCards(
+        (data['zjueh.wrong-words'] ?? []) as Parameters<typeof upgradeCards>[0],
+        (data['zjueh.mastered'] ?? []) as Parameters<typeof upgradeCards>[1], Date.now())
+    }
+    delete data['zjueh.wrong-words']; delete data['zjueh.mastered']
+  } else if (Object.hasOwn(data, 'zjueh.wrong-words') || Object.hasOwn(data, 'zjueh.mastered')) {
+    return { ok: false, error: '当前备份不能包含旧版错题字段。' }
   }
   const keys = BACKUP_KEYS.filter((key) => Object.hasOwn(data, key))
   if (keys.length === 0) return { ok: false, error: '备份里没有可导入的数据。' }
@@ -69,6 +87,7 @@ export function importBackup(text: string): ImportResult {
   const previous = new Map<BackupKey, string | null>()
   const written: BackupKey[] = []
   try {
+    flushPendingSaves()
     for (const key of keys) previous.set(key, localStorage.getItem(key))
     for (const key of keys) {
       localStorage.setItem(key, JSON.stringify(data[key]))
@@ -87,4 +106,13 @@ export function importBackup(text: string): ImportResult {
     return { ok: false, error: '无法写入本地存储，本次导入未生效。' }
   }
   return { ok: true, keys: keys.length }
+}
+
+export function downloadUpgradeBackup() {
+  const raw = localStorage.getItem(UPGRADE_BACKUP_KEY)
+  if (!raw) throw new Error('没有升级前备份')
+  const url = URL.createObjectURL(new Blob([raw], { type: 'application/json' }))
+  const a = document.createElement('a')
+  a.href = url; a.download = 'daiying-moxieqi-before-upgrade-v2.json'; a.click()
+  URL.revokeObjectURL(url)
 }

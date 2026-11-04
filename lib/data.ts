@@ -1,5 +1,6 @@
 import { isWordEntry, type WordEntry } from './model'
 import { hasFields, isId, isText } from './validation'
+import type { WordOrigin } from './review'
 
 export interface BookMeta {
   id: string
@@ -50,6 +51,11 @@ export interface LoadProgress {
   total: number
 }
 
+export interface UnitWords {
+  unitId: string
+  words: WordEntry[]
+}
+
 async function fetchUnit(bookId: string, unitId: string): Promise<WordEntry[]> {
   const key = `${bookId}/${unitId}`
   const res = await fetch(`/data/${key}.json`)
@@ -75,12 +81,11 @@ function loadUnit(bookId: string, unitId: string): Promise<WordEntry[]> {
   return hit
 }
 
-/** 加载一本词书若干单元的全部词条（按单元顺序拼接），并报告单元完成进度。 */
-export async function loadWordsWithProgress(
+async function loadUnitGroups(
   bookId: string,
   unitIds: string[],
   onProgress?: (progress: LoadProgress) => void,
-): Promise<WordEntry[]> {
+): Promise<UnitWords[]> {
   const manifest = await loadManifest()
   const book = manifest.books.find((entry) => entry.id === bookId)
   if (!book || unitIds.length === 0 || new Set(unitIds).size !== unitIds.length ||
@@ -89,20 +94,55 @@ export async function loadWordsWithProgress(
   }
   const total = unitIds.length
   let loaded = 0
-  const perUnit = await Promise.all(
-    unitIds.map(async (unit) => {
-      const words = await loadUnit(bookId, unit)
+  return Promise.all(
+    unitIds.map(async (unitId) => {
+      const words = await loadUnit(bookId, unitId)
       loaded += 1
       onProgress?.({ loaded, total })
-      return words
+      return { unitId, words }
     }),
   )
-  return perUnit.flat()
+}
+
+/** 按单元顺序建立单词来源索引，供练习和预习共用。 */
+export function indexWordOrigins(bookId: string, groups: readonly UnitWords[]): Map<string, WordOrigin[]> {
+  const origins = new Map<string, WordOrigin[]>()
+  for (const group of groups) {
+    for (const word of group.words) {
+      let entries = origins.get(word.english)
+      if (!entries) {
+        entries = []
+        origins.set(word.english, entries)
+      }
+      entries.push({ bookId, unitId: group.unitId })
+    }
+  }
+  return origins
+}
+
+/** 加载一本词书若干单元的全部词条（按单元顺序拼接），并报告单元完成进度。 */
+export async function loadWordsWithProgress(
+  bookId: string,
+  unitIds: string[],
+  onProgress?: (progress: LoadProgress) => void,
+): Promise<WordEntry[]> {
+  const groups = await loadUnitGroups(bookId, unitIds, onProgress)
+  return groups.flatMap(group => group.words)
 }
 
 /** 加载一本词书若干单元的全部词条（按单元顺序拼接） */
 export function loadWords(bookId: string, unitIds: string[]): Promise<WordEntry[]> {
   return loadWordsWithProgress(bookId, unitIds)
+}
+
+/** 提前填充单元缓存；实际开局仍会校验并报告加载错误。 */
+export async function preloadWords(bookId: string, unitIds: string[]): Promise<void> {
+  await loadUnitGroups(bookId, unitIds)
+}
+
+export async function loadWordsWithOrigins(bookId: string, unitIds: string[], onProgress?: (progress: LoadProgress) => void) {
+  const groups = await loadUnitGroups(bookId, unitIds, onProgress)
+  return { words: groups.flatMap(group => group.words), origins: indexWordOrigins(bookId, groups) }
 }
 
 export function unitLabel(unitId: string): string {

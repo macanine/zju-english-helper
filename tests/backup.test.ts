@@ -30,9 +30,9 @@ test('buildBackup 只收集当前 schema 的数据', () => {
   store.set('zjueh.wrong-words', JSON.stringify([card]))
   const backup = buildBackup()
   assert.equal(backup.app, 'zjueh')
-  assert.equal(backup.version, 2)
+  assert.equal(backup.version, 3)
   assert.ok(backup.exportedAt)
-  assert.deepEqual(Object.keys(backup.data).sort(), ['zjueh.prefs', 'zjueh.wrong-words'])
+  assert.deepEqual(Object.keys(backup.data).sort(), ['zjueh.prefs', 'zjueh.review-notebook'])
 })
 
 test('importBackup 覆盖写入当前版本备份', () => {
@@ -47,7 +47,7 @@ test('importBackup 覆盖写入当前版本备份', () => {
   })
   assert.deepEqual(importBackup(text), { ok: true, keys: 2 })
   assert.deepEqual(JSON.parse(store.get('zjueh.prefs')!), DEFAULT_PREFS)
-  assert.deepEqual(JSON.parse(store.get('zjueh.wrong-words')!), [card])
+  assert.equal(JSON.parse(store.get('zjueh.review-notebook')!)[0].word.english, card.english)
 })
 
 test('importBackup 拒绝旧版本、非法和空备份', () => {
@@ -73,7 +73,7 @@ test('导出再导入保持当前 schema 不变', () => {
   store.clear()
   assert.deepEqual(importBackup(JSON.stringify(backup)), { ok: true, keys: 2 })
   assert.deepEqual(JSON.parse(store.get('zjueh.prefs')!), DEFAULT_PREFS)
-  assert.deepEqual(JSON.parse(store.get('zjueh.wrong-words')!), [card])
+  assert.deepEqual(JSON.parse(store.get('zjueh.review-notebook')!), backup.data['zjueh.review-notebook'])
 })
 
 test('本地浏览器语音选择可以随备份往返', () => {
