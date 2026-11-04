@@ -10,3 +10,9 @@ next-env.d.ts
 
 # 测试编译产物
 .test-build/
+
+# Tauri
+src-tauri/target/
+src-tauri/gen/schemas/
+src-tauri/icons/android/
+src-tauri/icons/ios/
