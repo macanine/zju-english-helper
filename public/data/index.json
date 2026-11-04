@@ -1,6 +1,20 @@
 {
   "books": [
     {
+      "id": "book1",
+      "units": [
+        "unit1",
+        "unit2",
+        "unit3",
+        "unit4",
+        "unit5",
+        "unit6",
+        "unit7",
+        "unit8"
+      ],
+      "name": "Book 1"
+    },
+    {
       "id": "book2",
       "units": [
         "unit1-1",
@@ -20,7 +34,7 @@
         "unit8-1",
         "unit8-2"
       ],
-      "name": "大英三"
+      "name": "Book 2"
     },
     {
       "id": "book3",
@@ -42,7 +56,7 @@
         "unit8-1",
         "unit8-2"
       ],
-      "name": "大英四"
+      "name": "Book 3"
     }
   ]
 }

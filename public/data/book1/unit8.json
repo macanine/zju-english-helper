@@ -1,0 +1,1318 @@
+[
+	{
+		"english": "undeniable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "不可否认的；无可争辩的",
+				"en": "definitely true or certain",
+				"examples": [
+					"The link between poverty and bad health is [[undeniable]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "mundane",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "平凡的；平淡的；乏味的",
+				"en": "ordinary and not interesting or exciting",
+				"examples": [
+					"The [[mundane]] task of setting the table can be fun on holidays."
+				]
+			}
+		]
+	},
+	{
+		"english": "bacon",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "咸猪肉；熏猪肉",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "rapt",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "全神贯注的；专心致志的",
+				"en": "(written) so interested in sth. that you do not notice anything else",
+				"examples": [
+					"She listened to the speaker with [[rapt]] attention."
+				]
+			}
+		]
+	},
+	{
+		"english": "marvel",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（尤指对他人的行为）感到惊讶；钦佩；赞美",
+				"en": "feel or express great surprise or admiration at sth., esp. sb.'s behavior",
+				"examples": [
+					"I [[marvel]] at my mother's ability to remain calm in crisis."
+				]
+			}
+		]
+	},
+	{
+		"english": "app",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "应用程序；应用软件",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "expose",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使暴露（于险境）；使置身（于危险）当中",
+				"en": "put sb. in a situation where they are not protected from sth. dangerous or unpleasant",
+				"examples": [
+					"The report revealed that workers had been [[exposed]] to high levels of radiation."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "显露；露出（通常掩盖或隐藏的东西）",
+				"en": "show sth. that is usu. covered or hidden",
+				"examples": [
+					"He lifted his T-shirt to [[expose]] a scar across his chest."
+				]
+			}
+		]
+	},
+	{
+		"english": "exposed",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "无保护的；易受攻击的",
+				"en": "not protected from attack",
+				"examples": [
+					"These developments leave the company in an [[exposed]] position."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "无遮蔽的；不挡风雨的",
+				"en": "not protected from the weather",
+				"examples": [
+					"This side of the garden is [[exposed]] to wind."
+				]
+			}
+		]
+	},
+	{
+		"english": "nerve",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "神经",
+				"en": "any of the long threads that carry messages between the brain and parts of the body, enabling you to move, feel pain, etc.",
+				"examples": [
+					"She was diagnosed with a rare condition which affected the [[nerves]] in her back."
+				]
+			},
+			{
+				"pos": "n. [pl.]",
+				"zh": "神经紧张；焦虑不安",
+				"en": "(~s) feelings of worry or anxiety",
+				"examples": [
+					"Sean drank a large glass of brandy to calm his [[nerves]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "humanity",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "人性",
+				"en": "the state of being human rather than an animal or machine",
+				"examples": [
+					"When we're in touch with our common [[humanity]], we remember that feelings of disappointment are universal."
+				]
+			},
+			{
+				"pos": "n. [U]",
+				"zh": "人；人类（总称）",
+				"en": "people in general",
+				"examples": [
+					"We want a clean environment for all [[humanity]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "interaction",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "交流",
+				"en": "(~ with / between / among) the activity of talking to other people, working together with them, etc.",
+				"examples": [
+					"The researchers watch through a two-way mirror the [[interaction]] between mother and child in a small room."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "相互影响；相互作用",
+				"en": "a process by which two or more things affect each other",
+				"examples": [
+					"Price is determined through the [[interaction]] of demand and supply."
+				]
+			}
+		]
+	},
+	{
+		"english": "inhuman",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（怪异、恐怖而）异于人类的",
+				"en": "lacking any human qualities in a way that seems strange or frightening",
+				"examples": [
+					"I quit this [[inhuman]] job. I don't want to work for a machine."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "残暴的；无同情心的",
+				"en": "very cruel or without any normal feelings of pity",
+				"examples": [
+					"The prisoners had suffered [[inhuman]] treatment."
+				]
+			}
+		]
+	},
+	{
+		"english": "confuse",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使困惑；把（某人）弄糊涂",
+				"en": "make sb. feel that they cannot think clearly or do not understand",
+				"examples": [
+					"I understand the text but the diagrams are [[confusing]] me."
+				]
+			}
+		]
+	},
+	{
+		"english": "confusing",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "令人困惑的；模糊不清的；难懂的",
+				"en": "unclear and difficult to understand",
+				"examples": [
+					"The road signs were very [[confusing]] and we ended up getting lost."
+				]
+			}
+		]
+	},
+	{
+		"english": "seemingly",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "看上去；表面上；外观上",
+				"en": "in a way that appears to have a particular quality when this may or may not be true",
+				"examples": [
+					"The new minister was faced with a [[seemingly]] impossible task."
+				]
+			}
+		]
+	},
+	{
+		"english": "conflicting",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（想法、信仰、观点等）冲突的，矛盾的",
+				"en": "conflicting ideas, beliefs, opinions, etc. cannot exist together or both be true",
+				"examples": [
+					"It can be difficult to balance the [[conflicting]] demands for our time."
+				]
+			}
+		]
+	},
+	{
+		"english": "lament",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "抱怨",
+				"en": "express annoyance or disappointment about sth. that you think is unsatisfactory or unfair",
+				"examples": [
+					"He [[lamented]] that people had expected too much of him."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（为···）悲痛，痛惜",
+				"en": "express feelings of great sadness about sth.",
+				"examples": [
+					"The nation [[lamented]] the death of its great leader."
+				]
+			}
+		]
+	},
+	{
+		"english": "ubiquitous",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "似乎无处不在的（有时为幽默手法）",
+				"en": "(fml.) seeming to be everywhere — sometimes used humorously",
+				"examples": [
+					"He is as recognizable and as [[ubiquitous]] as the celebrities he photographs."
+				]
+			}
+		]
+	},
+	{
+		"english": "advanced",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "先进的",
+				"en": "very modern",
+				"examples": [
+					"Modern armies consist of fewer soldiers and more [[advanced]] weapon systems."
+				]
+			}
+		]
+	},
+	{
+		"english": "capture",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "引起某人想象；吸引某人注意等",
+				"en": "(~ sb's imagination / attention, etc.) make sb. feel very interested in sth.",
+				"examples": [
+					"His stories of foreign adventure [[captured]] my imagination."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "俘虏；逮捕",
+				"en": "catch a person and keep them as a prisoner",
+				"examples": [
+					"Government troops have succeeded in [[capturing]] the rebel leader."
+				]
+			}
+		]
+	},
+	{
+		"english": "category",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "类别；种类；范畴",
+				"en": "a group of people or things that are all of the same type",
+				"examples": [
+					"Seats are available in ten price [[categories]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "categorize",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "对···进行分类；把···归类",
+				"en": "(BrE categorise) put people or things into groups according to the type of person or thing they are",
+				"examples": [
+					"The population is [[categorized]] according to age, sex, and social group."
+				]
+			}
+		]
+	},
+	{
+		"english": "viewpoint",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "观点；看法；见解",
+				"en": "a particular way of thinking about a problem or subject",
+				"examples": [
+					"From a practical [[viewpoint]], I'd advise you not to go."
+				]
+			}
+		]
+	},
+	{
+		"english": "equip",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使有能力；使能够胜任",
+				"en": "give sb. the information and skills that they need to do sth.",
+				"examples": [
+					"We [[equip]] students with the skills they will need once they leave college."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "装备；配备",
+				"en": "provide a person or place with the things that are needed for a particular kind of activity or work",
+				"examples": [
+					"They spent a lot of money [[equipping]] the school with new computers."
+				]
+			}
+		]
+	},
+	{
+		"english": "observation",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "观察结果",
+				"en": "sth. that you notice when watching sb. / sth.",
+				"examples": [
+					"Some interesting [[observations]] emerged from this research."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "观察；注意；监视",
+				"en": "the process of watching sb. / sth. carefully for a period of time",
+				"examples": [
+					"Most information was collected by direct [[observation]] of the animals' behavior."
+				]
+			}
+		]
+	},
+	{
+		"english": "dynamic",
+		"senses": [
+			{
+				"pos": "n. [pl.]",
+				"zh": "动态；（事物或人）相互作用的方式",
+				"en": "(~s) the way in which things or people behave, react, and affect each other",
+				"examples": [
+					"He did research on group [[dynamics]] and leadership styles."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "不断移动的；不断变化的；动态的",
+				"en": "continuously moving or changing",
+				"examples": [
+					"These countries are characterized by highly [[dynamic]] economies."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "精力充沛的；有创新思想的；志在成功的",
+				"en": "full of energy and new ideas, and determined to succeed",
+				"examples": [
+					"We're looking for someone positive and [[dynamic]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "revealing",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "揭露真相的；揭示内情的",
+				"en": "a remark or event that is revealing shows you sth. interesting or surprising about a situation or sb.'s character",
+				"examples": [
+					"The document provided a [[revealing]] insight into the way government works."
+				]
+			}
+		]
+	},
+	{
+		"english": "occasional",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "偶尔的；不经常的",
+				"en": "(only before noun) happening sometimes but not often or regularly",
+				"examples": [
+					"He spent five years in Paris, with [[occasional]] visits to Italy."
+				]
+			}
+		]
+	},
+	{
+		"english": "intertwine",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）缠绕；（使）交织在一起",
+				"en": "if two things intertwine, or if they are intertwined, they are twisted together",
+				"examples": [
+					"He told us a story in which the present and the past [[intertwined]]."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）（局势、观点等）紧密相关",
+				"en": "if two situations, ideas, etc. are intertwined, they are closely related to each other",
+				"examples": [
+					"Her fate [[intertwined]] with his."
+				]
+			}
+		]
+	},
+	{
+		"english": "continuously",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "持续地；不间断地",
+				"en": "without a pause or interruption",
+				"examples": [
+					"He has lived and worked in France almost [[continuously]] since 1990."
+				]
+			}
+		]
+	},
+	{
+		"english": "lens",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（照相机的）镜头",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "re-frame",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "全新地拟定（或表达）（话语、概念或计划）",
+				"en": "frame or express (words, or a concept or plan) differently",
+				"examples": [
+					"She is trying to [[re-frame]] the debate about the care of children in need."
+				]
+			}
+		]
+	},
+	{
+		"english": "cellphone",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "移动电话；手机",
+				"en": "(BrE mobile phone)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "rebellious",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "叛逆的；反叛的；反抗的",
+				"en": "deliberately not obeying people in authority or rules of behavior",
+				"examples": [
+					"Her teachers consider her a [[rebellious]], trouble-making girl."
+				]
+			}
+		]
+	},
+	{
+		"english": "old-fashioned",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "旧式的；老式的；过时的",
+				"en": "not considered to be modern or fashionable anymore",
+				"examples": [
+					"His idea is regarded as rather [[old-fashioned]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "flip phone",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "翻盖手机",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "insane",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "愚蠢的；疯狂的",
+				"en": "(infml.) completely stupid or crazy, often in a way that is dangerous",
+				"examples": [
+					"For some [[insane]] reason he decided to do the whole journey in one day."
+				]
+			}
+		]
+	},
+	{
+		"english": "monthly",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "按月结算的；每月的",
+				"en": "(only before noun) used to talk about the total amount of sth. that is received, paid, measured, or calculated in a month",
+				"examples": [
+					"Summers are hot here, with [[monthly]] average temperature above 30 °C."
+				]
+			}
+		]
+	},
+	{
+		"english": "possibility",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "可能；可能性",
+				"en": "if there is a possibility that sth. is true or that sth. will happen, it might be true or it might happen",
+				"examples": [
+					"There is always a [[possibility]] that he might go back to Seattle."
+				]
+			}
+		]
+	},
+	{
+		"english": "upgrade",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "（计算器、机器、软件的）升级",
+				"en": "the act of making a computer, machine, or piece of software better and able to do more things",
+				"examples": [
+					"The [[upgrade]] to the latest version costs $395."
+				]
+			}
+		]
+	},
+	{
+		"english": "roaming",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "（手机）漫游",
+				"en": "the process that a mobile phone uses when it is in a different country or area from usual, and has to connect to a different network",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "transmit",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "传输，发送，传送（电子信号、信息等）",
+				"en": "send out electronic signals, messages, etc. using radio, television, or other similar equipment",
+				"examples": [
+					"The system [[transmits]] information over digital phone lines."
+				]
+			}
+		]
+	},
+	{
+		"english": "emission",
+		"senses": [
+			{
+				"pos": "n. [C, usu. pl.]",
+				"zh": "排放物；散发物",
+				"en": "a gas or other substance that is sent into the air",
+				"examples": [
+					"The government has decided to clean up industrial [[emissions]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "landfill",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "废弃物填埋场",
+				"en": "a place where waste is buried under the ground",
+				"examples": []
+			},
+			{
+				"pos": "n. [U]",
+				"zh": "废弃物的填埋；填埋的废弃物",
+				"en": "the practice of burying waste under the ground, or the waste buried in this way",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "toxic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有毒的；由有毒物质引起的",
+				"en": "containing poison, or caused by poisonous substances",
+				"examples": [
+					"[[Toxic]] chemicals have been spilled into the river for the past three months."
+				]
+			}
+		]
+	},
+	{
+		"english": "decisive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "决定性的；关键性的",
+				"en": "an action, event, etc. that is decisive has a big effect on the way that sth. develops",
+				"examples": [
+					"It is the chief executive's opinion that is ultimately [[decisive]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "anytime",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "任何时候",
+				"en": "at a time that is not fixed",
+				"examples": [
+					"They should arrive [[anytime]] between noon and 3 p.m."
+				]
+			}
+		]
+	},
+	{
+		"english": "liberate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使自由；使摆脱束缚",
+				"en": "free sb. from feelings or conditions that make their life unhappy or difficult",
+				"examples": [
+					"Writing poetry [[liberated]] her from the routine of everyday life."
+				]
+			}
+		]
+	},
+	{
+		"english": "overwhelming",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "难以抗拒的；令人不知所措的",
+				"en": "having such a great effect on you that you feel confused and do not know how to react",
+				"examples": [
+					"She felt an [[overwhelming]] desire to tell someone about what had happened."
+				]
+			}
+		]
+	},
+	{
+		"english": "burden",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "重担；负担",
+				"en": "sth. difficult or worrying that you are responsible for",
+				"examples": [
+					"His family responsibilities have started to become a [[burden]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "temptation",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "引诱；诱惑",
+				"en": "(~ to do sth.) a strong desire to have or do sth. even though you know you should not",
+				"examples": [
+					"Resist the [[temptation]] to buy the item until you're certain you need it."
+				]
+			}
+		]
+	},
+	{
+		"english": "presence",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "出席；到场；存在",
+				"en": "when sb. / sth. is present in a particular place",
+				"examples": [
+					"Your [[presence]] is requested at the club meeting on Friday."
+				]
+			}
+		]
+	},
+	{
+		"english": "witness",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（罪案、事故、事件的）目击者",
+				"en": "sb. who sees a crime, accident or other event and can describe what happened",
+				"examples": [
+					"According to [[witnesses]], the thief escaped through the bedroom window."
+				]
+			}
+		]
+	},
+	{
+		"english": "intrude",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "打扰；干涉",
+				"en": "interrupt sb. or become involved in their private affairs, in an annoying and unwanted way",
+				"examples": [
+					"Would I be [[intruding]] if I came with you?"
+				]
+			}
+		]
+	},
+	{
+		"english": "intrusive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "干涉的；打扰的",
+				"en": "affecting sb's private life or interrupting them in an unwanted and annoying way",
+				"examples": [
+					"Some residents of the island found the presence of the film crew too [[intrusive]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "patience",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "（持续等待或长时间做某事的）耐心",
+				"en": "the ability to continue waiting or doing sth. for a long time without becoming angry or anxious",
+				"examples": [
+					"Teaching children with special needs requires [[patience]] and understanding."
+				]
+			}
+		]
+	},
+	{
+		"english": "empathy",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "同情；同感；共鸣",
+				"en": "the ability to understand other people's feelings and problems",
+				"examples": [
+					"The nurse should try to develop [[empathy]] between herself and the patient."
+				]
+			}
+		]
+	},
+	{
+		"english": "affection",
+		"senses": [
+			{
+				"pos": "n. [U, sing.]",
+				"zh": "喜爱；钟爱；慈爱",
+				"en": "a feeling of liking or love and caring",
+				"examples": [
+					"She looked back on those days with [[affection]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "contemplation",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "沉思；冥想；默想",
+				"en": "quiet serious thinking about sth.",
+				"examples": [
+					"The monks spend an hour on [[contemplation]] each morning."
+				]
+			}
+		]
+	},
+	{
+		"english": "essential",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "极其重要的；必不可少的",
+				"en": "(~ for / to) extremely important and necessary",
+				"examples": [
+					"It is becoming almost [[essential]] for students to learn a second language."
+				]
+			}
+		]
+	},
+	{
+		"english": "fulfil",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "实现（希望、愿望、目标等）",
+				"en": "if you fulfil a hope, wish, or aim, you achieve the thing that you hoped for, wished for, etc.",
+				"examples": [
+					"Visiting Disneyland has [[fulfilled]] my boyhood dream."
+				]
+			}
+		]
+	},
+	{
+		"english": "fulfilling",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "令人满意的",
+				"en": "making you feel happy and satisfied because you are doing interesting, useful, or important things",
+				"examples": [
+					"Each of these courses is academically challenging and personally [[fulfilling]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "compatible",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "可共存的；可兼用的",
+				"en": "able to exist or be used together without causing problems",
+				"examples": [
+					"Are measures to protect the environment [[compatible]] with economic growth?"
+				]
+			}
+		]
+	},
+	{
+		"english": "gratitude",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "感激（之情）",
+				"en": "the feeling of being grateful",
+				"examples": [
+					"I would like to express my [[gratitude]] to everyone for their hard work."
+				]
+			}
+		]
+	},
+	{
+		"english": "Greek",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "希腊的；希腊人的；希腊语的",
+				"en": "relating to Greece, its people, or its language",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "anticipate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "预期；预料",
+				"en": "expect that sth. will happen and be ready for it",
+				"examples": [
+					"We need someone who can [[anticipate]] and respond to changes in the fashion industry."
+				]
+			}
+		]
+	},
+	{
+		"english": "meaningful",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "严肃的；重要的；有用的",
+				"en": "serious, important, or useful",
+				"examples": [
+					"They want a chance to do [[meaningful]] work."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "有意义的；浅显易懂的",
+				"en": "having a meaning that is easy to understand and makes sense",
+				"examples": [
+					"These statistics are not [[meaningful]] to anyone but a scientist."
+				]
+			}
+		]
+	},
+	{
+		"english": "absorbed",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "极感兴趣的；全神贯注的；专注的",
+				"en": "so interested or involved in sth. that you do not notice anything else",
+				"examples": [
+					"Judith was totally [[absorbed]] in her book."
+				]
+			}
+		]
+	},
+	{
+		"english": "willpower",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "毅力；意志力",
+				"en": "the ability to control your mind and body in order to achieve sth. that you want to do",
+				"examples": [
+					"It took all his [[willpower]] to remain calm."
+				]
+			}
+		]
+	},
+	{
+		"english": "owner",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "所有人；物主；业主",
+				"en": "sb. who owns sth.",
+				"examples": [
+					"The police have been unable to trace the [[owner]] of the vehicle."
+				]
+			}
+		]
+	},
+	{
+		"english": "guarantee",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使必然发生；确保",
+				"en": "make it certain that sth. will happen",
+				"examples": [
+					"The process of training does not automatically [[guarantee]] you a job."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "保证",
+				"en": "promise to do sth. or promise that sth. will happen",
+				"examples": [
+					"I [[guarantee]] you will love this film."
+				]
+			}
+		]
+	},
+	{
+		"english": "bind",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "捆绑；系",
+				"en": "(bound, bound) tie sb. / sth. so that they cannot move or are held together firmly",
+				"examples": [
+					"They [[bound]] the package with brightly colored ribbons."
+				]
+			}
+		]
+	},
+	{
+		"english": "fasten",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使两部分）系牢，扎牢，结牢，扣紧",
+				"en": "close or join together the two parts of sth; become closed or joined together",
+				"examples": [
+					"I was so fat that my skirt wouldn't [[fasten]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "unreal",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "不真实的；虚幻的",
+				"en": "(not before noun) an experience, situation, etc. that is unreal seems so strange that you think you must be imagining it",
+				"examples": [
+					"It seemed [[unreal]] to be talking to someone so famous."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "脱离现实的；不切实际的",
+				"en": "not related to real things that happen",
+				"examples": [
+					"Many people have [[unreal]] expectations of what marriage will be like."
+				]
+			}
+		]
+	},
+	{
+		"english": "disconnect",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）脱离（关系）；（使）不联系",
+				"en": "if you disconnect or become disconnected from your feelings, family, society, etc., you no longer feel you belong or have a relationship with them",
+				"examples": [
+					"Divorced men can too easily become [[disconnected]] from their children."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "切断（机器或设备）的电力（煤气、水）等供应",
+				"en": "remove the supply of power, gas, water, etc. from a machine or piece of equipment",
+				"examples": [
+					"You should pay attention to [[disconnecting]] the machine from the mains first."
+				]
+			}
+		]
+	},
+	{
+		"english": "convince",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使确信；使信服",
+				"en": "make sb. feel certain that sth. is true",
+				"examples": [
+					"Her arguments didn't [[convince]] everyone, but changes were made."
+				]
+			}
+		]
+	},
+	{
+		"english": "convinced",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "确信的；信服的",
+				"en": "(not before noun) feeling certain that sth. is true",
+				"examples": [
+					"I was [[convinced]] that we were doing the right thing."
+				]
+			}
+		]
+	},
+	{
+		"english": "worlds apart",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（观点、态度等）有天壤之别",
+				"en": "completely different in attitudes, opinions, etc.",
+				"examples": [
+					"On the surface, they look the same. But in reality, they are [[worlds apart]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "hand down",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "传给（后代）",
+				"en": "give or leave sth. to people who will live after you",
+				"examples": [
+					"The ring was [[handed down]] to her from her grandmother."
+				]
+			}
+		]
+	},
+	{
+		"english": "hang on sb.'s every word / words",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "倾听（注意）某人每一个字 / 说的话",
+				"en": "pay close attention to everything sb. is saying",
+				"examples": [
+					"She was watching him, [[hanging on his every word]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "long to do sth.",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "渴望；盼望",
+				"en": "want sth. very much, esp. when it seems unlikely to happen soon",
+				"examples": [
+					"These were the words she had secretly [[longed to]] hear."
+				]
+			}
+		]
+	},
+	{
+		"english": "touch / hit a (raw) nerve",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（尤指无心地）触到敏感话题，触到痛处",
+				"en": "mention sth. that makes sb. upset, angry, or embarrassed, esp. accidentally",
+				"examples": [
+					"You [[touched a raw nerve]] when you mentioned his first wife."
+				]
+			}
+		]
+	},
+	{
+		"english": "sum up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "简而言之；概括",
+				"en": "show the most typical qualities of sb. / sth., esp. in a few words",
+				"examples": [
+					"For me, the novel [[summed up]] the major problems of human existence."
+				]
+			}
+		]
+	},
+	{
+		"english": "break down",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "拆分；把···分成若干部分（以方便做或理解）",
+				"en": "separate sth. into smaller parts so that it is easier to do or understand",
+				"examples": [
+					"The question can be [[broken down]] into two parts."
+				]
+			}
+		]
+	},
+	{
+		"english": "in short",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "总而言之；简单地说",
+				"en": "used when you want to give the main point of sth.",
+				"examples": [
+					"His novels belong to a great but vanished age. They are, [[in short]], old-fashioned."
+				]
+			}
+		]
+	},
+	{
+		"english": "engage with",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "与···建立密切关系；尽力理解",
+				"en": "become involved with and try to understand sb. / sth.",
+				"examples": [
+					"Are you so tired that you don't have the energy to [[engage with]] your kids?"
+				]
+			}
+		]
+	},
+	{
+		"english": "(be) on call",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（医生、工程师等）待命，随叫随到",
+				"en": "if sb. such as a doctor or engineer is on call, they are ready to go and help whenever they are needed as part of their job",
+				"examples": [
+					"Don't worry, there is a doctor [[on call]] 24 hours a day."
+				]
+			}
+		]
+	},
+	{
+		"english": "bear witness (to sth.)",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "见证（某事）；（为某事）证明",
+				"en": "show that sth. is true or exists",
+				"examples": [
+					"The empty workshops [[bear witness]] to the industrial past."
+				]
+			}
+		]
+	},
+	{
+		"english": "on the contrary / quite the contrary",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "正相反；恰恰相反",
+				"en": "used to add to a negative statement, to disagree with a negative statement by sb. else, or to answer no to a question",
+				"examples": [
+					"It wasn't a good thing; [[on the contrary]] it was a huge mistake."
+				]
+			}
+		]
+	},
+	{
+		"english": "The New Yorker",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "《纽约客》（美国知识、文艺类综合杂志）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Anaxagoras",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "阿那克萨哥拉（古希腊哲学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Pew survey",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "皮尤调查（美国 Pew Research Center 开展的民意调查）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

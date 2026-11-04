@@ -80,7 +80,7 @@ npm run android:build # 打通用 APK 到 src-tauri/gen/android/app/build/output
 
 - 词条结构：`{ english, senses: [{ pos, zh, en, examples }] }`。词性属于释义，允许为 `null`；同一词的多个用法合并进 `senses`。中文和英文释义分开保存，例句也属于各自释义。
 - 修改或新增数据直接编辑 `public/data/`，运行 `npm run check:data`。该命令检查清单与文件对应关系、必需字段、重复词头、词性格式及零宽空格/NBSP。运行时不替数据做兜底清洗。
-- 新词书需添加数据目录和单元 JSON、更新 `public/data/index.json`，并按需在 `lib/data.ts` 的 `BOOK_NAME_MAP` 配显示名。界面通过清单读取词书和单元，不要在视图中硬编码单元列表。
+- 新词书需添加数据目录和单元 JSON、更新 `public/data/index.json`，并在清单中填写显示名。界面通过清单读取词书和单元，不要在视图中硬编码单元列表。
 - 例句空缺用 `[[...]]` 标记；方括号内的拼写就是作答形式，可为语法所需的变形。一个句子多个不同空缺按顺序以空格连接作答；多个相同空缺只输入一次。例句练习按释义出题，没有可用空缺的卡片会自动跳过；若所选牌组都没有可用例句，显示无可用例句状态。
 - `buildCards(words, merge)` 的 `sense` 为每条释义各出一题，`first` 为每词一题并提示首条释义，`all` 为每词一题并列出全部释义。例句模式固定使用 `sense`，不要改变题目与释义配对关系。
 - `scripts/convert-v2.mjs`、`scripts/convert-v3.mjs` 和 `scripts/apply-example-split.mjs` 是历史迁移工具，会重写 `public/data/` 或创建归档快照，不属于日常数据编辑流程。执行前先阅读脚本、确认输入与备份；不要为了普通词条修订运行它们。历史 CSV 和从 CSV 重建 v1 词库的脚本已移除；`archive/v2-json/`、`archive/v3-json/` 仅保留格式迁移快照。

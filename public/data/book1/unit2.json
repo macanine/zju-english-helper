@@ -1,0 +1,1241 @@
+[
+	{
+		"english": "dispute",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "争议；争论；争端；纠纷",
+				"en": "a serious argument or disagreement",
+				"examples": [
+					"The firm is involved in a legal [[dispute]] with its competitor."
+				]
+			}
+		]
+	},
+	{
+		"english": "indisputable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "无可争辩的；不可否认的",
+				"en": "unable to be challenged or denied",
+				"examples": [
+					"It is [[indisputable]] that the crime rate has been decreasing."
+				]
+			}
+		]
+	},
+	{
+		"english": "explanation",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "解释；说明",
+				"en": "a statement or account that makes sth. clear or easy to understand",
+				"examples": [
+					"Could you give me a quick [[explanation]] of how the machine works?"
+				]
+			}
+		]
+	},
+	{
+		"english": "straightforward",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "简单的；易懂的",
+				"en": "simple and easy to understand",
+				"examples": [
+					"The question seemed [[straightforward]] enough."
+				]
+			}
+		]
+	},
+	{
+		"english": "economics",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "经济学",
+				"en": "the study of the way in which money and goods are produced and used",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "economy",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "经济",
+				"en": "the wealth that a country gets from business and industry",
+				"examples": [
+					"The country's [[economy]] grew at an annual rate of more than 10 percent."
+				]
+			}
+		]
+	},
+	{
+		"english": "squeeze",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "挤；捏",
+				"en": "firmly press sth., typically with your fingers",
+				"examples": [
+					"As she waited for the interview, he [[squeezed]] her hand and wished her good luck."
+				]
+			}
+		]
+	},
+	{
+		"english": "engage",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）从事，参加",
+				"en": "(~ sb. in sth.; ~ in sth.) make sb. take part in sth.; take part in sth.",
+				"examples": [
+					"The two governments have agreed to [[engage]] in a dialogue to solve the problem."
+				]
+			}
+		]
+	},
+	{
+		"english": "dominate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "支配；控制；左右；影响",
+				"en": "control or have a lot of influence over sb. / sth., esp. in an unpleasant way",
+				"examples": [
+					"The industry is [[dominated]] by five multinational companies."
+				]
+			}
+		]
+	},
+	{
+		"english": "manufacture",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（用机器大量）生产，制造",
+				"en": "use machines to make goods or materials, usu. in large numbers or amounts",
+				"examples": [
+					"It is a company that [[manufactures]] drugs."
+				]
+			},
+			{
+				"pos": "n. [U]",
+				"zh": "（大量商品的）生产，制造",
+				"en": "the process of making goods or materials using machines, usu. in large numbers or amounts",
+				"examples": [
+					"Cost will determine the methods of [[manufacture]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "manufacturing",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "制造；制造业",
+				"en": "the process or business of producing goods in factories",
+				"examples": [
+					"Thousands of jobs had been lost in [[manufacturing]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "harvest",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "收割",
+				"en": "gather in crops",
+				"examples": [
+					"Farmers here still plant and [[harvest]] their crops by hand."
+				]
+			},
+			{
+				"pos": "n. [C, U]",
+				"zh": "收割；收获季节",
+				"en": "the process or period of gathering in crops",
+				"examples": [
+					"The drought has made farmers anxious about the [[harvest]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "ripe",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（水果或庄稼）成熟的",
+				"en": "(of fruit or crops) fully grown and ready to eat",
+				"examples": [
+					"Those tomatoes aren't [[ripe]] yet —— they're still green."
+				]
+			}
+		]
+	},
+	{
+		"english": "infinite",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "无限的",
+				"en": "without limits, edges, or ends",
+				"examples": [
+					"Her fellow members marveled at her seemingly [[infinite]] energy."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "（数量或程度上）极大的",
+				"en": "very great in amount or degree",
+				"examples": [
+					"There was an [[infinite]] variety of drinks to choose from."
+				]
+			}
+		]
+	},
+	{
+		"english": "incoming",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（消息）接收到的",
+				"en": "(of a message) being received rather than sent",
+				"examples": [
+					"My email box is flooded with [[incoming]] messages when a school year begins."
+				]
+			}
+		]
+	},
+	{
+		"english": "mobile",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "与移动电话等技术有关的",
+				"en": "relating to mobile phones and similar technology",
+				"examples": [
+					"Over half of the country's e-commerce is now conducted on [[mobile]] devices."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "可移动的",
+				"en": "able to be moved from one place to another",
+				"examples": [
+					"The seats in the classroom are not [[mobile]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "handle",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "处理；应付",
+				"en": "deal with",
+				"examples": [
+					"If you can't [[handle]] the job, I'll ask someone else to do it."
+				]
+			}
+		]
+	},
+	{
+		"english": "to-do list",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "待办清单",
+				"en": "a list of tasks that need to be done",
+				"examples": [
+					"I'll take a moment away from my [[to-do list]] and think about my dream holiday."
+				]
+			}
+		]
+	},
+	{
+		"english": "inevitably",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "不可避免地；必然地",
+				"en": "as is certain to happen",
+				"examples": [
+					"One's accent [[inevitably]] gives away their place of origin."
+				]
+			}
+		]
+	},
+	{
+		"english": "overwhelm",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "压垮；使应接不暇",
+				"en": "give too much of a thing to sb.",
+				"examples": [
+					"We were [[overwhelmed]] by requests for information."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（感情上）使（某人）感到不能自持，使不知所措",
+				"en": "have a very strong emotional effect on sb.",
+				"examples": [
+					"She was [[overwhelmed]] by the need to talk to someone."
+				]
+			}
+		]
+	},
+	{
+		"english": "finite",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有限的；有限制的",
+				"en": "having a definite limit or fixed size",
+				"examples": [
+					"Every computer has a [[finite]] amount of memory."
+				]
+			}
+		]
+	},
+	{
+		"english": "demonstrate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "说明；证明；论证；证实",
+				"en": "show or prove sth. clearly",
+				"examples": [
+					"Hitchcock's films [[demonstrate]] that a British filmmaker could learn from Hollywood."
+				]
+			}
+		]
+	},
+	{
+		"english": "ironic",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（情况）出乎意料的，令人啼笑皆非的",
+				"en": "(of a situation) strange or amusing because it is very different from what you expect",
+				"examples": [
+					"It's [[ironic]] that she became a teacher —— she used to hate school."
+				]
+			}
+		]
+	},
+	{
+		"english": "economist",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "经济学家",
+				"en": "a person who studies or writes about economics",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "scarcity",
+		"senses": [
+			{
+				"pos": "n. [sing.]",
+				"zh": "不足；短缺",
+				"en": "a situation in which there is not enough of sth.",
+				"examples": [
+					"Many college graduates hunt for jobs in large cities owing to the [[scarcity]] of opportunities in small towns."
+				]
+			}
+		]
+	},
+	{
+		"english": "commitment",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "已承诺（或同意）的事；不得不做的事",
+				"en": "sth. that you have promised or agreed to do, or that you have to do",
+				"examples": [
+					"Women often have to strike a balance between work and their family [[commitments]]."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "承诺",
+				"en": "a promise to do sth. or to behave in a particular way",
+				"examples": [
+					"Alice doesn't want to make a big emotional [[commitment]] to Steve at the moment."
+				]
+			}
+		]
+	},
+	{
+		"english": "priority",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "优先处理的事；当务之急",
+				"en": "the thing that you think is most important and that needs attention before anything else",
+				"examples": [
+					"The customer is high on our list of [[priority]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "prioritise",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "优先考虑；优先处理",
+				"en": "(AmE prioritize) treat sth. as being more important than other things",
+				"examples": [
+					"The company has failed to [[prioritise]] safety."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "确定优先次序",
+				"en": "(AmE prioritize) determine the order for dealing with a series of items or tasks according to their relative importance",
+				"examples": [
+					"You should make a list of all the jobs you have to do and [[prioritise]] them."
+				]
+			}
+		]
+	},
+	{
+		"english": "crucial",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "至关重要的；关键性的",
+				"en": "extremely important because it will affect other things",
+				"examples": [
+					"This aid money is [[crucial]] to the government's economic policies."
+				]
+			}
+		]
+	},
+	{
+		"english": "infect",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使感染（某种感情）；影响",
+				"en": "make sb. share a particular feeling",
+				"examples": [
+					"The panic in the mother's voice [[infected]] her children."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "传染",
+				"en": "give sb. a disease",
+				"examples": [
+					"People with the virus may feel perfectly well, but they can still [[infect]] others."
+				]
+			}
+		]
+	},
+	{
+		"english": "leisure",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "空闲；闲暇",
+				"en": "free time",
+				"examples": [
+					"Most people only have a limited amount of [[leisure]] time."
+				]
+			}
+		]
+	},
+	{
+		"english": "recovery",
+		"senses": [
+			{
+				"pos": "n. [U, sing.]",
+				"zh": "改善；复苏",
+				"en": "the process of improving or becoming stronger again",
+				"examples": [
+					"The economy is showing signs of [[recovery]]."
+				]
+			},
+			{
+				"pos": "n. [U, sing.]",
+				"zh": "恢复；康复",
+				"en": "a return to a normal state of health, mind, or strength",
+				"examples": [
+					"It is hoped that Lawrence can make a full [[recovery]] from the operation."
+				]
+			}
+		]
+	},
+	{
+		"english": "epidemic",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（坏事的突然）泛滥，蔓延",
+				"en": "a sudden increase in the number of times that sth. bad happens",
+				"examples": [
+					"Can anything be done about this unhappiness [[epidemic]]?"
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "（传染病的）流行，传播",
+				"en": "a widespread occurrence of an infectious disease in a community at a particular time",
+				"examples": [
+					"A flu [[epidemic]] is sweeping through the United States this winter."
+				]
+			}
+		]
+	},
+	{
+		"english": "ultimate",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "最好的；极端的",
+				"en": "being the best or most extreme example of its kind",
+				"examples": [
+					"This race will be the [[ultimate]] test of your skill."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "最后的；终极的",
+				"en": "happening at the end of a long process",
+				"examples": [
+					"My manager will make the [[ultimate]] decision about whom to employ."
+				]
+			}
+		]
+	},
+	{
+		"english": "status",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "地位；身份；职位",
+				"en": "the social or professional position of sb. / sth. in relation to others",
+				"examples": [
+					"Doctors have traditionally enjoyed high social [[status]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "badge",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "象征",
+				"en": "sth. that shows a particular quality",
+				"examples": [
+					"His gun was a [[badge]] of power for him."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "徽章；证章",
+				"en": "a small piece of metal, cloth, plastic with a picture or words on it, worn to show rank, membership of a group, support for a political idea, etc.",
+				"examples": [
+					"He pulled out a [[badge]] and said he was a police officer."
+				]
+			}
+		]
+	},
+	{
+		"english": "indicator",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "指示物",
+				"en": "sth. that can be regarded as a sign of sth. else",
+				"examples": [
+					"All the main economic [[indicators]] suggest that trade is improving."
+				]
+			}
+		]
+	},
+	{
+		"english": "absurd",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "荒唐的；愚蠢的",
+				"en": "completely stupid or unreasonable",
+				"examples": [
+					"It seems quite [[absurd]] to expect anyone to drive for three hours just for a 20-minute meeting."
+				]
+			}
+		]
+	},
+	{
+		"english": "locksmith",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "锁匠",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "fee",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "报酬；服务费",
+				"en": "an amount of money paid for a piece of work or a service",
+				"examples": [
+					"Does the bank charge a [[fee]] for setting up an account?"
+				]
+			}
+		]
+	},
+	{
+		"english": "complain",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "抱怨；不满；发牢骚",
+				"en": "(not in passive) say that you are annoyed, not satisfied, or unhappy about sth./ sb.",
+				"examples": [
+					"Residents are [[complaining]] because traffic in this area has increased."
+				]
+			}
+		]
+	},
+	{
+		"english": "regain",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "重新获得",
+				"en": "get back sth. you no longer have, esp. an ability or a quality",
+				"examples": [
+					"She paused on the edge, trying to [[regain]] her balance."
+				]
+			}
+		]
+	},
+	{
+		"english": "access",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "接近；进入",
+				"en": "(~ to) the means or opportunity to approach or enter a place",
+				"examples": [
+					"The police managed to gain [[access]] to the house through an upstairs window."
+				]
+			}
+		]
+	},
+	{
+		"english": "stroll",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "散步；闲逛",
+				"en": "walk somewhere in a slow, relaxed way",
+				"examples": [
+					"We were [[strolling]] along, laughing and joking."
+				]
+			}
+		]
+	},
+	{
+		"english": "leisurely",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "不慌不忙地",
+				"en": "without hurrying",
+				"examples": [
+					"We walked [[leisurely]] into the hotel."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "不慌不忙的",
+				"en": "unhurried or relaxed",
+				"examples": [
+					"After getting up, we had a [[leisurely]] breakfast at our hotel."
+				]
+			}
+		]
+	},
+	{
+		"english": "ulcer",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "溃疡",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "fingernail",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "手指甲",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "abuse",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "虐待",
+				"en": "cruel or violent treatment of sb.",
+				"examples": [
+					"The woman suffered years of physical [[abuse]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "wimp",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "懦夫；窝囊废",
+				"en": "(infml.) a person who is not strong, brave, or confident",
+				"examples": [
+					"The more she called her son a [[wimp]], the less confident he became."
+				]
+			}
+		]
+	},
+	{
+		"english": "luggage",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "行李",
+				"en": "(AmE baggage) the cases, bags, etc. that you carry when you are traveling",
+				"examples": [
+					"We dropped our [[luggage]] off at our hotel and went sightseeing."
+				]
+			}
+		]
+	},
+	{
+		"english": "practically",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "几乎；差不多",
+				"en": "almost",
+				"examples": [
+					"She blamed me for [[practically]] every mistake in the report."
+				]
+			}
+		]
+	},
+	{
+		"english": "fuss",
+		"senses": [
+			{
+				"pos": "n. [U, sing.]",
+				"zh": "无谓的激动（或忧虑、活动）；大惊小怪",
+				"en": "unnecessary excitement, worry, or activity",
+				"examples": [
+					"We tried to arrange a ceremony with as little [[fuss]] as possible."
+				]
+			}
+		]
+	},
+	{
+		"english": "crush",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）变皱；起皱",
+				"en": "become or make sth. full of folds or lines",
+				"examples": [
+					"My dress got all [[crushed]] in my suitcase."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "压坏；压伤；挤压变形",
+				"en": "press or squeeze sth. so hard that it is damaged or injured, or loses its shape",
+				"examples": [
+					"The car was completely [[crushed]] under the truck."
+				]
+			}
+		]
+	},
+	{
+		"english": "self",
+		"senses": [
+			{
+				"pos": "n. [U, sing.]",
+				"zh": "自身；本身；自己；自我",
+				"en": "the type of person you are, including your character, your typical behavior, your abilities, etc.",
+				"examples": [
+					"Paula seemed to be her usual cheerful [[self]] a week after she came back home."
+				]
+			}
+		]
+	},
+	{
+		"english": "conspiracy",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "密谋；阴谋",
+				"en": "a secret plan made by two or more people to do sth. harmful or illegal",
+				"examples": [
+					"He was charged with [[conspiracy]] to commit criminal damage."
+				]
+			}
+		]
+	},
+	{
+		"english": "airline",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "航空公司",
+				"en": "a company that takes passengers and goods to different places by plane",
+				"examples": [
+					"I won't fly with an [[airline]] that has a bad safety record."
+				]
+			}
+		]
+	},
+	{
+		"english": "embarrass",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（尤指在社交场合）使尴尬，使窘迫",
+				"en": "make sb. feel ashamed, nervous, or uncomfortable, esp. in front of other people",
+				"examples": [
+					"He didn't want to [[embarrass]] her by asking questions."
+				]
+			}
+		]
+	},
+	{
+		"english": "embarrassment",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "尴尬；难堪；窘迫",
+				"en": "a feeling of being nervous or ashamed because of what people know or think about you",
+				"examples": [
+					"She suffered extreme [[embarrassment]] at not knowing how to read and write."
+				]
+			}
+		]
+	},
+	{
+		"english": "embarrassed",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "窘迫的；尴尬的",
+				"en": "shy, awkward, or ashamed, esp. in a social situation",
+				"examples": [
+					"The girl felt [[embarrassed]] at being the center of attention."
+				]
+			}
+		]
+	},
+	{
+		"english": "corridor",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "走廊；通道",
+				"en": "a long narrow passage on a train or between rooms in a building, with doors on one or both sides",
+				"examples": [
+					"We had to wait outside in the [[corridor]] until our names were called."
+				]
+			}
+		]
+	},
+	{
+		"english": "stumble",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "绊脚；绊跌",
+				"en": "trip or momentarily lose one's balance; almost fall",
+				"examples": [
+					"Victor [[stumbled]] over the step as he came in."
+				]
+			}
+		]
+	},
+	{
+		"english": "occupy",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使用，占用（空间、面积、时间等）",
+				"en": "fill or use a space, an area, or an amount of time",
+				"examples": [
+					"The bed seemed to [[occupy]] most of the room."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "占据；居住",
+				"en": "live or stay in a place",
+				"examples": [
+					"He [[occupies]] the house without paying any rent."
+				]
+			}
+		]
+	},
+	{
+		"english": "unoccupied",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "空着的；闲置的；无人占用的",
+				"en": "empty, with nobody living there or using it",
+				"examples": [
+					"I sat down at the nearest [[unoccupied]] table in the restaurant."
+				]
+			}
+		]
+	},
+	{
+		"english": "gut",
+		"senses": [
+			{
+				"pos": "n. [pl.]",
+				"zh": "（做困难或不愉快的事情所需要的）勇气，魄力，决心",
+				"en": "(~s) (infml.) the courage and determination you need to do sth. difficult or unpleasant",
+				"examples": [
+					"When failure knocks you down, will you have the [[guts]] to get up and get going?"
+				]
+			}
+		]
+	},
+	{
+		"english": "snap",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "厉声说（话）",
+				"en": "say sth. quickly in an angry way",
+				"examples": [
+					"There's no need to [[snap]] at me — it's not my fault that you lost your wallet."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）啪的一声折断",
+				"en": "break or cause to break suddenly and completely, typically with a sharp cracking sound",
+				"examples": [
+					"You'll [[snap]] that ruler if you bend it too far."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（给···）拍照",
+				"en": "(infml.) take a photograph",
+				"examples": [
+					"Dave [[snapped]] a picture of me and Lucas."
+				]
+			}
+		]
+	},
+	{
+		"english": "lifetime",
+		"senses": [
+			{
+				"pos": "n. [C, usu. sing.]",
+				"zh": "终身；有生之年；存在期",
+				"en": "the length of time that sb. lives or that sth. lasts",
+				"examples": [
+					"That large sum of money will last me a [[lifetime]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "squeeze in",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "为···挤出时间",
+				"en": "manage to find time for sb. / sth. although you are very busy",
+				"examples": [
+					"How can you manage to [[squeeze in]] so much work?"
+				]
+			}
+		]
+	},
+	{
+		"english": "get through",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "完成（工作）；处理（事情）",
+				"en": "do an amount of work",
+				"examples": [
+					"We've got a lot of work to [[get through]] today."
+				]
+			}
+		]
+	},
+	{
+		"english": "weigh down",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "使忧心忡忡",
+				"en": "make sb. feel worried and upset",
+				"examples": [
+					"The CEO felt [[weighed down]] by his responsibilities."
+				]
+			}
+		]
+	},
+	{
+		"english": "take on",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "接受（工作）；承担（责任）",
+				"en": "undertake a task or responsibility, esp. a difficult one",
+				"examples": [
+					"Don't [[take on]] too much work — the extra cash isn't worth it."
+				]
+			}
+		]
+	},
+	{
+		"english": "end up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（尤指经历一系列意外后）最终处于，到头来",
+				"en": "be in a particular situation, state, or place after a series of events, esp. when you did not plan it",
+				"examples": [
+					"He came round for a coffee and we [[ended up]] having a meal together."
+				]
+			}
+		]
+	},
+	{
+		"english": "throw in",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "额外赠送",
+				"en": "add sth. at no extra cost",
+				"examples": [
+					"Buy this book and we [[throw in]] a CD."
+				]
+			}
+		]
+	},
+	{
+		"english": "in part",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "在某种程度上；部分地",
+				"en": "to some degree, but not completely",
+				"examples": [
+					"Their harmonious relationship resulted [[in part]] from their similar goals."
+				]
+			}
+		]
+	},
+	{
+		"english": "take off",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "起飞",
+				"en": "(of an aircraft, etc.) leave the ground and begin to fly",
+				"examples": [
+					"I felt quite excited when the plane [[took off]] from Heathrow."
+				]
+			}
+		]
+	},
+	{
+		"english": "make a fuss (about sth.)",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（因某事）大吵大闹，大惊小怪",
+				"en": "complain or become angry about sth., esp. when this is not necessary",
+				"examples": [
+					"The soup is just a bit salty. I don't know why you're [[making]] such [[a fuss about]] it."
+				]
+			}
+		]
+	},
+	{
+		"english": "show up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "到达（尤指有人在等候之处）",
+				"en": "arrive, esp. at the place where sb. is waiting for you",
+				"examples": [
+					"We had 200 people [[show up]] for the conference."
+				]
+			}
+		]
+	},
+	{
+		"english": "make it",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（尤指在困难情况下）准时到达，赶上",
+				"en": "succeed in getting somewhere in time for sth. or when this is difficult",
+				"examples": [
+					"You can still [[make it]] to the railway station if you set out right away."
+				]
+			}
+		]
+	},
+	{
+		"english": "in advance (of sth.)",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "预先；提前",
+				"en": "before sth. happens or is expected to happen",
+				"examples": [
+					"I should warn you [[in advance]] that I'm not a very good dancer."
+				]
+			}
+		]
+	},
+	{
+		"english": "Sendhil Mullainathan",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "塞德希尔 • 穆来纳森（美国芝加哥大学经济学教授）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Eldar Shafir",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "埃尔达尔•沙菲尔（美国普林斯顿大学行为科学和公共政策教授）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Thorstein Veblen",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "索尔斯坦•凡勃伦（美国经济学家、社会学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Dan Ariely",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "丹•艾瑞里（美国杜克大学行为经济学教授）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Dhahran",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "宰赫兰（沙特阿拉伯东部城市）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Saudi Arabia",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "沙特阿拉伯（亚洲西南部国家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "LaGuardia",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "拉瓜迪亚机场（位于美国纽约市）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "O'Hare",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "奥黑尔国际机场（位于美国芝加哥市）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Chicago",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "芝加哥（美国中西部城市）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]

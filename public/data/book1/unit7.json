@@ -1,0 +1,1376 @@
+[
+	{
+		"english": "envy",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "羡慕；忌妒",
+				"en": "the feeling of wanting sth. that sb. else has",
+				"examples": [
+					"They only say such unkind things about you out of [[envy]]."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "羡慕；忌妒",
+				"en": "wish that you had sb. else's possessions, abilities, etc.",
+				"examples": [
+					"I [[envy]] her ability to talk confidently to people she has never met before."
+				]
+			}
+		]
+	},
+	{
+		"english": "delight",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使愉快；使高兴",
+				"en": "give sb. great satisfaction and enjoyment",
+				"examples": [
+					"Her recipe will [[delight]] anyone who loves chocolate."
+				]
+			}
+		]
+	},
+	{
+		"english": "delighted",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "愉快的；高兴的",
+				"en": "very pleased and happy",
+				"examples": [
+					"Thanks for your invitation. I'd be [[delighted]] to come."
+				]
+			}
+		]
+	},
+	{
+		"english": "shortlist",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "把（某人）列入入围（决选）名单",
+				"en": "(usu. passive) (BrE) put sb. on a short list for a job or a prize",
+				"examples": [
+					"He was [[shortlisted]] for the Nobel Prize for Literature several times."
+				]
+			}
+		]
+	},
+	{
+		"english": "lurch",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（因震惊、惊恐等而）感到心猛地一跳，胃里猛地翻腾了一下",
+				"en": "if your heart or stomach lurches, it seems to move suddenly because you feel shocked, frightened, etc.",
+				"examples": [
+					"Virginia's heart [[lurched]] painfully in her chest on hearing the news."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "突然不稳地行走（移动）；蹒跚而行",
+				"en": "walk or move suddenly in an uncontrolled or unsteady way",
+				"examples": [
+					"Suddenly the horse [[lurched]] to one side and the child fell off."
+				]
+			}
+		]
+	},
+	{
+		"english": "spin",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（因震惊、兴奋或醉酒）头晕，感到天旋地转",
+				"en": "(spun, spun) if your head or the room is spinning you feel as if you might faint because you are shocked, excited, or drunk",
+				"examples": [
+					"I was pouring with sweat, and my head was [[spinning]]."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "（使）快速旋转",
+				"en": "(spun, spun) (cause to) turn round and round fast",
+				"examples": [
+					"He [[spun]] the wheel sharply and made a U turn in the middle of the road."
+				]
+			}
+		]
+	},
+	{
+		"english": "clench",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（尤指因生气或不安）握紧，绷紧，咬紧",
+				"en": "if you clench a part of your body such as your hand or your mouth, or if it clenches, you close it tightly, esp. because you are angry or upset",
+				"examples": [
+					"Through [[clenched]] teeth she told him to leave."
+				]
+			}
+		]
+	},
+	{
+		"english": "tighten",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）（身体的某一部分）变得僵硬，变得僵直",
+				"en": "become stiff or make a part of your body become stiff",
+				"examples": [
+					"Sofia's throat had [[tightened]] and she couldn't speak."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "使变紧；拧紧",
+				"en": "close or fasten sth. firmly by turning it",
+				"examples": [
+					"I'd put the new tyre on and [[tightened]] up the wheel."
+				]
+			}
+		]
+	},
+	{
+		"english": "scroll",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（将计算机屏幕上的信息）上下滚动，滚屏（以便阅读）",
+				"en": "move information on a computer screen up or down so that you can read it",
+				"examples": [
+					"[[Scroll]] to the end of the document and you will find what you need."
+				]
+			}
+		]
+	},
+	{
+		"english": "vaguely",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "略微；稍微",
+				"en": "slightly",
+				"examples": [
+					"He was [[vaguely]] aware of footsteps behind him."
+				]
+			}
+		]
+	},
+	{
+		"english": "fortune",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "运气；机遇",
+				"en": "chance or luck, and the effect that it has on your life",
+				"examples": [
+					"I had the good [[fortune]] to work with a brilliant head of department."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "大笔的钱；巨款",
+				"en": "a very large amount of money",
+				"examples": [
+					"He made his [[fortune]] in car sales."
+				]
+			}
+		]
+	},
+	{
+		"english": "stir",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "激发，激起（强烈的感情）；引起（强烈的反应）",
+				"en": "make sb. have a strong feeling or reaction",
+				"examples": [
+					"Looking at the photographs [[stirred]] childhood memories of the long hot summers."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "搅；搅拌；搅动",
+				"en": "move a liquid or substance around with a spoon or stick in order to mix it together",
+				"examples": [
+					"[[Stir]] the paint to make sure it is smooth."
+				]
+			}
+		]
+	},
+	{
+		"english": "immune",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "豁免的；可免于···的",
+				"en": "(not before noun) specially protected from sth. unpleasant",
+				"examples": [
+					"The criminal was told that he would be [[immune]] from prosecution (起诉) if he helped the police."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "（对···）免疫的，有免疫力的",
+				"en": "safe from a disease, because you cannot be infected by it",
+				"examples": [
+					"This blood test will show whether or not you're [[immune]] to the disease."
+				]
+			}
+		]
+	},
+	{
+		"english": "disturbing",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "令人不安的；使人烦恼的",
+				"en": "worrying or upsetting",
+				"examples": [
+					"There was something about him that she found very [[disturbing]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "psychological",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "心理的；精神的",
+				"en": "relating to the way that your mind works and the way that this affects your behavior",
+				"examples": [
+					"Robyn's loss of memory is a [[psychological]] problem, rather than a physical one."
+				]
+			}
+		]
+	},
+	{
+		"english": "clinical",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "临床的",
+				"en": "(only before noun) relating to treating or testing people who are sick",
+				"examples": [
+					"The therapy has helped people with [[clinical]] depression."
+				]
+			}
+		]
+	},
+	{
+		"english": "self-conscious",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（因顾虑自己的外表或他人的看法）忸怩的，害羞的，不自然的",
+				"en": "worried and embarrassed about what you look like or what other people think of you",
+				"examples": [
+					"Bess was [[self-conscious]] about being shorter than her two friends."
+				]
+			}
+		]
+	},
+	{
+		"english": "social media",
+		"senses": [
+			{
+				"pos": "n. [pl.]",
+				"zh": "社交媒体",
+				"en": "websites and software programs used for social networking",
+				"examples": [
+					"[[Social media]] is changing the way people communicate, work, and shop."
+				]
+			}
+		]
+	},
+	{
+		"english": "inspiration",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "灵感",
+				"en": "a good idea about what you should do, write, say, etc., esp. one which you get suddenly",
+				"examples": [
+					"Dreams are a rich source of [[inspiration]] for some writers."
+				]
+			}
+		]
+	},
+	{
+		"english": "makeup",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "化妆",
+				"en": "the application of cosmetics",
+				"examples": [
+					"I got my wedding [[makeup]] done in this beauty studio."
+				]
+			}
+		]
+	},
+	{
+		"english": "destructive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "毁灭性的；造成破坏的",
+				"en": "causing damage to people or things",
+				"examples": [
+					"Lack of trust is very [[destructive]] in a relationship."
+				]
+			}
+		]
+	},
+	{
+		"english": "envious",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "羡慕的；忌妒的",
+				"en": "wanting sth. that sb. else has",
+				"examples": [
+					"I'm so [[envious]] of you getting an extra day's holiday."
+				]
+			}
+		]
+	},
+	{
+		"english": "psychotherapist",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "精神治疗医师",
+				"en": "sb. who is trained to treat people with a mental illness by talking to them instead of giving them drugs",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "resent",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（因受委屈而）对···感到愤恨",
+				"en": "feel angry or upset about a situation or about sth. that sb. has done, esp. because you think that it is not fair",
+				"examples": [
+					"I [[resented]] having to work such long hours."
+				]
+			}
+		]
+	},
+	{
+		"english": "resentful",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（对不公平的事）愤恨的，不满的，憎恶的",
+				"en": "feeling angry and upset about sth. that you think is unfair",
+				"examples": [
+					"They were bitterly [[resentful]] of the fact that they had to work such long hours."
+				]
+			}
+		]
+	},
+	{
+		"english": "well-being",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "舒适；健康；幸福",
+				"en": "a feeling of being comfortable, healthy, and happy",
+				"examples": [
+					"The warm sunny weather always gives me a sense of [[well-being]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "urge",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "强烈的欲望；迫切的要求；冲动",
+				"en": "a strong wish or need",
+				"examples": [
+					"He could no longer resist the [[urge]] to go and see Amanda."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "竭力主张；强烈要求；敦促",
+				"en": "strongly suggest that sb. do sth.",
+				"examples": [
+					"They [[urged]] Parliament to approve plans for their reform program."
+				]
+			}
+		]
+	},
+	{
+		"english": "vulnerable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "脆弱的；易受伤的",
+				"en": "able to be easily harmed or hurt",
+				"examples": [
+					"Their constant arguments left her feeling increasingly [[vulnerable]] and insecure."
+				]
+			}
+		]
+	},
+	{
+		"english": "self-esteem",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "自尊（心）",
+				"en": "the feeling of being satisfied with your own abilities, and that you deserve to be liked or respected",
+				"examples": [
+					"Educated people are found to have higher [[self-esteem]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "deprivation",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "缺少；匮乏",
+				"en": "the lack of sth. that you need in order to be healthy, comfortable, or happy",
+				"examples": [
+					"Sleep [[deprivation]] can result in mental disorders."
+				]
+			}
+		]
+	},
+	{
+		"english": "tolerance",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "忍受；容忍；宽容",
+				"en": "willingness to allow people to do, say, or believe what they want without criticizing or punishing them",
+				"examples": [
+					"He shows little [[tolerance]] for people with different views."
+				]
+			}
+		]
+	},
+	{
+		"english": "intolerance",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "偏狭；偏执；不容异己",
+				"en": "unwillingness to accept ways of thinking and behaving that are different from your own",
+				"examples": [
+					"The party was accused of stirring up a climate of fear and [[intolerance]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "worthy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "值得尊敬的；值得注意的；值得敬仰的",
+				"en": "deserving respect, attention, or admiration",
+				"examples": [
+					"The money we raise will be going to a very [[worthy]] cause."
+				]
+			}
+		]
+	},
+	{
+		"english": "differentiate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "辨别；区别",
+				"en": "recognize or express the difference between things or people",
+				"examples": [
+					"It's important to [[differentiate]] between fact and opinion."
+				]
+			}
+		]
+	},
+	{
+		"english": "unhealthy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "反常的；病态的",
+				"en": "not normal or natural and likely to be harmful",
+				"examples": [
+					"Frank has developed what I would term an [[unhealthy]] relationship with these people."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "对健康有害的；会致病的",
+				"en": "likely to make you ill",
+				"examples": [
+					"He worked in the [[unhealthy]] environment of a coal mine."
+				]
+			}
+		]
+	},
+	{
+		"english": "hunger",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "饥饿感",
+				"en": "the feeling that you need to eat",
+				"examples": [
+					"I can't believe that that enormous meal wasn't enough to satisfy your [[hunger]]."
+				]
+			},
+			{
+				"pos": "n. [U]",
+				"zh": "（尤指长期的）饥饿，饥荒",
+				"en": "lack of food, esp. for a long period of time, that can cause illness or death",
+				"examples": [
+					"Is it possible to end poverty and [[hunger]] in a decade?"
+				]
+			}
+		]
+	},
+	{
+		"english": "coincide",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "同时发生（尤指巧合）",
+				"en": "(~ with) happen at the same time as sth. else, esp. by chance",
+				"examples": [
+					"I timed my holiday to [[coincide]] with the children's school holiday."
+				]
+			}
+		]
+	},
+	{
+		"english": "insecurity",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "不安全；没有自信；没有把握",
+				"en": "the state of not feeling at all confident about yourself, your abilities, or your relationships with people",
+				"examples": [
+					"She had developed an outgoing personality to mask her deep [[insecurities]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "freelance",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "从事自由职业的",
+				"en": "working independently for different companies rather than being employed by one particular company",
+				"examples": [
+					"He has been a [[freelance]] journalist for the BBC for a decade."
+				]
+			}
+		]
+	},
+	{
+		"english": "neurosurgery",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "神经外科（学）",
+				"en": "",
+				"examples": [
+					"Now I am chief of pediatric [[neurosurgery]] at John Hopkins Children's Center in Baltimore."
+				]
+			}
+		]
+	},
+	{
+		"english": "shocking",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "惊人的；骇人的；令人难以置信的",
+				"en": "very surprising, upsetting, and difficult to believe",
+				"examples": [
+					"It is [[shocking]] that they involved children in the crime."
+				]
+			}
+		]
+	},
+	{
+		"english": "stimulate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "激励；促使；促进",
+				"en": "encourage or help an activity to begin or develop further",
+				"examples": [
+					"The government should do more to [[stimulate]] investment in the rural areas of the state."
+				]
+			}
+		]
+	},
+	{
+		"english": "instruct",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "命令；指示",
+				"en": "officially tell sb. what to do",
+				"examples": [
+					"He [[instructed]] his men to collect information about troop movements."
+				]
+			}
+		]
+	},
+	{
+		"english": "unrelated",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "无关的；不相关的",
+				"en": "two things that are unrelated are not connected to each other in any way",
+				"examples": [
+					"The police think that the two incidents are [[unrelated]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "robust",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "强健的；健壮的",
+				"en": "having or showing good health and strength",
+				"examples": [
+					"He looks [[robust]] and healthy."
+				]
+			}
+		]
+	},
+	{
+		"english": "contagious",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "（感觉、态度、行动）富于感染力的，会蔓延的",
+				"en": "if a feeling, attitude, or action is contagious, other people are quickly affected by it and begin to have it or do it",
+				"examples": [
+					"Daffy has a [[contagious]] enthusiasm for life and poetry."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "（疾病）接触传染的",
+				"en": "a disease that is contagious can be passed from person to person by touch",
+				"examples": [
+					"Mumps (腮腺炎) can be a [[contagious]] disease."
+				]
+			}
+		]
+	},
+	{
+		"english": "laughter",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "笑；笑声",
+				"en": "when people laugh, or the sound of people laughing",
+				"examples": [
+					"He delivered the line perfectly, and everybody roared with [[laughter]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "induce",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "引起，促使，导致（尤指精神或身体的变化）",
+				"en": "(fml.) cause sth., esp. a mental or physical change",
+				"examples": [
+					"Taking a brisk walk can often [[induce]] a feeling of well-being."
+				]
+			},
+			{
+				"pos": "v.",
+				"zh": "劝诱，诱导（尤指做似乎不明智的事）",
+				"en": "(fml.) persuade sb. to do sth., esp. sth. that does not seem wise",
+				"examples": [
+					"Nothing would [[induce]] me to take that job."
+				]
+			}
+		]
+	},
+	{
+		"english": "duration",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "持续时间",
+				"en": "the length of time that sth. continues",
+				"examples": [
+					"For the [[duration]] of the strike our shop will remain closed."
+				]
+			}
+		]
+	},
+	{
+		"english": "intensity",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "强烈；剧烈",
+				"en": "the quality of being felt very strongly or having a strong effect",
+				"examples": [
+					"The storm started again with even greater [[intensity]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "sensation",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "感觉；感受",
+				"en": "a feeling or an impression caused by a particular experience",
+				"examples": [
+					"I can remember the first time I went sailing — it was a wonderful [[sensation]]."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "（感官的）感觉；（尤指）触觉",
+				"en": "a feeling that you get from one of your five senses, esp. the sense of touch",
+				"examples": [
+					"Massage (按摩) produces wonderful [[sensations]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "electric",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "用电的；电动的；带电的",
+				"en": "needing electricity to work, produced by electricity, or used for carrying electricity",
+				"examples": [
+					"The [[electric]] guitar, along with rock-and-roll, rose to popularity around the world."
+				]
+			}
+		]
+	},
+	{
+		"english": "associate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "联想；联系",
+				"en": "(~ sb. / sth. with sth.) make a connection in your mind between one person or thing and another",
+				"examples": [
+					"Most people [[associate]] this brand with good quality."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "同事；（生意）伙伴",
+				"en": "sb. with whom you work or do business with",
+				"examples": [
+					"They have been business [[associates]] for decades."
+				]
+			}
+		]
+	},
+	{
+		"english": "implication",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "含意；暗指；暗示",
+				"en": "sth. that is not directly said or shown, but that is suggested or understood",
+				"examples": [
+					"I resent the [[implication]] that my work is not thorough."
+				]
+			},
+			{
+				"pos": "n. [C, usu. pl.]",
+				"zh": "（行动、事件、决定等的）可能的影响（后果）",
+				"en": "a possible future effect or result of an action, event, decision, etc.",
+				"examples": [
+					"The new report has far-reaching [[implications]] for the future of broadcasting."
+				]
+			}
+		]
+	},
+	{
+		"english": "astonish",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "使大为吃惊；使惊愕",
+				"en": "surprise sb. very much",
+				"examples": [
+					"What [[astonished]] me most was her lack of common sense."
+				]
+			}
+		]
+	},
+	{
+		"english": "astonishing",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "令人惊讶的",
+				"en": "so surprising that it is difficult to believe",
+				"examples": [
+					"It's [[astonishing]] how much the place has changed."
+				]
+			}
+		]
+	},
+	{
+		"english": "neuron",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "神经元；神经细胞",
+				"en": "(also 'neurone')",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "neurotransmitter",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "神经传递素",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "electrical",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "电的；用电的；发电的",
+				"en": "connected with electricity; using or producing electricity",
+				"examples": [
+					"Since the Great Depression, every new [[electrical]] appliance has come with a promise that it would transform the home."
+				]
+			}
+		]
+	},
+	{
+		"english": "neurophysiology",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "神经生理学",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "musical",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "音乐的；配乐的",
+				"en": "(only before noun) relating to music or consisting of music",
+				"examples": [
+					"She has no formal [[musical]] qualifications."
+				]
+			}
+		]
+	},
+	{
+		"english": "favorable",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "有利的",
+				"en": "(BrE favourable) suitable and likely to make sth. happen or succeed",
+				"examples": [
+					"The disease spreads quickly under [[favorable]] conditions."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "赞许的；称赞的；肯定的",
+				"en": "(BrE favourable) a favorable report, opinion, or reaction shows that you think sb. / sth. is good or that you agree with them",
+				"examples": [
+					"We have had a [[favorable]] response to the plan so far."
+				]
+			}
+		]
+	},
+	{
+		"english": "reinforce",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "加强，强化（观点、思想、感觉等）",
+				"en": "give support to an opinion, idea, feeling, etc. and make it stronger and more likely to continue",
+				"examples": [
+					"The latest figures [[reinforce]] the view that economic growth is slowing down."
+				]
+			}
+		]
+	},
+	{
+		"english": "rage",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "盛怒；狂怒",
+				"en": "a strong feeling of uncontrollable anger",
+				"examples": [
+					"He would sometimes fly into a [[rage]] for no reason at all."
+				]
+			}
+		]
+	},
+	{
+		"english": "monster",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "妖怪；怪兽；怪物",
+				"en": "an imaginary or ancient creature that is large, ugly, and frightening",
+				"examples": [
+					"A terrifying [[monster]] attacked the helpless villagers."
+				]
+			}
+		]
+	},
+	{
+		"english": "cable",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "电缆",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "handy",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "手边的；附近的",
+				"en": "(infml.) near and easy to reach",
+				"examples": [
+					"Keep your pills [[handy]] just in case you feel seasick."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "有用的",
+				"en": "useful",
+				"examples": [
+					"It's very [[handy]] having a light above your desk."
+				]
+			}
+		]
+	},
+	{
+		"english": "correlate",
+		"senses": [
+			{
+				"pos": "v.",
+				"zh": "（使）相互关联",
+				"en": "(~ to / with) if two or more facts, ideas, etc. correlate or if you correlate them, they are closely connected to each other or one causes the other",
+				"examples": [
+					"Stress levels [[correlate]] strongly with heart disease."
+				]
+			}
+		]
+	},
+	{
+		"english": "lifespan",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "（人或动物的）寿命，预期生命期限",
+				"en": "the length of time that a person or animal lives or is expected to live",
+				"examples": [
+					"Worms have a [[lifespan]] of a few months."
+				]
+			}
+		]
+	},
+	{
+		"english": "unfortunately",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "不幸地；令人遗憾地",
+				"en": "used when you are mentioning a fact that you wish was not true",
+				"examples": [
+					"[[Unfortunately]], you were out when we called."
+				]
+			}
+		]
+	},
+	{
+		"english": "blank",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "无表情的；木然的",
+				"en": "showing no emotion, understanding, or interest",
+				"examples": [
+					"Zoe looked at me with a [[blank]] expression."
+				]
+			},
+			{
+				"pos": "adj.",
+				"zh": "无字迹的；空白的",
+				"en": "without any writing, print, or recorded sound",
+				"examples": [
+					"Sign your name in the [[blank]] space at the bottom of the form."
+				]
+			}
+		]
+	},
+	{
+		"english": "indoors",
+		"senses": [
+			{
+				"pos": "adv.",
+				"zh": "往室内；在室内",
+				"en": "into or inside a building",
+				"examples": [
+					"Mother was advised to stay [[indoors]] for a week after her cough seemed better."
+				]
+			}
+		]
+	},
+	{
+		"english": "captive",
+		"senses": [
+			{
+				"pos": "adj.",
+				"zh": "被关押的；遭监禁的",
+				"en": "kept in prison or in a place that you are not allowed to leave",
+				"examples": [
+					"She was kidnapped and held [[captive]] for over a week."
+				]
+			},
+			{
+				"pos": "n. [C]",
+				"zh": "俘虏",
+				"en": "sb. who is kept as a prisoner",
+				"examples": [
+					"They freed their [[captives]] before surrendering."
+				]
+			}
+		]
+	},
+	{
+		"english": "scenario",
+		"senses": [
+			{
+				"pos": "n. [C]",
+				"zh": "可能发生的事；可能出现的情况",
+				"en": "a situation that could possibly happen",
+				"examples": [
+					"Imagine a [[scenario]] where only 20 percent of people have a job."
+				]
+			}
+		]
+	},
+	{
+		"english": "captivity",
+		"senses": [
+			{
+				"pos": "n. [U]",
+				"zh": "拘禁；囚禁；关押",
+				"en": "when a person or animal is kept in a prison, cage, etc. and not allowed to go where they want",
+				"examples": [
+					"Animals bred in [[captivity]] would probably not survive if they were released into the wild."
+				]
+			}
+		]
+	},
+	{
+		"english": "autopilot",
+		"senses": [
+			{
+				"pos": "n. [C, U]",
+				"zh": "（飞机上的）自动驾驶仪",
+				"en": "(also 'automatic pilot') a machine that flies a plane by itself without the need for a pilot",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "you name it",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "凡是你说得出的（应有尽有）",
+				"en": "(spoken) used after a list of things to mean that there are many more you could mention",
+				"examples": [
+					"Vodka, whisky, beer — [[you name it]], I've got it."
+				]
+			}
+		]
+	},
+	{
+		"english": "miss out",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "错失机会",
+				"en": "not have the chance to do sth. that you enjoy or that would be good for you",
+				"examples": [
+					"Well, I'm glad you could make it; I didn't want you to [[miss out]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "in relation to",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "关于；涉及",
+				"en": "concerning",
+				"examples": [
+					"One of the biggest things that should happen [[in relation to]] the Internet is that kids and adults, too, should be taught to manage it."
+				]
+			}
+		]
+	},
+	{
+		"english": "measure up",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "合格；达到某个标准",
+				"en": "be good enough to do a particular job or to reach a particular standard",
+				"examples": [
+					"How will the Secretary General [[measure up]] to his new responsibilities?"
+				]
+			}
+		]
+	},
+	{
+		"english": "when it comes to (doing) sth.",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "谈到（做）某事时",
+				"en": "(infml.) when the subject being discussed is a particular thing",
+				"examples": [
+					"He's a bit of an expert [[when it comes to]] computers."
+				]
+			}
+		]
+	},
+	{
+		"english": "every now and then / again",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "偶尔；有时",
+				"en": "(also 'every so often') sometimes, but not often or regularly",
+				"examples": [
+					"He cleans out his desk drawers [[every now and then]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "work on",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "努力提高；努力实现",
+				"en": "try very hard to improve or achieve sth.",
+				"examples": [
+					"We need to [[work on]] ensuring that the children feel safe and confident."
+				]
+			}
+		]
+	},
+	{
+		"english": "sink in",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "（信息、事实等逐渐）被充分理解",
+				"en": "if information, facts, etc. sink in, you gradually understand them or realize their full meaning",
+				"examples": [
+					"He paused a moment for his words to [[sink in]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "for that matter",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "对···同样如此",
+				"en": "used to say that what you are saying about one thing is also true about sth. else",
+				"examples": [
+					"Ben never touched beer, or any kind of alcohol [[for that matter]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "(just) in case",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "以防万一",
+				"en": "as a way of being safe from sth. that might happen or might be true",
+				"examples": [
+					"Take an umbrella, [[in case]] it rains."
+				]
+			}
+		]
+	},
+	{
+		"english": "on average",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "平均来看",
+				"en": "based on a calculation about how many times sth. usually happens, how much money sb. usually gets, how often people usually do sth., etc.",
+				"examples": [
+					"My income's rather variable, but I earn £73 a day [[on average]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "up to sth.",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "正在做（秘密或不该做的事）",
+				"en": "(spoken) doing sth. secret or sth. that you should not be doing",
+				"examples": [
+					"The children are very quiet. I wonder what they're [[up to]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "the other way around / round",
+		"senses": [
+			{
+				"pos": "短语",
+				"zh": "正相反；倒过来",
+				"en": "the opposite of what you have just mentioned",
+				"examples": [
+					"Now the reality was just [[the other way round]]."
+				]
+			}
+		]
+	},
+	{
+		"english": "Facebook",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "脸书（美国社交网站）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Aristotle",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "亚里士多德（古希腊哲学家、科学家）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Rachel Andrew",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "雷切尔 · 安德鲁（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Patricia Polledri",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "帕特里夏 · 波莱德里（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Itzhak Fried",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "伊扎克 · 弗里德（人名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "UCLA",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "加州大学洛杉矶分校",
+				"en": "(University of California, Los Angeles)",
+				"examples": []
+			}
+		]
+	},
+	{
+		"english": "Frankenstein",
+		"senses": [
+			{
+				"pos": "专有名词",
+				"zh": "弗兰肯斯坦（小说人物名）",
+				"en": "",
+				"examples": []
+			}
+		]
+	}
+]
