@@ -28,7 +28,7 @@ let manifestPromise: Promise<Manifest> | null = null
 
 /** 加载词库清单 public/data/index.json；失败不缓存，便于重试 */
 export function loadManifest(): Promise<Manifest> {
-  manifestPromise ??= fetch('/data/index.json')
+  manifestPromise ??= fetch('/data/index.json', { cache: 'no-store' })
     .then(async (res) => {
       if (!res.ok) throw new Error(`词库清单加载失败 (${res.status})`)
       return await res.json() as unknown
@@ -58,7 +58,7 @@ export interface UnitWords {
 
 async function fetchUnit(bookId: string, unitId: string): Promise<WordEntry[]> {
   const key = `${bookId}/${unitId}`
-  const res = await fetch(`/data/${key}.json`)
+  const res = await fetch(`/data/${key}.json`, { cache: 'no-store' })
   if (!res.ok) throw new Error(`词库加载失败：${key} (${res.status})`)
   const words: unknown = await res.json()
   if (!Array.isArray(words) || !words.every(isWordEntry) ||
